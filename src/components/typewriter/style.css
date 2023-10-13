@@ -1,0 +1,38 @@
+#typewriter {
+  font-weight: 300;
+}
+/* The CSS file (style.css) */
+
+#typewriter {
+  font-weight: 300;
+}
+
+/* Media queries for different screen sizes */
+
+/* Small screens */
+@media screen and (max-width: 767px) {
+  #typewriter {
+    font-size: 3vw;
+  }
+}
+
+/* Medium screens */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #typewriter {
+    font-size: 2vw;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  #typewriter {
+    font-size: 20px;
+  }
+}
+
+/* Extra-large screens */
+@media screen and (min-width: 1600px) {
+  #typewriter {
+    font-size: 25px;
+  }
+}

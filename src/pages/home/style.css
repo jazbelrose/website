@@ -1,0 +1,5 @@
+.home-main-container {
+  position: relative;
+  overflow: hidden;  /* Ensures that any overflow content is hidden */
+}
+

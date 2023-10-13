@@ -1,0 +1,348 @@
+.services {
+  border-radius: 40px;
+  border: 2px solid var(--text-color);
+  padding: 20px;
+  line-height: 0.9em;
+}
+#random-quote-container {
+  padding-bottom: 0px;
+}
+
+#about-section,
+#services-title-section {
+  padding-bottom: 25px;
+}
+
+.services-title {
+  padding: 20px;
+}
+.data-class.about-us {
+  padding: 20px;
+}
+
+#random-quote {
+  color: red;
+}
+
+.about,
+.services-title {
+  border-radius: 40px;
+
+  margin: 20px;
+  padding: 20px;
+  line-height: 0.9em;
+  display: inline-block;
+}
+
+.t_border.my-4 {
+  padding-bottom: 50px;
+}
+
+.sec_sp {
+  margin-bottom: calc(3rem + 5.128vw);
+  width: 100%;
+}
+
+.t_border {
+  border-color: var(--text-color) !important;
+}
+
+.section-title {
+  font-size: 45px;
+}
+
+.service__title {
+  border-bottom: dotted 2px var(--secondary-color);
+  border-bottom-width: 0.5vh;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+}
+
+@media screen and (min-width: 480px) {
+  #random-quote,
+  #random-quote.quote {
+    letter-spacing: -0.05em;
+    line-height: 0.9em;
+  }
+  #random-quote {
+    font-size: 70px;
+    padding: 20px;
+  }
+  #random-quote.quote {
+    font-size: 70px;
+    padding: 30px;
+    text-align: left;
+  }
+  #sunburst {
+    min-width: 70px;
+  }
+  .data-class {
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.1em;
+  }
+
+  .service__title.data-class {
+    font-weight: 600;
+    font-size: 40px;
+    padding-bottom: 10px;
+  }
+  .service_desc.data-class {
+    padding-top: 15px;
+    padding-bottom: 40px;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 0.03em;
+    line-height: 1em;
+  }
+  .about,
+  .services-title {
+    font-size: 70px;
+    line-height: 0.9em;
+  }
+
+  .services {
+    margin: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  #random-quote {
+    font-size: 165px;
+    letter-spacing: -0.05em;
+    line-height: 0.9em;
+  }
+  #random-quote.quote {
+    font-size: 125px;
+    padding: 30px 20px;
+    text-align: left;
+  }
+  #sunburst {
+    min-width: 300px;
+  }
+  .t_border.my-4 {
+    padding: 20px;
+  }
+  .data-class {
+    font-size: 60px;
+    letter-spacing: -0.025em;
+    line-height: 1em;
+  }
+  .service__title.data-class {
+    font-weight: 600;
+    font-size: 60px;
+    padding-bottom: 20px;
+    letter-spacing: 0.025em;
+    line-height: 1em;
+  }
+  .service_desc.data-class {
+    padding-top: 25px;
+    padding-bottom: 40px;
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 0.03em;
+    line-height: 1em;
+  }
+  .service__title {
+    padding-bottom: 15px;
+  }
+  .service_desc {
+    padding-bottom: 50px;
+  }
+  .about,
+  .services-title {
+    font-size: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  .data-class {
+    font-size: 40px;
+    letter-spacing: -0.03em;
+    line-height: 1em;
+  }
+  .service__title.data-class {
+    font-weight: 600;
+    font-size: 80px;
+    padding-bottom: 25px;
+    letter-spacing: 0.025em;
+    line-height: 1em;
+  }
+  .service_desc.data-class {
+    padding-top: 35px;
+    padding-bottom: 40px;
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: 0.03em;
+    line-height: 1em;
+  }
+  .service__title {
+    padding-bottom: 20px;
+  }
+  .service_desc {
+    padding-bottom: 75px;
+  }
+  .about,
+  .services-title {
+    font-size: 120px;
+  }
+
+  #random-quote,
+  #random-quote.quote {
+    font-size: 125px;
+    letter-spacing: -0.05em;
+    line-height: 0.9em;
+    padding: 30px 20px;
+    text-align: left;
+  }
+  #sunburst {
+    min-width: 50vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  .data-class {
+    font-size: 60px;
+    letter-spacing: -0.03em;
+    line-height: 1em;
+  }
+  .service__title.data-class {
+    font-weight: 600;
+    font-size: 100px;
+    padding-bottom: 35px;
+    letter-spacing: 0.025em;
+    line-height: 1em;
+  }
+  .service_desc.data-class {
+    padding-top: 35px;
+    padding-bottom: 100px;
+    font-size: 60px;
+    font-weight: 100;
+    letter-spacing: 0.03em;
+    line-height: 1em;
+  }
+  #random-quote,
+  #random-quote.quote {
+    font-size: 175px;
+    letter-spacing: -0.05em;
+    line-height: 0.9em;
+    padding: 30px 20px;
+    text-align: left;
+  }
+  #sunburst {
+    min-width: 50vw;
+  }
+  .about,
+  .services-title {
+    font-size: 150px;
+  }
+  .services {
+    margin: 30px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .data-class {
+    font-size: 80px;
+    letter-spacing: -0.03em;
+    line-height: 1em;
+  }
+  #random-quote,
+  #random-quote.quote {
+    font-size: 200px;
+    letter-spacing: -0.05em;
+    line-height: 0.9em;
+    padding: 30px 20px;
+    text-align: left;
+  }
+  #sunburst {
+    min-width: 300px;
+  }
+}
+
+@media (min-width: 2400px) {
+  #random-quote {
+    font-size: 300px;
+    letter-spacing: -0.05em;
+    line-height: 0.9em;
+  }
+  #random-quote.quote {
+    font-size: 350px;
+    padding: 30px 250px;
+    text-align: left;
+  }
+  #sunburst {
+    min-width: 50vw;
+  }
+
+  .service__title.data-class {
+    font-weight: 600;
+    font-size: 130px;
+    padding-bottom: 50px;
+    letter-spacing: 0.025em;
+    line-height: 1em;
+  }
+  .service_desc.data-class {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    font-size: 80px;
+    font-weight: 100;
+    letter-spacing: 0.02em;
+    line-height: 1.1em;
+  }
+  .about,
+  .services-title {
+    font-size: 200px;
+    letter-spacing: -0.005em;
+  }
+  .services {
+    margin: 40px;
+  }
+}
+
+@media (min-width: 3000px) {
+  .data-class {
+    font-size: 105px;
+    letter-spacing: -0.03em;
+    line-height: 1em;
+  }
+  #random-quote {
+    font-size: 300px;
+    letter-spacing: -0.05em;
+    line-height: 0.9em;
+  }
+  #random-quote.quote {
+    font-size: 400px;
+    padding: 30px 400px;
+    text-align: left;
+  }
+  #sunburst {
+    min-width: 50vw;
+  }
+
+  .service__title.data-class {
+    font-weight: 600;
+    font-size: 170px;
+    padding-bottom: 50px;
+    letter-spacing: 0.025em;
+    line-height: 1em;
+  }
+  .service_desc.data-class {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    font-size: 105px;
+    font-weight: 100;
+    letter-spacing: 0.02em;
+    line-height: 1.1em;
+  }
+
+  .about,
+  .services-title {
+    font-size: 250px;
+    letter-spacing: -0.005em;
+    margin: 50px;
+    padding: 50px;
+  }
+}

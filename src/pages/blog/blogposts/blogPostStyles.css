@@ -1,0 +1,38 @@
+.blog-layout-container {
+  padding: 100px 20px 200px;
+}
+
+.blog-post-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 100px;
+  margin-bottom: 200px;
+  line-height: 1.8; /* Increased line-height for better readability */
+  font-family: "Roboto", sans-serif;
+}
+
+.blog-post-title {
+  font-size: 4.5em;
+  margin-bottom: 70px;
+  margin-top: 20px; /* Added spacing on top of headings for separation */
+  font-family: "Oswald", sans-serif;
+  color: red;
+}
+
+p {
+  margin-bottom: 50px; /* Added spacing between paragraphs */
+}
+
+blockquote {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  margin-top: 20px; /* Added spacing on top of headings for separation */
+  font-family: "Oswald", sans-serif;
+  color: red;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 20px; /* Added more spacing above subheadings for separation */
+}
