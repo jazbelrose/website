@@ -1,0 +1,64 @@
+import React from "react";
+import { TweenLite, Power4 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Create a context for SmoothScroll
+export const SmoothScrollContext = React.createContext({
+  refreshScrollTrigger: () => {}
+});
+
+export default class SmoothScroll extends React.Component {
+  state = {
+    height: window.innerHeight
+  };
+
+  ro = new ResizeObserver((elements) => {
+    for (let elem of elements) {
+      const crx = elem.contentRect;
+      this.setState({
+        height: crx.height
+      });
+    }
+    // Add this line:
+    ScrollTrigger.update();
+  });
+  componentDidMount() {
+    window.addEventListener("scroll", this.onScroll);
+    this.ro.observe(this.viewport);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
+  }
+
+  onScroll = () => {
+    TweenLite.to(this.viewport, 2, {
+      y: -window.pageYOffset,
+      ease: Power4.easeOut
+    });
+    ScrollTrigger.update(); // Ensure this line is present
+  };
+
+  // Define the refreshScrollTrigger method here
+  refreshScrollTrigger = () => {
+    ScrollTrigger.update();
+  };
+
+  render() {
+    return (
+      <SmoothScrollContext.Provider
+        value={{ refreshScrollTrigger: this.refreshScrollTrigger }}
+      >
+        <div className="viewport" ref={(ref) => (this.viewport = ref)}>
+          {this.props.children}
+        </div>
+        <div
+          ref={(ref) => (this.fake = ref)}
+          style={{
+            height: this.state.height
+          }}
+        />
+      </SmoothScrollContext.Provider>
+    );
+  }
+}

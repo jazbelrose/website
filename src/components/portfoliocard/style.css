@@ -1,0 +1,116 @@
+.portfolio-card {
+    font-size: 16px;
+    position: relative;
+    margin: 10px;
+    transition: transform 0.2s;
+    box-sizing: border-box;
+    overflow: hidden; 
+    border-radius: 8px; 
+    display: flex; /* add flex display */
+    flex-direction: column; /* stack children vertically */
+    justify-content: space-between; /* space out the top and bottom content */
+}
+
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+    object-fit: cover;
+    z-index: -1; 
+    position: relative;
+}
+
+.top-left, .bottom-left {
+    position: absolute; /* make them float over the image */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 1; /* ensure they're above the image */
+}
+
+.top-left {
+    top: 0.5em;
+    left: 1em;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0.5em; 
+    left: 3em;
+    z-index: 1;  
+}
+
+.portfolio-description {
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 50px;
+    margin-bottom: 25px;
+}
+
+    
+
+.title {
+    font-size: 4vw;
+}
+
+.subtitle {
+    font-size: 2vw;
+    opacity: 0.5;
+}
+
+.description {
+    font-size: 1.5vw;
+    margin: 0; 
+}
+
+/* Dark overlay for image */
+.portfolio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* semi-transparent black */
+    z-index: -1; /* place below content but above the image */
+}
+/* Very Large Desktops */
+@media (min-width: 2001px) and (max-width: 2400px) {
+}
+
+
+/* Large Desktops */
+@media (min-width: 1601px) and (max-width: 2000px) {
+}
+
+
+/* Desktops */
+@media (min-width: 1201px) and (max-width: 1600px) {
+}
+
+/* Tablets (Landscape) */
+@media (min-width: 992px) and (max-width: 1200px) {
+}
+
+
+/* Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+
+/* Mobile (Landscape) */
+@media (min-width: 576px) and (max-width: 767px) {
+
+}
+
+
+
+@media (max-width: 575.9px) {
+
+
+}

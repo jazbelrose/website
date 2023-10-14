@@ -2,11 +2,9 @@ import React, { useEffect, useState, Suspense } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./style.css";
 import { Herosection } from "../../components/herosection";
+import PortfolioCard from "../../components/portfoliocard";
 
-import { ContactUs } from "../contact";
-import { About } from "../about";
-import { Blog } from "../blog";
-import { Scroll } from "../scroll";
+
 
 
 import { meta } from "../../content_option";
@@ -36,7 +34,7 @@ export const Home = () => {
         <title>{meta.title} | Home </title>
         <meta name="description" content={meta.description} />
       </Helmet>
-      <div className="home-main-container ">
+     
 
         <div class="overlay">
           <div class="bar"></div>
@@ -50,12 +48,44 @@ export const Home = () => {
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
+
         <Herosection />
-        <About />
-        <Blog maxPosts={5} />
-        <Scroll />
-        <ContactUs />
+
+
+
+      <div className="portfolio-section">
+        
+        <div className="portfolio-row single-card-row">
+          <PortfolioCard 
+            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Elf.jpg" 
+            imageAlt="e.l.f. Beauty Design" 
+            title="e.l.f. Beauty"
+            subtitle="Nylon House Art Basel" 
+            description="3D Design, Immersive Digital" 
+          />
+        </div>
+        
+        
+        <div className="portfolio-row double-card-row">
+          <PortfolioCard 
+            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Now-United.jpg" 
+            imageAlt="Now United Design" 
+            title="Now United" 
+            subtitle="Logo Design" 
+            description="3D Design, Immersive Digital" 
+          />
+          <PortfolioCard 
+            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Bloom-And-Bliss.jpg" 
+            imageAlt="Bloom & Bliss Design" 
+            title="Bloom & Bliss" 
+            subtitle="Brand Identity" 
+            description="3D Animation, Branding Design" 
+          />
+        </div>
       </div>
-    </HelmetProvider>
-  );
+
+
+  
+  </HelmetProvider>
+);
 };
