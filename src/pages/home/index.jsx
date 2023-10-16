@@ -1,17 +1,17 @@
 import React, { useEffect, useState, Suspense } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./style.css";
-import { Herosection } from "../../components/herosection";
-import PortfolioCard from "../../components/portfoliocard";
-
-
-
-
 import { meta } from "../../content_option";
 import { gsap } from "gsap";
 
+import { Herosection } from "../../components/herosection";
+import PortfolioCard from "../../components/portfoliocard";
+import Ticker from "../../components/ticker";
 
-import { Typewritercomponent } from "../../components/typewriter";
+
+
+
+
 
 export const Home = () => {
 
@@ -57,10 +57,11 @@ export const Home = () => {
         
         <div className="portfolio-row single-card-row">
           <PortfolioCard 
+            className="single-card"
             imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Elf.jpg" 
             imageAlt="e.l.f. Beauty Design" 
             title="e.l.f. Beauty"
-            subtitle="Nylon House Art Basel" 
+            subtitle="Nylon House Mokibaby Art Basel" 
             description="3D Design, Immersive Digital" 
           />
         </div>
@@ -68,7 +69,7 @@ export const Home = () => {
         
         <div className="portfolio-row double-card-row">
           <PortfolioCard 
-            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Now-United.jpg" 
+            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/The+Gold+Princess.jpg" 
             imageAlt="Now United Design" 
             title="Now United" 
             subtitle="Logo Design" 
@@ -84,6 +85,49 @@ export const Home = () => {
         </div>
       </div>
 
+      <div className="ticker-section">
+
+      <Ticker />
+</div>
+ <div className="portfolio-section">
+        
+        <div className="portfolio-row single-card-row">
+          <PortfolioCard 
+            className="single-card"
+            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Pipedream-Events.jpg" 
+            imageAlt="PD Events" 
+            title="PD Events"
+            subtitle="Branding & Web Design" 
+            description="3D Design, Animation, Web, Branding Design" 
+          />
+        </div>
+        <div className="portfolio-row double-card-row">
+          <PortfolioCard 
+            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Chevron-strategy.jpg" 
+            imageAlt="Chevron" 
+            title="Chevron" 
+            subtitle="Turn it up 2023" 
+            description="3D Design, Immersive, Event Design" 
+          />
+          <PortfolioCard 
+            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Jack-Masai.jpg" 
+            imageAlt="Jack Masaï" 
+            title="Jack Masaï" 
+            subtitle="StrikeFit Paris, France" 
+            description="Branding, Photography, Styling" 
+          />
+        </div>
+        <div className="portfolio-row single-card-row">
+          <PortfolioCard 
+            className="single-card"
+            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Ghost-Circus.jpg" 
+            imageAlt="Ghost Circus Apparel" 
+            title="Ghost Circus Apparel"
+            subtitle="X by Eli James Collection" 
+            description="Branding, Photography, Web Design" 
+          />
+        </div>
+      </div>
 
   
   </HelmetProvider>

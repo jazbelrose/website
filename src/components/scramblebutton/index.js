@@ -5,9 +5,12 @@ import "./style.css";
 
 export const ScrambleButton = ({ text, to, ...props }) => {
     const btnRef = useRef(null);
+    const isHoveredRef = useRef(false);
+
     let scrambleInstance = null;
 
     const handleMouseEnter = () => {
+        isHoveredRef.current = true;
         const btnElem = btnRef.current;
         const scrambledElem = btnElem.querySelector(".scrambled");
         if (scrambledElem && !scrambleInstance) {
@@ -19,8 +22,9 @@ export const ScrambleButton = ({ text, to, ...props }) => {
                 timeOffset: 12.5,
                 chars: ["o", "¦"],
                 callback: () => {
-                    // Highlight the button text
-                    scrambledElem.style.color = "red";
+                    if (isHoveredRef.current) { // Only change color if still hovered
+                        scrambledElem.style.color = "red";
+                    }
                     scrambleInstance = null;
                 }
             });
@@ -29,6 +33,7 @@ export const ScrambleButton = ({ text, to, ...props }) => {
     };
 
     const handleMouseLeave = () => {
+        isHoveredRef.current = false;
         const scrambledElem = btnRef.current.querySelector(".scrambled");
         if (scrambledElem) {
             scrambledElem.style.color = "var(--text-color)"; // Reset the color
