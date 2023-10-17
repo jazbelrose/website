@@ -70,10 +70,10 @@ export const Home = () => {
         <div className="portfolio-row double-card-row">
           <PortfolioCard 
             imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/The+Gold+Princess.jpg" 
-            imageAlt="Now United Design" 
-            title="Now United" 
-            subtitle="Logo Design" 
-            description="3D Design, Immersive Digital" 
+            imageAlt="The Gold Princess" 
+            title="The Gold Princess" 
+            subtitle="Royal Allure Campaign" 
+            description="Branding, Photography, Styling" 
           />
           <PortfolioCard 
             imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Bloom-And-Bliss.jpg" 

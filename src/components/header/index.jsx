@@ -8,7 +8,34 @@ import Themetoggle from "../themetoggle";
 import gsap from "gsap";
 
 const SmallLinks = () => {
-  const location = useLocation(); // Use the useLocation hook inside SmallLinks
+
+  return (
+    <div className="header-wrapper">
+      <Link to="/" className="site-logo">
+        *MYLG!*
+      </Link>
+      <div className="small-links">
+        <Link to="/works" className={`small-link ${getLinkClass("/works")}`}>
+          WORKS
+        </Link>
+        <Link to="/blog" className={`small-link ${getLinkClass("/blog")}`}>
+          READS
+        </Link>
+        <Link to="/about" className={`small-link ${getLinkClass("/about")}`}>
+          ABOUT
+        </Link>
+        <Link to="/contact" className={`small-link ${getLinkClass("/contact")}`}>
+          CONTACT
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+const Headermain = () => {
+
+
+  const location = useLocation();
 
   const getLinkClass = (path) => {
     const currentPath = location.pathname.endsWith("/")
@@ -16,30 +43,10 @@ const SmallLinks = () => {
       : location.pathname;
     return currentPath.startsWith(path) ? "active-link" : "";
   };
-  return (
-    <div className="small-links">
-      <Link to="/" className="logo">
-        *MYLG!*
-      </Link>
-      <br />
 
-      <Link to="/works" className={`small-link ${getLinkClass("/works")}`}>
-        WORKS
-      </Link>
-      <Link to="/blog" className={`small-link ${getLinkClass("/blog")}`}>
-        READS
-      </Link>
-      <Link to="/about" className={`small-link ${getLinkClass("/about")}`}>
-        ABOUT
-      </Link>
-      <Link to="/contact" className={`small-link ${getLinkClass("/contact")}`}>
-        CONTACT
-      </Link>
-    </div>
-  );
-};
 
-const Headermain = () => {
+
+
   const [isActive, setActive] = useState(false);
   const menuAnimation = useRef(null); // Ref to store the GSAP timeline
 
@@ -133,18 +140,30 @@ const Headermain = () => {
   return (
     <>
       <header className={`fixed-top site__header ${isVisible ? "" : "hide"}`}>
-        <div className="d-flex align-items-center justify-content-between">
-          <div className="nav_ac">
-            <SmallLinks />
-          </div>
 
-          <div className="d-flex align-items-center">
-            <Themetoggle />
-            <button className="menu__button  nav_ac" onClick={handleToggle}>
-              {isActive ? <VscClose /> : <VscGrabber />}
-            </button>
+        <div className="nav-bar">
+          <Link to="/" className="site-logo">
+            *MYLG!*
+          </Link>
+          <div className="small-links">
+            <Link to="/works" className={`small-link ${getLinkClass("/works")}`}>
+              WORKS
+            </Link>
+            <Link to="/blog" className={`small-link ${getLinkClass("/blog")}`}>
+              READS
+            </Link>
+            <Link to="/about" className={`small-link ${getLinkClass("/about")}`}>
+              ABOUT
+            </Link>
+            <Link to="/contact" className={`small-link ${getLinkClass("/contact")}`}>
+              CONTACT
+            </Link>
           </div>
+           <button className="toggle-button" onClick={handleToggle}>
+            {isActive ? <VscClose /> : <VscGrabber />}
+          </button>
         </div>
+
 
         <div className="site__navigation">
           <div className="svg__wrapper">
@@ -209,9 +228,7 @@ const Headermain = () => {
             </div>
           </div>
         </div>
-        <div className="menu_footer d-flex flex-column flex-md-row justify-content-between align-items-md-center position-absolute w-100 p-3">
-          <p className="copyright m-0">{logotext}</p>
-        </div>
+
       </header>
     </>
   );

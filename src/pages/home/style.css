@@ -27,8 +27,8 @@
       align-items: center;
   }
   .single-card {
-    width: calc(100vw - 40px);  /* Reduce width by twice the margin */
-    height: calc(100vw - 40px); /* Keeping 1:1 aspect ratio */
+    width: calc(100vw - 20px);  /* Reduce width by twice the margin */
+    height: calc(100vw - 20px); /* Keeping 1:1 aspect ratio */
     margin: 0 20px;             /* Left and right margins */
     overflow: hidden;
   }

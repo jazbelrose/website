@@ -1,3 +1,25 @@
+
+.header-wrapper {
+  display: flex;
+  align-items: center; 
+  
+}
+
+.nav-bar {
+  padding: 10px;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  border: unset;
+  background: transparent;
+  font-weight: 900;
+  z-index: 1000;
+}
+
+.nav-bar:hover {
+  color: var(--text-color-2);
+}
+
 .site__navigation {
   z-index: 9999;
 }
@@ -11,35 +33,31 @@
   z-index: 1;
   pointer-events: none;
 }
-.span-open {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
 
 .active-link {
   color: red !important; /* Highlight active link in red */
 }
 
-.logo {
-  color: var(--text-color);
-  font-size: 30px;
-  text-decoration: none;
-  transition: color 0.2s;
-  vertical-align: middle;
-}
-.logo:hover {
+
+.site-logo:hover {
   color: red;
 }
 
 .small-links {
+  position: fixed;         
+  left: 50%;                
+  transform: translate(-50%, 0%);  
+  z-index: 1001;             
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 2px solid white;
+  overflow: hidden; 
   display: flex;
   align-items: center;
-  gap: 1vw; /* Spacing between links */
-  vertical-align: middle;
+  gap: 1vw; 
 }
 
 .small-link {
@@ -53,51 +71,62 @@
   color: red; /* Any desired hover color */
 }
 
+.site-logo {
+  margin-right: 20px; /* Add space between the logo and the links */
+  font-weight: bold; 
+  font-size: 24px;  
+  color: var(--text-color);
+  font-size: 30px;
+  text-decoration: none;
+  transition: color 0.2s;
+  
+  border: none;
+  
+}
+.logo {
+  color: var(--text-color);
+  font-size: 30px;
+  text-decoration: none;
+  transition: color 0.2s;
+  
+ 
+  
+}
 .site__header {
   top: 0px;
-  padding-left: 10px;
-  padding-right: 10px;
   width: 100%;
-  background-color: var(--bg-color);
+  background-color: black;
   transition: top 0.5s;
 }
 .hide {
   top: -100px; /* Adjust as needed */
 }
 
-.menu__button {
-  color: var(--text-color);
-}
-
-.menu__button:focus,
-.menu__button:hover {
-  color: var(--text-color);
-  box-shadow: unset;
-}
-
-.menu__button svg {
-  width: 2em;
-  height: 2em;
-  fill: var(--text-color-2);
-  color: var(--text-color-2);
-}
-
-.nav_ac {
-  padding: 0px 15px;
-  margin-bottom: 12px;
-  border: unset;
-  background: var(--primary-color);
-  font-size: 1.25rem;
+.toggle-button {
+  background-color: black;
+  border: none; /* Remove any default borders */
+  color: white; /* This sets the color of the SVG icon */
   
-  color: var(--text-color);
-  line-height: 2;
-  height: 50px;
-  font-weight: 900;
-  z-index: 1000;
 }
 
-.nav_ac:hover {
-  color: var(--text-color-2);
+.toggle-button:hover {
+  background-color: #333; /* Slightly lighter black for hover, adjust as needed */
+}
+
+.toggle-button svg {
+  fill: white;
+  color: white;
+  width: 20px; /* Adjust the size as needed */
+  height: 20px; /* Adjust the size as needed */
+}
+
+.span-open {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .site__navigation {
@@ -179,11 +208,53 @@
   color: var(--text-color-3);
 }
 
-@media (min-width: 768px) {
+
+
+/* Mobile (portrait and smaller) */
+@media (max-width: 575.9px) {
+
+  .small-links {
+    display: none;
+  }
+
+.site-logo {
+  font-size: 18px; /* slightly smaller for mobile */
+}
+
+}
+
+/* Mobile (Landscape) */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* styles for larger mobile screens in landscape */
+
+ 
+
+.site-logo {
+  font-size: 24px; /* slightly smaller for mobile */
+}
+
+.small-link {
+  font-size: 18px; /* Adjust size as needed for mobile */
+}
+
+}
+
+
+/* Tablets (Landscape) */
+@media (min-width: 768px) and (max-width: 1200px) {
+  /* styles for tablets in landscape */
+
+  .site-logo {
+    font-size: 28px;
+  }
+
+  .small-link {
+    font-size: 18px;
+  }
   .the_menu .menu_item > a {
     font-size: 4.8vw;
   }
-}
+
 
 .menu_footer {
   bottom: 0;
@@ -197,22 +268,6 @@
   margin-right: 10px;
   text-decoration: none;
 }
-
-@media (max-width: 600px) {
-  .logo {
-    font-size: 25px; /* slightly smaller for mobile */
-  }
-
-  .small-link {
-    font-size: 17px; /* Adjust size as needed for mobile */
-  }
 }
-@media (min-width: 601px) and (max-width: 1024px) {
-  .logo {
-    font-size: 28px;
-  }
 
-  .small-link {
-    font-size: 18px;
-  }
-}
+

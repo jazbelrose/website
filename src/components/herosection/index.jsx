@@ -12,15 +12,7 @@ export const Herosection = () => {
   const textRef = useRef(null);
 
   useEffect(() => {
-    gsap.from(".heading", {
-      delay: 1.2, 
-      duration: 1,
-      opacity: 0,
-      y: 50,
-      ease: "power3.out"
-    });
-
-    gsap.from(".sub-heading", {
+    gsap.from(".typewriter", {
       delay: 1.4, 
       duration: 1,
       opacity: 0,
@@ -28,13 +20,39 @@ export const Herosection = () => {
       ease: "power3.out"
     });
 
-    gsap.from(".button-container", {
+    gsap.from(".heading", {
       delay: 1.6, 
       duration: 1,
       opacity: 0,
       y: 50,
       ease: "power3.out"
     });
+
+    gsap.from(".sub-heading", {
+      delay: 1.8, 
+      duration: 1,
+      opacity: 0,
+      y: 50,
+      ease: "power3.out"
+    });
+
+    gsap.from(".button-container", {
+      delay: 2, 
+      duration: 1,
+      opacity: 0,
+      y: 50,
+      ease: "power3.out"
+    });
+
+    gsap.from(".branding-0 ", {
+      delay: 2, 
+      duration: 1,
+      opacity: 0,
+      x: 50,
+      ease: "power3.out"
+    });
+    
+
 
     gsap.to(".bar", 1.5, {
       delay: 3.5,
@@ -44,6 +62,8 @@ export const Herosection = () => {
       },
       ease: "power4.inOut"
     });
+
+    
   }, []);
 
   return (
@@ -73,15 +93,15 @@ export const Herosection = () => {
             }
           }}
         />
-        <div className="content-overlay">
-    
-        <div className="custom-column"></div>
-        <div className="typewriter-container">
-    <Typewritercomponent className="typewriter" />
-</div>
+<div className="content-overlay">
+  
+    <div className="custom-column typewriter">
+      <Typewritercomponent className="typewriter" />
+    </div>
+ 
         <div className="custom-row ">
         
-          <div className="custom-column ">
+          <div className="custom-column headings">
             <div className="text-wrapper">
               <h2 className="heading" ref={textRef}>
                 Design <br />
@@ -98,9 +118,7 @@ export const Herosection = () => {
               
             </div>
           </div>
-          <div className="custom-column">
-            
-          </div>
+     
           <div className="custom-column branding-0 ">
             <Branding0 className="branding-0-svg" />
           </div>

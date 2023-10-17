@@ -82,9 +82,7 @@ body {
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-top: 60px;
-  border-left: 10px solid var(--primary-color);
-  border-right: 10px solid var(--primary-color);
+  
   overflow-x: hidden;
   overflow-y: visible;
   

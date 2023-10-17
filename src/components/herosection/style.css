@@ -1,6 +1,11 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 .herosection-container {
   position: relative;
   width: 100vw;
+  overflow: hidden;
   height: 100vh;
   overflow: hidden;
 }
@@ -12,9 +17,6 @@
   width: 100%;
   height: 100%;
   z-index: 2;
-  padding-top: 10px;
-  padding-bottom: 100px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -25,7 +27,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   z-index: 1;
   object-fit: cover;
 }
@@ -40,7 +42,7 @@
 }
 
 .custom-column {
-  flex: 1;
+  
   background-color: transparent;
   border: none;
   padding: 0px;
@@ -58,11 +60,15 @@
 }
 
 .typewriter-container {
+  
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 20px 20px 0px 20px;
+  padding: 20px 20px 0px 0px;
+  text-align: center;
+  margin: 20px 0; 
+  min-height: 50px; 
   
 }
 
@@ -121,189 +127,46 @@ h2.heading {
 
 /* Media Queries */
 
-/* Extra Large Desktops */
-@media (min-width: 2401px) {
-  .sub-heading {
-    font-size: 1vw;
-  }
-
-  h2.heading {
-    font-size: 5vw;
-    line-height: 0.8em;
-    text-align: left;
-    padding: 0px;
-    margin-right: -3vw;
-    margin-bottom: 1.5vw;
-    letter-spacing: -0.05em;
-    position: relative;
-  }
-
-  .text-wrapper {
-    text-align: left;
-    margin: 50px;
-  }
-
-  .branding-0-svg {
-    max-width: 800px;
-    padding-bottom: 50px;
-    position: absolute; 
-    right: 3%; /* % away from right edge. You can adjust this value as needed */
-  }
-
-  .button-container {
-    justify-content: flex-start;
-  }
-  .button-container button {
-    font-size: 1.5vw;
-    
-  }
-}
-
-/* Very Large Desktops */
-@media (min-width: 2001px) and (max-width: 2400px) {
-  .sub-heading {
-    font-size: 1.5vw;
-  }
-
-  h2.heading {
-    font-size: 6vw;
-    line-height: 0.8em;
-    text-align: left;
-    padding: 0px;
-    margin-right: -3vw;
-    margin-bottom: 2.5vw;
-    letter-spacing: -0.05em;
-    position: relative;
-  }
-
-  .text-wrapper {
-    text-align: left;
-    margin: 50px;
-  }
-
-  .branding-0-svg {
-    max-width: 500px;
-    padding-bottom: 50px;
-    position: absolute; 
-    right: 3%; /* % away from right edge. You can adjust this value as needed */
-    
-    
-  }
-
-  .button-container {
-    justify-content: flex-start;
-  }
-  .button-container button {
-    font-size: 2vw;
-    
-  }
-
-}
-
-/* Large Desktops */
-@media (min-width: 1601px) and (max-width: 2000px) {
 
 
-  h2.heading {
-    font-size: 7.5vw;
-    line-height: 0.8em;
-    text-align: left;
-    padding: 0px;
-    margin-right: 2.5vw;
-    margin-bottom: 2vw;
-    letter-spacing: -0.05em;
-    position: relative;
-  }
 
-  .sub-heading {
-    font-size: 1.5vw;
-  }
 
-  .text-wrapper {
-    text-align: left;
-    padding: 100px;
-  }
-
-  .branding-0-svg {
-    max-width: 500px;
-    padding-bottom: 50px;
-  }
-
-  .button-container {
-    justify-content: flex-start;
-  }
-  .button-container button {
-    font-size: 2vw;
-    
-  }
-}
-
-/* Desktops */
-@media (min-width: 1201px) and (max-width: 1600px) {
-
-  h2.heading {
-    font-size: 7.5vw;
-    line-height: 0.8em;
-    text-align: left;
-    padding: 0px;
-    margin-right: -3vw;
-    margin-bottom: 2.5vw;
-    letter-spacing: -0.05em;
-    position: relative;
-  }
-
-  .sub-heading {
-    font-size: 1.5vw;
-    padding-bottom: 0;
-  }
-
-  .text-wrapper {
-    text-align: left;
-    margin: 50px;
-  }
-
-  .branding-0-svg {
-    max-width: 500px;
-    padding-bottom: 50px;
-  }
-
-  .button-container {
-    justify-content: flex-start;
-  }
-
-  .button-container button {
-    font-size: 2vw;
-    
-  }
-  .button-container button {
-    font-size: 2vw;
-    
-  }
-}
-
-/* Tablets (Landscape) */
-@media (min-width: 992px) and (max-width: 1200px) {
+/* Mobile (portrait and smaller) */
+@media (min-width: 0px)  {
   .custom-column {
     padding: 0;
+
+  }
+
+  .custom-row {
+    padding: 0;
+    order: 1;
+  }
+
+  .content-overlay {
+    padding: 60px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   h2.heading {
-    font-size: 10vw;
+    font-size: 12vw;
     line-height: 0.8em;
     text-align: center;
-    padding: 10px;
-    padding-bottom: 50px;
+    
     letter-spacing: -0.05em;
     position: relative;
   }
 
   .sub-heading {
-    font-size: 3vw;
-    margin: 0px 50px;
+    font-size: 4vw;
+    padding: 15px;
   }
 
   .text-wrapper {
     text-align: center;
+    padding-top: 10px;
     margin: 20px;
   }
 
@@ -317,119 +180,29 @@ h2.heading {
     align-items: center;
   }
 
-  .typewriter {
-    order: -1;
-  }
-
-  .branding-0-svg {
-    min-width: 400px;
-    padding-bottom: 50px;
-  }
-  .button-container button {
-    font-size: 3vw;
-    
-  }
-
-
-}
-
-/* Tablets (Portrait) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .custom-column {
+  .custom-row .typewriter-container{
     padding: 0;
   }
-
-  h2.heading {
-    font-size: 10vw;
-    line-height: 0.8em;
-    text-align: center;
-    padding: 10px;
-    padding-bottom: 50px;
-    letter-spacing: -0.05em;
-    position: relative;
-  }
-
-  .sub-heading {
-    font-size: 3vw;
-    margin: 0px 50px;
-  }
-
-  .text-wrapper {
-    text-align: center;
-    margin: 20px;
-  }
-
-  .custom-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .typewriter,
-  .branding-0 {
-    align-items: center;
-  }
-
   .typewriter {
     order: -1;
   }
 
   .branding-0-svg {
-    min-width: 300px;
-    padding-bottom: 50px;
-  }
-  .button-container button {
-    font-size: 2.5vw;
+   /* margin-top: -50px; */
+
+    min-width: 75px;
+    max-width: 250px;
+    
+    justify-content: center;
     
   }
 
-}
-
-
-/* Mobile (Landscape) */
-@media (min-width: 576px) and (max-width: 767px) {
-
-  .custom-column {
-    padding: 0;
-  }
-
-  h2.heading {
-    font-size: 15vw;
-    line-height: 0.8em;
-    text-align: center;
-    padding: 10px;
-    padding-bottom: 50px;
-    letter-spacing: -0.05em;
-    position: relative;
-  }
-
-  .sub-heading {
-    font-size: 5vw;
-  }
-
-  .text-wrapper {
-    text-align: center;
-    margin: 20px;
-  }
-
-  .custom-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .typewriter,
-  .branding-0 {
-    align-items: center;
-  }
-
-  .typewriter {
-    order: -1;
-  }
-
-  .branding-0-svg {
-    min-width: 300px;
+  .button-container{
+    margin: 0;
+    
   }
   .button-container button {
-    font-size: 5vw;
+    font-size: 4vw;
     
   }
 
@@ -437,7 +210,7 @@ h2.heading {
 
 
 
-@media (max-width: 575.9px) {
+@media (min-width: 576px) {
 
   .custom-column {
     padding: 0;
@@ -450,24 +223,97 @@ h2.heading {
   }
 
   .content-overlay {
+    padding: 75px 0px 20px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   h2.heading {
-    font-size: 15vw;
+    font-size: 11vw;
     line-height: 0.8em;
     text-align: center;
-    padding: 10px;
-    padding-bottom: 50px;
+    
     letter-spacing: -0.05em;
     position: relative;
   }
 
   .sub-heading {
-    font-size: 5vw;
+    font-size: 3.5vw;
     padding: 15px;
+  }
+
+  .text-wrapper {
+    text-align: center;
+    margin: 0px;
+  }
+
+  .custom-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .typewriter,
+  .branding-0 {
+    align-items: center;
+  }
+
+  .custom-row .typewriter-container{
+    padding: 0;
+  }
+  .typewriter {
+    order: -1;
+  }
+
+  .branding-0-svg {
+    margin-top: 35px; 
+    
+    min-width: 75px;
+    max-width: 250px;
+    
+    justify-content: center;
+    
+  }
+
+  .button-container{
+    margin: 0;
+    
+  }
+  .button-container button {
+    font-size: 3vw;
+    
+  }
+
+}
+
+
+/* Tablets (Portrait) */
+@media (min-width: 768px) {
+
+  
+  .content-overlay {
+    padding: 100px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-column {
+    padding: 0;
+  }
+
+  h2.heading {
+    font-size: 8vw;
+    line-height: 0.8em;
+    text-align: center;
+   padding: 20px 0px 20px 0px;
+    letter-spacing: -0.05em;
+    position: relative;
+  }
+
+  .sub-heading {
+    font-size: 2.5vw;
+    margin: 0px 50px;
   }
 
   .text-wrapper {
@@ -490,12 +336,346 @@ h2.heading {
   }
 
   .branding-0-svg {
-    min-width: 250px;
+    min-width: 300px;
+    padding-bottom: 100px;
   }
 
+  .button-container{
+    padding-bottom: 20px;
+    margin: 0;
+    justify-content: center;
+  }
   .button-container button {
-    font-size: 5vw;
+    font-size: 2vw;
     
   }
 
+}
+
+/* Tablets (Landscape) */
+@media  (min-width: 992px){
+  .content-overlay {
+    padding: 100px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-column {
+    padding: 0;
+  }
+
+  h2.heading {
+    font-size: 6vw;
+    line-height: 0.8em;
+    text-align: center;
+   padding: 20px 0px 20px 0px;
+    letter-spacing: -0.05em;
+    position: relative;
+  }
+
+  .sub-heading {
+    font-size: 2vw;
+    margin: 0px 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .text-wrapper {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .custom-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .typewriter,
+  .branding-0 {
+    
+    align-items: center;
+  }
+
+  .typewriter {
+    order: -1;
+  }
+
+  .branding-0-svg {
+    right: 0%; 
+    min-width: 300px;
+    padding-bottom: 100px;
+  }
+
+  .button-container{
+    padding-bottom: 20px;
+    margin: 0;
+    justify-content: center;
+  }
+  .button-container button {
+    font-size: 2vw;
+    
+  }
+
+}
+
+
+/* Desktops */
+@media  (min-width: 1201px) {
+  .content-overlay {
+    padding: 30px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .custom-row {
+    padding: 20px;
+    padding-bottom: 0px;
+    flex-direction: row; /* Change direction to row for side-by-side layout */
+    justify-content: space-between; /* Adjust as needed */
+}
+#typewriter{
+  padding-top: 50px;
+  padding-bottom: 0;
+}
+
+ .headings{
+  align-items: flex-start;
+  height: 100%; 
+
+  
+}
+
+.branding-0 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;  
+  
+}
+
+
+  h2.heading {
+    font-size: 7.5vw;
+    line-height: 0.8em;
+    text-align: left;
+    padding: 0px;
+   margin-top: 0;
+    margin-bottom: 2.5vw;
+    letter-spacing: -0.05em;
+    position: relative;
+    align-items: flex-start;
+    
+  }
+
+  .sub-heading {
+    font-size: 1.5vw;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  .text-wrapper {
+    text-align: left;
+    margin: 50px;
+  }
+  
+  .branding-0-svg {
+   position: relative;
+ 
+    right: 10%;
+  }
+
+  .button-container {
+    justify-content: flex-start;
+  }
+
+  .button-container button {
+    font-size: 2vw;
+    
+  }
+  .button-container button {
+    font-size: 2vw;
+    
+  }
+}
+
+
+/* Large Desktops */
+@media  (min-width: 1601px)  {
+
+
+  .content-overlay {
+   padding: 30px 0px 20px 0px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+#typewriter{
+ padding-top: 75px;
+ padding-bottom: 0;
+}
+.headings {
+
+ align-items: flex-start;
+}
+
+ h2.heading {
+   font-size: 6vw;
+   line-height: 0.8em;
+   text-align: left;
+   padding: 0px;
+  margin-top: -20px;
+   margin-bottom: 2vw;
+   letter-spacing: -0.05em;
+   position: relative;
+ }
+
+ .sub-heading {
+   font-size: 1.5vw;
+   margin-right: 100px;
+   padding-bottom: 0;
+ }
+
+ .text-wrapper {
+   text-align: left;
+   margin: 50px;
+ }
+
+ .branding-0-svg {
+   min-width: 500px;
+   padding-right: 10px;
+   padding-bottom: 50px;
+   position: relative;
+   right: 5%;
+ }
+
+ .button-container {
+   justify-content: flex-start;
+ }
+
+ .button-container .button {
+   font-size: 2vw;
+   
+ }
+ 
+}
+
+/* Very Large Desktops */
+@media  (min-width: 2001px)  {
+  .content-overlay {
+    padding: 30px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+#typewriter{
+  padding-top: 75px;
+  padding-bottom: 0;
+}
+.headings {
+
+  align-items: flex-start;
+}
+
+  h2.heading {
+    font-size: 6vw;
+    line-height: 0.8em;
+    text-align: left;
+    padding: 0px;
+   margin-top: -20px;
+    margin-bottom: 2vw;
+    letter-spacing: -0.05em;
+    position: relative;
+  }
+
+  .sub-heading {
+    font-size: 1.5vw;
+    margin-right: 100px;
+    padding-bottom: 0;
+  }
+
+  .text-wrapper {
+    text-align: left;
+    margin: 50px;
+  }
+
+  .branding-0-svg {
+    min-width: 500px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+    position: relative;
+    right: 5%;
+  }
+
+  .button-container {
+    justify-content: flex-start;
+  }
+
+  .button-container .button {
+    font-size: 2vw;
+    
+  }
+
+}
+
+/* Extra Large Desktops */
+@media (min-width: 2401px) {
+  .content-overlay {
+    padding: 30px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+#typewriter{
+  padding-top: 75px;
+  padding-bottom: 0;
+}
+.headings {
+
+  align-items: flex-start;
+}
+
+  h2.heading {
+    font-size: 5vw;
+    line-height: 0.8em;
+    text-align: left;
+    padding: 0px;
+   margin-top: -20px;
+    margin-bottom: 2vw;
+    letter-spacing: -0.05em;
+    position: relative;
+  }
+
+  .sub-heading {
+    font-size: 1vw;
+    margin-right: 100px;
+    padding-bottom: 0;
+  }
+
+  .text-wrapper {
+    text-align: left;
+    margin: 50px;
+  }
+
+  .branding-0-svg {
+    min-width: 500px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+    position: relative;
+    right: 5%;
+  }
+
+  .button-container {
+    justify-content: flex-start;
+  }
+
+  .button-container button {
+    font-size: 1vw;
+    
+  }
 }
