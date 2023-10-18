@@ -120,7 +120,9 @@ export const Herosection = () => {
           </div>
      
           <div className="custom-column branding-0 ">
+            <div className="svg-wrapper">
             <Branding0 className="branding-0-svg" />
+            </div>
           </div>
         </div>
       </div>

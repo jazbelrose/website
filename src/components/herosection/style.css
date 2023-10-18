@@ -1,6 +1,4 @@
-*, *:before, *:after {
-  box-sizing: border-box;
-}
+
 
 .herosection-container {
   position: relative;
@@ -38,11 +36,11 @@
   margin: 0;
   width: 100%;
   height: 100%;
-  
+
 }
 
 .custom-column {
-  
+
   background-color: transparent;
   border: none;
   padding: 0px;
@@ -54,22 +52,20 @@
 
 
 .typewriter {
-
+  position: relative;
   text-align: center;
 
 }
 
 .typewriter-container {
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 20px 20px 0px 0px;
   text-align: center;
-  margin: 20px 0; 
-  min-height: 50px; 
-  
+
+
 }
 
 .branding-0 {
@@ -81,10 +77,6 @@
 
 .branding-0-svg {
   min-width: 200px;
-}
-
-.branding-0-svg {
-
   width: 100%;
   height: auto;
 }
@@ -101,7 +93,7 @@
 
 }
 
-/* Optional: Style for the button */
+
 .button-container button {
   padding: 10px 20px;
   font-size: 1.2em;
@@ -109,8 +101,8 @@
   border-radius: 50px;
   background-color: transparent;
   border: 2px solid white;
-  white-space: nowrap; 
-  overflow: hidden; 
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .sub-heading {
@@ -120,9 +112,9 @@
 
 h2.heading {
   line-height: 0.9em;
- 
-  
-  
+
+
+
 }
 
 /* Media Queries */
@@ -132,7 +124,7 @@ h2.heading {
 
 
 /* Mobile (portrait and smaller) */
-@media (min-width: 0px)  {
+@media (min-width: 0px) {
   .custom-column {
     padding: 0;
 
@@ -144,23 +136,23 @@ h2.heading {
   }
 
   .content-overlay {
-    padding: 60px 0px 20px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   h2.heading {
-    font-size: 12vw;
+    font-size: 3rem;
     line-height: 0.8em;
     text-align: center;
-    
+    padding-top: 10px;
+    margin: 0px 0px 20px;
     letter-spacing: -0.05em;
     position: relative;
   }
 
   .sub-heading {
-    font-size: 4vw;
+    font-size: 1rem;
     padding: 15px;
   }
 
@@ -180,30 +172,30 @@ h2.heading {
     align-items: center;
   }
 
-  .custom-row .typewriter-container{
-    padding: 0;
-  }
+
   .typewriter {
     order: -1;
   }
-
+  .branding-0 {
+    margin-top: -45px;
+  }
   .branding-0-svg {
-   /* margin-top: -50px; */
 
-    min-width: 75px;
-    max-width: 250px;
-    
+    min-width: 150px;
+    max-width: 200px;
+
     justify-content: center;
-    
+
   }
 
-  .button-container{
+  .button-container {
     margin: 0;
-    
+
   }
+
   .button-container button {
-    font-size: 4vw;
-    
+    font-size: 1rem;
+
   }
 
 }
@@ -222,25 +214,19 @@ h2.heading {
     order: 1;
   }
 
-  .content-overlay {
-    padding: 75px 0px 20px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   h2.heading {
-    font-size: 11vw;
+    font-size: 6rem;
     line-height: 0.8em;
     text-align: center;
-    
+    padding: 30px;
     letter-spacing: -0.05em;
     position: relative;
   }
 
   .sub-heading {
-    font-size: 3.5vw;
+    font-size: 2rem;
     padding: 15px;
+    margin: 20px 40px;
   }
 
   .text-wrapper {
@@ -258,30 +244,37 @@ h2.heading {
     align-items: center;
   }
 
-  .custom-row .typewriter-container{
+  .custom-row .typewriter-container {
     padding: 0;
   }
+
   .typewriter {
     order: -1;
   }
 
-  .branding-0-svg {
-    margin-top: 35px; 
-    
-    min-width: 75px;
-    max-width: 250px;
-    
-    justify-content: center;
-    
+  .branding-0 {
+    margin: 0;
   }
 
-  .button-container{
-    margin: 0;
+  .branding-0-svg {
     
+
+    min-width: 400px;
+    
+
+    justify-content: center;
+
   }
+
+  .button-container {
+    margin: 0;
+
+  }
+
   .button-container button {
-    font-size: 3vw;
+    font-size: 1.75rem;
     
+
   }
 
 }
@@ -290,34 +283,27 @@ h2.heading {
 /* Tablets (Portrait) */
 @media (min-width: 768px) {
 
-  
-  .content-overlay {
-    padding: 100px 0px 20px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+
 
   .custom-column {
     padding: 0;
   }
 
   h2.heading {
-    font-size: 8vw;
-    line-height: 0.8em;
+
+    font-size: 8rem;
     text-align: center;
-   padding: 20px 0px 20px 0px;
-    letter-spacing: -0.05em;
     position: relative;
+   
   }
 
   .sub-heading {
-    font-size: 2.5vw;
+
     margin: 0px 50px;
   }
 
   .text-wrapper {
-    text-align: center;
+   
     margin: 20px;
   }
 
@@ -335,56 +321,42 @@ h2.heading {
     order: -1;
   }
 
-  .branding-0-svg {
-    min-width: 300px;
-    padding-bottom: 100px;
-  }
+  
 
-  .button-container{
-    padding-bottom: 20px;
+  .button-container {
+    padding-bottom: 10px;
     margin: 0;
     justify-content: center;
   }
-  .button-container button {
-    font-size: 2vw;
-    
-  }
+
+
 
 }
 
 /* Tablets (Landscape) */
-@media  (min-width: 992px){
-  .content-overlay {
-    padding: 100px 0px 20px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+@media (min-width: 992px) {
+
 
   .custom-column {
     padding: 0;
   }
 
   h2.heading {
-    font-size: 6vw;
+    margin: 10px;
+
     line-height: 0.8em;
     text-align: center;
-   padding: 20px 0px 20px 0px;
     letter-spacing: -0.05em;
     position: relative;
   }
 
   .sub-heading {
-    font-size: 2vw;
+
     margin: 0px 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0 50px;
   }
 
-  .text-wrapper {
-    text-align: center;
-    margin: 20px;
-  }
+  
 
   .custom-row {
     flex-direction: column;
@@ -394,7 +366,7 @@ h2.heading {
 
   .typewriter,
   .branding-0 {
-    
+
     align-items: center;
   }
 
@@ -403,279 +375,133 @@ h2.heading {
   }
 
   .branding-0-svg {
-    right: 0%; 
-    min-width: 300px;
-    padding-bottom: 100px;
+   
+    right: 0%;
+    min-width: 400px;
+
   }
 
-  .button-container{
-    padding-bottom: 20px;
+  .button-container {
+    padding: 50px 0;
     margin: 0;
     justify-content: center;
   }
-  .button-container button {
-    font-size: 2vw;
-    
-  }
+
+    .button-container button {
+      
+      padding: 20px 40px;
+  
+    }
+  
+
+  
 
 }
 
 
 /* Desktops */
-@media  (min-width: 1201px) {
+@media (min-width: 1201px) {
   .content-overlay {
-    padding: 30px 0px 0px 0px;
+
     display: flex;
     flex-direction: column;
-    
+
   }
+
   .custom-row {
-    padding: 20px;
+
     padding-bottom: 0px;
-    flex-direction: row; /* Change direction to row for side-by-side layout */
-    justify-content: space-between; /* Adjust as needed */
-}
-#typewriter{
-  padding-top: 50px;
-  padding-bottom: 0;
-}
+    flex-direction: row;
+    /* Change direction to row for side-by-side layout */
+    justify-content: space-between;
+    /* Adjust as needed */
+  }
 
- .headings{
-  align-items: flex-start;
-  height: 100%; 
-
+  .svg-wrapper {
+    
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    
   
-}
+  }
 
-.branding-0 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 100%;  
-  
-}
+  .branding-0 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    position: relative;
+    
 
+  }
+
+  .branding-0-svg {
+   
+    right: 0%;
+    min-width: 500px;
+
+  }
+  .headings {
+    height: 100%;
+    align-items: flex-start;
+  }
 
   h2.heading {
-    font-size: 7.5vw;
-    line-height: 0.8em;
+
+    font-size: 10rem;
     text-align: left;
-    padding: 0px;
-   margin-top: 0;
-    margin-bottom: 2.5vw;
-    letter-spacing: -0.05em;
+    margin: 0;
+    padding: 0 0 30px 0;
     position: relative;
-    align-items: flex-start;
     
+
   }
 
   .sub-heading {
-    font-size: 1.5vw;
+    font-size: 2.5rem;
     padding: 0;
     margin: 0;
     padding-bottom: 0;
+    max-width: 700px;
   }
 
   .text-wrapper {
     text-align: left;
     margin: 50px;
   }
-  
+
   .branding-0-svg {
-   position: relative;
- 
-    right: 10%;
+    position: relative;
+    
+
+
   }
 
   .button-container {
     justify-content: flex-start;
   }
 
+
   .button-container button {
-    font-size: 2vw;
-    
-  }
-  .button-container button {
-    font-size: 2vw;
-    
+    font-size: 2rem;
+
   }
 }
 
 
 /* Large Desktops */
-@media  (min-width: 1601px)  {
+@media (min-width: 1601px) {
 
+  .sub-heading {
+    margin-right: 100px;
 
-  .content-overlay {
-   padding: 30px 0px 20px 0px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
- }
+  }
 
-#typewriter{
- padding-top: 75px;
- padding-bottom: 0;
-}
-.headings {
+  
 
- align-items: flex-start;
-}
-
- h2.heading {
-   font-size: 6vw;
-   line-height: 0.8em;
-   text-align: left;
-   padding: 0px;
-  margin-top: -20px;
-   margin-bottom: 2vw;
-   letter-spacing: -0.05em;
-   position: relative;
- }
-
- .sub-heading {
-   font-size: 1.5vw;
-   margin-right: 100px;
-   padding-bottom: 0;
- }
-
- .text-wrapper {
-   text-align: left;
-   margin: 50px;
- }
-
- .branding-0-svg {
-   min-width: 500px;
-   padding-right: 10px;
-   padding-bottom: 50px;
-   position: relative;
-   right: 5%;
- }
-
- .button-container {
-   justify-content: flex-start;
- }
-
- .button-container .button {
-   font-size: 2vw;
-   
- }
+  
  
 }
 
-/* Very Large Desktops */
-@media  (min-width: 2001px)  {
-  .content-overlay {
-    padding: 30px 0px 20px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
-#typewriter{
-  padding-top: 75px;
-  padding-bottom: 0;
-}
-.headings {
-
-  align-items: flex-start;
-}
-
-  h2.heading {
-    font-size: 6vw;
-    line-height: 0.8em;
-    text-align: left;
-    padding: 0px;
-   margin-top: -20px;
-    margin-bottom: 2vw;
-    letter-spacing: -0.05em;
-    position: relative;
-  }
-
-  .sub-heading {
-    font-size: 1.5vw;
-    margin-right: 100px;
-    padding-bottom: 0;
-  }
-
-  .text-wrapper {
-    text-align: left;
-    margin: 50px;
-  }
-
-  .branding-0-svg {
-    min-width: 500px;
-    padding-right: 10px;
-    padding-bottom: 50px;
-    position: relative;
-    right: 5%;
-  }
-
-  .button-container {
-    justify-content: flex-start;
-  }
-
-  .button-container .button {
-    font-size: 2vw;
-    
-  }
-
-}
-
-/* Extra Large Desktops */
-@media (min-width: 2401px) {
-  .content-overlay {
-    padding: 30px 0px 20px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-#typewriter{
-  padding-top: 75px;
-  padding-bottom: 0;
-}
-.headings {
-
-  align-items: flex-start;
-}
-
-  h2.heading {
-    font-size: 5vw;
-    line-height: 0.8em;
-    text-align: left;
-    padding: 0px;
-   margin-top: -20px;
-    margin-bottom: 2vw;
-    letter-spacing: -0.05em;
-    position: relative;
-  }
-
-  .sub-heading {
-    font-size: 1vw;
-    margin-right: 100px;
-    padding-bottom: 0;
-  }
-
-  .text-wrapper {
-    text-align: left;
-    margin: 50px;
-  }
-
-  .branding-0-svg {
-    min-width: 500px;
-    padding-right: 10px;
-    padding-bottom: 50px;
-    position: relative;
-    right: 5%;
-  }
-
-  .button-container {
-    justify-content: flex-start;
-  }
-
-  .button-container button {
-    font-size: 1vw;
-    
-  }
-}

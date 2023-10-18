@@ -57,7 +57,7 @@ export const Home = () => {
         
         <div className="portfolio-row single-card-row">
           <PortfolioCard 
-            className="single-card"
+            className="single-card elf"
             imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Elf.jpg" 
             imageAlt="e.l.f. Beauty Design" 
             title="e.l.f. Beauty"
@@ -119,7 +119,7 @@ export const Home = () => {
         </div>
         <div className="portfolio-row single-card-row">
           <PortfolioCard 
-            className="single-card"
+            className="single-card gca"
             imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Ghost-Circus.jpg" 
             imageAlt="Ghost Circus Apparel" 
             title="Ghost Circus Apparel"

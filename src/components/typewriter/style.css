@@ -4,69 +4,34 @@
 /* The CSS file (style.css) */
 
 #typewriter {
+  margin-top: 100px;
   font-weight: 300;
+  font-size: 0.9rem;
 }
 
-/* Media queries for different screen sizes */
 
-@media (min-width: 0px)  {
 
-  
-}
 
-/* Mobile (portrait and smaller) */
-@media (max-width: 575.9px) {
+@media (min-width: 575.9px) {
   #typewriter {
-    font-size: 3vw;
+  margin-top: 120px;
+  font-size: 1.25rem;
   }
 }
 
-
-/* Mobile (Landscape) */
-@media (min-width: 576px) and (max-width: 767px) {
-  #typewriter {
-    font-size: 3vw;
-  }
-}
-
-/* Tablets (Portrait) */
-@media (min-width: 768px) and (max-width: 991px) {
-  #typewriter {
-    font-size: 2vw;
-  }
-}
-
-/* Tablets (Landscape) */
-@media (min-width: 992px) and (max-width: 1200px) {
-  #typewriter {
-    font-size: 1.5vw;
-  }
-}
 
 /* Desktops */
-@media (min-width: 1201px) and (max-width: 1600px) {
-  #typewriter {
-    font-size: 1.5vw;
-  }
+@media (min-width: 1201px) {
+  #typewriter {font-size: 2rem;
+}
 }
 
 /* Large Desktops */
-@media (min-width: 1601px) and (max-width: 2000px) {
-  #typewriter {
-    font-size: 1vw;
-  }
+@media (min-width: 1601px)  {
+  /* styles for larger desktops */
 }
 
 /* Very Large Desktops */
-@media (min-width: 2001px) and (max-width: 2400px) {
-  #typewriter {
-    font-size: 1vw;
-  }
-}
-
-/* Max width for fonts scaling with vw */
-@media (min-width: 1921px) {
-  #typewriter {
-    font-size: 1vw;
-  }
+@media (min-width: 2001px) {
+  /* styles for very large desktops */
 }
