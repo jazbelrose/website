@@ -69,28 +69,19 @@ export const Herosection = () => {
 <div className="herosection-container">
 
 <div className="video-wrapper">
-<ReactPlayer
-          className="background-video"
-          url={backgroundVideo}
-          width="100%"
-          height="100%"
-          playing
-          muted
-          loop
-          controls={false}
-          config={{
-            youtube: {
-              playerVars: {
-                autoplay: 1,
-                controls: 0,
-                modestbranding: 1,
-                showinfo: 0,
-                rel: 0,
-                disablekb: 1
-              }
-            }
-          }}
-        />
+<video 
+    className="background-video" 
+    width="100%" 
+    height="100%" 
+    autoPlay 
+    muted 
+    loop 
+    playsInline
+>
+    <source src={backgroundVideo} type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
+
         </div>
 
 

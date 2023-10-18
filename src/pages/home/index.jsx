@@ -130,7 +130,7 @@ export const Home = () => {
         </div>
       </div>
       <div className="video-container">
-      <video loop autoPlay muted>
+      <video loop autoPlay muted playsInline>
         <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/videos/liquid+bullet.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>

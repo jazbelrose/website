@@ -11,22 +11,22 @@ const Ticker = () => {
 
         const tickers = [
             gsap.to(".ticker-text-1", {
-                x: "-100%", // Since it's a single set of content
-                duration: 240,
+                x: "-50%", // Since it's a single set of content
+                duration: 480,
                 repeat: -1,
                 ease: "linear",
                 paused: true
             }),
             gsap.to(".ticker-text-2", {
-                x: "-100%",
-                duration: 200,
+                x: "-50%",
+                duration: 400,
                 repeat: -1,
                 ease: "linear",
                 paused: true
             }),
             gsap.to(".ticker-text-3", {
-                x: "-100%",
-                duration: 220,
+                x: "-50%",
+                duration: 440,
                 repeat: -1,
                 ease: "linear",
                 paused: true
@@ -56,7 +56,13 @@ const Ticker = () => {
         };
     }, []);
 
-    const repeatedContent = text => `${text} ${text} ${text} ${text}`; // Helper function to quadruple the content
+        const repeatedContent = (text, times = 4) => {
+        let result = "";
+        for (let i = 0; i < times; i++) {
+            result += text;
+        }
+        return result;
+    }
 
     return (
         <div className="ticker-container">
