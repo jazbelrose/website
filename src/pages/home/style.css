@@ -1,6 +1,6 @@
 
 .video-container {
-  height: 500px; /* Or whatever fixed height you want */
+  height: 50vh; 
   overflow: hidden; /* To hide any part of the video that exceeds the container's boundaries */
   position: relative;
 }
@@ -53,17 +53,6 @@
     
 }
 
-.single-card.tcs {
-  background-image: url('https://mylgcontent.s3.us-west-1.amazonaws.com/images/chain+copy-01.png');
-  background-size: cover;
-  background-position: center;
-}
-
-.single-card.nocco {
-  background-image: url('https://mylgcontent.s3.us-west-1.amazonaws.com/images/Nocco+vertical-01.png');
-  background-size: cover;
-  background-position: center;
-}
 
 
 
@@ -101,10 +90,29 @@
   }
 
   .single-card.tcs img,
-  .single-card.nocco img {
-    display: none;
-  }
+    .single-card.nocco img {
+        display: none !important;
+    }
+    .single-card.tcs {
+      background-image: url('https://mylgcontent.s3.us-west-1.amazonaws.com/images/chain+copy-01.png');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .single-card.nocco {
+      background-image: url('https://mylgcontent.s3.us-west-1.amazonaws.com/images/Nocco+vertical-01.png');
+      background-size: cover;
+      background-position: center;
+    }
+    
 
+.video-container video {
+    height: 100%;
+    width: auto;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%) ; /* Center the video horizontally */
+  }
 
 }
 
