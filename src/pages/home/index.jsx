@@ -129,7 +129,73 @@ export const Home = () => {
           />
         </div>
       </div>
+      <div className="video-container">
+      <video loop autoPlay muted>
+        <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/Liquid+Bullets_RS+Camera_a.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div className="portfolio-section">
+        
+        <div className="portfolio-row single-card-row">
+          <PortfolioCard 
+            className="single-card nocco"
+            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Nocco+logo-01.png" 
+            imageAlt="NOCCO" 
+            title="NOCCO"
+            subtitle="Influencers Venice Beach, CA" 
+            description="3D Design, Immersive, Branding Design" 
+          />
+        </div>
+        <div className="portfolio-row double-card-row">
+          <PortfolioCard 
+            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/keys-soulcare.jpg" 
+            imageAlt="Keys Soulcare" 
+            title="Keys Soulcare" 
+            subtitle="Haller 6 Mokibaby" 
+            description="3D Design, Immersive, Digital" 
+          />
+          <PortfolioCard 
+            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Logitech.jpg" 
+            imageAlt="Logitech" 
+            title="Logitech" 
+            subtitle="Unleash your play" 
+            description="3D Design, Graphic Design" 
+          />
+        </div>
+        <div className="portfolio-row double-card-row">
+          <PortfolioCard 
+            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/the-A.png" 
+            imageAlt="Academy of Pop" 
+            title="Academy of Pop" 
+            subtitle="Branding Mokibaby" 
+            description="3D Design, Immersive, Digital" 
+          />
+          <PortfolioCard 
+            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/barebells.jpg" 
 
+            imageAlt="Barebells" 
+            title="Barebells" 
+            subtitle="Influencer Room" 
+            
+            description="3D Design, Graphic Design" 
+          />
+        </div>
+     
+     
+
+        <div className="portfolio-row single-card-row">
+          <PortfolioCard 
+            className="single-card tcs"
+            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/the-chainsmokers.jpg" 
+            imageAlt="The Party Never Ends" 
+            title="The Party Never Ends"
+            subtitle="Chainsmokers ADPTV" 
+            description="3D Design, Immersive, Event Design" 
+          />
+        </div>
+      </div>
+    
   
   </HelmetProvider>
 );

@@ -43,7 +43,7 @@
 
 .bottom-left {
     position: absolute;
-    bottom: 0.5em; 
+    bottom: 1em; 
     left: 2.2em;
     z-index: 1;  
 }
@@ -52,7 +52,7 @@
     padding: 10px;
     border: 2px solid white;
     border-radius: 50px;
-    margin-bottom: 20px;
+    
 }
 
     
@@ -159,7 +159,7 @@
 @media (max-width: 575.9px) {
     
     .portfolio-description {
-        margin-bottom: 10px;
+        
     }
     .title {
         font-size: 6vw;

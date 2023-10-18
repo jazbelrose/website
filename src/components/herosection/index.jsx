@@ -12,14 +12,8 @@ export const Herosection = () => {
   const textRef = useRef(null);
 
   useEffect(() => {
-    gsap.from(".typewriter", {
-      delay: 1.4, 
-      duration: 1,
-      opacity: 0,
-      y: 50,
-      ease: "power3.out"
-    });
 
+    
     gsap.from(".heading", {
       delay: 1.6, 
       duration: 1,
@@ -98,6 +92,8 @@ export const Herosection = () => {
           }}
         />
         </div>
+
+
         <div className="text-overlay">
              <h2 className="heading" ref={textRef}>
               Design <br />
