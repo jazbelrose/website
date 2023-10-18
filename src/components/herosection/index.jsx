@@ -70,7 +70,11 @@ export const Herosection = () => {
     
    
 <>
+
+
 <div className="herosection-container">
+
+<div className="video-wrapper">
 <ReactPlayer
           className="background-video"
           url={backgroundVideo}
@@ -93,40 +97,23 @@ export const Herosection = () => {
             }
           }}
         />
-<div className="content-overlay">
-  
-    <div className="custom-column typewriter">
-      <Typewritercomponent className="typewriter" />
-    </div>
- 
-        <div className="custom-row ">
-        
-          <div className="custom-column headings">
-            <div className="text-wrapper">
-              <h2 className="heading" ref={textRef}>
-                Design <br />
-                That elevates <br />
-                Your brand
-              </h2>
-              <h4 className="sub-heading">
-                From the vibrant streets of Los Angeles, our design agency brings to life stunning experiential designs. We offer a platform for designers, clients, and brands to shine and elevate!
-              </h4>
-              <div className="button-container">
-              <ScrambleButton text="Get in touch → " to="/contact" />
-  
-                </div>
-              
-            </div>
-          </div>
-     
-          <div className="custom-column branding-0 ">
-            <div className="svg-wrapper">
-            <Branding0 className="branding-0-svg" />
-            </div>
-          </div>
         </div>
-      </div>
-      </div>
+        <div className="text-overlay">
+             <h2 className="heading" ref={textRef}>
+              Design <br />
+              That elevates <br />
+              Your brand
+            </h2>
+            <h4 className="sub-heading">
+              From the vibrant streets of Los Angeles, our design agency brings to life stunning experiential designs. We offer a platform for designers, clients, and brands to shine and elevate!
+            </h4>
+            <div className="button-container">
+              <ScrambleButton text="Get in touch → " to="/contact" />
+            </div>
+          
+          </div>
+  </div>
+     
       </>
     );
     

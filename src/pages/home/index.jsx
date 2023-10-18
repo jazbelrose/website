@@ -49,6 +49,7 @@ export const Home = () => {
           <div class="bar"></div>
         </div>
 
+
         <Herosection />
 
 
