@@ -1,6 +1,6 @@
 
 .video-container {
-  height: 50vh; 
+  height: 60vh; 
   overflow: hidden; /* To hide any part of the video that exceeds the container's boundaries */
   position: relative;
 }
