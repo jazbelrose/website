@@ -39,7 +39,7 @@ const Ticker = () => {
             const velocity = (currentScrollY - lastScrollY.current) / (currentTime - lastScrollTime.current);
 
             tickers.forEach(ticker => {
-                ticker.timeScale(1 + Math.abs(velocity) * 5);
+                ticker.timeScale(1 + Math.abs(velocity) * 10);
             });
 
             lastScrollY.current = currentScrollY;
