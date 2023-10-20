@@ -4,49 +4,17 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./style.css";
 import { meta } from "../../content_option";
 import { gsap } from "gsap";
-
 import { Herosection } from "../../components/herosection";
+import { BlogEntry } from '../../components/blogentry';  
+
 import PortfolioCard from "../../components/portfoliocard";
 import Ticker from "../../components/ticker";
-import ScrambleButton from '../../components/scramblebutton';  // Adjust the path accordingly
+
+
 
 import allBlogPosts from '../blog/blogposts/allBlogPosts.json';  
 
 
-
-const BlogEntry = ({ post }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-      <div className="blog-entry">
-
-          <div className="blog-entry-row">
-              <div className="blog-entry-date">
-                  <span>{post.date}</span>
-              </div>
-              <div className="blog-entry-title">
-                  <span>{post.title}</span>
-              </div>
-              <div className="blog-entry-toggle">
-                  <button onClick={() => setIsOpen(!isOpen)}>+</button>
-              </div>
-              
-              </div>
-              {isOpen && 
-            <>
-              <p className="blog-entry-description">{post.description}</p>
-              <div className="button-container">
-                <ScrambleButton text="Read More → " to={`/blog/${post.slug}`} />
-              </div>
-            </>
-          }
-         
-          <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
-
-          
-      </div>
-  );
-};
 
 
 export const Home = () => {
@@ -165,6 +133,8 @@ export const Home = () => {
           />
         </div>
       </div>
+
+      
       <div className="video-container">
       <video loop autoPlay muted playsInline>
         <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/videos/liquid+bullet.mp4" type="video/mp4" />

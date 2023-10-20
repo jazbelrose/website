@@ -1,18 +1,22 @@
 
 .video-container {
+
   height: 60vh; 
   overflow: hidden; /* To hide any part of the video that exceeds the container's boundaries */
   position: relative;
 }
 
 .video-container video {
-  width: 100%; 
+  
+  max-width: 1920px;  
   height: auto; 
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* Center the video */
 }
+
+
 .portfolio-section {
   margin: 20px auto; /* Center the section horizontally */
   width: 1920px;
@@ -52,119 +56,6 @@
    
     
 }
-.blog-section h2 {
-  
-  font-size: 10rem; 
-  padding-bottom: 30px; /* Adjust this value as per your requirement */
-}
-.blog-section {
-  width: 1920px;
-  max-width: 100%;
-  margin: 0 auto;  /* Center the section horizontally */
-  padding: 20px 20px; /* Add some vertical padding */
-}
-
-.blog-grid {
-  display: flex;
-  flex-direction: column; /* Stack blog entries vertically */
-  gap: 20px; /* Spacing between blog entries */
-}
-
-.blog-entry {
-  display: flex;
-  flex-direction: column; /* Change from the default "row" to "column" */
-  justify-content: space-between;
- 
-  padding: 20px;
-  box-sizing: border-box;
-}
-.blog-entry-row {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.blog-entry-date {
-  white-space: nowrap;
-  font-size: 3rem;
-  display: flex;
-  align-items: center; /* Vertically center the content */
-  justify-content: flex-start; /* Align content to the left */
-}
-
-.blog-entry-title {
-  white-space: nowrap;
-  font-size: 3rem;
-  display: flex;
-  align-items: center; /* Vertically center the content */
-  justify-content: center; /* Center content */
-}
-.blog-entry-toggle {
-  display: flex;
-  align-items: center; /* Vertically center the content */
-  justify-content: flex-end; /* Align content to the right */
-}
-.blog-entry-description {
-  opacity: 0.7; 
-  background-color: transparent;
-  font-size: 2rem;
-  text-align: center;
-  margin: 20px auto;  /* Center the description horizontally */
-  padding: 10px;
-  box-sizing: border-box;
-  max-width: 800px;   /* Adjust this value as per your requirement */
-}
-
-.blog-entry-date, .blog-entry-title, .blog-entry-toggle {
-  flex: 1; /* Ensure each part of the entry takes up equal width */
-  padding: 0 10px; /* Add some horizontal padding to each section */
-}
-
-.blog-entry-button {
-  padding: 10px 20px;
-  font-size: 1.2em;
-  color: #fff;
-  border-radius: 50px;
-  background-color: transparent;
-  border: 2px solid white;
-  white-space: nowrap;
-  display: block;  
-  margin: 20px auto;  
- 
-}
-
-.button-container {
-  padding-bottom: 20px;
-  display: flex;
-  justify-content: center; /* Horizontally center the content */
-  align-items: center;     /* Vertically center the content */
-}
-.button-container a {
-  text-decoration: none;
-}
-
-
-.blog-entry-toggle button {
-  background-color: transparent;
-  border: none;
-  font-size: 3rem;  
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  color: inherit;
-  outline: none;
-  transition: transform 0.3s ease-in-out;  /* Ensure transform has a smooth transition */
-}
-.blog-entry-toggle button:hover {
-  transform: rotate(30deg); /* Rotate the button by 15 degrees on hover */
-}
-
-
-.blog-entry.open p {
-  display: block;
-}
-
 
 
 @media (max-width: 767px) {
