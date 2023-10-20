@@ -5,7 +5,7 @@ import { NavigationDirectionContext } from "../../components/NavigationDirection
 import LeftArrow from "../../assets/svg/chevron-left.svg";
 import RightArrow from "../../assets/svg/chevron-right.svg";
 
-const BlogPostDetail = () => {
+const BlogPost = () => {
   
   const { setDirection } = React.useContext(NavigationDirectionContext);
   const { postSlug } = useParams();
@@ -59,4 +59,4 @@ const BlogPostDetail = () => {
   );
 };
 
-export default BlogPostDetail;
+export default BlogPost;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ScrambleText from "scramble-text";
 import "./style.css";  
 
-export const ScrambleButton = ({ text, to, ...props }) => {
+export const ScrambleButton = ({ text, to, className, ...props }) => {
     const btnRef = useRef(null);
     const isHoveredRef = useRef(false);
 
@@ -57,6 +57,7 @@ export const ScrambleButton = ({ text, to, ...props }) => {
     return (
         <Link to={to}>
         <button
+            className={`scramble-button ${className}`} 
             ref={btnRef}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
