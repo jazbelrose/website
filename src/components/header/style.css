@@ -1,4 +1,13 @@
+.menu{
+  padding-left: 0;
+  padding-top: 10vh;
+    padding-bottom: 10vh;
+}
 
+
+.menu-container {
+  margin-left: 33.3333%;
+}
 .header-wrapper {
   display: flex;
   align-items: center; 
@@ -20,11 +29,11 @@
   color: var(--text-color-2);
 }
 
-.site__navigation {
+.nav-bar-menu {
   z-index: 9999;
 }
 
-.svg__wrapper {
+.svg-wrapper {
   position: absolute;
   top: 0;
   right: 0;
@@ -43,7 +52,7 @@
   color: red;
 }
 
-.small-links {
+.nav-links {
   position: fixed;         
   left: 50%;                
   transform: translate(-50%, 0%);  
@@ -60,14 +69,14 @@
   gap: 1vw; 
 }
 
-.small-link {
+.nav-link {
   font-size: 20px; /* Adjust size as needed */
   color: var(--text-color);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-.small-link:hover {
+.nav-link:hover {
   color: red; /* Any desired hover color */
 }
 
@@ -92,10 +101,10 @@
  
   
 }
-.site__header {
+.header {
   top: 0px;
   width: 100%;
-  background-color: black;
+  background-color: var(--bg-color);
   transition: top 0.5s;
 }
 .hide {
@@ -103,17 +112,19 @@
 }
 
 .toggle-button {
-  background-color: black;
+  
+  background-color: var(--bg-color);
   border: none; /* Remove any default borders */
   color: white; /* This sets the color of the SVG icon */
   
 }
 
 .toggle-button:hover {
-  background-color: #333; /* Slightly lighter black for hover, adjust as needed */
+  background-color: transparent; /* Slightly lighter black for hover, adjust as needed */
 }
 
 .toggle-button svg {
+  
   fill: white;
   color: white;
   width: 20px; /* Adjust the size as needed */
@@ -129,7 +140,7 @@
   z-index: 0;
 }
 
-.site__navigation {
+.nav-bar-menu {
   height: 100%;
   left: 0;
   overflow: hidden;
@@ -139,7 +150,7 @@
   pointer-events: none;
 }
 
-.site__navigation.opened {
+.nav-bar-menu.opened {
   pointer-events: all;
 }
 
@@ -151,28 +162,17 @@
   visibility: visible;
 }
 
-.site__navigation .main__menu_ul li {
-  list-style: none;
-  margin: 10px 0;
-}
 
-.site__navigation .main__menu_ul li a {
-  color: var(--text-color);
-  display: block;
-  font-size: 2.5rem;
-  text-decoration: none;
-}
-
-.bg__menu {
+.menu-bg {
   position: fixed;
   left: 0px;
   top: 0px;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.1); 
+  background-color: var(--bg-color); 
 }
 
-.menu__wrapper {
+.menu-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
@@ -181,21 +181,16 @@
 }
 
 @media (min-width: 992px) {
-  .menu__container {
-    margin-left: 33.3333%;
-  }
-  .the_menu {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-  }
+
+
 }
 
-.the_menu .menu_item > a {
+.menu .menu-item > a {
   opacity: 0;
   transform: translateY(-20px);
   color: var(--text-color-2);
-  line-height: 1;
-  font-size: 2rem;
+  line-height: 0.8;
+  font-size: 6vw;
   display: inline-block;
   position: relative;
   transition: color 250ms cubic-bezier(0, 0, 0.58, 1) 0s;
@@ -204,7 +199,7 @@
   z-index: 5;
 }
 
-.the_menu .menu_item > a:hover {
+.menu .menu-item > a:hover {
   color: var(--text-color-3);
 }
 
@@ -213,7 +208,7 @@
 /* Mobile (portrait and smaller) */
 @media (max-width: 575.9px) {
 
-  .small-links {
+  .nav-links {
     display: none;
   }
 
@@ -233,7 +228,7 @@
   font-size: 24px; /* slightly smaller for mobile */
 }
 
-.small-link {
+.nav-link {
   font-size: 18px; /* Adjust size as needed for mobile */
 }
 
@@ -248,22 +243,19 @@
     font-size: 28px;
   }
 
-  .small-link {
+  .nav-link {
     font-size: 18px;
   }
-  .the_menu .menu_item > a {
-    font-size: 4.8vw;
-  }
+ 
 
-
-.menu_footer {
+.menu-footer {
   bottom: 0;
   font-family: Raleway;
   font-size: 14px;
   background: var(--primary-color);
 }
 
-.menu_footer a {
+.menu-footer a {
   color: var(--text-color-2);
   margin-right: 10px;
   text-decoration: none;

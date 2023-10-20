@@ -3,8 +3,7 @@ import { useLocation } from "react-router-dom";
 import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom"; // Modified import
-import { logotext, socialprofils } from "../../content_option";
-import Themetoggle from "../themetoggle";
+
 import gsap from "gsap";
 
 const SmallLinks = () => {
@@ -14,17 +13,17 @@ const SmallLinks = () => {
       <Link to="/" className="site-logo">
         *MYLG!*
       </Link>
-      <div className="small-links">
-        <Link to="/works" className={`small-link ${getLinkClass("/works")}`}>
+      <div className="nav-links">
+        <Link to="/works" className={`nav-link ${getLinkClass("/works")}`}>
           WORKS
         </Link>
-        <Link to="/blog" className={`small-link ${getLinkClass("/blog")}`}>
+        <Link to="/blog" className={`nav-link ${getLinkClass("/blog")}`}>
           READS
         </Link>
-        <Link to="/about" className={`small-link ${getLinkClass("/about")}`}>
+        <Link to="/about" className={`nav-link ${getLinkClass("/about")}`}>
           ABOUT
         </Link>
-        <Link to="/contact" className={`small-link ${getLinkClass("/contact")}`}>
+        <Link to="/contact" className={`nav-link ${getLinkClass("/contact")}`}>
           CONTACT
         </Link>
       </div>
@@ -87,12 +86,12 @@ const Headermain = () => {
         attr: { d: "M0 502S175 272 500 272s500 230 500 230V0H0Z" },
         ease: "Power2.easeIn",
         onStart: () => {
-          document.querySelector(".site__navigation").classList.add("opened");
-          gsap.set(".site__navigation", { visibility: "visible" });
+          document.querySelector(".nav-bar-menu").classList.add("opened");
+          gsap.set(".nav-bar-menu", { visibility: "visible" });
         },
         onReverseComplete: () => {
           document
-            .querySelector(".site__navigation")
+            .querySelector(".nav-bar-menu")
             .classList.remove("opened");
         }
       })
@@ -103,7 +102,7 @@ const Headermain = () => {
         ease: "Power2.easeOut"
       })
 
-      .to(".the_menu .menu_item > a", {
+      .to(".menu .menu-item > a", {
         duration: 0.5,
         opacity: 1,
         transform: "translateY(0)",
@@ -139,23 +138,23 @@ const Headermain = () => {
 
   return (
     <>
-      <header className={`fixed-top site__header ${isVisible ? "" : "hide"}`}>
+      <header className={`fixed-top header ${isVisible ? "" : "hide"}`}>
 
         <div className="nav-bar">
           <Link to="/" className="site-logo">
             *MYLG!*
           </Link>
-          <div className="small-links">
-            <Link to="/works" className={`small-link ${getLinkClass("/works")}`}>
+          <div className="nav-links">
+            <Link to="/works" className={`nav-link ${getLinkClass("/works")}`}>
               WORKS
             </Link>
-            <Link to="/blog" className={`small-link ${getLinkClass("/blog")}`}>
+            <Link to="/blog" className={`nav-link ${getLinkClass("/blog")}`}>
               READS
             </Link>
-            <Link to="/about" className={`small-link ${getLinkClass("/about")}`}>
+            <Link to="/about" className={`nav-link ${getLinkClass("/about")}`}>
               ABOUT
             </Link>
-            <Link to="/contact" className={`small-link ${getLinkClass("/contact")}`}>
+            <Link to="/contact" className={`nav-link ${getLinkClass("/contact")}`}>
               CONTACT
             </Link>
           </div>
@@ -165,8 +164,8 @@ const Headermain = () => {
         </div>
 
 
-        <div className="site__navigation">
-          <div className="svg__wrapper">
+        <div className="nav-bar-menu">
+          <div className="svg-wrapper">
             <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
               <path
                 class="span-open"
@@ -176,10 +175,10 @@ const Headermain = () => {
             </svg>
           </div>
 
-          <div className="menu__wrapper">
-            <div className="menu__container p-3">
-              <ul className="the_menu">
-                <li className="menu_item ">
+          <div className="menu-wrapper">
+            <div className="menu-container">
+              <ul className="menu">
+                <li className="menu-item ">
                   <Link
                     onClick={handleToggle}
                     to="/" // Updated path
@@ -188,7 +187,7 @@ const Headermain = () => {
                     HOME
                   </Link>
                 </li>
-                <li className="menu_item">
+                <li className="menu-item">
                   <Link
                     onClick={handleToggle}
                     to="/works" // Updated path
@@ -197,7 +196,7 @@ const Headermain = () => {
                     WORKS
                   </Link>
                 </li>
-                <li className="menu_item">
+                <li className="menu-item">
                   <Link
                     onClick={handleToggle}
                     to="/blog" // Updated path
@@ -206,7 +205,7 @@ const Headermain = () => {
                     READS
                   </Link>
                 </li>
-                <li className="menu_item">
+                <li className="menu-item">
                   <Link
                     onClick={handleToggle}
                     to="/about" // Updated path
@@ -215,7 +214,7 @@ const Headermain = () => {
                     ABOUT
                   </Link>
                 </li>
-                <li className="menu_item">
+                <li className="menu-item">
                   <Link
                     onClick={handleToggle}
                     to="/contact" // Updated path

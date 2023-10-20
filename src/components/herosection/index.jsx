@@ -8,7 +8,7 @@ import { ReactComponent as Branding0 } from "../../assets/svg/Branding3.svg";
 import backgroundVideo from '../../assets/videos/video.mp4';
 import "./style.css";
 
-export const Herosection = () => {
+export const HeroSection = () => {
   const textRef = useRef(null);
 
   useEffect(() => {

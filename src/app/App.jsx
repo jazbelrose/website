@@ -14,9 +14,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AppRoutes from "./routes";
 import Headermain from "../components/header/";
 
-import { Home } from "../pages/home";
+
 import {
-  NavigationDirectionContext,
+ 
   NavigationDirectionProvider
 } from "../components/NavigationDirectionProvider";
 

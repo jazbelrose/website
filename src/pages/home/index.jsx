@@ -4,12 +4,14 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./style.css";
 import { meta } from "../../content_option";
 import { gsap } from "gsap";
-import { Herosection } from "../../components/herosection";
+import { HeroSection } from "../../components/herosection";
+import { InfoSection } from "../../components/infosection";
 import { BlogEntry } from '../../components/blogentry';  
 
 import PortfolioCard from "../../components/portfoliocard";
-import Ticker from "../../components/ticker";
 
+import Ticker from "../../components/ticker";
+import SingleTicker from "../../components/singleticker";
 
 
 import allBlogPosts from '../blog/blogposts/allBlogPosts.json';  
@@ -54,11 +56,19 @@ export const Home = () => {
         </div>
 
 
-        <Herosection />
+        <HeroSection />
 
 
+        <div className="work-header">
+        <h2>Work</h2>
+        <span className="arrow-down">↓</span>
+    </div>
 
+
+    
       <div className="portfolio-section">
+      
+
         
         <div className="portfolio-row single-card-row">
           <PortfolioCard 
@@ -203,14 +213,28 @@ export const Home = () => {
      
      
       </div>
-      <div className="blog-section">
-    <h2>Blog</h2>
+
+  <div className="blog-section">
+      <div className="blog-header">
+        <h2>Blog</h2>
+        <span className="arrow-down">↓</span>
+    </div>
     <div className="blog-grid">
         {allBlogPosts.slice(0, 5).map((post, index) => (
             <BlogEntry key={index} post={post} />
         ))}
     </div>
 </div>
+
+    
+    <InfoSection />
+    <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
+
+    <div className="single-ticker-section">
+
+<SingleTicker />
+</div>
+
   
   </HelmetProvider>
 );

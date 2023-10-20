@@ -1,0 +1,146 @@
+.info-section p {
+    font-size: 1.5rem; /* Adjust this value based on your preference */
+}
+
+.club-title {
+    font-size: 2.5rem; 
+    padding-bottom: 20px;
+}
+
+.info-section {
+    display: flex;
+    justify-content: center; /* Center the entire section */
+    
+    text-align: center;
+    padding: 20px;
+    max-width: 1920px; /* Max width as mentioned before */
+    margin: 0 auto; /* Centering the section if the screen is wider than 1920px */
+    padding-bottom: 100px;
+}
+
+.info-column {
+    flex: 1; /* This ensures all columns take up equal width */
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content container vertically */
+    align-items: center; /* Center the content container horizontally */
+ 
+}
+
+
+.info-column .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the inner content vertically */
+    align-items: center; /* Center the inner content horizontally */
+    width: 100%; /* Take full width of parent column */
+}
+
+
+
+
+.info-header h2 {
+    font-size: 10rem; 
+  padding-bottom: 30px;
+}
+
+.newsletter {
+    margin-top: 20px;
+}
+
+.newsletter input {
+    padding: 10px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.consent-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.consent-container input[type="checkbox"] {
+    margin-right: 10px; /* Add some space between the checkbox and the label */
+}
+
+.consent-container label {
+    font-size: 0.9rem; 
+    cursor: pointer;
+    margin: 0; /* Remove any default margins */
+}
+
+
+.touch-btn {
+    margin-top: 75px; 
+    padding: 10px 20px;
+    font-size: 3em;
+    color: #fff;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+    white-space: nowrap;
+}
+.touch-btn-subscribe {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+    white-space: nowrap;
+}
+.info-row {
+    margin-bottom: 10px;
+}
+
+
+
+.first-column .content-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+.third-column .content-container {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* Styling for the consent checkbox and label */
+.consent-container {
+    margin-top: 20px;
+}
+
+.consent-container label {
+    font-size: 0.9rem; 
+    display: block;
+    cursor: pointer;
+}
+
+
+.info-address {
+    max-width: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;  /* To vertically center align SVG and text */
+}
+
+.address-svg {
+    width: 600px;  /* Adjust this for desired width */
+    height: 600px; /* Adjust this for desired height */
+    margin-left: 10px;  /* Adjust for space between SVG and text */
+}
+
+.address-text {
+    margin: 0;
+}
+#data-consent:checked {
+    background-color: red;
+
+}
+    #data-consent:checked + label {
+        color: red;
+    }

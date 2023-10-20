@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ScrambleText from "scramble-text";
 import "./style.css";  
 
-export const ScrambleButton = ({ text, to, className, ...props }) => {
+export const ScrambleButton = ({ text, to, className, submitMode,  ...props }) => {
     const btnRef = useRef(null);
     const isHoveredRef = useRef(false);
 
@@ -54,17 +54,33 @@ export const ScrambleButton = ({ text, to, className, ...props }) => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+    
+    if (submitMode) {
+        return (
+            <button 
+                type="submit" 
+                className={`scramble-button ${className}`} 
+                ref={btnRef}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                {...props}
+            >
+                <span className="scrambled">{text}</span>
+            </button>
+        );
+    }
+
     return (
         <Link to={to}>
-        <button
-            className={`scramble-button ${className}`} 
-            ref={btnRef}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            {...props}
-        >
-             <span className="scrambled">{text}</span>
-        </button>
+            <button 
+                className={`scramble-button ${className}`} 
+                ref={btnRef}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                {...props}
+            >
+                <span className="scrambled">{text}</span>
+            </button>
         </Link>
     );
 };

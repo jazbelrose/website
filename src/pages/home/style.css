@@ -1,3 +1,24 @@
+.blog-header, .work-header, .info-header {
+  display: flex;
+  justify-content: space-between; /* pushes children to extreme ends */
+  align-items: center;
+  padding: 30px 20px; /* This gives space on the sides. Adjust if needed. */
+  max-width: 1920px; /* Set max-width */
+  margin: 0 auto; /* Center the container */
+}
+
+
+.work-header h2 {
+  font-size: 10rem; 
+  padding-bottom: 30px;
+}
+
+.info-header h2 {
+  font-size: 10rem; 
+  padding-bottom: 30px;
+}
+
+
 
 .video-container {
 
@@ -56,6 +77,14 @@
    
     
 }
+
+
+
+
+.arrow-down, .work-header span {
+  font-size: 12rem; /* Adjust as needed */
+}
+
 
 
 @media (max-width: 767px) {
@@ -120,3 +149,7 @@
 
   
 
+.single-ticker-section{
+  margin-bottom: 30px;
+  
+}
