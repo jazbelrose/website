@@ -61,7 +61,7 @@ export const Home = () => {
 
         <div className="work-header">
         <h2>Work</h2>
-        <span className="arrow-down">↓</span>
+        <span className="arrow-down work-arrow">↓</span>
     </div>
 
 
@@ -217,7 +217,7 @@ export const Home = () => {
   <div className="blog-section">
       <div className="blog-header">
         <h2>Blog</h2>
-        <span className="arrow-down">↓</span>
+        <span className="arrow-down blog-arrow">↓</span>
     </div>
     <div className="blog-grid">
         {allBlogPosts.slice(0, 5).map((post, index) => (
@@ -225,7 +225,7 @@ export const Home = () => {
         ))}
     </div>
 </div>
-
+<hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
     
     <InfoSection />
     <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />

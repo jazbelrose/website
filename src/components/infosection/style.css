@@ -1,48 +1,51 @@
 .info-section p {
-    font-size: 1.5rem; /* Adjust this value based on your preference */
+    font-size: 1.5rem;
+    /* Adjust this value based on your preference */
 }
 
 .club-title {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
     padding-bottom: 20px;
 }
 
 .info-section {
+    overflow: hidden;
     display: flex;
-    justify-content: center; /* Center the entire section */
-    
+    justify-content: center;
     text-align: center;
-    padding: 20px;
-    max-width: 1920px; /* Max width as mentioned before */
-    margin: 0 auto; /* Centering the section if the screen is wider than 1920px */
+    max-width: 1920px;
+    margin: 0 auto;
     padding-bottom: 100px;
 }
 
 .info-column {
-    flex: 1; /* This ensures all columns take up equal width */
+    flex: 1;
     padding: 0 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the content container vertically */
-    align-items: center; /* Center the content container horizontally */
- 
+    justify-content: center;
+    align-items: center;
+
 }
 
 
 .info-column .content-container {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the inner content vertically */
-    align-items: center; /* Center the inner content horizontally */
-    width: 100%; /* Take full width of parent column */
+    justify-content: center;
+    /* Center the inner content vertically */
+    align-items: center;
+    /* Center the inner content horizontally */
+    width: 100%;
+    /* Take full width of parent column */
 }
 
 
 
 
 .info-header h2 {
-    font-size: 10rem; 
-  padding-bottom: 30px;
+    font-size: 10rem;
+    padding-bottom: 30px;
 }
 
 .newsletter {
@@ -50,29 +53,15 @@
 }
 
 .newsletter input {
+    font-size: 0.9rem;
     padding: 10px;
     margin-right: 10px;
     flex: 1;
 }
 
-.consent-container {
-    display: flex;
-    align-items: center; /* Align items vertically */
-}
-
-.consent-container input[type="checkbox"] {
-    margin-right: 10px; /* Add some space between the checkbox and the label */
-}
-
-.consent-container label {
-    font-size: 0.9rem; 
-    cursor: pointer;
-    margin: 0; /* Remove any default margins */
-}
-
 
 .touch-btn {
-    margin-top: 75px; 
+    margin-top: 20px;
     padding: 10px 20px;
     font-size: 3em;
     color: #fff;
@@ -81,6 +70,7 @@
     border: 2px solid white;
     white-space: nowrap;
 }
+
 .touch-btn-subscribe {
     padding: 10px 20px;
     font-size: 1em;
@@ -89,6 +79,12 @@
     background-color: transparent;
     border: 2px solid white;
     white-space: nowrap;
+}
+
+
+.info-introtext {
+
+    padding-bottom: 10px;
 }
 .info-row {
     margin-bottom: 10px;
@@ -103,44 +99,155 @@
 
 
 .third-column .content-container {
-    max-width: 500px;
+    margin-left: 50px;
     display: flex;
     flex-direction: column;
-    
-}
 
-/* Styling for the consent checkbox and label */
-.consent-container {
-    margin-top: 20px;
-}
 
-.consent-container label {
-    font-size: 0.9rem; 
-    display: block;
-    cursor: pointer;
 }
-
 
 .info-address {
-    max-width: 350px;
+
     position: relative;
     display: flex;
-    align-items: center;  /* To vertically center align SVG and text */
+    align-items: center;
+    /* To vertically center align SVG and text */
 }
 
 .address-svg {
-    width: 600px;  /* Adjust this for desired width */
-    height: 600px; /* Adjust this for desired height */
-    margin-left: 10px;  /* Adjust for space between SVG and text */
+    width: 300px;
+    /* Adjust this for desired width */
+    height: 300px;
+    /* Adjust this for desired height */
+    margin-left: -100px;
+    /* Adjust for space between SVG and text */
 }
 
 .address-text {
     margin: 0;
 }
-#data-consent:checked {
-    background-color: red;
 
-}
-    #data-consent:checked + label {
-        color: red;
+@media (max-width: 1601px) {
+
+    .info-section{
+        padding: 0px
     }
+
+
+    .club-title {
+        font-size: 1.5rem;
+        padding-bottom: 0px;
+    }
+
+    .club-description {
+        margin: 5px;
+    }
+
+    .touch-btn-subscribe {
+        padding: 5px 10px;
+    }
+
+    .newsletter {
+        margin-top: 0px;
+    }
+
+    .newsletter input {
+        font-size: 0.8rem;
+        padding: 0 0 0 5px;
+        margin: 0 5px 10px 0;
+        flex: 1;
+    }
+
+    .first-column .content-container {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .second-column {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .info-section p {
+        font-size: 1rem;
+    }
+
+    .info-header h2 {
+        font-size: 8rem;
+    }
+
+    .touch-btn {
+        font-size: 1.5em;
+    }
+
+    .address-svg {
+        width: 210px;
+        height: 250px;
+        margin-left: -50px;
+    }
+}
+
+@media (max-width: 767px) {
+
+  
+    
+    .info-section {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .info-column {
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    .info-section p {
+        font-size: 1.1rem;
+    }
+
+    .club-title {
+        font-size: 2.5rem;
+    }
+    .club-description {
+        margin: 20px;
+    }
+    .newsletter input {
+        font-size: 0.8rem;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    .touch-btn-subscribe {
+        padding: 10px 20px;
+    }
+
+    .info-header h2 {
+        font-size: 6rem;
+    }
+    .info-header {}
+
+    .touch-btn {
+        font-size: 2em;
+    }
+
+   
+
+    .consent-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .consent-container input[type="checkbox"] {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .first-column .content-container,
+    .third-column .content-container {
+        max-width: 100%;
+    }
+
+    .address-svg {
+        width: 200px;
+        height: 200px;
+    }
+}

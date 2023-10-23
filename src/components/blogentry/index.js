@@ -7,6 +7,7 @@ export const BlogEntry = ({ post }) => {
 
   return (
       <div className="blog-entry">
+      <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
           <div className="blog-entry-row">
               <div className="blog-entry-date">
                   <span>{post.date}</span>
@@ -26,7 +27,7 @@ export const BlogEntry = ({ post }) => {
               </div>
             </>
           }
-          <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
+          
       </div>
   );
 };

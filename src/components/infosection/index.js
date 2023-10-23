@@ -82,40 +82,34 @@ export const InfoSection = () => {
   <ScrambleButton text="Subscribe" className="touch-btn-subscribe" submitMode={true} />
 </form>
 
-        <div className="consent-container">
-            <input type="checkbox" id="data-consent" />
-            <label htmlFor="data-consent">
-                CONSENT TO THE PROCESSING OF YOUR PERSONAL DATA FOR MARKETING AND PROFILING PURPOSES
-            </label>
-        </div>
+       
     </div>
 </div>
            {/* Second Column */}
 <div className="info-column second-column">
-
+<div className="info-introtext">
     <Introtext />
+    </div>
     <ScrambleButton text="Get in Touch → " to="/contact" className="touch-btn" />
 
         
 </div>
 
-            {/* Third Column */}
+{/* Third Column */}
 <div className="info-column third-column">
     <div className="content-container">
-    <div className="info-address">
-    <p className="address-text">
-        OFFICE
-        S BROADWAY
-        DOWNTOWN
-        LOS ANGELES
-        PARIS FRANCE
-        310.002.4217
-    </p>
-    <Snap className="address-svg" />
-</div>
+        <div className="info-address">
+            <p className="address-text">
+                400 S BROADWAY<br />
+                LOS ANGELES<br />
+                PARIS FRANCE<br />
+                310.002.4217
+            </p>
+            <Snap className="address-svg" />
+        </div>
         <div className="info-contact">
             <p className="contact-phone">
-           
+                {/* You haven't provided any content for this. Add content as needed. */}
             </p>
         </div>
     </div>

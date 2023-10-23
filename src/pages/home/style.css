@@ -81,13 +81,24 @@
 
 
 
-.arrow-down, .work-header span {
-  font-size: 12rem; /* Adjust as needed */
+.arrow-down{
+  font-size: 12rem;
 }
 
 
 
 @media (max-width: 767px) {
+
+
+  .work-header h2 {
+    font-size: 6rem;
+    padding-bottom: 0px;
+}
+
+.arrow-down {
+  font-size: 4rem;
+}
+
   .portfolio-row {
     flex-direction: column;
     align-items: center;
@@ -153,3 +164,4 @@
   margin-bottom: 30px;
   
 }
+
