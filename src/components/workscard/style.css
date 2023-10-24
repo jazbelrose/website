@@ -1,12 +1,12 @@
 .works-card {
-    font-size: 16px;
+    font-size: min(16px, 2vw);
     position: relative;
-    padding: 25px;
-    margin: 10px auto;  /* Centers the card horizontally */
+    padding: min(25px, 2vw);
+    margin: min(10px, 1vw) auto;  /* Centers the card horizontally */
     transition: transform 0.2s;
     box-sizing: border-box;
     overflow: hidden; 
-    border-radius: 25px; 
+    border-radius: min(25px, 2vw);
     display: flex;
     background-color: white;
     
@@ -14,16 +14,17 @@
     justify-content: space-between; 
    
     max-width: 1920px; 
-    height: 900px;
+    height: min(750px, 50vw);
     width: 100%; 
+    
 }
 
 .works-left-column {
-    padding: 10px;
+    padding: min(10px, 1vw);
     display: flex;
     flex-direction: column;
     justify-content: space-between;  /* Push content to the top and bottom */
-    gap: 10px;
+    gap: min(10px, 1vw);
 }
 
 
@@ -32,7 +33,7 @@
 }
 
 .works-right-column {
-    padding: 10px;
+    padding: min(10px, 1vw);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,58 +43,62 @@
 
 
 .tag {
-    font-size: 2rem;
+    padding-bottom: min(10px, 1vw);
+    font-size: min(2rem, 3vw);
     font-weight: bold;
     color: #888;
+    user-select: none;
 }
 
 .works-title {
-    line-height: 0.9;
+    line-height: 0.8;
     color: black;
-    font-size: 5rem;
     margin: 0;
+    font-size: min(5rem, 8vw);
+    padding-bottom: min(10px, 1vw);
+    user-select: none;
 }
 
 .works-subtitle {
-    font-size: 2rem;
+    font-size: min(2rem, 3.5vw);
     opacity: 0.2;
     margin: 0;
-    flex: 1; /* This will make the subtitle take any available space and push the button down */
+    flex: 1; 
+    user-select: none;
 }
 
 
-.view-project-btn {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
 
-.view-project-btn:hover {
-    background-color: #0056b3;
-}
+
+
 .works-right-column img {
     max-width: 100%;   /* Allow the image to scale up to the full width of its container */
     max-height: 100%;  /* Allow the image to scale up to the full height of its container */
-    border-radius: 8px;
+    border-radius: min(8px, 1vw);
     object-fit: contain;  /* Ensures the image maintains its aspect ratio */
     transition: transform 0.2s;
 }
 
 .works-card:hover img {
-    /* transform: scale(1.03); */
+    transform: scale(1.03);
 }
 
 .works-card .scramble-button {
 
-    padding: 10px 20px;
-    font-size: 3rem;
+    padding: min(20px, 3vw) min(40px, 4vw);
+    font-size: min(2rem, 3vw);
     color: black;
-    border-radius: 50px;
+    border-radius: min(50px, 5vw);
     background-color: transparent;
     border: 2px solid black;
     white-space: nowrap;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .works-card .scramble-button {
+    border: 1px solid black;
+
+    }
   }

@@ -97,13 +97,13 @@ const Headermain = () => {
       })
 
       .to(".span-open", {
-        duration: 0.5,
+        duration: 0.75,
         attr: { d: "M0,1005S175,995,500,995s500,5,500,5V0H0Z" },
         ease: "Power2.easeOut"
       })
 
       .to(".menu .menu-item > a", {
-        duration: 0.5,
+        duration: .5,
         opacity: 1,
         transform: "translateY(0)",
         stagger: 0.1, // This will delay each link animation by 0.1s creating a cascading effect

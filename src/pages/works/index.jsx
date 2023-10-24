@@ -6,8 +6,8 @@ import WorksCard from '../../components/workscard';  // Importing the WorksCard 
 import worksData from './works.json'; // Adjust the path based on your file structure
 import "./style.css";
 import { InfoSection } from "../../components/infosection";
-import { BlogEntry } from '../../components/blogentry';  
-import allBlogPosts from '../blog/blogposts/allBlogPosts.json';  
+import { BlogEntry } from '../../components/blogentry';
+import allBlogPosts from '../blog/blogposts/allBlogPosts.json';
 import SingleTicker from "../../components/singleticker";
 
 gsap.registerPlugin(CSSPlugin);
@@ -68,14 +68,21 @@ export const Works = () => {
       <div className="works-container">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Works</title>
+          <title>Our Work</title>
         </Helmet>
+        <div className="works-heading">
+        <div className="works-top-row">
+  <div className="works-header">
+    <h2>Our Work</h2>
+  </div>
+  <span className="arrow-down works-arrow">↓</span>
+</div>
+<div className="works-subheader">
+    <h3>Purposeful branding & <br />
+     immersive digital</h3>
+</div>
 
-        <div className="work-header works">
-        <h2>Our Works</h2>
-        <span className="arrow-down work-arrow">↓</span>
-    </div>
-
+</div>
 
         <div className="works-wrapper">
           {worksData.map((work, i) => (
@@ -84,7 +91,7 @@ export const Works = () => {
               className="works-item"
               ref={(el) => (galleryRefs.current[i] = el)}
             >
-              <WorksCard 
+              <WorksCard
                 tag={work.tag}
                 title={work.title}
                 subtitle={work.subtitle}
@@ -96,25 +103,26 @@ export const Works = () => {
       </div>
 
       <div className="blog-section">
-      <div className="blog-header">
-        <h2>Blog</h2>
-        <span className="arrow-down blog-arrow">↓</span>
-    </div>
-    <div className="blog-grid">
-        {allBlogPosts.slice(5, 10).map((post, index) => (
+        <div className="blog-header">
+          <h2>Blog</h2>
+          <span className="arrow-down blog-arrow">↓</span>
+          
+        </div>
+        <div className="blog-grid">
+          {allBlogPosts.slice(5, 10).map((post, index) => (
             <BlogEntry key={index} post={post} />
-        ))}
-    </div>
-</div>
-<hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
-    
-    <InfoSection />
-    <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
+          ))}
+        </div>
+      </div>
+      <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
 
-    <div className="single-ticker-section">
+      <InfoSection />
+      <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
 
-<SingleTicker />
-</div>
+      <div className="single-ticker-section">
+
+        <SingleTicker />
+      </div>
 
     </HelmetProvider>
   );

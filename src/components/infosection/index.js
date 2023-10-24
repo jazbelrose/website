@@ -100,18 +100,15 @@ export const InfoSection = () => {
     <div className="content-container">
         <div className="info-address">
             <p className="address-text">
-                400 S BROADWAY<br />
+                400 S Broadway<br />
                 LOS ANGELES<br />
-                PARIS FRANCE<br />
-                310.002.4217
+                17 rue Barrault<br />
+                PARIS<br />
+                <span className="phone-number">+1 310.002.4217</span>
             </p>
             <Snap className="address-svg" />
         </div>
-        <div className="info-contact">
-            <p className="contact-phone">
-                {/* You haven't provided any content for this. Add content as needed. */}
-            </p>
-        </div>
+       
     </div>
 </div>
 

@@ -127,16 +127,25 @@
     margin: 0;
 }
 
+
+.phone-number {
+    font-size: 2rem;  /* Adjust this value as needed */
+}
+
+
 @media (max-width: 1601px) {
 
     .info-section{
-        padding: 0px
+        padding-bottom: 0px
     }
 
 
     .club-title {
         font-size: 1.5rem;
         padding-bottom: 0px;
+    }
+    .phone-number {
+        font-size: 1.2rem;  /* Adjust this value as needed */
     }
 
     .club-description {
@@ -145,6 +154,7 @@
 
     .touch-btn-subscribe {
         padding: 5px 10px;
+        margin: 10px;
     }
 
     .newsletter {
@@ -154,7 +164,7 @@
     .newsletter input {
         font-size: 0.8rem;
         padding: 0 0 0 5px;
-        margin: 0 5px 10px 0;
+        margin: 10px 5px 10px 0;
         flex: 1;
     }
 
@@ -182,8 +192,9 @@
 
     .address-svg {
         width: 210px;
-        height: 250px;
+        height: 240px;
         margin-left: -50px;
+        margin-bottom: 20px;
     }
 }
 

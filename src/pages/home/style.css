@@ -6,16 +6,23 @@
   max-width: 1920px; /* Set max-width */
   margin: 0 auto; /* Center the container */
 }
+.work-header {
+
+  padding-top:50px ;
+}
+
  .blog-header {
   padding-bottom: 30px;
  }
 
 .work-header h2 {
+  line-height: 0.8;
   font-size: 10rem; 
   padding-bottom: 30px;
 }
 
 .info-header h2 {
+  
   font-size: 10rem; 
   padding-bottom: 30px;
 }

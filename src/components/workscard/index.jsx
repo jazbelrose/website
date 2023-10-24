@@ -9,7 +9,7 @@ function WorksCard(props) {
         <span className="tag">{props.tag}</span>
         <h3 className="works-title">{props.title}</h3>
         <h3 className="works-subtitle">{props.subtitle}</h3>
-        <ScrambleButton text="View Project" to={props.projectLink} />
+        <ScrambleButton text="View Project → " to={props.projectLink} />
       </div>
       <div className="works-right-column">
         <img src={props.images[0]} alt={props.title} className="card-image"/>
