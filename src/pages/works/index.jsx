@@ -5,6 +5,10 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import WorksCard from '../../components/workscard';  // Importing the WorksCard component
 import worksData from './works.json'; // Adjust the path based on your file structure
 import "./style.css";
+import { InfoSection } from "../../components/infosection";
+import { BlogEntry } from '../../components/blogentry';  
+import allBlogPosts from '../blog/blogposts/allBlogPosts.json';  
+import SingleTicker from "../../components/singleticker";
 
 gsap.registerPlugin(CSSPlugin);
 
@@ -20,7 +24,7 @@ export const Works = () => {
     const observerOptions = {
       root: null,
       rootMargin: "-50px 50px",
-      threshold: 0
+      threshold: 0.1
     };
 
     const handleIntersection = (entries) => {
@@ -67,11 +71,17 @@ export const Works = () => {
           <title>Works</title>
         </Helmet>
 
+        <div className="work-header works">
+        <h2>Our Works</h2>
+        <span className="arrow-down work-arrow">↓</span>
+    </div>
+
+
         <div className="works-wrapper">
           {worksData.map((work, i) => (
             <div
               key={work.id}
-              className="po_item"
+              className="works-item"
               ref={(el) => (galleryRefs.current[i] = el)}
             >
               <WorksCard 
@@ -84,6 +94,28 @@ export const Works = () => {
           ))}
         </div>
       </div>
+
+      <div className="blog-section">
+      <div className="blog-header">
+        <h2>Blog</h2>
+        <span className="arrow-down blog-arrow">↓</span>
+    </div>
+    <div className="blog-grid">
+        {allBlogPosts.slice(5, 10).map((post, index) => (
+            <BlogEntry key={index} post={post} />
+        ))}
+    </div>
+</div>
+<hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
+    
+    <InfoSection />
+    <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
+
+    <div className="single-ticker-section">
+
+<SingleTicker />
+</div>
+
     </HelmetProvider>
   );
 };

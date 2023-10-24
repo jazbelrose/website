@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { HeroSection } from "../../components/herosection";
 import { InfoSection } from "../../components/infosection";
 import { BlogEntry } from '../../components/blogentry';  
+import allBlogPosts from '../blog/blogposts/allBlogPosts.json';  
 
 import PortfolioCard from "../../components/portfoliocard";
 
@@ -14,7 +15,7 @@ import Ticker from "../../components/ticker";
 import SingleTicker from "../../components/singleticker";
 
 
-import allBlogPosts from '../blog/blogposts/allBlogPosts.json';  
+
 
 
 
