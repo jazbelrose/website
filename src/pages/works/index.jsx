@@ -1,8 +1,9 @@
-import { galleryItems } from "../../assets/images/CompleteGalleryItems";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { CSSPlugin } from "gsap/CSSPlugin";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import WorksCard from '../../components/workscard';  // Importing the WorksCard component
+import worksData from './works.json'; // Adjust the path based on your file structure
 import "./style.css";
 
 gsap.registerPlugin(CSSPlugin);
@@ -60,38 +61,25 @@ export const Works = () => {
 
   return (
     <HelmetProvider>
-      <div className="works">
+      <div className="works-container">
         <Helmet>
           <meta charSet="utf-8" />
           <title>Works</title>
         </Helmet>
 
-        <div className="mb-5 po_items_ho">
-          {galleryItems.map((item, i) => (
+        <div className="works-wrapper">
+          {worksData.map((work, i) => (
             <div
-              key={i}
+              key={work.id}
               className="po_item"
               ref={(el) => (galleryRefs.current[i] = el)}
             >
-              <div className="img-wrapper">
-                <img
-                  src={item.imageUrl}
-                  alt={`Image ${i + 1}`}
-                  className="d-block w-100"
-                  style={{
-                    objectFit: "cover",
-                    width: "100%",
-                    height: "100%"
-                  }}
-                />
-              </div>
-
-              <div className="content">
-                <p>{item.title}</p>
-                <a href="#" onClick={(e) => e.preventDefault()}>
-                  View project
-                </a>
-              </div>
+              <WorksCard 
+                tag={work.tag}
+                title={work.title}
+                subtitle={work.subtitle}
+                images={work.images}
+              />
             </div>
           ))}
         </div>

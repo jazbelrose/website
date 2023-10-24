@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ScrambleText from "scramble-text";
 import "./style.css";  
@@ -6,6 +6,7 @@ import "./style.css";
 export const ScrambleButton = ({ text, to, className, submitMode,  ...props }) => {
     const btnRef = useRef(null);
     const isHoveredRef = useRef(false);
+    const [originalColor, setOriginalColor] = useState(null);
 
     let scrambleInstance = null;
 
@@ -36,24 +37,31 @@ export const ScrambleButton = ({ text, to, className, submitMode,  ...props }) =
         isHoveredRef.current = false;
         const scrambledElem = btnRef.current.querySelector(".scrambled");
         if (scrambledElem) {
-            scrambledElem.style.color = "var(--text-color)"; // Reset the color
+            scrambledElem.style.color = originalColor || "var(--text-color)"; // Use the original color if available
         }
     };
 
     useEffect(() => {
+        // Capture the original color
+        const scrambledElem = btnRef.current.querySelector(".scrambled");
+        if (scrambledElem) {
+            setOriginalColor(getComputedStyle(scrambledElem).color);
+        }
+    
+        // Handle resize
         const handleResize = () => {
             const btnElem = btnRef.current;
             if (btnElem) {
                 btnElem.style.width = 'auto'; // Reset to auto to let it adapt naturally
             }
         };
-
+    
         window.addEventListener('resize', handleResize);
         
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    }, []); // Empty dependency array ensures this useEffect runs only once, similar to componentDidMount
     
     if (submitMode) {
         return (
