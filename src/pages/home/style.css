@@ -2,11 +2,13 @@
   display: flex;
   justify-content: space-between; /* pushes children to extreme ends */
   align-items: center;
-  padding: 30px 20px; /* This gives space on the sides. Adjust if needed. */
+  padding: 30px 20px 0px 20px; /* This gives space on the sides. Adjust if needed. */
   max-width: 1920px; /* Set max-width */
   margin: 0 auto; /* Center the container */
 }
-
+ .blog-header {
+  padding-bottom: 30px;
+ }
 
 .work-header h2 {
   font-size: 10rem; 
