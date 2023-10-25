@@ -3,8 +3,8 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import allBlogPosts from './allblogposts/allBlogPosts.json';  
 import BlogPostButton from "./blogpostbutton/BlogPostButton.js";  
-
-
+import { InfoSection } from "../../components/infosection";
+import SingleTicker from "../../components/singleticker";
 
 
 
@@ -42,6 +42,17 @@ export const Blog = ({ maxPosts = 20 }) => {
       </div>
 
       </div>
+
+      <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
+    
+    <InfoSection />
+    <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
+
+    <div className="single-ticker-section">
+
+<SingleTicker />
+</div>
+
     </HelmetProvider>
   );
 };

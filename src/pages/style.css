@@ -3,6 +3,7 @@
 
   transform: rotate(-2.5deg);
 }
+
 .reads {
   padding-bottom: 0px;
 }
@@ -14,7 +15,8 @@
   border: 1px solid;
   border-radius: 40px;
   display: inline-block;
-  vertical-align: center; /* Use inline-flex if you want it to be inline with other elements */
+  vertical-align: center;
+  /* Use inline-flex if you want it to be inline with other elements */
   flex-wrap: wrap;
 }
 
@@ -38,6 +40,7 @@
 .About-header {
   padding-top: 100px;
 }
+
 .works-scrolling-container {
   padding: 20px 40px;
   border: 1px solid;
@@ -53,6 +56,7 @@
   line-height: 0.7;
   transform: rotate(0deg);
 }
+
 .works-discipline-1 {
   display: inline-block;
   margin-right: 1rem;
@@ -62,6 +66,7 @@
   line-height: 0.7;
   transform: rotate(0deg);
 }
+
 .works-discipline-2 {
   display: inline-block;
   margin-right: 1rem;
@@ -71,6 +76,7 @@
   line-height: 0.7;
   transform: rotate(0deg);
 }
+
 .works-discipline-3 {
   display: inline-block;
   margin-right: 1rem;
@@ -110,6 +116,7 @@ a:active .works-discipline-4.blog-item {
   color: white;
   transform: scale(1.2);
 }
+
 .works-scrolling-container a {
   color: var(--text-color);
 }
@@ -133,6 +140,7 @@ a:active .works-discipline-4.blog-item {
     font-weight: 600;
     line-height: 1em;
   }
+
   @media (min-width: 1600px) {
     .blog-item {
       font-size: 5rem;
@@ -144,12 +152,15 @@ a:active .works-discipline-4.blog-item {
       padding: 20px;
       margin: 5px;
     }
+
     .disciplines {
       padding-top: 100px;
       padding-bottom: 150px;
     }
   }
+
   @media (min-width: 3000px) {
+
     .works-discipline-0,
     .works-discipline-1,
     .works-discipline-2,
@@ -165,18 +176,20 @@ a:active .works-discipline-4.blog-item {
       padding: 30px;
       margin: 7.5px;
     }
+
     .disciplines {
       padding-top: 250px;
       padding-bottom: 250px;
     }
   }
-  @media (min-width: 2400px) {
-  }
+
+  @media (min-width: 2400px) {}
 
   .reads-container {
     padding: 20px 20px 20px 20px;
     margin: 5px;
   }
+
   .reads {
     padding-bottom: 50px;
   }
@@ -187,6 +200,7 @@ a:active .works-discipline-4.blog-item {
     font-size: 100px;
   }
 }
+
 @media only screen and (max-width: 992px) {
   .works-scrolling-container {
     /* Adjust the padding-top and other properties as necessary */
@@ -204,9 +218,11 @@ a:active .works-discipline-4.blog-item {
     margin-bottom: 30px;
     padding: 15px;
   }
+
   h1.works-title {
     font-size: 60px;
   }
+
   .reads-container {
     padding-top: 15px;
   }
@@ -253,6 +269,6 @@ a:active .works-discipline-4.blog-item {
     padding: 10px 0px 0px 10px;
     margin: 2px;
   }
-  .blog-titles {
-  }
+
+  .blog-titles {}
 }

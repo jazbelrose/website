@@ -10,6 +10,7 @@ import { BlogEntry } from '../../components/blogentry';
 import allBlogPosts from '../blog/allblogposts/allBlogPosts.json';
 import SingleTicker from "../../components/singleticker";
 
+
 gsap.registerPlugin(CSSPlugin);
 
 export const Works = () => {
