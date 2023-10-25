@@ -24,12 +24,12 @@ export const Blog = ({ maxPosts = 20 }) => {
 
 
 
-
+<div className="blog-container">
 
 
 
         <div className="works-footer">
-          <h1 id="works-title">Works</h1>
+          <h1 className="works-footer-title">Works</h1>
         </div>
         <div className="works-titles">
           {displayedPosts.map((post, index) => (
@@ -39,6 +39,8 @@ export const Blog = ({ maxPosts = 20 }) => {
           ))}
         
         </div>
+      </div>
+
       </div>
     </HelmetProvider>
   );

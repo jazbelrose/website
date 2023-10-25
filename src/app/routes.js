@@ -86,7 +86,7 @@ const ActualRoutes = ({ location }) => {
 
 
   return (
-    <div className="s_c">
+    
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route
@@ -176,7 +176,7 @@ const ActualRoutes = ({ location }) => {
           />
         </Routes>
       </AnimatePresence>
-    </div>
+    
   );
 };
 

@@ -30,7 +30,7 @@ const BlogPost = () => {
   };
 
   return (
-    <div className="blog-wrapper">
+    <div className="blog-content-wrapper">
       {previousPostSlug && (
         <div
           className="arrow-container left"
