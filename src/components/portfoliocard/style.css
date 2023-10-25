@@ -26,7 +26,7 @@
 }
 
 .portfolio-card:hover img {
-    transform: scale(1.03);
+    transform: scale(1.01);
 }
 .top-left, .bottom-left {
     position: absolute; /* make them float over the image */

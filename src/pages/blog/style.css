@@ -79,7 +79,7 @@
 }
 
 .blog-title-container a:hover {
-  color: red;
+  color: #FA3356;
 }
 
 .blog-title-container a:active {
@@ -108,7 +108,7 @@
 }
 
 #reads-title {
-  color: red;
+  color: #FA3356;
 }
 
 /* Media Queries */

@@ -24,7 +24,7 @@ export const ScrambleButton = ({ text, to, className, submitMode,  ...props }) =
                 chars: ["o", "¦"],
                 callback: () => {
                     if (isHoveredRef.current) { // Only change color if still hovered
-                        scrambledElem.style.color = "red";
+                        scrambledElem.style.color = "#FA3356";
                     }
                     scrambleInstance = null;
                 }

@@ -44,12 +44,12 @@
 }
 
 .active-link {
-  color: red !important; /* Highlight active link in red */
+  color: #FA3356 !important; /* Highlight active link in red */
 }
 
 
 .site-logo:hover {
-  color: red;
+  color: #FA3356;
 }
 
 .nav-links {
@@ -77,7 +77,7 @@
 }
 
 .nav-link:hover {
-  color: red; /* Any desired hover color */
+  color: #FA3356; /* Any desired hover color */
 }
 
 .site-logo {

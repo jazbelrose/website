@@ -8,7 +8,7 @@
     overflow: hidden; 
     border-radius: min(25px, 2vw);
     display: flex;
-    background-color: white;
+    background-color: #1D1A1A;
     
     
     justify-content: space-between; 
@@ -42,17 +42,19 @@
 }
 
 
-.tag {
+.works-tag {
     padding-bottom: min(10px, 1vw);
     font-size: min(2rem, 3vw);
     font-weight: bold;
-    color: #888;
-    user-select: none;
+    color: #FA3356;
+    
 }
+
+
 
 .works-title {
     line-height: 0.8;
-    color: black;
+    color: white;
     margin: 0;
     font-size: min(5rem, 8vw);
     padding-bottom: min(10px, 1vw);
@@ -61,7 +63,7 @@
 
 .works-subtitle {
     font-size: min(2rem, 3.5vw);
-    opacity: 0.2;
+    color: #8D8787;
     margin: 0;
     flex: 1; 
     user-select: none;
@@ -80,17 +82,17 @@
 }
 
 .works-card:hover img {
-    transform: scale(1.03);
+    transform: scale(1.01) translate3d(0,0,0);
 }
 
 .works-card .scramble-button {
 
     padding: min(20px, 3vw) min(40px, 4vw);
     font-size: min(2rem, 3vw);
-    color: black;
+    color: white;
     border-radius: min(50px, 5vw);
     background-color: transparent;
-    border: 2px solid black;
+    border: 2px solid white;
     white-space: nowrap;
   }
 
@@ -98,7 +100,7 @@
 
   @media (max-width: 768px) {
     .works-card .scramble-button {
-    border: 1px solid black;
+    border: 1px solid white;
 
     }
   }

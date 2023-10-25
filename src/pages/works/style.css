@@ -1,5 +1,5 @@
 .works-container {
-    background-color: hsl(0, 0%, 89%);
+    background-color: var(--bg-color);
     padding: min(75px, 10vw) min(20px, 2vw) 0;
     margin-bottom: min(100px, 10vw);
     overflow: hidden;
@@ -24,7 +24,7 @@
 }
 
 .works-header {
-    color: black;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,7 +42,7 @@
 
 
 .arrow-down.works-arrow {
-    color: black;
+    color: white;
     margin-left: auto;
     padding: min(50px, 3vw) 20px 0;
     font-size: min(10rem, 16vw);
@@ -54,8 +54,8 @@
 .works-subheader {
     padding: 0 25px min(50px, 3vw);
 
-    color: black;
-    opacity: 0.5;
+    color: #8D8787;
+    
 }
 
 
