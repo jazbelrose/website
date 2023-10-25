@@ -6,7 +6,7 @@ import AnimatedCursor from "../hooks/AnimatedCursor";
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-import ThemeContext from "../components/themetoggle/ThemeContext";
+
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -57,7 +57,7 @@ export default function App() {
 
   return (
     <NavigationDirectionProvider>
-      <ThemeContext.Provider value={{ theme, setTheme }}>
+      
         <div className="cursor__dot">
           <AnimatedCursor
             innerSize={15}
@@ -77,7 +77,7 @@ export default function App() {
               <AppRoutes />
            
         </Router>
-      </ThemeContext.Provider>
+    
     </NavigationDirectionProvider>
   );
 }

@@ -15,7 +15,7 @@ import { Works } from "../pages/works";
 import { ContactUs } from "../pages/contact";
 import { About } from "../pages/about";
 import { Blog } from "../pages/blog";
-import BlogPost from "../pages/blog/BlogPost";
+import BlogPost from "../pages/blog/blogpost/BlogPost";
 import { AnimatePresence, motion } from "framer-motion";
 import { NavigationDirectionContext, NavigationDirectionProvider } from "../components/NavigationDirectionProvider";
 
@@ -53,11 +53,11 @@ function AppRoutes() {
 
 
 
-useEffect(() => {
-  if (scrollRef.current) {
+  useEffect(() => {
+    if (scrollRef.current) {
       scrollRef.current.update();
-  }
-}, [location]);
+    }
+  }, [location]);
 
 
   // Handle route change to reset scroll position (Consider removing or delaying this if it feels abrupt)
@@ -83,7 +83,7 @@ const ActualRoutes = ({ location }) => {
   const { direction } = React.useContext(NavigationDirectionContext);
   const chosenDirection = direction === "left" ? "left" : "right";
 
-  
+
 
   return (
     <div className="s_c">

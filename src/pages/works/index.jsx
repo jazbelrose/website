@@ -7,7 +7,7 @@ import worksData from './works.json'; // Adjust the path based on your file stru
 import "./style.css";
 import { InfoSection } from "../../components/infosection";
 import { BlogEntry } from '../../components/blogentry';
-import allBlogPosts from '../blog/blogposts/allBlogPosts.json';
+import allBlogPosts from '../blog/allblogposts/allBlogPosts.json';
 import SingleTicker from "../../components/singleticker";
 
 gsap.registerPlugin(CSSPlugin);

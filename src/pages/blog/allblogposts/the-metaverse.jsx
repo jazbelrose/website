@@ -4,6 +4,8 @@ import React from "react";
 function The_metaverse() {
   return (
     <div className="blog-post-container">
+
+
       <h1 className="blog-post-title">The Metaverse</h1>
 
       <p>
@@ -31,7 +33,6 @@ function The_metaverse() {
         confined, bound by the rules of their respective platforms with little
         room for cross-interaction.
       </p>
-
       <p>
         With the emergence of Virtual Reality (VR) and Augmented Reality (AR)
         technologies in the 2010s, we began inching closer to the metaverse of

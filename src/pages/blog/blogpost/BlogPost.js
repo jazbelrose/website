@@ -1,9 +1,10 @@
 import React, { Suspense } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import allBlogPosts from './blogposts/allBlogPosts.json';  
-import { NavigationDirectionContext } from "../../components/NavigationDirectionProvider";
-import LeftArrow from "../../assets/svg/chevron-left.svg";
-import RightArrow from "../../assets/svg/chevron-right.svg";
+import "./style.css";
+import allBlogPosts from '../allblogposts/allBlogPosts.json';  
+import { NavigationDirectionContext } from "../../../components/NavigationDirectionProvider";
+import LeftArrow from "../../../assets/svg/chevron-left.svg";
+import RightArrow from "../../../assets/svg/chevron-right.svg";
 
 const BlogPost = () => {
   
@@ -17,7 +18,7 @@ const BlogPost = () => {
   const nextPostSlug = currentIndex < allSlugs.length - 1 ? allSlugs[currentIndex + 1] : null;
 
 
-  const PostComponent = React.lazy(() => import(`./blogposts/${postSlug}.jsx`));
+  const PostComponent = React.lazy(() => import(`../allblogposts/${postSlug}.jsx`));
 
 
 
