@@ -52,25 +52,10 @@ function AppRoutes() {
   const scrollRef = useRef(null);
 
 
-
-  useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.update();
-    }
-  }, [location]);
-
-
-  // Handle route change to reset scroll position (Consider removing or delaying this if it feels abrupt)
-  useEffect(() => {
-    if (scrollRef.current) {
-      setTimeout(() => {
-        scrollRef.current.scrollTo(0, 0, { duration: 1000 }); // Duration added for a smoother experience
-      }, 100); // Delay added to ensure route transition is smooth
-    }
-  }, [location]);
   if (isLoading) {
     return <Preloader setIsLoading={setIsLoading} />;
   }
+
 
   return (
     <NavigationDirectionProvider>

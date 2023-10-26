@@ -8,24 +8,6 @@
   font-style: normal;
 }
 
-.overlay {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  z-index: 2;
-  display: flex;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  pointer-events: none;
-}
-
-.bar {
-  width: 10vw;
-  height: 105vh;
-  background: #0c0c0c;
-}
 
 
 
@@ -50,6 +32,11 @@ body::-webkit-scrollbar {
   width: 0 !important;
 }
 
+html{
+  height: 100vh;
+  height: 100%;
+}
+
 body {
   height: 100vh;
   margin: 0;
@@ -65,6 +52,8 @@ body {
    overflow-x: hidden;
    overflow: -moz-scrollbars-none; 
    -ms-overflow-style: none; 
+   font-family: "Helvetica Special", sans-serif;
+  letter-spacing: -0.03em;
 }
 
 ul {
@@ -82,10 +71,7 @@ h6 {
   letter-spacing: -0.03em;
 }
 
-body {
-  font-family: "Helvetica Special", sans-serif;
-  letter-spacing: -0.03em;
-}
+
 
 a,
 a:hover {
@@ -114,3 +100,21 @@ p {
   background-color: var(--overlay-color) !important;
 }
 
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.bar {
+  width: 10vw;
+  height: 105vh;
+  background: #0c0c0c;
+}

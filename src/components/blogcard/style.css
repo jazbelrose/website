@@ -1,0 +1,496 @@
+.blog-card {
+    font-size: min(16px, 2vw);
+    position: relative;
+    padding: min(25px, 2vw);
+    margin: min(10px, 1vw) 10px;
+    /* Centers the card horizontally */
+    transition: transform 0.2s;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: min(25px, 2vw);
+    display: flex;
+    background-color: #1D1A1A;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 1920px;
+    
+    width: 100%;
+
+}
+
+.blog-left-column {
+    padding: min(10px, 1vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Push content to the top and bottom */
+    gap: min(10px, 1vw);
+}
+
+
+.blog-left-column {
+    gap: 10px;
+}
+
+.blog-right-column {
+    padding: min(10px, 1vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* Ensure the column takes the full height of its parent */
+}
+
+
+.blog-tag {
+    padding-bottom: min(10px, 1vw);
+    font-size: min(2rem, 3vw);
+    font-weight: bold;
+    color: #FA3356;
+
+}
+
+
+
+.blog-title {
+    line-height: 0.8;
+    color: white;
+    margin: 0;
+    font-size: min(5rem, 8vw);
+    padding-bottom: min(10px, 1vw);
+    user-select: none;
+}
+
+.blog-description {
+    max-width: 400px;
+
+    line-height: 1;
+    color: white;
+    margin: 0;
+    font-size: min(2rem, 4vw);
+    padding-bottom: min(10px, 1vw);
+    user-select: none;
+}
+
+.blog-date {
+    font-size: min(2.5rem, 4vw);
+    color: #8D8787;
+    margin: 0;
+    flex: 1;
+    user-select: none;
+}
+
+.blog-reading-time {
+    font-size: min(2rem, 3.5vw);
+    color: #8D8787;
+    margin: 0;
+    flex: 1;
+    user-select: none;
+}
+
+
+
+
+
+
+
+.blog-card:hover img {
+    transform: scale(1.01) translate3d(0, 0, 0);
+}
+
+.blog-card .scramble-button {
+
+    padding: min(20px, 3vw) min(40px, 4vw);
+    font-size: min(2rem, 3vw);
+    color: white;
+    border-radius: min(50px, 5vw);
+    background-color: transparent;
+    border: 2px solid white;
+    white-space: nowrap;
+}
+
+/* General styles */
+
+
+
+.blog-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+/* Row 1 styles */
+
+
+
+.row1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.row1-image {
+    flex: 0.6;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    object-fit: contain;  
+    max-height: 600px;  /* adjust as needed */
+    overflow: hidden;  
+}
+
+.row1 .card-image {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.row1-content {
+    flex: 0.4;
+    display: flex;
+    flex-direction: row;
+}
+
+.row1-content .column1,
+.row1-content .column2 {
+    padding: 10px;
+    flex: 1;
+}
+
+.row1-content .column1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row1-content .column2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: self-end;
+}
+
+.row1 .blog-tag {
+    padding-bottom: min(10px, 1vw);
+    font-size: min(1.5rem, 1.5vw);
+    font-weight: bold;
+    color: #FA3356;
+
+}
+
+
+
+.row1 .blog-title {
+    line-height: 0.8;
+    color: white;
+    margin: 0;
+    font-size: min(3rem, 6vw);
+    padding-top: min(10px, 1vw);
+    padding-bottom: min(10px, 1vw);
+    user-select: none;
+}
+
+.row1 .blog-description {
+    max-width: 900px;
+
+    line-height: 1;
+    color: white;
+    margin: 0;
+    font-size: min(1.3rem, 1.5vw);
+    padding-bottom: min(5px, 0.5vw);
+    user-select: none;
+}
+
+.row1 .blog-date {
+    font-size: min(1.2rem, 2vw);
+    color: #8D8787;
+    margin: 0;
+    flex: 1;
+    user-select: none;
+}
+
+.row1 .blog-reading-time {
+    font-size: min(1.2rem, 2vw);
+    color: #8D8787;
+    margin: 0;
+    flex: 1;
+    user-select: none;
+}
+
+.row1 .column2 .scramble-button {
+    padding: min(5px, 0.5vw) min(20px, 2vw);
+    font-size: min(1.5rem, 2vw);
+
+}
+
+
+
+
+
+
+
+/* Row 2 and Row 5 styles */
+
+
+
+
+.row2 .column2 .blog-date-time {
+    display: flex; 
+    justify-content: space-between; /* This will push the children to the extremes of the container */
+}
+
+.row2 .blog-reading-time {
+    text-align: right; /* Align the text of this element to the right */
+    flex: 1; /* Ensure it takes the available space */
+    display: block; /* Change it to block so that text-align takes effect */
+}
+
+.row2 .blog-date,
+.row2 .blog-reading-time {
+    flex: 1; /* Make each of them take equal space in the container */
+    display: inline-block; /* Ensure they are inline-block elements */
+}
+
+
+
+
+.row2-image {
+
+    
+height: 80%;
+   
+position: relative;    
+}
+
+
+
+.row2 .card-image {
+    border-radius: 8px;
+    width: 100%;          /* The image will occupy the full width of its container */
+    height: 100%;         /* The image will occupy the full height of its container */
+    object-fit: cover;    /* The image will cover its container without distorting the aspect ratio */
+    object-position: center; /* Image will be centered in its container */
+}
+
+
+
+.row2 .blog-tag {
+    padding-bottom: min(10px, 1vw);
+    font-size: min(1.5rem, 1.5vw);
+    font-weight: bold;
+    color: #FA3356;
+
+}
+.row2 .blog-title {
+    line-height: 0.8;
+    color: white;
+    margin: 0;
+    font-size: min(1.5rem, 6vw);
+    padding-top: min(10px, 1vw);
+    padding-bottom: min(10px, 1vw);
+    user-select: none;
+}
+
+.row2 .blog-description {
+    max-width: 600px;
+
+    line-height: 1;
+    color: white;
+    margin: 0;
+    font-size: min(1.5rem, 3vw);
+    padding-bottom: min(5px, 0.5vw);
+    user-select: none;
+}
+
+.row2 .blog-date {
+    font-size: min(1.2rem, 2vw);
+    color: #8D8787;
+    margin: 0;
+    flex: 1;
+    user-select: none;
+}
+
+.row2 .blog-reading-time {
+    font-size: min(1.2rem, 2vw);
+    color: #8D8787;
+    margin: 0;
+    flex: 1;
+    user-select: none;
+}
+
+.row2 .column2 .scramble-button {
+    padding: min(5px, 0.5vw) min(20px, 2vw);
+    font-size: min(2rem, 3vw);
+
+}
+
+.card-link {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Inherits the color from its parent */
+    display: block; /* Makes the link block-level to fill the container */
+}
+
+
+
+
+
+
+
+
+
+/* Row 3 and Row 4 styles */
+.blog-row .row3 {
+    
+    /* Adjust for margins/gutters between cards */
+    height: 600px;
+    /* Adjust as needed */
+    display: flex;
+    flex-direction: row;
+}
+
+.row3 .left,
+.row3 .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row3 .left .tags,
+.row3 .left .title,
+.row3 .left .details {
+    flex: 1;
+}
+
+.row3 .right {
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.row3-image {
+    
+   
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center;     /* Center the image vertically */
+}
+
+
+.row3 .column1 {
+    flex: 1;              /* Takes up the full available height of its parent */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This will push the last item (blog-date-time) to the bottom */
+}
+
+
+.row3 .image-column2 {
+    width: 60%;
+
+    max-width: 100%;   /* Allow the image to scale up to the full width of its container */
+    max-height: 100%;  /* Allow the image to scale up to the full height of its container */
+    border-radius: min(8px, 1vw);
+    object-fit: contain;  /* Ensures the image maintains its aspect ratio */
+    transition: transform 0.2s;
+    display: flex;           
+    justify-content: center; 
+    align-items: right;     
+    overflow: hidden;        
+}
+
+
+
+
+
+.row3 .card-image {
+         
+    max-height: 100%;    
+    object-fit: contain;  
+}
+
+
+.row3 .blog-tag {
+    padding-bottom: min(10px, 1vw);
+    font-size: min(1.5rem, 1.5vw);
+    font-weight: bold;
+    color: #FA3356;
+
+}
+.row3 .blog-title {
+    line-height: 0.9;
+    color: white;
+    margin: 0;
+    font-size: min(3rem, 6vw);
+    padding-top: min(10px, 1vw);
+    padding-bottom: min(25px, 2.5vw);
+    user-select: none;
+}
+
+.row3 .blog-description {
+    max-width: 600px;
+
+    line-height: 1;
+    color: white;
+    margin: 0;
+    font-size: min(1.5rem, 3vw);
+    margin-bottom: min(25px, 2.5vw);
+    padding-bottom: min(5px, 0.5vw);
+    user-select: none;
+}
+.row3 .scramble-button {
+    padding: min(5px, 0.5vw) min(10px, 1vw);
+    font-size: min(1.5rem, 2vw);
+
+}
+
+
+.row3 .blog-date-time {
+    display: flex;              
+    align-items: flex-end;      
+    justify-content: space-between; 
+    width: 100%;  /* Ensure it takes up the full width of the container */
+}
+
+.row3 .blog-name,
+.row3 .blog-date,
+.row3 .blog-reading-time {
+    flex: 1;  
+    margin: 0;                  
+}
+
+
+
+.row3 .blog-date {
+    font-size: min(1rem, 2vw);
+    color: #8D8787;
+    margin: 0;
+    flex: 1;
+    user-select: none;
+}
+
+.row3 .blog-reading-time {
+    font-size: min(1rem, 2vw);
+    color: #8D8787;
+    margin: 0;
+    flex: 1;
+    user-select: none;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .blog-card .scramble-button {
+        border: 1px solid white;
+
+    }
+}

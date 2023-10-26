@@ -22,6 +22,7 @@
 
 p {
   margin-bottom: 50px; /* Added spacing between paragraphs */
+  letter-spacing: 0;
 }
 
 blockquote {
@@ -33,6 +34,7 @@ blockquote {
 }
 
 h2 {
+  letter-spacing: 0;
   margin-top: 30px;
-  margin-bottom: 20px; /* Added more spacing above subheadings for separation */
+  margin-bottom: 25px; /* Added more spacing above subheadings for separation */
 }

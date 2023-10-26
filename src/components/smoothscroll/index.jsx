@@ -25,8 +25,12 @@ export default class SmoothScroll extends React.Component {
   componentDidMount() {
     window.addEventListener("scroll", this.onScroll);
     this.ro.observe(this.viewport);
+  
+    // Update the fake div height to match the viewport content
+    this.setState({
+      height: this.viewport.scrollHeight
+    });
   }
-
   componentWillUnmount() {
     window.removeEventListener("scroll", this.onScroll);
   }

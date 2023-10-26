@@ -16,10 +16,6 @@ import SingleTicker from "../../components/singleticker";
 
 
 
-
-
-
-
 export const Home = () => {
 
   useEffect(() => {

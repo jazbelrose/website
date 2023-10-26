@@ -15,6 +15,7 @@
 }
 
 .nav-bar {
+  height: 100%;
   padding: 10px 50px;
   display: flex;
   align-items: center; 

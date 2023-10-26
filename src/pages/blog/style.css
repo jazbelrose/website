@@ -1,3 +1,5 @@
+
+
 .blog-container{
 
   background-color: var(--bg-color);
@@ -19,8 +21,6 @@
   line-height: 0.5;
   padding: 30px 15px;
 }
-
-
 
 
 
@@ -66,7 +66,56 @@
 }
 
 
-/* Styles for screens with a width of up to 575px */
+
+
+
+
+
+.blog-section {
+  margin: 20px auto; /* Center the section horizontally */
+  width: 1920px;
+  max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.single-card-row {
+  justify-content: center;
+}
+
+.single-card.tcs .title,
+.single-card.nocco .title {
+    color: black;
+}
+
+.single-card.tcs .subtitle,
+.single-card.nocco .subtitle {
+    color: grey;
+}
+
+.single-card.tcs .description,
+.single-card.nocco .description {
+    color: black;
+    
+    border: 2px solid black;
+    border-radius: 50px;
+    margin: 0;
+   
+    
+}
+
+
+
+
+
+
 @media only screen and (max-width: 767px) {
   .blog-element {
     font-size: 1.4rem;
@@ -84,5 +133,52 @@
     line-height: 0.9em;
     padding: 20px;
   }
-}
+  .blog-row {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .single-card {
+    width: calc(100vw - 20px);
+    /* Reduce width by twice the margin */
+    height: calc(100vw - 20px);
+    /* Keeping 1:1 aspect ratio */
+    margin: 0 20px;
+    /* Left and right margins */
+    overflow: hidden;
+  }
+
+  .single-card .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gca .card-image {
+    object-position: 75% center;
+  }
+
+
+  .elf .card-image {
+
+    object-position: 20% center;
+    /* 10% from the left edge */
+  }
+
+  .single-card.tcs img,
+    .single-card.nocco img {
+        display: none !important;
+    }
+    .single-card.tcs {
+      background-image: url('https://mylgcontent.s3.us-west-1.amazonaws.com/images/chain+copy-01.png');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .single-card.nocco {
+      background-image: url('https://mylgcontent.s3.us-west-1.amazonaws.com/images/Nocco+vertical-01.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+  }

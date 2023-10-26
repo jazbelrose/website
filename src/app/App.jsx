@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, useLocation } from "react-router-dom";
-import withRouter from "../hooks/withRouter";
-import AnimatedCursor from "../hooks/AnimatedCursor";
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -20,14 +18,14 @@ import {
   NavigationDirectionProvider
 } from "../components/NavigationDirectionProvider";
 
-function _ScrollToTop(props) {
+function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  return props.children;
+  return null; // or return children if needed
 }
-const ScrollToTop = withRouter(_ScrollToTop);
+
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -56,22 +54,13 @@ export default function App() {
 
 
   return (
+
+
     <NavigationDirectionProvider>
-      
-        <div className="cursor__dot">
-          <AnimatedCursor
-            innerSize={15}
-            outerSize={15}
-            color="255, 255 ,255"
-            outerAlpha={0.4}
-            innerScale={0.7}
-            outerScale={5}
-          />
-        </div>
+    
         <Router basename={process.env.PUBLIC_URL}>
           {!isLoading && <Headermain />}
 
-          
               <ScrollToTop />
 
               <AppRoutes />
@@ -79,5 +68,7 @@ export default function App() {
         </Router>
     
     </NavigationDirectionProvider>
+
+
   );
 }
