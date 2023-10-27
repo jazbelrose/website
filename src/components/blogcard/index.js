@@ -41,8 +41,8 @@ function BlogCard({ title, description, slug, date, tags, readingTime, layout, i
           <div className="content-row">
             <div className="column1">
               <h3 className="blog-title">{title}</h3>
-              {/* Placeholder for name (not provided in original data) */}
-              <p className="blog-name">By {authorName}</p>
+             
+              <p className="blog-name">By <span style={{color: '#FA3356'}}>{authorName}</span></p>
             </div>
             <div className="column2">
               <div className="blog-date-time">
@@ -66,7 +66,7 @@ function BlogCard({ title, description, slug, date, tags, readingTime, layout, i
             </div>
             
             <div className="blog-date-time">
-              <p className="blog-name">By {authorName}</p>
+              <p className="blog-name">By <span style={{color: '#FA3356'}}>{authorName}</span></p>
               <p className="blog-date">{date}</p>
               <p className="blog-reading-time">{readingTime} min read</p>
             </div>

@@ -61,7 +61,7 @@ export const Blog = ({ maxPosts = 17 }) => {
   
   return (
     <HelmetProvider>
-    <div className="container-fluid">
+    <div className="blog-container">
       <Helmet>
         <meta charSet="utf-8" />
         <title> Blog </title>

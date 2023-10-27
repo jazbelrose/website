@@ -30,7 +30,7 @@ const BlogPostButton = ({ post }) => {
     };
   
     return (
-      <Link to={`/blog/${post.slug}`}>
+      <Link to={`/works/${post.slug}`}>
         <h2
           ref={containerRef}
           className="h2 blog-element"

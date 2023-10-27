@@ -176,7 +176,7 @@
 
 .row1 .blog-tag {
     padding-bottom: min(10px, 1vw);
-    font-size: min(1.5rem, 1.5vw);
+    font-size: min(1.5rem, 3vw);
     font-weight: bold;
     color: #FA3356;
 
@@ -188,9 +188,9 @@
     line-height: 0.8;
     color: white;
     margin: 0;
-    font-size: min(3rem, 6vw);
+    font-size: min(4rem, 7vw);
     padding-top: min(10px, 1vw);
-    padding-bottom: min(10px, 1vw);
+    padding-bottom: min(15px, 2vw);
     user-select: none;
 }
 
@@ -200,13 +200,13 @@
     line-height: 1;
     color: white;
     margin: 0;
-    font-size: min(1.3rem, 1.5vw);
-    padding-bottom: min(5px, 0.5vw);
+    font-size: min(1.3rem, 3.5vw);
+    padding-bottom: min(10px, 1vw);
     user-select: none;
 }
 
 .row1 .blog-date {
-    font-size: min(1.2rem, 2vw);
+    font-size: min(1.2rem, 2.5vw);
     color: #8D8787;
     margin: 0;
     flex: 1;
@@ -214,7 +214,7 @@
 }
 
 .row1 .blog-reading-time {
-    font-size: min(1.2rem, 2vw);
+    font-size: min(1.2rem, 2.5vw);
     color: #8D8787;
     margin: 0;
     flex: 1;
@@ -223,7 +223,7 @@
 
 .row1 .column2 .scramble-button {
     padding: min(5px, 0.5vw) min(20px, 2vw);
-    font-size: min(1.5rem, 2vw);
+    font-size: min(1.5rem, 2.5vw);
 
 }
 
@@ -276,13 +276,15 @@ position: relative;
     height: 100%;         
     object-fit: cover;    
     object-position: center;
+    padding: min(10px, 1vw) 0;
 }
 
 
 
 .row2 .blog-tag {
-    padding-bottom: min(10px, 1vw);
-    font-size: min(1.5rem, 1.5vw);
+    
+    font-size: min(1.5rem, 3vw);
+    line-height: 0.8;
     font-weight: bold;
     color: #FA3356;
 
@@ -291,9 +293,9 @@ position: relative;
     line-height: 0.8;
     color: white;
     margin: 0;
-    font-size: min(1.5rem, 6vw);
+    font-size: min(3rem, 5vw);
     padding-top: min(10px, 1vw);
-    padding-bottom: min(10px, 1vw);
+    padding-bottom: min(10px, 1.5vw);
     user-select: none;
 }
 
@@ -309,7 +311,7 @@ position: relative;
 }
 
 .row2 .blog-date {
-    font-size: min(1.2rem, 2vw);
+    font-size: min(1.2rem, 2.5vw);
     color: #8D8787;
     margin: 0;
     flex: 1;
@@ -317,11 +319,15 @@ position: relative;
 }
 
 .row2 .blog-reading-time {
-    font-size: min(1.2rem, 2vw);
+    font-size: min(1.2rem, 2.5vw);
     color: #8D8787;
     margin: 0;
     flex: 1;
     user-select: none;
+}
+
+.row2 .blog-name {
+    padding-left:min(0.25rem, 0.25vw) ;
 }
 
 .row2 .column2 .scramble-button {
@@ -409,7 +415,7 @@ position: relative;
 
 .row3 .blog-tag {
     padding-bottom: min(10px, 1vw);
-    font-size: min(1.5rem, 1.5vw);
+    font-size: min(1.5rem, 3vw);
     font-weight: bold;
     color: #FA3356;
 
@@ -418,7 +424,7 @@ position: relative;
     line-height: 0.9;
     color: white;
     margin: 0;
-    font-size: min(3rem, 4vw);
+    font-size: min(3rem, 5vw);
     padding-top: min(10px, 1vw);
     padding-bottom: min(25px, 2.5vw);
     user-select: none;
@@ -430,14 +436,17 @@ position: relative;
     line-height: 1;
     color: white;
     margin: 0;
-    font-size: min(1.3rem, 1.5vw);
+    font-size: min(1.5rem, 3vw);
     margin-bottom: min(25px, 1.45vw);
-    padding-bottom: min(5px, 0.5vw);
+    padding-bottom: min(10px, 1.55vw);
+    padding-right: min(10px, 2vw) ;
     user-select: none;
 }
 .row3 .scramble-button {
     padding: min(5px, 0.5vw) min(10px, 1vw);
     font-size: min(1.5rem, 1.5vw);
+    margin-bottom: min(25px, 1.5vw);
+    
 
 }
 
@@ -459,7 +468,7 @@ position: relative;
 
 
 .row3 .blog-date {
-    font-size: min(1rem, 1.5vw);
+    font-size: min(1.2rem, 2.5vw);
     color: #8D8787;
     margin: 0;
     flex: 1;
@@ -467,14 +476,23 @@ position: relative;
 }
 
 .row3 .blog-reading-time {
-    font-size: min(1rem, 1.5vw);
+    font-size: min(1.2rem, 2.5vw);
     color: #8D8787;
     margin: 0;
     flex: 1;
     user-select: none;
 }
 
+.row3 .blog-name {
+    padding-left:min(0.25rem, 0.25vw) ;
+}
 
+.row3 .scramble-button {
+    padding: min(5px, 0.5vw) min(20px, 2vw);
+    margin-bottom: min(10px, 1vw) ;
+    font-size: min(1.5rem, 2.5vw);
+
+}
 
 
 @media (max-width: 768px) {
