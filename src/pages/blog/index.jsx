@@ -1,4 +1,6 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useLayoutEffect } from "react";
+import { gsap } from "gsap";
+import { CSSPlugin } from "gsap/CSSPlugin";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import allBlogPosts from './allblogposts/allBlogPosts.json'; 
@@ -7,6 +9,7 @@ import BlogPostButton from "./blogpostbutton/BlogPostButton.js";
 import { InfoSection } from "../../components/infosection";
 import SingleTicker from "../../components/singleticker";
 import BlogCard from "../../components/blogcard";
+gsap.registerPlugin(CSSPlugin);
 
 
 
@@ -14,9 +17,101 @@ import BlogCard from "../../components/blogcard";
 
 export const Blog = ({ maxPosts = 17 }) => {
 
+  let blogPostRefs = useRef([]);
+  let worksRefs = useRef([]);
   const [displayedWorks, setDisplayedWorks] = useState([]);
   const displayedPosts = allBlogPosts.slice(0, maxPosts);
 
+  useEffect(() => {
+    console.log("Current worksRefs:", worksRefs.current);
+}, [displayedWorks]);
+
+
+useLayoutEffect(() => {
+  setTimeout(() => {
+    
+    blogPostRefs.current.forEach((galleryItem, index) => {
+      if (index < 2) {
+        
+        gsap.set(galleryItem, { autoAlpha: 1, y: 0, scale: 1 });
+      } else {
+        // For the rest, set their initial state to be invisible
+        gsap.set(galleryItem, { autoAlpha: 0, y: 50, scale: 0.8 });
+      }
+    });
+    
+  worksRefs.current.forEach((workItem) => {
+    gsap.set(workItem, { autoAlpha: 0, y: 50, scale: 0.8 });
+});
+
+  gsap.to(blogPostRefs.current[0], { autoAlpha: 1, y: 0, scale: 1, ease: "power3.out", overwrite: "auto" });
+  
+    const observerOptions = {
+      root: null,
+      rootMargin: "-50px 50px",
+      threshold: 0.1
+    };
+
+    
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        console.log("Observed:", entry.target);  // Debugging line
+        if (entry.isIntersecting) {
+          console.log("Animating:", entry.target);  // Debugging line
+          const tl = gsap.timeline();
+          tl.to(entry.target, {
+            autoAlpha: 1,
+            y: 0,
+            scale: 1,
+            ease: "power3.out",
+            overwrite: "auto"
+          });
+        }
+      });
+    };
+    
+
+    const observer = new IntersectionObserver(
+      handleIntersection,
+      observerOptions
+    );
+
+    blogPostRefs.current.forEach((blogItem) => {
+      if (blogItem) {
+          observer.observe(blogItem);
+      }
+  });
+  
+  worksRefs.current.forEach((workItem) => {
+      if (workItem) {
+          observer.observe(workItem);
+      }
+  });
+  
+
+
+    return () => {
+      if (blogPostRefs.current) {
+          blogPostRefs.current.forEach((blogItem) => {
+              if (blogItem) {
+                  observer.unobserve(blogItem);
+              }
+          });
+      }
+  
+      if (worksRefs.current) {
+          worksRefs.current.forEach((workItem) => {
+              if (workItem) {
+                  observer.unobserve(workItem);
+              }
+          });
+      }
+      observer.disconnect();
+  };
+  
+}, 100);
+}, []);
+  
   useEffect(() => {
     setDisplayedWorks(works.slice(0, maxPosts)); 
   }, []);
@@ -55,9 +150,13 @@ export const Blog = ({ maxPosts = 17 }) => {
       }
     }
   
-    return renderedCards;
+    return renderedCards.map((card, index) => (
+      <div key={index} ref={(el) => { blogPostRefs.current[index] = el; }}>
+          {card}
+      </div>
+  ));
+  
 };
-
   
   return (
     <HelmetProvider>
@@ -66,7 +165,9 @@ export const Blog = ({ maxPosts = 17 }) => {
         <meta charSet="utf-8" />
         <title> Blog </title>
       </Helmet>
-      <div className="blog-container">
+      <div className="blog-container" ref={(el) => { blogPostRefs.current[0] = el; }}>
+
+
         <div className="blog-section">
           {renderBlogCards(displayedPosts)}
         </div>
@@ -77,11 +178,20 @@ export const Blog = ({ maxPosts = 17 }) => {
 
         <div className="works-titles">
 
-          {displayedWorks.map((work, index) => (
-            <div className="blog-title-container" key={index}>
-              <BlogPostButton post={work} />
-            </div>
-          ))}
+        {displayedWorks.map((work, index) => (
+          <div className="blog-title-container" key={index} ref={(el) => {
+  if (el && !worksRefs.current.includes(el)) { // Only add if it's a new element
+    worksRefs.current[index] = el;
+  }
+}}
+>
+
+
+
+    <BlogPostButton post={work} />
+</div>
+
+))}
         
         </div>
       </div>

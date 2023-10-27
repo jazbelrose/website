@@ -16,7 +16,7 @@
 
     max-width: 1920px;
     
-    width: 100%;
+    
 
 }
 
@@ -235,6 +235,9 @@
 
 /* Row 2 and Row 5 styles */
 
+.row2{
+    width: 100%;
+}
 .row2:hover img {
     transform: scale(1.01) translate3d(0, 0, 0);
 }
@@ -361,8 +364,9 @@ position: relative;
 
 
 /* Row 3 and Row 4 styles */
-.blog-row .row3 {
 
+.blog-row .row3 {
+width: 100%;
     display: flex;
     flex-direction: row;
 }

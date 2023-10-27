@@ -225,7 +225,7 @@ export const Home = () => {
 <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
     
     <InfoSection />
-    <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff" }} />
+    <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff", margin: "0.5rem", }} />
 
     <div className="single-ticker-section">
 
