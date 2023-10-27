@@ -29,7 +29,7 @@
   font-size: min(12rem, 18vw);
   letter-spacing: -0.05em;
   line-height: 0.9em;
-  padding: 50px 10px 0px;
+  padding: 35px 10px 0px;
   text-align: left;
 }
 
@@ -72,6 +72,7 @@
 
 
 .blog-section {
+  padding-top: 20px;
   margin: 20px auto; /* Center the section horizontally */
   width: 1920px;
   max-width: 100%; /* Ensure it doesn't overflow on smaller screens */

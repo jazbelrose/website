@@ -211,7 +211,7 @@ export const Home = () => {
      
       </div>
 
-  <div className="blog-section">
+  <div className="footer-blog-section">
       <div className="blog-header">
         <h2>Blog</h2>
         <span className="arrow-down blog-arrow">↓</span>
