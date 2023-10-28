@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+  }
+  
 .works-container {
     background-color: var(--bg-color);
     padding: min(75px, 10vw) min(20px, 2vw) 0;

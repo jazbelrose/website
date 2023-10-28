@@ -163,9 +163,7 @@
     }
 
     
-    .blog-entry-title {
-        font-size: 2.5rem;
-    }
+    
 
     .blog-entry-date{
       font-size: 2rem;
@@ -187,6 +185,8 @@
     .blog-entry-title {
       order: 1; 
       justify-content: flex-start;
+      font-size: 2.5rem;
+      white-space: normal;
   }
 
   .blog-entry-toggle {
