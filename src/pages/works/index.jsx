@@ -15,7 +15,7 @@ import BlogCard from "../../components/blogcard";
 
 gsap.registerPlugin(CSSPlugin);
 
-export const Works = ({ maxPosts = 40 }) => {
+export const Works = ({ maxPosts = 45 }) => {
 
   let blogPostRefs = useRef([]);
   let worksRefs = useRef([]);
@@ -129,13 +129,13 @@ export const Works = ({ maxPosts = 40 }) => {
       switch (position) {
         case 0:
           renderedCards.push(
-            <BlogCard key={currentIndex} {...works[currentIndex]} layout="row1" />
+            <BlogCard className="works-row1-card"  key={currentIndex} {...works[currentIndex]} layout="row1" />
           );
           currentIndex++;
           break;
         case 1:
           renderedCards.push(
-            <BlogCard className="works-card" key={currentIndex} {...works[currentIndex]} layout="row3" />
+            <BlogCard className="works-row3-card" key={currentIndex} {...works[currentIndex]} layout="row3" />
           );
           currentIndex++;
           break;
@@ -163,7 +163,7 @@ export const Works = ({ maxPosts = 40 }) => {
           break;
         case 6:
           renderedCards.push(
-            <BlogCard className="works-card" key={currentIndex} {...works[currentIndex]} layout="row3" />
+            <BlogCard className="works-row3-card" key={currentIndex} {...works[currentIndex]} layout="row3" />
           );
           currentIndex++;
           break;
