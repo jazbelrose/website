@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 
 import './style.css';
 import { ScrambleButton } from "../scramblebutton";
-function BlogCard({ title, description, slug, date, tags, readingTime, layout, images, authorName }) {
+
+function BlogCard({ className, title, description, slug, date, tags, readingTime, layout, images, authorName, subtitle }) {
   return (
-    <div className={`blog-card ${layout}`}>
+    <div className={`blog-card ${layout} ${className || ''}`}>
       {layout === "row1" && (
         <>
         <div className="row1-image">
@@ -72,6 +73,27 @@ function BlogCard({ title, description, slug, date, tags, readingTime, layout, i
             </div>
           </div>
           <div className="image-column2"><img src={images[0]} alt={title} className="card-image"/></div>
+        </>
+      )}
+      
+
+      
+      {layout === "row4" && (
+        <>
+        <div className="row1-image">
+        <Link to={`/works/${slug}`}>
+          <img src={images[0]} alt={title} className="card-image" />
+            </Link>
+</div>
+          <div className="row1-content">
+    {tags && <span className="blog-tag">{tags.join(', ')}</span>}
+    <h3 className="blog-title">{title}</h3>
+    <div className="blog-date-time">
+        
+        <p className="blog-description">{subtitle}</p>
+    </div>
+</div>
+
         </>
       )}
 
