@@ -210,10 +210,10 @@ export const Works = ({ maxPosts = 45 }) => {
             </div>
 
 
+</div>
 
 
-
-            <div className="blog-section">
+            <div className="footer-blog-section">
                 <div className="blog-header">
                     <h2>Blog</h2>
                     <span className="arrow-down blog-arrow">↓</span>
@@ -234,7 +234,7 @@ export const Works = ({ maxPosts = 45 }) => {
             <div className="single-ticker-section">
                 <SingleTicker />
             </div>
-        </div>
+        
     </HelmetProvider>
 );
 
