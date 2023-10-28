@@ -129,19 +129,19 @@ export const Works = ({ maxPosts = 45 }) => {
       switch (position) {
         case 0:
           renderedCards.push(
-            <BlogCard className="works-row1-card"  key={currentIndex} {...works[currentIndex]} layout="row1" />
+            <BlogCard type="works" className="works-row1-card"  key={currentIndex} {...works[currentIndex]} layout="row1" />
           );
           currentIndex++;
           break;
         case 1:
           renderedCards.push(
-            <BlogCard className="works-row3-card" key={currentIndex} {...works[currentIndex]} layout="row3" />
+            <BlogCard type="works" className="works-row3-card" key={currentIndex} {...works[currentIndex]} layout="row3" />
           );
           currentIndex++;
           break;
         case 2:
           renderedCards.push(
-            <BlogCard key={currentIndex} {...works[currentIndex]} layout="row4" />
+            <BlogCard type="works" key={currentIndex} {...works[currentIndex]} layout="row4" />
           );
           currentIndex++;
           break;
@@ -157,13 +157,13 @@ export const Works = ({ maxPosts = 45 }) => {
           break;
         case 5:
           renderedCards.push(
-            <BlogCard key={currentIndex} {...works[currentIndex]} layout="row4" />
+            <BlogCard type="works" key={currentIndex} {...works[currentIndex]} layout="row4" />
           );
           currentIndex++;
           break;
         case 6:
           renderedCards.push(
-            <BlogCard className="works-row3-card" key={currentIndex} {...works[currentIndex]} layout="row3" />
+            <BlogCard type="works" className="works-row3-card" key={currentIndex} {...works[currentIndex]} layout="row3" />
           );
           currentIndex++;
           break;

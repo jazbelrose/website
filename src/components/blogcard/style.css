@@ -190,7 +190,7 @@
 
 .row1 .blog-tag {
     padding-bottom: min(10px, 1vw);
-    font-size: min(1.5rem, 3vw);
+    font-size: min(1.25rem, 2.5vw);
     font-weight: bold;
     color: #FA3356;
 
@@ -307,7 +307,7 @@ position: relative;
 
 .row2 .blog-tag {
     
-    font-size: min(1.5rem, 3vw);
+    font-size: min(1.25rem, 2.5vw);
     line-height: 0.8;
     font-weight: bold;
     color: #FA3356;
@@ -571,14 +571,19 @@ width: 100%;
     color: white; 
 }
 
+.row4 .blog-tag {
+    
+    font-size: min(1.2rem, 2.5vw);
+    padding-bottom: 0;
+}
 
 .row4 .blog-title {
     line-height: 0.8;
     color: white;
-    margin: 0;
-    font-size: min(3rem, 5vw);
     
-    padding-top: min(25px, 2.5vw);
+    font-size: min(3rem, 5vw);
+    margin-left: 5px;
+    padding-top: min(10px, 1vw);
     padding-bottom: min(10px, 1.5vw);
     user-select: none;
 }
@@ -589,9 +594,10 @@ width: 100%;
     line-height: 1;
     color: white;
     margin: 0;
-    font-size: min(1.5rem, 3vw);
+    font-size: min(2rem, 4vw);
     padding-bottom: min(5px, 0.5vw);
-    padding: 5px;
+    opacity: 0.5;
+    
     user-select: none;
 }
 

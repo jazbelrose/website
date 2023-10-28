@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import './style.css';
 import { ScrambleButton } from "../scramblebutton";
 
-function BlogCard({ className, title, description, slug, date, tags, readingTime, layout, images, authorName, subtitle }) {
+function BlogCard({type = 'blog', className, title, description, slug, date, tags, readingTime, layout, images, authorName, subtitle }) {
   return (
     <div className={`blog-card ${layout} ${className || ''}`}>
       {layout === "row1" && (
         <>
-        <div className="row1-image">
-    <img src={images[0]} alt={title} className="card-image"/>
-</div>
+          <div className="row1-image">
+            <img src={images[0]} alt={title} className="card-image"/>
+          </div>
           <div className="row1-content">
             <div className="column1">
               <h3 className="blog-title">{title}</h3>
@@ -19,7 +19,7 @@ function BlogCard({ className, title, description, slug, date, tags, readingTime
               {tags && <span className="blog-tag">{tags.join(', ')}</span>}
             </div>
             <div className="column2">
-              <ScrambleButton text="Read More →" to={`/blog/${slug}`} />
+              <ScrambleButton text={type === 'blog' ? "Read More →" : "View Project →"} to={`/${type}/${slug}`} />
               <div className="blog-date-time">
                 <p className="blog-date">{date}</p>
                 <p className="blog-reading-time">{readingTime} min read</p>
@@ -63,7 +63,8 @@ function BlogCard({ className, title, description, slug, date, tags, readingTime
             {tags && <span className="blog-tag">{tags.join(', ')}</span>}
             <h3 className="blog-title">{title}</h3>
             <h3 className="blog-description">{description}</h3>
-            <ScrambleButton text="Read More →" to={`/blog/${slug}`} />
+            <ScrambleButton text={type === 'blog' ? "Read More →" : "View Project →"} to={`/${type}/${slug}`} />
+
             </div>
             
             <div className="blog-date-time">
