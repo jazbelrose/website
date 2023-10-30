@@ -7,7 +7,12 @@
   font-weight: 900;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'Helvetica Black';
+  src: url('./fonts/HelveticaLT97BlackCondensed.woff2');
+  font-weight: 900;
+  font-style: normal;
+}
 
 
 

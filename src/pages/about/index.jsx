@@ -55,7 +55,7 @@ export const About = () => {
         <title>{meta.title} | About </title>
         <meta name="description" content={meta.description} />
       </Helmet>
-      <div className="container-fluid">
+     
         <div class="overlay">
           <div class="bar"></div>
           <div class="bar"></div>
@@ -68,7 +68,7 @@ export const About = () => {
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
-
+<div className="about-container">
         <div className="custom-row ">
           <div className="custom-column">
             <h1 id="random-quote" className="quote">
@@ -218,7 +218,7 @@ export const About = () => {
             </div>
           </Col>
         </Row>
-      </div>
+        </div>
     </HelmetProvider>
   );
 };

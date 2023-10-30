@@ -1,3 +1,15 @@
+
+
+.about-container {
+
+  margin: 20px auto; /* Center the section horizontally */
+  width: 1920px;
+  max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .services {
   border-radius: 40px;
   border: 2px solid var(--text-color);
@@ -21,7 +33,7 @@
 }
 
 #random-quote {
-  color: red;
+  color: var(--text-color-3);
 }
 
 .about,

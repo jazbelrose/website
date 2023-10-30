@@ -82,7 +82,7 @@ const Headermain = () => {
     menuAnimation.current = gsap
       .timeline({ paused: true }) // Start in a paused state
       .to(".span-open", {
-        duration: 0.5,
+        duration: 0.75,
         attr: { d: "M0 502S175 272 500 272s500 230 500 230V0H0Z" },
         ease: "Power2.easeIn",
         onStart: () => {
@@ -97,13 +97,13 @@ const Headermain = () => {
       })
 
       .to(".span-open", {
-        duration: 0.75,
+        duration: 1,
         attr: { d: "M0,1005S175,995,500,995s500,5,500,5V0H0Z" },
         ease: "Power2.easeOut"
       })
 
       .to(".menu .menu-item > a", {
-        duration: .5,
+        duration: .75,
         opacity: 1,
         transform: "translateY(0)",
         stagger: 0.1, // This will delay each link animation by 0.1s creating a cascading effect
@@ -115,26 +115,25 @@ const Headermain = () => {
   }, []);
 
   const handleToggle = () => {
-    // Toggle the ovhidden class on the body element
-    document.body.classList.toggle("ovhidden");
-
-    if (menuAnimation.current) {
-      if (isActive) {
-        menuAnimation.current.reverse();
-        menuAnimation.current.eventCallback("onReverseComplete", () =>
-          setActive(false)
-        );
-      } else {
-        menuAnimation.current.play();
-        menuAnimation.current.eventCallback("onComplete", () =>
-          setActive(true)
-        );
-      }
+    if (isActive) {
+        document.body.classList.remove("ovhidden");
+        if (menuAnimation.current) {
+            menuAnimation.current.reverse();
+            menuAnimation.current.eventCallback("onReverseComplete", () => setActive(false));
+        } else {
+            setActive(!isActive);
+        }
     } else {
-      // If menuAnimation.current doesn't exist, simply toggle the isActive state
-      setActive(!isActive);
+        document.body.classList.add("ovhidden");
+        if (menuAnimation.current) {
+            menuAnimation.current.play();
+            menuAnimation.current.eventCallback("onComplete", () => setActive(true));
+        } else {
+            setActive(!isActive);
+        }
     }
-  };
+};
+
 
   return (
     <>
