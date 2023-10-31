@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
   
-.works-container {
+.workspage-container {
     background-color: var(--bg-color);
     padding: min(75px, 10vw) min(20px, 2vw) 0;
     margin-bottom: min(100px, 10vw);
@@ -11,6 +11,7 @@
     margin: 0 auto;
     width: 100%;
 }
+
 
 .works-heading {
     
@@ -58,7 +59,7 @@
 
 
 .works-subheader {
-    padding: 0 25px min(50px, 3vw);
+    padding: 0 25px ;
 
     color: #8D8787;
     

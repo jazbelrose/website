@@ -184,7 +184,7 @@ export const Works = ({ maxPosts = 45 }) => {
 
   return (
     <HelmetProvider>
-        <div className="works-container">
+        <div className="workspage-container">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Our Work</title>
@@ -203,7 +203,7 @@ export const Works = ({ maxPosts = 45 }) => {
                 </div>
             </div>
 
-            <div className="blog-container" ref={(el) => { blogPostRefs.current[0] = el; }}>
+            <div className="works-container" ref={(el) => { blogPostRefs.current[0] = el; }}>
                 <div className="blog-section">
                     {renderWorks(displayedWorks)}
                 </div>
