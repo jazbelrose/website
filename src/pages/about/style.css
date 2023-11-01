@@ -1,19 +1,66 @@
 
-#mylg-graphic {
-  width: 1000px; /* or any width you prefer */
-  height: auto; /* maintain the aspect ratio */
+
+.content-limit {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative; /* For the absolute positioned SVGs inside */
+  padding-left: 20px;  /* Optional padding */
+  padding-right: 20px; /* Optional padding */
+  overflow: hidden;
 }
 
-
-.mylg-container {
+.studio-title {
+  background: white;
+  padding-top: 75px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%; /* or any specific height you want */
-
-  background-color:var(--text-color-3);
+  overflow: hidden;
 }
 
+
+.studio-subtitle {
+  background: #FA3356;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#studio-title, #studio-subtitle {
+  width: 100%;  /* Fallback */
+ 
+
+}
+
+
+.services-title {
+  color: #0c0c0c;
+  width: 90%;
+  text-align: center;  /* Horizontally centers the text */
+  font-size: min(6vw, 40px);  /* Adapts based on viewport width, but doesn't exceed 40px */
+  margin: 0 auto;  /* Centers the title when the width is less than the container */
+}
+
+.mylg-container {
+  background: linear-gradient(to bottom, #FA3356, #0c0c0c 100%);
+  display: flex;
+  justify-content: center;
+  height: 75vw;
+  overflow: hidden;
+}
+#mylg-staggered, #mylg-solo {
+  position: absolute;
+  top: min(2vw,20px);  /* Adjust the values as needed */
+  left: 50%;
+  transform: translateX(-50%); /* Only centering horizontally */
+  width: 95%;
+  
+  
+}
+
+#mylg-solo { 
+  z-index: 2;
+}
 .about-container {
 padding-top: 100px;
   margin: 20px auto; /* Center the section horizontally */
@@ -47,6 +94,7 @@ padding-top: 100px;
   flex-wrap: wrap;
   align-items: center;
   margin: 1.5rem auto;
+  overflow: hidden;
 }
 
 .flex-col {
@@ -119,7 +167,7 @@ padding-top: 100px;
 
 .card {
   background-color: #0d0d0d;
-  
+  height: 50vw;
   flex: 0 0 48%; 
   padding: min(25px, 5vw) min(20px, 2.5vw); 
   margin: 20px 10px;
@@ -155,11 +203,11 @@ padding-top: 100px;
 }
  .card-title {
   
-  font-size: min(6rem, 3vw);
+  font-size: min(8rem, 4vw);
   line-height: 0.8;
  }
  .card-description {
-  font-size: min(2.5rem, 2vw);
+  font-size: min(5rem, 2.5vw);
   line-height: 1.5;
  }
 
@@ -186,7 +234,7 @@ padding-top: 100px;
   }
 
   .card-description {
-    max-width: ;
+    
     font-size: min(2.5rem, 2vw);
     line-height: 1.5;
    }

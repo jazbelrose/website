@@ -4,7 +4,10 @@ import { dataabout, meta, } from "../../content_option";
 import dataAbout from "./dataAbout.json";
 import serviceData from "./services.json";
 import { ReactComponent as Sunburst } from "../../assets/svg/sunburst.svg";
-import { ReactComponent as Mylg } from "../../assets/svg/mylg.svg";
+import { ReactComponent as Mylgstaggered } from "../../assets/svg/mylgstagger.svg";
+import { ReactComponent as Mylgsolo } from "../../assets/svg/mylgsolo.svg";
+import { ReactComponent as Studiotitle } from "../../assets/svg/studiotitle.svg";
+import { ReactComponent as Studiosubtitle } from "../../assets/svg/subtitles.svg";
 import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -40,25 +43,29 @@ export const About = () => {
       ease: "power4.inOut"
     });
 
-    gsap.from(".left-column .card", {
-      opacity: 0,
-      x: -100,                /* Offset of 100px in the X direction to the left */
-      duration: 0.5,
-      stagger: 0.2            /* 0.2 second delay between each card's animation */
-    });
+  s
 
-    // Animate cards from the right column
-    gsap.from(".right-column .card", {
-      opacity: 0,
-      x: 100,                 /* Offset of 100px in the X direction to the right */
-      duration: 0.5,
-      stagger: 0.2            /* 0.2 second delay between each card's animation */
-    });
-    gsap.from("path.cls-15", {
-      duration: 0.001,
-      opacity: 0,
-      y: -50,
-      stagger: 0.1
+    gsap.set(".uuid-66427b3d-aabb-420f-a8e7-bf006193f4f4", { opacity: 0 });
+
+// Animation: stagger the appearance of each path
+gsap.to(".uuid-66427b3d-aabb-420f-a8e7-bf006193f4f4", {
+    opacity: 1,
+    duration: 0.1,
+    stagger: 0.1,
+    delay: 0.75,
+    ease: "power2.out"
+});
+
+    // Initial state: set the opacity of .cls-13 elements to 0
+    gsap.set(".cls-13", { opacity: 0 });
+
+    // Animation: Staggered fade-in of .cls-13 elements
+    gsap.to(".cls-13", {
+      opacity: 1,
+      duration: 0.5,   // Very fast fade-in
+      stagger: 0.002,    // 0.025 seconds delay between each element's animation start
+      delay: 1.5,
+      ease: "power4.inOut"
     });
 
 
@@ -87,15 +94,26 @@ export const About = () => {
           ))}
       </div>
 
-    <div className="mylg-container">
 
-    <Mylg id="mylg-graphic" />
-
-
-
+      <div className="studio-title">
+    <div className="content-limit">
+        <Studiotitle id="studio-title" />
+       
     </div>
+</div>
 
+<div className="studio-subtitle">
+    <div className="content-limit">
+        <Studiosubtitle id="studio-subtitle" />
+    </div>
+</div>
 
+<div className="mylg-container">
+    <div className="content-limit">
+        <Mylgsolo id="mylg-solo" />
+        <Mylgstaggered id="mylg-staggered" />
+    </div>
+</div>
 
 
 
