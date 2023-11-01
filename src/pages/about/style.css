@@ -23,6 +23,7 @@
 }
 
 .studio-title {
+  
   background: white;
   padding-top: 75px;
   display: flex;
@@ -32,6 +33,7 @@
 
 
 .studio-subtitle {
+ 
   background: #FA3356;
   display: flex;
   justify-content: center;
@@ -43,8 +45,32 @@
  
 
 }
+.tagline {
+  background: #0c0c0c;
+  padding-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.tagline .services-description {
+  font-size: min(2rem, 3vw); /* Decrease the vw value to reduce font size on smaller screens */
+  max-width: min(1100px, 80vw); /* Set a dynamic max-width based on the viewport width */
+  width: 100%;
+  margin: -0px auto 50px;
+  padding: 0 20px;
+}
 
 
+#tagline{
+  padding: 10px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+}
 .services-title {
   color: #0c0c0c;
   width: 90%;

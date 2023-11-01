@@ -8,6 +8,7 @@ import { ReactComponent as Mylgstaggered } from "../../assets/svg/mylgstagger.sv
 import { ReactComponent as Mylgsolo } from "../../assets/svg/mylgsolo.svg";
 import { ReactComponent as Studiotitle } from "../../assets/svg/studiotitle.svg";
 import { ReactComponent as Studiosubtitle } from "../../assets/svg/subtitles.svg";
+import { ReactComponent as Tagline } from "../../assets/svg/notjust.svg";
 import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -79,6 +80,24 @@ gsap.to(".uuid-66427b3d-aabb-420f-a8e7-bf006193f4f4", {
       ease: "power4.inOut"
     });
 
+    gsap.set(".uuid-15b93112-0a1e-483d-913e-d7227f930ae5", { opacity: 0 });
+
+
+gsap.to(".uuid-15b93112-0a1e-483d-913e-d7227f930ae5", {
+  opacity: 1,
+  duration: 0.05,
+  stagger: 0.05,
+  ease: "power4.inOut",
+  scrollTrigger: {
+    trigger: ".tagline", // Assuming #tagline is the ID of the SVG container
+    start: "top bottom",
+    
+  }
+});
+
+
+
+
 
     return () => clearInterval(interval);
   }, []);
@@ -123,6 +142,24 @@ gsap.to(".uuid-66427b3d-aabb-420f-a8e7-bf006193f4f4", {
         <Mylgsolo id="mylg-solo" />
         <Mylgstaggered id="mylg-staggered" />
     </div>
+</div>
+
+<div className="tagline">
+    <div className="content-limit">
+        <Tagline id="tagline" />
+    </div>
+    <p className="services-description">MYLG is here to make you look good in any digital landscape. 
+As a premier design agency, we focus on delivering tailored 
+digital solutions that elevate your brand’s presence. From 3D
+environment design, 3D modeling and comprehensive web
+design to advanced back-end and front-end development, 
+we are dedicated to setting industry standards. Our work 
+doesn’t just aim for aesthetics; we ensure it communicates
+ the essence of your brand. If you’re seeking immersive 
+digital campaigns, strategic brand narratives, or 
+high-end commercial content, MYLG is 
+equipped to drive your vision into the
+future of digital innovation.</p>
 </div>
 
 
