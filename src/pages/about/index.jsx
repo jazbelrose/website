@@ -18,6 +18,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const About = () => {
   useEffect(() => {
+
+    const timeline = gsap.timeline();
     const interval = setInterval(() => {
       const svg = document.querySelector("#sunburst");
       if (svg) {
@@ -34,16 +36,25 @@ export const About = () => {
       }
     }, 100);
 
-    gsap.to(".bar", 1.5, {
-      delay: 0,
-      height: 0,
-      stagger: {
-        amount: 0.5
+    timeline.to("#revealPath", {
+      attr: {
+        d: "M0,502S175,272,500,272s500,230,500,230V0H0Z" // Intermediate state
       },
-      ease: "power4.inOut"
+      duration: .75,
+      ease: "Power1.easeIn",
+    })
+    .to("#revealPath", {
+      attr: {
+        d: "M0,2S175,1,500,1s500,1,500,1V0H0Z" // Final state
+      },
+      duration: 0.5,
+      ease: "power1.easeOut"
+      
     });
 
-  
+
+
+
 
     gsap.set(".uuid-66427b3d-aabb-420f-a8e7-bf006193f4f4", { opacity: 0 });
 
@@ -86,13 +97,12 @@ gsap.to(".uuid-66427b3d-aabb-420f-a8e7-bf006193f4f4", {
         <meta name="description" content={meta.description} />
       </Helmet>
 
-      <div className="overlay">
-        {Array(10)
-          .fill(null)
-          .map((_, idx) => (
-            <div key={idx} className="bar"></div>
-          ))}
-      </div>
+      <div className="svg-overlay">
+  <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+    <path id="revealPath" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+  </svg>
+</div>
+
 
 
       <div className="studio-title">

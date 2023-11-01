@@ -1,4 +1,16 @@
+.svg-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+}
 
+#revealPath {
+  fill: #0c0c0c; /* Color to hide the content initially */
+}
 
 .content-limit {
   max-width: 1920px;
