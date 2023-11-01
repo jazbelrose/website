@@ -43,7 +43,7 @@ export const About = () => {
       ease: "power4.inOut"
     });
 
-  s
+  
 
     gsap.set(".uuid-66427b3d-aabb-420f-a8e7-bf006193f4f4", { opacity: 0 });
 
