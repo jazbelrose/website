@@ -3,13 +3,32 @@
 
 @font-face {
   font-family: 'Helvetica Special';
-  src: url('./fonts/HelveticaNowDisplay-Regular.woff2');
+  src: url('./fonts/Helvetica-Display.woff2');
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: 'Helvetica Black';
-  src: url('./fonts/HelveticaLT97BlackCondensed.woff2');
+  src: url('./fonts/Helvetica-Black.woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Light';
+  src: url('./fonts/Helvetica-Light.woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./fonts/Helvetica-Neue.woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Medium';
+  src: url('./fonts/Helvetica-Medium.woff2');
   font-weight: 900;
   font-style: normal;
 }

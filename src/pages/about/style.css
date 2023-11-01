@@ -59,7 +59,8 @@
   max-width: min(1100px, 80vw); /* Set a dynamic max-width based on the viewport width */
   width: 100%;
   margin: -0px auto 50px;
-  padding: 0 20px;
+  padding: 0px 20px;
+  padding-bottom: 5vw;
 }
 
 
@@ -83,9 +84,11 @@
   background: linear-gradient(to bottom, #FA3356, #0c0c0c 100%);
   display: flex;
   justify-content: center;
-  height: 75vw;
+  height: 50vw; /* Set a base height relative to the viewport width */
+  max-height: 70vh; /* Set a maximum height relative to the viewport height */
   overflow: hidden;
 }
+
 #mylg-staggered, #mylg-solo {
   position: absolute;
   top: min(2vw,20px);  /* Adjust the values as needed */
@@ -191,26 +194,34 @@ padding-top: 100px;
   display: inline-block;
 }
 
-
-
-
-.card-container {
+.cards-container {
   max-width: 1920px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Change to center to center the cards */
-  margin: 0 auto; /* Center the container */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Adjust the gap between cards as you need */
 }
 
 
-.card {
+
+.cards-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 20px; /* or whatever value you'd like */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+
+.card-item {
   background-color: #0d0d0d;
-  height: 50vw;
-  flex: 0 0 48%; 
-  padding: min(25px, 5vw) min(20px, 2.5vw); 
-  margin: 20px 10px;
+  
+  
+  padding: min(10px, 2.5vw) min(10px, 2.5vw); 
+  
   color: white;
-  border-radius: min(50px, 5vw);
+  border-radius: min(40px, 3vw);
   background-color: transparent;
   border: 2px solid white;
   
