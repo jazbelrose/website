@@ -69,12 +69,12 @@ export const About = () => {
   
     
  // Set the initial state for elements with class `st1` to `st10`
- for (let i = 1; i <= 10; i++) {
+ for (let i = 1; i <= 11; i++) {
   gsap.set(`.st${i}`, { opacity: 0 });
 }
 
 // Create the staggered animation for the elements
-for (let i = 1; i <= 10; i++) {
+for (let i = 1; i <= 11; i++) {
   masterTimeline.to(`.st${i}`, {
     opacity: 1,
     duration: 0.01,
@@ -84,7 +84,7 @@ for (let i = 1; i <= 10; i++) {
   }, `+=${i * 0.01}`); // Add a relative offset for each subsequent animation
 }
 
-   
+
 
     //DESIGN SERVICES
     gsap.set(".uuid-8f1a6b90-5ac3-4aa1-bc90-e08ce41c3195", { opacity: 0 });
@@ -161,7 +161,10 @@ for (let i = 1; i <= 10; i++) {
 
 
     
-  }, []);
+ // Clean up ScrollTriggers when the component unmounts
+return () => ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+}, []);
+   
 
   const randomQuote =
     dataAbout.dataAbout &&
@@ -198,17 +201,12 @@ for (let i = 1; i <= 10; i++) {
         </div>
       </div>
 
-      <div className="mylg-container">
-        <div className="content-limit">
-          <Mylgstaggered id="mylg-staggered" />
-        </div>
-      </div>
-
+     
       
-        <div className="content-limit">
+      
           <Tagline id="tagline" />
-        </div>
-      
+       
+         
 
       <div className="cards-container">
         <div className="card-item">
