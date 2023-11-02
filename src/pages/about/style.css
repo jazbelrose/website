@@ -52,25 +52,27 @@
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  
 }
 
 .tagline .services-description {
   font-size: min(2rem, 3vw); /* Decrease the vw value to reduce font size on smaller screens */
   max-width: min(1920px, 100vw); /* Set a dynamic max-width based on the viewport width */
   width: 100%;
-  margin: -0px auto 50px;
+  margin: 0px auto ;
   padding: 0px 20px;
-  padding-bottom: 5vw;
+  
 }
 
 
 #tagline{
+  margin: -20px;
   padding: 10px;
   background-color: transparent;
   display: flex;
   justify-content: center;
   overflow: hidden;
-  padding-bottom: 50px;
+ 
 
 }
 .services-title {
@@ -289,4 +291,10 @@ padding-top: 100px;
     line-height: 1.5;
    }
   
+}
+/* Media query for screens that are 768px wide or less */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr; /* switch to one column */
+  }
 }

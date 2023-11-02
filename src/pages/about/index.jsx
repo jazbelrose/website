@@ -95,18 +95,22 @@ export const About = () => {
 
     });
 
-    gsap.set(".uuid-15b93112-0a1e-483d-913e-d7227f930ae5", { opacity: 0 });
-    gsap.to(".uuid-15b93112-0a1e-483d-913e-d7227f930ae5", {
-      opacity: 1,
-      duration: 0.05,
-      stagger: 0.05,
-      ease: "power4.inOut",
-      scrollTrigger: {
-        trigger: ".tagline", // Assuming #tagline is the ID of the SVG container
-        start: "top bottom +=50px",
+    
 
-      }
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".tagline",
+        start: "top bottom+=50px",
+      },
+      defaults: { duration: 0.1, ease: "elastic.inOut" }
     });
+    
+    // Assuming you have 10 elements with classes st1 through st10
+    for (let i = 1; i <= 10; i++) {
+      tl.set(`.st${i}`, { opacity: 0 })
+        .to(`.st${i}`, { opacity: 1 }, i * 0.1); // Stagger the start of each 'to' animation
+    }
+    
 
     //DESIGN SERVICES
     gsap.set(".uuid-9cd30154-9d0b-43f3-b1df-48048d51db89", { opacity: 0 });
@@ -159,8 +163,8 @@ export const About = () => {
     });
 
     //BRANDING SERVICES
-    gsap.set(".uuid-764a425e-d9eb-463a-a20f-36402e9c32ba", { opacity: 0 });
-    gsap.to(".uuid-764a425e-d9eb-463a-a20f-36402e9c32ba", {
+    gsap.set(".uuid-f45ebbdd-fd0e-4c32-b939-92482ee45304", { opacity: 0 });
+    gsap.to(".uuid-f45ebbdd-fd0e-4c32-b939-92482ee45304", {
       opacity: 1,
       duration: 0.1,
       stagger: 0.015,
