@@ -60,7 +60,16 @@ export const About = () => {
       });
 
 
+      gsap.set(".uuid-66427b3d-aabb-420f-a8e7-bf006193f4f4", { opacity: 0 });
 
+      // Animation: stagger the appearance of each path
+      gsap.to(".uuid-66427b3d-aabb-420f-a8e7-bf006193f4f4", {
+          opacity: 1,
+          duration: 0.1,
+          stagger: 0.1,
+          delay: 0.5,
+          ease: "power2.out"
+      });
 
 
     gsap.set(".uuid-01f5aca7-0df2-4d97-885c-bee4c47a7981", { opacity: 0 });
