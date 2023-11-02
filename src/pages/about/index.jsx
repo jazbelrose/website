@@ -5,7 +5,7 @@ import dataAbout from "./dataAbout.json";
 import serviceData from "./services.json";
 import { ReactComponent as Sunburst } from "../../assets/svg/sunburst.svg";
 import { ReactComponent as Mylgstaggered } from "../../assets/svg/mylgstagger.svg";
-import { ReactComponent as Mylgsolo } from "../../assets/svg/mylgsolo.svg";
+
 import { ReactComponent as Studiotitle } from "../../assets/svg/studiotitle.svg";
 import { ReactComponent as Studiosubtitle } from "../../assets/svg/subtitles.svg";
 import { ReactComponent as Tagline } from "../../assets/svg/notjust.svg";
@@ -26,95 +26,69 @@ gsap.registerPlugin(ScrollTrigger);
 export const About = () => {
   useEffect(() => {
 
-    const timeline = gsap.timeline();
-    const interval = setInterval(() => {
-      const svg = document.querySelector("#sunburst");
-      if (svg) {
-        clearInterval(interval);
-        gsap.to(svg, {
-          transformOrigin: "center center",
-          rotation: 720,
-          scrollTrigger: {
-            trigger: svg,
-            start: "top bottom",
-            scrub: true
-          }
-        });
-      }
-    }, 100);
+    
+    const masterTimeline = gsap.timeline();
 
-    timeline.to("#revealPath", {
-      attr: {
-        d: "M0,502S175,272,500,272s500,230,500,230V0H0Z" // Intermediate state
-      },
-      duration: .75,
-      ease: "Power1.easeIn",
-    })
+    // Path reveal animations
+    masterTimeline
       .to("#revealPath", {
-        attr: {
-          d: "M0,2S175,1,500,1s500,1,500,1V0H0Z" // Final state
-        },
+        attr: { d: "M0,502S175,272,500,272s500,230,500,230V0H0Z" }, // Intermediate state
+        duration: 0.75,
+        ease: "Power1.easeIn",
+      })
+      .to("#revealPath", {
+        attr: { d: "M0,2S175,1,500,1s500,1,500,1V0H0Z" }, // Final state
         duration: 0.5,
         ease: "power1.easeOut"
-
       });
-
-
-      gsap.set(".uuid-66427b3d-aabb-420f-a8e7-bf006193f4f4", { opacity: 0 });
-
-      // Animation: stagger the appearance of each path
-      gsap.to(".uuid-66427b3d-aabb-420f-a8e7-bf006193f4f4", {
-          opacity: 1,
-          duration: 0.1,
-          stagger: 0.1,
-          delay: 0.5,
-          ease: "power2.out"
-      });
-
-
-    gsap.set(".uuid-01f5aca7-0df2-4d97-885c-bee4c47a7981", { opacity: 0 });
-
-    // Animation: stagger the appearance of each path
-    gsap.to(".uuid-01f5aca7-0df2-4d97-885c-bee4c47a7981", {
+  
+    // Staggered fade-ins
+    gsap.set(".uuid-66427b3d-aabb-420f-a8e7-bf006193f4f4", { opacity: 0 });
+    masterTimeline.to(".uuid-66427b3d-aabb-420f-a8e7-bf006193f4f4", {
       opacity: 1,
       duration: 0.1,
       stagger: 0.1,
-      delay: 0.75,
       ease: "power2.out"
     });
-
+  
+    gsap.set(".uuid-01f5aca7-0df2-4d97-885c-bee4c47a7981", { opacity: 0 });
+    masterTimeline.to(".uuid-01f5aca7-0df2-4d97-885c-bee4c47a7981", {
+      opacity: 1,
+      duration: 0.1,
+      stagger: 0.1,
+      ease: "power2.out"
+    });
+  
     gsap.set(".cls-all", { opacity: 0 });
-
-
-    gsap.to(".cls-all", {
+    masterTimeline.to(".cls-all", {
       opacity: 1,
       duration: 0.5,
       stagger: 0.002,
-      delay: 1.5,
       ease: "power4.inOut"
-
     });
+  
+    
+ // Set the initial state for elements with class `st1` to `st10`
+ for (let i = 1; i <= 10; i++) {
+  gsap.set(`.st${i}`, { opacity: 0 });
+}
 
-    
+// Create the staggered animation for the elements
+for (let i = 1; i <= 10; i++) {
+  masterTimeline.to(`.st${i}`, {
+    opacity: 1,
+    duration: 0.01,
+    scrub: true,
+    // Don't use stagger here since it's being handled by the loop
+    ease: "power2.out"
+  }, `+=${i * 0.01}`); // Add a relative offset for each subsequent animation
+}
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".tagline",
-        start: "top bottom+=50px",
-      },
-      defaults: { duration: 0.1, ease: "elastic.inOut" }
-    });
-    
-    // Assuming you have 10 elements with classes st1 through st10
-    for (let i = 1; i <= 10; i++) {
-      tl.set(`.st${i}`, { opacity: 0 })
-        .to(`.st${i}`, { opacity: 1 }, i * 0.1); // Stagger the start of each 'to' animation
-    }
-    
+   
 
     //DESIGN SERVICES
-    gsap.set(".uuid-9cd30154-9d0b-43f3-b1df-48048d51db89", { opacity: 0 });
-    gsap.to(".uuid-9cd30154-9d0b-43f3-b1df-48048d51db89", {
+    gsap.set(".uuid-8f1a6b90-5ac3-4aa1-bc90-e08ce41c3195", { opacity: 0 });
+    gsap.to(".uuid-8f1a6b90-5ac3-4aa1-bc90-e08ce41c3195", {
       opacity: 1,
       duration: 0.1,
       stagger: 0.015,
@@ -139,7 +113,7 @@ export const About = () => {
       ease: "power2.out",
 
       scrollTrigger: {
-        trigger: "",
+        trigger: "#tagline",
         start: "top bottom",
         markers: true
       }
@@ -186,8 +160,7 @@ export const About = () => {
 
 
 
-
-    return () => clearInterval(interval);
+    
   }, []);
 
   const randomQuote =
@@ -227,16 +200,15 @@ export const About = () => {
 
       <div className="mylg-container">
         <div className="content-limit">
-          <Mylgsolo id="mylg-solo" />
           <Mylgstaggered id="mylg-staggered" />
         </div>
       </div>
 
-      <div className="tagline">
+      
         <div className="content-limit">
           <Tagline id="tagline" />
         </div>
-      </div>
+      
 
       <div className="cards-container">
         <div className="card-item">

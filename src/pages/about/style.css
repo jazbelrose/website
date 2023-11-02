@@ -19,7 +19,7 @@
   position: relative; /* For the absolute positioned SVGs inside */
   padding-left: 20px;  /* Optional padding */
   padding-right: 20px; /* Optional padding */
-  overflow: hidden;
+  
 }
 
 .studio-title {
@@ -71,7 +71,8 @@
   background-color: transparent;
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  
+  z-index: 1;
  
 
 }
@@ -82,25 +83,13 @@
   font-size: min(6vw, 40px);  /* Adapts based on viewport width, but doesn't exceed 40px */
   margin: 0 auto;  /* Centers the title when the width is less than the container */
 }
-
 .mylg-container {
   background: linear-gradient(to bottom, #FA3356, #0c0c0c 100%);
-  display: flex;
   justify-content: center;
-  height: 50vw; /* Set a base height relative to the viewport width */
-  max-height: 70vh; /* Set a maximum height relative to the viewport height */
-  overflow: hidden;
+  z-index: 0;
+  height: 70vh;
 }
 
-#mylg-staggered, #mylg-solo {
-  position: absolute;
-  top: min(2vw,20px);  /* Adjust the values as needed */
-  left: 50%;
-  transform: translateX(-50%); /* Only centering horizontally */
-  width: 95%;
-  
-  
-}
 
 #mylg-solo { 
   z-index: 2;
@@ -199,22 +188,14 @@ padding-top: 100px;
 
 .cards-container {
   max-width: 1920px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px; /* Adjust the gap between cards as you need */
-}
-
-
-
-.cards-container {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 20px; /* or whatever value you'd like */
+  padding: 20px 20px; /* or whatever value you'd like */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+
 
 
 .card-item {
