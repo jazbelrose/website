@@ -74,7 +74,6 @@ export const About = () => {
       ease: "power2.out"
     });
 
-
     gsap.set(".cls-all", { opacity: 0 });
 
 
@@ -88,8 +87,6 @@ export const About = () => {
     });
 
     gsap.set(".uuid-15b93112-0a1e-483d-913e-d7227f930ae5", { opacity: 0 });
-
-
     gsap.to(".uuid-15b93112-0a1e-483d-913e-d7227f930ae5", {
       opacity: 1,
       duration: 0.05,
@@ -97,10 +94,81 @@ export const About = () => {
       ease: "power4.inOut",
       scrollTrigger: {
         trigger: ".tagline", // Assuming #tagline is the ID of the SVG container
-        start: "top bottom",
+        start: "top bottom +=50px",
 
       }
     });
+
+    //DESIGN SERVICES
+    gsap.set(".uuid-9cd30154-9d0b-43f3-b1df-48048d51db89", { opacity: 0 });
+    gsap.to(".uuid-9cd30154-9d0b-43f3-b1df-48048d51db89", {
+      opacity: 1,
+      duration: 0.1,
+      stagger: 0.015,
+      delay: 0.75,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "#tagline",
+        start: "top bottom",
+        markers: true
+      }
+    });
+
+
+    //EXPERIENTIAL SERVICES
+
+    gsap.set(".uuid-5f43e327-c228-43b8-9ef9-8c8e7994fc22", { opacity: 0 });
+    gsap.to(".uuid-5f43e327-c228-43b8-9ef9-8c8e7994fc22", {
+      opacity: 1,
+      duration: 0.1,
+      stagger: 0.015,
+      delay: 0.75,
+      ease: "power2.out",
+
+      scrollTrigger: {
+        trigger: "",
+        start: "top bottom",
+        markers: true
+      }
+
+    });
+
+    //TECH SERVICES
+    gsap.set(".uuid-20cdce58-cbcf-46d1-8067-9f46302af0a6", { opacity: 0 });
+    gsap.to(".uuid-20cdce58-cbcf-46d1-8067-9f46302af0a6", {
+      opacity: 1,
+      duration: 0.1,
+      stagger: 0.015,
+
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".techcard",
+        start: "top bottom -=250px", // The animation will start even earlier
+        
+      }
+      
+    });
+
+    //BRANDING SERVICES
+    gsap.set(".uuid-764a425e-d9eb-463a-a20f-36402e9c32ba", { opacity: 0 });
+    gsap.to(".uuid-764a425e-d9eb-463a-a20f-36402e9c32ba", {
+      opacity: 1,
+      duration: 0.1,
+      stagger: 0.015,
+
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".techcard",
+        start: "top bottom -=250px", // The animation will start even earlier
+        
+      }
+      
+    });
+
+
+
+
+
 
 
 
@@ -155,6 +223,27 @@ export const About = () => {
         <div className="content-limit">
           <Tagline id="tagline" />
         </div>
+      </div>
+
+      <div className="cards-container">
+        <div className="card-item">
+          <Designcard />
+
+        </div>
+        <div className="card-item">
+          <Experientialcard />
+        </div>
+        <div className="card-item">
+          <Techcard className="techcard" />
+        </div>
+        <div className="card-item">
+
+          <Brandingcard className="brandingcard" />
+        </div>
+      </div>
+
+      <div className="tagline">
+       
         <p className="services-description">MYLG is here to make you look good in any digital landscape.
           As a premier design agency, we focus on delivering tailored
           digital solutions that elevate your brand’s presence. From 3D
@@ -168,23 +257,7 @@ export const About = () => {
           equipped to drive your vision into the
           future of digital innovation.</p>
       </div>
-      
-      <div className="cards-container">
-        <div className="card-item">
-          <Designcard />
 
-        </div>
-        <div className="card-item">
-          <Experientialcard />
-        </div>
-        <div className="card-item">
-          <Techcard />
-        </div>
-        <div className="card-item">
-          
-          <Brandingcard />
-        </div>
-      </div>
 
 
 

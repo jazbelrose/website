@@ -56,7 +56,7 @@
 
 .tagline .services-description {
   font-size: min(2rem, 3vw); /* Decrease the vw value to reduce font size on smaller screens */
-  max-width: min(1100px, 80vw); /* Set a dynamic max-width based on the viewport width */
+  max-width: min(1920px, 100vw); /* Set a dynamic max-width based on the viewport width */
   width: 100%;
   margin: -0px auto 50px;
   padding: 0px 20px;
@@ -70,6 +70,7 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
+  padding-bottom: 50px;
 
 }
 .services-title {
