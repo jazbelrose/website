@@ -7,12 +7,8 @@ import aFLowerBathData from './A-Flower-Bath.json';
 import { ReactComponent as WorksHeader } from "../../../assets/svg/aflowerbathheader.svg";
 
 const AFLowerBath = () => {
-  const work = worksData.find(w => w.slug === "A-Flower-Bath");
 
-  if (!work) {
-    return <div>Work not found.</div>;
-  }
-
+ 
   let galleryRefs = useRef([]);
   const imageUrls = aFLowerBathData; // Use the goldPrincessData for image URLs
 
@@ -68,6 +64,8 @@ const AFLowerBath = () => {
         observer.observe(galleryItem);
       }
     });
+
+    
   
     return () => {
       galleryRefs.current.forEach((galleryItem) => {
@@ -78,6 +76,16 @@ const AFLowerBath = () => {
       masterTimeline.kill();
     };
   }, [imageUrls]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      console.log("Window scrolled to", window.scrollY);
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
 
   return (
 

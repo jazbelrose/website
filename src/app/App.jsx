@@ -50,6 +50,27 @@ export default function App() {
       ScrollTrigger.refresh();
     }, 2500);
   }
+  useEffect(() => {
+    const setFavicon = (darkMode) => {
+      const link = document.querySelector("link[rel~='icon']");
+      if (!link) return;
+
+      link.href = darkMode ? '/favicon-light.png' : '/favicon-light.png';
+    };
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    setFavicon(mediaQuery.matches);
+
+    const handleChange = (e) => {
+      setFavicon(e.matches);
+    };
+
+    mediaQuery.addListener(handleChange);
+
+    return () => {
+      mediaQuery.removeListener(handleChange);
+    };
+  }, []);
 
 
 

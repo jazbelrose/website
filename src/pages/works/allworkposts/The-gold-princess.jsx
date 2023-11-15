@@ -1,18 +1,16 @@
 import React, { useRef, useEffect } from "react";
 
 import { gsap } from "gsap";
+
 import "./style.css";
 import worksData from '../works.json';  
 import goldPrincessData from './the-gold-princess.json';
 import { ReactComponent as WorksHeader } from "../../../assets/svg/goldprincessheader.svg";
 
 const TheGoldPrincess = () => {
-  const work = worksData.find(w => w.slug === "The-Gold-Princess");
 
-  if (!work) {
-    return <div>Work not found.</div>;
-  }
 
+  
   let galleryRefs = useRef([]);
   const imageUrls = goldPrincessData; // Use the goldPrincessData for image URLs
 
