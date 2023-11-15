@@ -69,12 +69,12 @@ export const About = () => {
   
     
  // Set the initial state for elements with class `st1` to `st10`
- for (let i = 1; i <= 11; i++) {
+ for (let i = 2; i <= 11; i++) {
   gsap.set(`.st${i}`, { opacity: 0 });
 }
 
 // Create the staggered animation for the elements
-for (let i = 1; i <= 11; i++) {
+for (let i = 2; i <= 11; i++) {
   masterTimeline.to(`.st${i}`, {
     opacity: 1,
     duration: 0.01,
@@ -84,7 +84,14 @@ for (let i = 1; i <= 11; i++) {
   }, `+=${i * 0.01}`); // Add a relative offset for each subsequent animation
 }
 
-
+gsap.set(".st1", { opacity: 0, scale: 0.5 });
+masterTimeline.to(".st1", {
+  scale: 1,
+  opacity: 1,
+  duration: 0.5,
+  stagger: 0.002,
+  ease: "power4.inOut"
+});
 
     //DESIGN SERVICES
     gsap.set(".uuid-8f1a6b90-5ac3-4aa1-bc90-e08ce41c3195", { opacity: 0 });
@@ -187,13 +194,6 @@ return () => ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       </div>
 
 
-
-      <div className="studio-title">
-        <div className="content-limit">
-          <Studiotitle id="studio-title" />
-
-        </div>
-      </div>
 
       <div className="studio-subtitle">
         <div className="content-limit">
