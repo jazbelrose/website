@@ -3,14 +3,14 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import "./style.css";
 import worksData from '../works.json';  
-import aFLowerBathData from './A-Flower-Bath.json';
-import { ReactComponent as WorksHeader } from "../../../assets/svg/aflowerbathheader.svg";
+import frankZummoSum41Data from './Frank-Zummo-Sum41.json';
+import { ReactComponent as WorksHeader } from "../../../assets/svg/frankzummosum41.svg";
 
-const AFLowerBath = () => {
+const FrankZummoSum41 = () => {
 
  
   let galleryRefs = useRef([]);
-  const imageUrls = aFLowerBathData; // Use the goldPrincessData for image URLs
+  const imageUrls = frankZummoSum41Data; // Use the goldPrincessData for image URLs
 
   useEffect(() => {
     const masterTimeline = gsap.timeline();
@@ -120,4 +120,4 @@ const AFLowerBath = () => {
   );
 };
 
-export default AFLowerBath;
+export default FrankZummoSum41;
