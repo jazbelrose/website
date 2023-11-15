@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import "./style.css";
 import worksData from '../works.json';  
 import goldPrincessData from './the-gold-princess.json';
-import { ReactComponent as WorksHeader } from "../../../assets/svg/worksheader.svg";
+import { ReactComponent as WorksHeader } from "../../../assets/svg/goldprincessheader.svg";
 
 const TheGoldPrincess = () => {
   const work = worksData.find(w => w.slug === "The-Gold-Princess");
