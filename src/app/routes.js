@@ -16,6 +16,7 @@ import { ContactUs } from "../pages/contact";
 import { About } from "../pages/about";
 import { Blog } from "../pages/blog";
 import BlogPost from "../pages/blog/blogpost/BlogPost";
+import WorkPost from "../pages/works/workpage/WorkPost";
 import { AnimatePresence, motion } from "framer-motion";
 import { NavigationDirectionContext, NavigationDirectionProvider } from "../components/NavigationDirectionProvider";
 
@@ -117,6 +118,22 @@ const ActualRoutes = ({ location }) => {
               </motion.div>
             }
           />
+
+<Route
+            path="/works/:workSlug"
+            element={
+              <motion.div
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={blogPostVariants[chosenDirection]}
+                transition={pageTransition}
+              >
+                <WorkPost />
+              </motion.div>
+            }
+          />
+
           <Route
             path="/contact"
             element={

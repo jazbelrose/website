@@ -1,0 +1,309 @@
+.works {
+    padding-top : 75px
+  }
+  .po_items_ho {
+    column-width: 20em;
+    -moz-column-width: 20em;
+    -webkit-column-width: 20em;
+    column-gap: 1rem;
+    -moz-column-gap: 1rem;
+    -webkit-column-gap: 1rem;
+    row-gap: 1rem;
+  }
+  .works {
+    margin: 20px;
+  }
+  
+  /* Large Desktops */
+  @media screen and (min-width: 1600px) {
+    .po_items_ho {
+      column-width: 30em;
+      -moz-column-width: 30em;
+      -webkit-column-width: 30em;
+      column-gap: 1rem;
+      -moz-column-gap: 1rem;
+      -webkit-column-gap: 1rem;
+      row-gap: 1rem;
+    }
+    .works {
+      margin: 20px;
+      padding-top: 50px;
+    }
+  }
+  
+  /* Very Large Screens */
+  @media screen and (min-width: 2500px) {
+    .po_items_ho {
+      column-width: 50em;
+      -moz-column-width: 50em;
+      -webkit-column-width: 50em;
+      column-gap: 1rem;
+      -moz-column-gap: 1rem;
+      -webkit-column-gap: 1rem;
+      row-gap: 1rem;
+    }
+    .works {
+      margin: 20px;
+    }
+  }
+  
+  .po_item {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0.5rem auto;
+    position: relative;
+    background: var(--secondary-color);
+    padding: 6px;
+    /* border: 1px solid var(--secondary-color); */
+    transition: 0.3s ease;
+    font-size: 0;
+    min-height: 300px;
+    /* border-radius: 40px; */
+    overflow: hidden;
+  }
+  .po_item img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    position: relative; /* Position the image so that z-index applies */
+    /* border-radius: 35px; Set border-radius on the image */
+    transition: transform 0.5s ease;
+  }
+  
+  /* .po_item:hover img {
+  /*  
+    z-index: 0;
+    border-radius: 40px; Set a high z-index so that it is on top of everything else 
+  } */
+  
+  .img-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* border-radius: 35px; */
+    overflow: hidden;
+    transition: transform 0.5s ease;
+  }
+  
+  .po_item .content {
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--overlay-color);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+  }
+  
+  .po_item .content {
+    opacity: 0;
+    transition-delay: 1s;
+    transition: 0.3s ease;
+    font-size: 20px;
+  }
+  
+  .po_item .content a {
+    background: var(--bg-color);
+  
+    padding: 4px 8px;
+    text-align: center;
+    font-size: 5rem;
+    /* border-radius: 40px; */
+  }
+  
+  /* Existing CSS */
+  h1.works-title {
+    font-size: 100px;
+  }
+  
+  /* Media Queries */
+  
+  /* For devices smaller than 1200px */
+  @media only screen and (max-width: 1199px) {
+    h1.works-title {
+      font-size: 100px;
+    }
+  }
+  
+  /* For devices smaller than 992px */
+  @media only screen and (max-width: 991px) {
+    h1.works-title {
+      font-size: 60px;
+    }
+  }
+  
+  /* For devices smaller than 768px */
+  @media only screen and (max-width: 767px) {
+    h1.works-title {
+      font-size: 40px;
+    }
+  }
+  
+  /* For devices smaller than 576px */
+  @media only screen and (max-width: 575px) {
+    h1.works-title {
+      font-size: 30px;
+    }
+  }
+  .works-scrolling-container {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    /* animation: scroll-left 120s linear infinite; */
+  }
+  
+  /* @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  } */
+  
+  .works-discipline {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 20rem;
+    --primary-color: #0d0d0d;
+    margin-bottom: 50px;
+    font-weight: 900;
+  }
+  
+  .po_item {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    /* margin: 0.5rem auto; */
+    position: relative;
+    background: var(--secondary-color);
+    /* padding: 6px; */
+    /* border: 1px solid var(--secondary-color); */
+    transition: 0.3s ease;
+    font-size: 0;
+    min-height: 300px;
+  }
+  
+  .po_item .content {
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--overlay-color);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+    border: 1px solid black;
+  }
+  
+  .po_item .content {
+    opacity: 0;
+    transition-delay: 1s;
+    transition: 0.3s ease;
+    font-size: 20px;
+  }
+  
+  /* .po_item:hover .content {
+    height: calc(100% - 30px);
+    width: calc(100% - 30px);
+    opacity: 1;
+    border-radius: 40px;
+  } */
+  
+  .po_item:hover .content {
+    opacity: 1;
+    color: var(--secondary-color);
+  }
+  
+  .po_item .content a {
+    background: var(--bg-color);
+    border: solid 1px var(--text-color);
+    padding: 4px 8px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .po_item .content a:hover {
+    text-decoration: none;
+  }
+  
+  /* Existing CSS */
+  h1.works-title {
+    font-size: 100px;
+  }
+  
+  /* Media Queries */
+  
+  /* For devices smaller than 1200px */
+  @media only screen and (maxwidth: 1199px) {
+    h1.works-title {
+      font-size: 100px;
+    }
+  }
+  
+  /* For devices smaller than 992px */
+  @media only screen and (maxwidth: 991px) {
+    h1.works-title {
+      font-size: 60px;
+    }
+  }
+  
+  /* For devices smaller than 768px */
+  @media only screen and (maxwidth: 767px) {
+    h1.works-title {
+      font-size: 40px;
+    }
+  }
+  
+  /* For devices smaller than 576px */
+  @media only screen and (maxwidth: 575px) {
+    h1.works-title {
+      font-size: 30px;
+    }
+  }
+  .works-scrolling-container {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    /* animation: scroll-left 120s linear infinite; */
+  }
+  
+  /* @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  } */
+  
+  .works-discipline {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 20rem;
+    --primary-color: #0d0d0d;
+    margin-bottom: 50px;
+    font-weight: 900;
+  }
+  
