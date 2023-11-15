@@ -72,115 +72,115 @@ const ActualRoutes = ({ location }) => {
 
 
   return (
-    
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route
-            path="/"
-            element={
-              <motion.div
-                initial="initial"
-                animate="in"
-                exit="out"
-                variants={pageVariants}
-                transition={pageTransition}
-              >
-                <Home />
-              </motion.div>
-            }
-          />
-          <Route
-            path="/about"
-            element={
-              <motion.div
-                initial="initial"
-                animate="in"
-                exit="out"
-                variants={pageVariants}
-                transition={pageTransition}
-              >
-                <About />
-              </motion.div>
-            }
-          />
 
-          <Route
-            path="/works"
-            element={
-              <motion.div
-                initial="initial"
-                animate="in"
-                exit="out"
-                variants={pageVariants}
-                transition={pageTransition}
-              >
-                <Works />
-              </motion.div>
-            }
-          />
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route
+          path="/"
+          element={
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <Home />
+            </motion.div>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <About />
+            </motion.div>
+          }
+        />
 
-<Route
-            path="/works/:workSlug"
-            element={
-              <motion.div
-                initial="initial"
-                animate="in"
-                exit="out"
-                variants={blogPostVariants[chosenDirection]}
-                transition={pageTransition}
-              >
-                <WorkPost />
-              </motion.div>
-            }
-          />
+        <Route
+          path="/works"
+          element={
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <Works />
+            </motion.div>
+          }
+        />
 
-          <Route
-            path="/contact"
-            element={
-              <motion.div
-                initial="initial"
-                animate="in"
-                exit="out"
-                variants={pageVariants}
-                transition={pageTransition}
-              >
-                <ContactUs />
-              </motion.div>
-            }
-          />
-          <Route
-            path="/blog"
-            element={
-              <motion.div
-                initial="initial"
-                animate="in"
-                exit="out"
-                variants={pageVariants}
-                transition={pageTransition}
-              >
-                <Blog />
-              </motion.div>
-            }
-          />
-          <Route
-            path="/blog/:postSlug"
-            element={
-              <motion.div
-                initial="initial"
-                animate="in"
-                exit="out"
-                variants={blogPostVariants[chosenDirection]}
-                transition={pageTransition}
-              >
-                <BlogPost />
-              </motion.div>
-            }
-          />
+        <Route
+          path="/works/:workSlug"
+          element={
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <WorkPost />
+            </motion.div>
+          }
+        />
 
-          
-        </Routes>
-      </AnimatePresence>
-    
+        <Route
+          path="/contact"
+          element={
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <ContactUs />
+            </motion.div>
+          }
+        />
+        <Route
+          path="/blog"
+          element={
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <Blog />
+            </motion.div>
+          }
+        />
+        <Route
+          path="/blog/:postSlug"
+          element={
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={blogPostVariants[chosenDirection]}
+              transition={pageTransition}
+            >
+              <BlogPost />
+            </motion.div>
+          }
+        />
+
+
+      </Routes>
+    </AnimatePresence>
+
   );
 };
 

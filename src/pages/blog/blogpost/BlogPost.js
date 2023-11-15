@@ -7,6 +7,8 @@ import LeftArrow from "../../../assets/svg/chevron-left.svg";
 import RightArrow from "../../../assets/svg/chevron-right.svg";
 
 const BlogPost = () => {
+
+  
   
   const { setDirection } = React.useContext(NavigationDirectionContext);
   const { postSlug } = useParams();
@@ -28,6 +30,8 @@ const BlogPost = () => {
       navigate(`/blog/${slug}`);
     });
   };
+
+  
 
   return (
     <div className="blog-content-wrapper">

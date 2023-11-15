@@ -2,11 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { dataabout, meta, } from "../../content_option";
 import dataAbout from "./dataAbout.json";
-import serviceData from "./services.json";
-import { ReactComponent as Sunburst } from "../../assets/svg/sunburst.svg";
-import { ReactComponent as Mylgstaggered } from "../../assets/svg/mylgstagger.svg";
-
-import { ReactComponent as Studiotitle } from "../../assets/svg/studiotitle.svg";
 import { ReactComponent as Studiosubtitle } from "../../assets/svg/subtitles.svg";
 import { ReactComponent as Tagline } from "../../assets/svg/notjust.svg";
 import { ReactComponent as Brandingcard } from "../../assets/svg/brandingcard.svg";
@@ -178,6 +173,8 @@ return () => ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     dataAbout.dataAbout[
     Math.floor(Math.random() * dataAbout.dataAbout.length)
     ];
+
+    
 
   return (
     <HelmetProvider>
