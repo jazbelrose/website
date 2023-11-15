@@ -3,18 +3,18 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import "./style.css";
 import worksData from '../works.json';  
-import goldPrincessData from './the-gold-princess.json';
+import aFLowerBathData from './A-Flower-Bath.json';
 import { ReactComponent as WorksHeader } from "../../../assets/svg/worksheader.svg";
 
-const TheGoldPrincess = () => {
-  const work = worksData.find(w => w.slug === "The-Gold-Princess");
+const AFLowerBath = () => {
+  const work = worksData.find(w => w.slug === "A-Flower-Bath");
 
   if (!work) {
     return <div>Work not found.</div>;
   }
 
   let galleryRefs = useRef([]);
-  const imageUrls = goldPrincessData; // Use the goldPrincessData for image URLs
+  const imageUrls = aFLowerBathData; // Use the goldPrincessData for image URLs
 
   useEffect(() => {
     const masterTimeline = gsap.timeline();
@@ -112,4 +112,4 @@ const TheGoldPrincess = () => {
   );
 };
 
-export default TheGoldPrincess;
+export default AFLowerBath;

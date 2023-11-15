@@ -7,7 +7,7 @@ const s3Client = new S3Client({ region: region });
 async function listS3Objects() {
   const command = new ListObjectsV2Command({
     Bucket: "mylgcontent",
-    Prefix: "35-The Gold PrIncess/XL/"
+    Prefix: "11-Flower Bath Rose/XL/"
   });
 
   try {
