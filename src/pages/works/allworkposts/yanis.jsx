@@ -1,43 +1,18 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 
 import { gsap } from "gsap";
 import "./style.css";
 import worksData from '../works.json';  
-import frankZummoSum41Data from './Frank-Zummo-Sum41.json';
-import { ReactComponent as WorksHeader } from "../../../assets/svg/frankzummosum41.svg";
+import yanisData from './yanis.json';
+import { ReactComponent as WorksHeader } from "../../../assets/svg/nikefemme.svg";
 
-const FrankZummoSum41 = () => {
+const Yanis = () => {
 
  
   let galleryRefs = useRef([]);
-  const imageUrls = frankZummoSum41Data; // Use the goldPrincessData for image URLs
-  const [isLoading, setIsLoading] = useState(true);
-
-
-  // Preload images
-  useEffect(() => {
-    let loadedImages = 0;
-    const totalImages = imageUrls.length;
-
-    const imageLoaded = () => {
-      loadedImages++;
-      if (loadedImages === totalImages) {
-        setIsLoading(false);
-      }
-    };
-
-    imageUrls.forEach(url => {
-      const img = new Image();
-      img.src = url;
-      img.onload = imageLoaded;
-      img.onerror = imageLoaded;
-    });
-  }, [imageUrls]);
-
-   // GSAP animation after images have loaded
+  const imageUrls = yanisData; // Use the goldPrincessData for image URLs
 
   useEffect(() => {
-    if (!isLoading) {
     const masterTimeline = gsap.timeline();
   
     // SVG Path Animation
@@ -98,17 +73,19 @@ const FrankZummoSum41 = () => {
           observer.unobserve(galleryItem);
         }
       });
-      return () => masterTimeline.kill();
-    }
-  }
-  }, [isLoading]); // Dependency on isLoading
+      masterTimeline.kill();
+    };
+  }, [imageUrls]);
 
-  // Other useEffects...
-
-  if (isLoading) {
-    return <div>Loading gallery...</div>;
-  }
-
+  useEffect(() => {
+    const handleScroll = () => {
+      console.log("Window scrolled to", window.scrollY);
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
 
   return (
 
@@ -143,4 +120,4 @@ const FrankZummoSum41 = () => {
   );
 };
 
-export default FrankZummoSum41;
+export default Yanis;

@@ -101,16 +101,16 @@ const AFLowerBath = () => {
      <WorksHeader />
       </div>
       <div className="mb-5 po_items_ho">
-        {imageUrls.map((imageUrl, i) => (
-          <div key={i} className="po_item" ref={(el) => (galleryRefs.current[i] = el)}>
-            <div className="img-wrapper">
-            <img
-                src={imageUrl}
-                alt={`Image ${i + 1}`}
-                className="d-block w-100"
-                style={{ objectFit: "cover", width: "100%", height: "100%" }}
-              />
-             
+          {imageUrls.map((imageUrl, i) => (
+            <div key={i} className="po_item" ref={(el) => (galleryRefs.current[i] = el)}>
+              <div className="img-wrapper">
+                <img
+                  src={imageUrl}
+                  alt={`Image ${i + 1}`}
+                  className="d-block w-100"
+                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                  loading="lazy"  // Lazy load the image
+                />
             </div>
           </div>
         ))}
