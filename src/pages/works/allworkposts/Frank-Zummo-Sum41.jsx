@@ -103,10 +103,13 @@ const FrankZummoSum41 = () => {
   }
   }, [isLoading]); // Dependency on isLoading
 
-  // Other useEffects...
+ 
 
   if (isLoading) {
-    return <div>Loading gallery...</div>;
+    return <div>
+
+      
+    </div>;
   }
 
 

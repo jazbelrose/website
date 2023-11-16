@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 import { gsap } from "gsap";
 import "./style.css";
@@ -12,7 +12,33 @@ const NikeFemme = () => {
   let galleryRefs = useRef([]);
   const imageUrls = nikeFemmeData; // Use the goldPrincessData for image URLs
 
+  const [isLoading, setIsLoading] = useState(true);
+
+
+  // Preload images
   useEffect(() => {
+    let loadedImages = 0;
+    const totalImages = imageUrls.length;
+
+    const imageLoaded = () => {
+      loadedImages++;
+      if (loadedImages === totalImages) {
+        setIsLoading(false);
+      }
+    };
+
+    imageUrls.forEach(url => {
+      const img = new Image();
+      img.src = url;
+      img.onload = imageLoaded;
+      img.onerror = imageLoaded;
+    });
+  }, [imageUrls]);
+
+    // GSAP animation after images have loaded
+  useEffect(() => {
+
+    if (!isLoading) {
     const masterTimeline = gsap.timeline();
   
     // SVG Path Animation
@@ -66,29 +92,26 @@ const NikeFemme = () => {
     });
 
     
-  
+
     return () => {
       galleryRefs.current.forEach((galleryItem) => {
         if (galleryItem) {
           observer.unobserve(galleryItem);
         }
       });
-      masterTimeline.kill();
-    };
-  }, [imageUrls]);
+      return () => masterTimeline.kill();
+    }
+  }
+  }, [isLoading]); // Dependency on isLoading
 
-  useEffect(() => {
-    const handleScroll = () => {
-      console.log("Window scrolled to", window.scrollY);
-    };
-  
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  
+ 
+
+  if (isLoading) {
+    return <div></div>;
+  }
+
 
   return (
-
 <>
     <div className="svg-overlay">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">

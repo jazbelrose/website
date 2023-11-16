@@ -1,18 +1,41 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 import { gsap } from "gsap";
 import "./style.css";
 import worksData from '../works.json';  
 import jewelieStarkData from './Jewelie-Stark.json';
-import { ReactComponent as WorksHeader } from "../../../assets/svg/nikefemme.svg";
+import { ReactComponent as WorksHeader } from "../../../assets/svg/jeweliestark.svg";
 
 const JewelieStark = () => {
 
  
   let galleryRefs = useRef([]);
   const imageUrls = jewelieStarkData; // Use the goldPrincessData for image URLs
+  const [isLoading, setIsLoading] = useState(true);
+
+
+  // Preload images
+  useEffect(() => {
+    let loadedImages = 0;
+    const totalImages = imageUrls.length;
+
+    const imageLoaded = () => {
+      loadedImages++;
+      if (loadedImages === totalImages) {
+        setIsLoading(false);
+      }
+    };
+
+    imageUrls.forEach(url => {
+      const img = new Image();
+      img.src = url;
+      img.onload = imageLoaded;
+      img.onerror = imageLoaded;
+    });
+  }, [imageUrls]);
 
   useEffect(() => {
+    if (!isLoading) {
     const masterTimeline = gsap.timeline();
   
     // SVG Path Animation
@@ -73,19 +96,17 @@ const JewelieStark = () => {
           observer.unobserve(galleryItem);
         }
       });
-      masterTimeline.kill();
-    };
-  }, [imageUrls]);
+      return () => masterTimeline.kill();
+    }
+  }
+  }, [isLoading]); // Dependency on isLoading
 
-  useEffect(() => {
-    const handleScroll = () => {
-      console.log("Window scrolled to", window.scrollY);
-    };
-  
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  
+ 
+
+  if (isLoading) {
+    return <div></div>;
+  }
+
 
   return (
 

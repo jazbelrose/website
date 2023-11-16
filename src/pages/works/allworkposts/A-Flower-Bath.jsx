@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 import { gsap } from "gsap";
 import "./style.css";
@@ -11,8 +11,32 @@ const AFLowerBath = () => {
  
   let galleryRefs = useRef([]);
   const imageUrls = aFLowerBathData; // Use the goldPrincessData for image URLs
+  const [isLoading, setIsLoading] = useState(true);
+
+ // Preload images
+ useEffect(() => {
+  let loadedImages = 0;
+  const totalImages = imageUrls.length;
+
+  const imageLoaded = () => {
+    loadedImages++;
+    if (loadedImages === totalImages) {
+      setIsLoading(false);
+    }
+  };
+
+  imageUrls.forEach(url => {
+    const img = new Image();
+    img.src = url;
+    img.onload = imageLoaded;
+    img.onerror = imageLoaded;
+  });
+}, [imageUrls]);
+
+// GSAP animation after images have loaded
 
   useEffect(() => {
+    if (!isLoading) {
     const masterTimeline = gsap.timeline();
   
     // SVG Path Animation
@@ -65,7 +89,6 @@ const AFLowerBath = () => {
       }
     });
 
-    
   
     return () => {
       galleryRefs.current.forEach((galleryItem) => {
@@ -73,19 +96,16 @@ const AFLowerBath = () => {
           observer.unobserve(galleryItem);
         }
       });
-      masterTimeline.kill();
-    };
-  }, [imageUrls]);
+      return () => masterTimeline.kill();
+    }
+  }
+  }, [isLoading]); // Dependency on isLoading
 
-  useEffect(() => {
-    const handleScroll = () => {
-      console.log("Window scrolled to", window.scrollY);
-    };
-  
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  
+ 
+
+  if (isLoading) {
+    return <div></div>;
+  }
 
   return (
 
