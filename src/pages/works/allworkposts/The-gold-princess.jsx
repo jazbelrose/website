@@ -6,6 +6,7 @@ import "./style.css";
 import worksData from '../works.json';  
 import goldPrincessData from './the-gold-princess.json';
 import { ReactComponent as WorksHeader } from "../../../assets/svg/goldprincessheader.svg";
+import Counter from "../../../counter.jsx";
 
 const TheGoldPrincess = () => {
 
@@ -107,7 +108,10 @@ const TheGoldPrincess = () => {
  
 
   if (isLoading) {
-    return <div></div>;
+    return <div>
+
+      
+    </div>;
   }
 
 

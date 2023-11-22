@@ -6,6 +6,8 @@ import worksData from '../works.json';
 import aFLowerBathData from './A-Flower-Bath.json';
 import { ReactComponent as WorksHeader } from "../../../assets/svg/aflowerbathheader.svg";
 
+import Counter from "../../../counter.jsx";
+
 const AFLowerBath = () => {
 
  
@@ -101,11 +103,13 @@ const AFLowerBath = () => {
   }
   }, [isLoading]); // Dependency on isLoading
 
- 
-
   if (isLoading) {
-    return <div></div>;
+    return <div>
+
+      
+    </div>;
   }
+
 
   return (
 
