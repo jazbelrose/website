@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import "./style.css";
 
-const Ticker = () => {
+const Ticker = ({ lines }) => {
     const lastScrollY = useRef(0);
     const lastScrollTime = useRef(Date.now());
 
@@ -56,27 +56,21 @@ const Ticker = () => {
         };
     }, []);
 
-        const repeatedContent = (text, times = 4) => {
-        let result = "";
-        for (let i = 0; i < times; i++) {
-            result += text;
-        }
-        return result;
-    }
+    const repeatedContent = (baseText, times = 10) => {
+        return Array(times).fill(baseText).join("");
+    };
 
     return (
         <div className="ticker-container">
-            <div className="ticker">
-                <span className="ticker-text ticker-text-1">{repeatedContent("L.A. +22 ← Paris, France +1  ←   New York. ←  London.  ←  California ")}</span>
-            </div>
-            <div className="ticker">
-                <span className="ticker-text ticker-text-2">{repeatedContent("ADPTV.TROIA.NOCCO.PD. BAREBELLS.MISTIFI.ZAPPOS.THE GOLD PRINCESS.MOKIBABY  ")}</span>
-            </div>
-            <div className="ticker">
-                <span className="ticker-text ticker-text-3">{repeatedContent("34.0549° N, 118.2426° W 48.8566° N, 2.3522° E 40.7128° N, 74.0060° W 51.5072° N, 0.1276° W")}</span>
-            </div>
+            {lines.map((line, index) => (
+                <div key={index} className="ticker">
+                    <span className={`ticker-text ticker-text-${(index % 3) + 1}`}>
+                        {repeatedContent(line)}
+                    </span>
+                </div>
+            ))}
         </div>
     );
-}
+};
 
 export default Ticker;

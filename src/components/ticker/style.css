@@ -32,3 +32,16 @@
     display: inline-block;
     white-space: nowrap;
 }
+
+/* Media query for small screens (e.g., mobile devices) */
+@media screen and (max-width: 600px) {
+    .ticker-container {
+        font-size: 5vh; 
+    }
+
+    .ticker{ 
+        
+        padding: 5px;}
+
+  
+}

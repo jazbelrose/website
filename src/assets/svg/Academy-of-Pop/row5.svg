@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-c887912b-dc20-4e2d-87de-aacab9e93c2c" data-name="uuid-e0919eae-fc65-4bab-86e9-9f3a11f0f6f3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1923 701">
+  <defs>
+    <style>
+      .uuid-e0dc76fd-1117-4bae-a12c-738bc7781b0a {
+        isolation: isolate;
+      }
+
+      .uuid-a0ce4603-1313-4056-ae2f-b1e75b4b8d19 {
+        fill: none;
+        stroke-width: 0px;
+      }
+
+      .uuid-5305df37-9cd9-4482-b140-473f56f2572e {
+        clip-path: url(#uuid-29d3ec7c-a7bd-4bf9-859b-be6405cf1a15);
+      }
+    </style>
+    <clipPath id="uuid-29d3ec7c-a7bd-4bf9-859b-be6405cf1a15">
+      <rect class="uuid-a0ce4603-1313-4056-ae2f-b1e75b4b8d19" width="1923" height="701" rx="40" ry="40"/>
+    </clipPath>
+  </defs>
+  <g class="uuid-5305df37-9cd9-4482-b140-473f56f2572e">
+    <image class="uuid-e0dc76fd-1117-4bae-a12c-738bc7781b0a" width="3000" height="1212" transform="translate(-18 -51) scale(.65)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/05.jpg"/>
+  </g>
+</svg>

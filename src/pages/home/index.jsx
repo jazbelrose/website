@@ -18,6 +18,12 @@ import SingleTicker from "../../components/singleticker";
 
 export const Home = () => {
 
+  const tickerLines = [
+    "L.A. +22 ← Paris, France +1  ←   New York. ←  London.  ←  California ",
+    "ADPTV.TROIA.NOCCO.PD. BAREBELLS.MISTIFI.ZAPPOS.THE GOLD PRINCESS.MOKIBABY",
+    "34.0549° N, 118.2426° W 48.8566° N, 2.3522° E 40.7128° N, 74.0060° W 51.5072° N, 0.1276° W"
+];
+
   useEffect(() => {
     gsap.to(".bar", 1.5, {
       delay: 0,
@@ -99,7 +105,7 @@ export const Home = () => {
 
       <div className="ticker-section">
 
-      <Ticker />
+      <Ticker lines={tickerLines}  />
 </div>
  <div className="portfolio-section">
         

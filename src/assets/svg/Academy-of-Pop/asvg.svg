@@ -1,53 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="uuid-def1aa44-e79f-455a-9680-95fd066033bd" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1482.88 535">
+<svg id="uuid-3eb31392-fc30-4de2-9c2c-f02492a8d948" data-name="uuid-def1aa44-e79f-455a-9680-95fd066033bd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 414 456">
   <defs>
     <style>
-      .uuid-3a0891af-5549-40eb-986f-905c5539dd39 {
-        clip-path: url(#uuid-45b9e8e4-3fd4-422b-b6a2-85ada9a36062);
-      }
-
-      .uuid-9cd401f3-ffe5-45e2-8369-adeee921265e {
-        fill: none;
-        stroke-width: 0px;
-      }
-
-      .uuid-d3ed3032-4a96-4fc7-a999-c6862b00454f {
-        fill: url(#uuid-6d1e78ac-e46d-4123-84f2-5e5259f9f157);
-        filter: url(#uuid-974925f7-8333-4d48-8388-d129cf7738d3);
-        stroke: url(#uuid-e95c931b-7701-4ed8-9a51-009d31e1ac7e);
+      .uuid-8eb2e8ca-066b-41b9-bc81-8b1f152fbcf6 {
+        fill: url(#uuid-080e7492-5e95-4fff-93b2-5a00f90bf5fe);
+        stroke: url(#uuid-b6a19f13-69e8-45ca-9e7c-56fb9cd02cf2);
         stroke-miterlimit: 10;
         stroke-width: 1.37px;
       }
     </style>
-    <clipPath id="uuid-45b9e8e4-3fd4-422b-b6a2-85ada9a36062">
-      <rect class="uuid-9cd401f3-ffe5-45e2-8369-adeee921265e" y="42.12" width="450" height="450"/>
-    </clipPath>
-    <linearGradient id="uuid-6d1e78ac-e46d-4123-84f2-5e5259f9f157" data-name="New Gradient Swatch 4" x1="1031.41" y1="267.12" x2="1440.1" y2="267.12" gradientUnits="userSpaceOnUse">
+    <linearGradient id="uuid-080e7492-5e95-4fff-93b2-5a00f90bf5fe" x1=".97" y1="471.39" x2="409.67" y2="471.39" gradientTransform="translate(0 701) scale(1 -1)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#00abec"/>
       <stop offset=".51" stop-color="#e90089"/>
       <stop offset="1" stop-color="#f8ea1d"/>
     </linearGradient>
-    <linearGradient id="uuid-e95c931b-7701-4ed8-9a51-009d31e1ac7e" data-name="New Gradient Swatch 4" x1="1030.72" x2="1440.79" xlink:href="#uuid-6d1e78ac-e46d-4123-84f2-5e5259f9f157"/>
-    <filter id="uuid-974925f7-8333-4d48-8388-d129cf7738d3" data-name="outer-glow-1" filterUnits="userSpaceOnUse">
-      <feOffset dx="0" dy="0"/>
-      <feGaussianBlur result="uuid-4e7deb8a-1bf1-419e-906c-e1217a760612" stdDeviation="13.75"/>
-      <feFlood flood-color="#ec008c" flood-opacity="1"/>
-      <feComposite in2="uuid-4e7deb8a-1bf1-419e-906c-e1217a760612" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
+    <linearGradient id="uuid-b6a19f13-69e8-45ca-9e7c-56fb9cd02cf2" x1=".28" y1="471.39" x2="410.35" y2="471.39" gradientTransform="translate(0 701) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00abec"/>
+      <stop offset=".51" stop-color="#e90089"/>
+      <stop offset="1" stop-color="#f8ea1d"/>
+    </linearGradient>
   </defs>
-
- 
-    
-    <foreignObject width="1074" height="1074" x="0" y="42.12">
-      <video xmlns="http://www.w3.org/1999/xhtml"
-        width="100%" height="100%" controls>
-          <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/00.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      
-    </foreignObject>
-  
-
-  <path class="uuid-d3ed3032-4a96-4fc7-a999-c6862b00454f" d="m1435.89,424.27l-158.03-353.63c-7.76-17.35-24.99-28.52-43.99-28.52h-.15c-19.06.06-36.29,11.35-43.96,28.8l-154.27,351.19c-10.7,24.36.37,52.79,24.73,63.49,24.36,10.7,52.79-.37,63.49-24.73l33.17-75.5h152.25c1.27,0,2.53-.05,3.77-.15l35.02,78.36c8,17.91,25.59,28.53,44.02,28.53,6.57,0,13.25-1.35,19.63-4.2,24.29-10.86,35.19-39.35,24.33-63.65Zm-236.68-135.26l35.04-79.77,35.65,79.77h-70.69Z"/>
+  <path class="uuid-8eb2e8ca-066b-41b9-bc81-8b1f152fbcf6" d="m405.45,386.77L247.42,33.14c-7.76-17.35-24.99-28.52-43.99-28.52h-.15c-19.06.06-36.29,11.35-43.96,28.8L5.05,384.61c-10.7,24.36.37,52.79,24.73,63.49,24.36,10.7,52.79-.37,63.49-24.73l33.17-75.5h152.25c1.27,0,2.53-.05,3.77-.15l35.02,78.36c8,17.91,25.59,28.53,44.02,28.53,6.57,0,13.25-1.35,19.63-4.2,24.29-10.86,35.19-39.35,24.33-63.65h-.01Zm-236.68-135.26l35.04-79.77,35.65,79.77h-70.69Z"/>
 </svg>
