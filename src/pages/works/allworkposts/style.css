@@ -20,7 +20,111 @@
     column-gap: .5rem;
     row-gap: 1rem;
   }
+   
+ 
+ /* Styles for rendering layout */
+
+.rendering-layout {
+  background-color: var(--bg-color);
+  padding: min(20px, 2vw) 0;
+  margin-bottom: min(100px, 10vw);
+  overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.rendering-heading {
+    
+    
+  padding-top: 20px;
+
+}
+
+
+.rendering-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-height: 175px;
   
+}
+
+.rendering-header {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: min(25px, 1.5vw) 5px 0;
+
+}
+
+.rendering-header h2 {
+  line-height: 0.8;
+  font-size: min(8rem, 14vw);
+  white-space: nowrap;
+  
+
+}
+
+
+.arrow-down.works-arrow {
+  color: white;
+  margin-left: auto;
+  padding: min(50px, 3vw) 20px 0;
+  font-size: min(10rem, 16vw);
+
+
+}
+
+
+.rendering-subheader {
+  padding: 0 20px ;
+
+  color: #8D8787;
+  
+}
+.rendering-subheader h3 {
+  font-weight: 900;
+  
+  font-size: min(4rem, 6vw);
+}
+
+
+.rendering-row{
+  margin: 10px;
+
+}
+.rendering-row-video {
+  padding: 50px;
+  display: flex;
+  justify-content: space-around; /* Equal spacing and centering */
+  align-items: center; /* Vertical centering */
+  
+}
+
+.video-container {
+  flex: 1; /* Equal width to the right content */
+  
+  object-fit: cover;
+}
+
+.right-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Align SVG to the right */
+  align-items: center;
+}
+
+.right-content svg {
+ 
+  width: auto; /* Adjust width automatically while maintaining aspect ratio */
+}
+
+
+
   @media screen and (min-width: 1600px) {
     .po_items_ho {
       column-width: 30em;

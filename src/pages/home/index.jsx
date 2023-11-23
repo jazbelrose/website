@@ -70,7 +70,7 @@ export const Home = () => {
         <div className="portfolio-row single-card-row">
           <PortfolioCard 
             className="single-card elf"
-            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Elf.jpg" 
+            imageSrc="https://d2qb21tb4meex0.cloudfront.net/images/Elf.jpg" 
             imageAlt="e.l.f. Beauty Design" 
             title="e.l.f. Beauty"
             subtitle="Nylon House Mokibaby Art Basel" 
@@ -81,14 +81,14 @@ export const Home = () => {
         
         <div className="portfolio-row double-card-row">
           <PortfolioCard 
-            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/The+Gold+Princess.jpg" 
+            imageSrc="https://d2qb21tb4meex0.cloudfront.net/images/The+Gold+Princess.jpg" 
             imageAlt="The Gold Princess" 
             title="The Gold Princess" 
             subtitle="Royal Allure Campaign" 
             description="Branding, Photography, Styling" 
           />
           <PortfolioCard 
-            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Bloom-And-Bliss.jpg" 
+            imageSrc="https://d2qb21tb4meex0.cloudfront.net/images/Bloom-And-Bliss.jpg" 
             imageAlt="Bloom & Bliss Design" 
             title="Bloom & Bliss" 
             subtitle="Brand Identity" 
@@ -106,7 +106,7 @@ export const Home = () => {
         <div className="portfolio-row single-card-row">
           <PortfolioCard 
             className="single-card"
-            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Pipedream-Events.jpg" 
+            imageSrc="https://d2qb21tb4meex0.cloudfront.net/images/Pipedream-Events.jpg" 
             imageAlt="PD Events" 
             title="PD Events"
             subtitle="Branding & Web Design" 
@@ -115,14 +115,14 @@ export const Home = () => {
         </div>
         <div className="portfolio-row double-card-row">
           <PortfolioCard 
-            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Chevron-strategy.jpg" 
+            imageSrc="https://d2qb21tb4meex0.cloudfront.net/images/Chevron-strategy.jpg" 
             imageAlt="Chevron" 
             title="Chevron" 
             subtitle="Turn it up 2023" 
             description="3D Design, Immersive, Event Design" 
           />
           <PortfolioCard 
-            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Jack-Masai.jpg" 
+            imageSrc="https://d2qb21tb4meex0.cloudfront.net/images/Jack-Masai.jpg" 
             imageAlt="Jack Masaï" 
             title="Jack Masaï" 
             subtitle="StrikeFit Paris, France" 
@@ -132,7 +132,7 @@ export const Home = () => {
         <div className="portfolio-row single-card-row">
           <PortfolioCard 
             className="single-card gca"
-            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Ghost-Circus.jpg" 
+            imageSrc="https://d2qb21tb4meex0.cloudfront.net/images/Ghost-Circus.jpg" 
             imageAlt="Ghost Circus Apparel" 
             title="Ghost Circus Apparel"
             subtitle="X by Eli James Collection" 
@@ -144,7 +144,7 @@ export const Home = () => {
       
       <div className="video-container">
       <video loop autoPlay muted playsInline>
-        <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/videos/liquid+bullet.mp4" type="video/mp4" />
+        <source src="https://d2qb21tb4meex0.cloudfront.net/videos/liquid+bullet.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
@@ -153,7 +153,7 @@ export const Home = () => {
         <div className="portfolio-row single-card-row">
           <PortfolioCard 
             className="single-card nocco"
-            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Nocco+logo-01.png" 
+            imageSrc="https://d2qb21tb4meex0.cloudfront.net/images/Nocco+logo-01.png" 
             imageAlt="NOCCO" 
             title="NOCCO"
             subtitle="Influencers Venice Beach, CA" 
@@ -162,14 +162,14 @@ export const Home = () => {
         </div>
         <div className="portfolio-row double-card-row">
           <PortfolioCard 
-            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/keys-soulcare.jpg" 
+            imageSrc="https://d2qb21tb4meex0.cloudfront.net/images/keys-soulcare.jpg" 
             imageAlt="Keys Soulcare" 
             title="Keys Soulcare" 
             subtitle="Haller 6 Mokibaby" 
             description="3D Design, Immersive, Digital" 
           />
           <PortfolioCard 
-            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/Logitech.jpg" 
+            imageSrc="https://d2qb21tb4meex0.cloudfront.net/images/Logitech.jpg" 
             imageAlt="Logitech" 
             title="Logitech" 
             subtitle="Unleash your play" 
@@ -178,14 +178,14 @@ export const Home = () => {
         </div>
         <div className="portfolio-row double-card-row">
           <PortfolioCard 
-            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/the-A.png" 
+            imageSrc="https://d2qb21tb4meex0.cloudfront.net/images/the-A.png" 
             imageAlt="Academy of Pop" 
             title="Academy of Pop" 
             subtitle="Branding Mokibaby" 
             description="3D Design, Immersive, Digital" 
           />
           <PortfolioCard 
-            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/barebells.jpg" 
+            imageSrc="https://d2qb21tb4meex0.cloudfront.net/images/barebells.jpg" 
 
             imageAlt="Barebells" 
             title="Barebells" 
@@ -200,7 +200,7 @@ export const Home = () => {
         <div className="portfolio-row single-card-row">
           <PortfolioCard 
             className="single-card tcs"
-            imageSrc="https://mylgcontent.s3.us-west-1.amazonaws.com/images/the-chainsmokers.jpg" 
+            imageSrc="https://d2qb21tb4meex0.cloudfront.net/images/the-chainsmokers.jpg" 
             imageAlt="The Party Never Ends" 
             title="The Party Never Ends"
             subtitle="Chainsmokers ADPTV" 
