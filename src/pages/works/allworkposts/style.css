@@ -62,12 +62,14 @@
 }
 
 .rendering-header h2 {
+  padding: min(50px, 3vw) 0px 0;
   line-height: 0.8;
   font-size: min(8rem, 14vw);
   white-space: nowrap;
   
 
 }
+
 
 
 .arrow-down.works-arrow {
@@ -81,14 +83,14 @@
 
 
 .rendering-subheader {
-  padding: 0 20px ;
+  padding: min(25px, 1.5vw) 10px 0;
 
   color: #8D8787;
   
 }
 .rendering-subheader h3 {
   font-weight: 900;
-  padding: 10px 0;
+  padding: 20px 0;
   font-size: min(4rem, 6vw);
 }
 
@@ -133,7 +135,7 @@
 }
 
 .rendering-ticker-section{
-  padding-bottom: 50px;
+  padding: 25px 0;
 }
 
 
@@ -147,6 +149,27 @@
   margin-right: min(10px, 1vw); /* Adjust this value for the desired spacing */
 }
 
+.aop-youtube-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 40px;
+}
+
+.aop-youtube-container::before {
+  content: '';
+  display: block;
+  padding-top: 56.25%; /* Aspect ratio 16:9; adjust as needed */
+}
+
+.aop-youtube-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
 .aop-video-container:last-child {
   margin-right: 0; /* No margin on the right side of the last container */
@@ -159,6 +182,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.aop-video-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adjust if needed */
 }
 
   @media screen and (min-width: 1600px) {
@@ -258,6 +290,10 @@
   @media only screen and (max-width: 575px) {
     h1.works-title {
       font-size: 30px;
+    }
+    .rendering-row{
+      margin: 2.5px;
+    
     }
   }
   

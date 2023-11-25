@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-db842edf-9833-441e-a6f5-99675197d4b3" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1881 3660.34">
+  <defs>
+    <style>
+      .uuid-f20505fa-ce41-4d05-a082-f9619e79b850 {
+        clip-path: url(#uuid-b1c5b0e7-0a89-4512-8065-fabd6d7dd37f);
+      }
+
+      .uuid-c595d159-66c1-4a63-8d6d-b2aba40ced84 {
+        clip-path: url(#uuid-3a73803e-fb96-4e82-aa22-135ca5800add);
+      }
+
+      .uuid-aa8d2e97-fd1d-469c-979b-b3bf1b7c3750 {
+        clip-path: url(#uuid-5e36eb88-4d24-4435-a57e-a979246886cb);
+      }
+
+      .uuid-b51454a6-d5f9-4254-a814-9aef52944b57 {
+        fill: none;
+        stroke-width: 0px;
+      }
+
+      .uuid-51b6fea6-c7ad-4e71-a781-73124e96bbb0 {
+        clip-path: url(#uuid-0830f55c-7dd8-4c18-8d60-8f0189fde254);
+      }
+
+      .uuid-c3f881c5-9b21-4439-adb4-4833e195fd96 {
+        clip-path: url(#uuid-f4062d7b-12a7-4f09-970c-01f7db8f2d9c);
+      }
+
+      .uuid-82f53727-e928-47ae-ab77-93c52670267a {
+        clip-path: url(#uuid-c8803bb2-1e56-48fe-ab20-222f5963de65);
+      }
+
+      .uuid-07d33df8-1ffd-4288-9d49-bd93483d8d60 {
+        clip-path: url(#uuid-1af5edbc-7e83-4482-b5a0-73f162927652);
+      }
+    </style>
+    <clipPath id="uuid-f4062d7b-12a7-4f09-970c-01f7db8f2d9c">
+      <rect id="uuid-4fe01332-33ff-40b1-aa46-9b92276a449d" data-name="Image3 001" class="uuid-b51454a6-d5f9-4254-a814-9aef52944b57" x="4.5" width="1876" height="1080" rx="70" ry="70"/>
+    </clipPath>
+    <clipPath id="uuid-3a73803e-fb96-4e82-aa22-135ca5800add">
+      <rect id="uuid-5ff5afc4-fffe-4222-8e88-5e7f62de1dae" data-name="Image23" class="uuid-b51454a6-d5f9-4254-a814-9aef52944b57" x="4.5" y="1108.11" width="1244" height="804" rx="70" ry="70"/>
+    </clipPath>
+    <clipPath id="uuid-5e36eb88-4d24-4435-a57e-a979246886cb">
+      <rect id="uuid-37a04d2f-2200-4ae6-b73c-49da077d49d4" data-name="Image26 001" class="uuid-b51454a6-d5f9-4254-a814-9aef52944b57" x="1268.5" y="1100" width="612" height="804" rx="70" ry="70"/>
+    </clipPath>
+    <clipPath id="uuid-1af5edbc-7e83-4482-b5a0-73f162927652">
+      <rect id="uuid-a5b9d51e-d0cc-4e64-961d-c1278118a28c" data-name="Image28 001" class="uuid-b51454a6-d5f9-4254-a814-9aef52944b57" x="4.5" y="1940.23" width="612" height="612" rx="70" ry="70"/>
+    </clipPath>
+    <clipPath id="uuid-c8803bb2-1e56-48fe-ab20-222f5963de65">
+      <rect id="uuid-8b7343b5-dc3a-4d4c-aa8d-cda3ffd189ac" data-name="Image27 000" class="uuid-b51454a6-d5f9-4254-a814-9aef52944b57" x="636.5" y="1940.23" width="612" height="612" rx="70" ry="70"/>
+    </clipPath>
+    <clipPath id="uuid-b1c5b0e7-0a89-4512-8065-fabd6d7dd37f">
+      <rect id="uuid-e2a3806c-cdec-415e-838e-d899dd022e42" data-name="Image24 000" class="uuid-b51454a6-d5f9-4254-a814-9aef52944b57" x="1268.5" y="1940.23" width="612" height="612" rx="70" ry="70"/>
+    </clipPath>
+    <clipPath id="uuid-0830f55c-7dd8-4c18-8d60-8f0189fde254">
+      <rect id="uuid-7868553c-5c5d-4ffd-a31e-3047c8d71e0d" data-name="Image15 001" class="uuid-b51454a6-d5f9-4254-a814-9aef52944b57" y="2580.34" width="1876" height="1080" rx="70" ry="70"/>
+    </clipPath>
+  </defs>
+  <g class="uuid-c3f881c5-9b21-4439-adb4-4833e195fd96">
+    <image width="1920" height="1080" transform="translate(-18 -.66)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/21.jpg"/>
+  </g>
+  <g class="uuid-c595d159-66c1-4a63-8d6d-b2aba40ced84">
+    <image width="1920" height="1080" transform="translate(-91.56 1107.61) scale(.75)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/22.jpg"/>
+  </g>
+  <g class="uuid-aa8d2e97-fd1d-469c-979b-b3bf1b7c3750">
+    <image width="1920" height="1920" transform="translate(1168 1102) scale(.42)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/23.jpg"/>
+  </g>
+  <g class="uuid-07d33df8-1ffd-4288-9d49-bd93483d8d60">
+    <image width="1920" height="1920" transform="translate(4.5 1940.23) scale(.32)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/24.jpg"/>
+  </g>
+  <g class="uuid-82f53727-e928-47ae-ab77-93c52670267a">
+    <image width="1920" height="1920" transform="translate(636.5 1940.23) scale(.32)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/25.jpg"/>
+  </g>
+  <g class="uuid-f20505fa-ce41-4d05-a082-f9619e79b850">
+    <image width="1920" height="1920" transform="translate(1268.5 1940.23) scale(.32)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/26.jpg"/>
+  </g>
+  <g class="uuid-51b6fea6-c7ad-4e71-a781-73124e96bbb0">
+    <image width="1920" height="1080" transform="translate(-30 2580.34)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/27.jpg"/>
+  </g>
+</svg>
