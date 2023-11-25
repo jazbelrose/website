@@ -109,6 +109,24 @@
   
 }
 
+.rendering-row-img {
+  
+  padding: min(5px, .5vw) min(20px, 2vw);
+
+  display: flex;
+  justify-content: space-between; /* Equal spacing and centering */
+  align-items: center; /* Vertical centering */
+  
+}
+
+.img-container {
+
+  
+  object-fit: cover;
+  padding-right: 10px; /* Add padding to the right of the video container */
+  
+}
+
 .animation-container {
   flex: 1;
   object-fit: contain;
@@ -117,20 +135,22 @@
 }
 
 
+
+
 .right-content {
   flex: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   
-  padding-left: 20px; /* Add padding to the left of the SVG container */
+  padding-left: 20px; 
 }
 
 .right-content .asvg {
   min-height: 100px;
-  height: 90%; /* Make SVG use up the full height */
-   /* Maximum height for the SVG */
-  width: auto; /* Adjust width automatically to maintain aspect ratio */
+  height: 100%; 
+  
+  width: 100%; 
   margin: 20px;
 }
 

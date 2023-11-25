@@ -25,38 +25,18 @@ const AcademyOfPop = () => {
 
 
     let galleryRefs = useRef([]);
-    const imageUrls = aFLowerBathData; // Use the goldPrincessData for image URLs
-    const [isLoading, setIsLoading] = useState(true);
+   
+    
     const tickerLines = [
         "PROJECT DESIGNED BY MOKIBABY ",
         "ACADEMY OF POP ",
         "DIGITAL ART BY *MYLG!*"
     ];
 
-    // Preload images
-    useEffect(() => {
-        let loadedImages = 0;
-        const totalImages = imageUrls.length;
-
-        const imageLoaded = () => {
-            loadedImages++;
-            if (loadedImages === totalImages) {
-                setIsLoading(false);
-            }
-        };
-
-        imageUrls.forEach(url => {
-            const img = new Image();
-            img.src = url;
-            img.onload = imageLoaded;
-            img.onerror = imageLoaded;
-        });
-    }, [imageUrls]);
-
     // GSAP animation after images have loaded
 
     useEffect(() => {
-        if (!isLoading) {
+       
             const masterTimeline = gsap.timeline();
 
             // SVG Path Animation
@@ -76,58 +56,12 @@ const AcademyOfPop = () => {
             masterTimeline.fromTo('.st1', { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 0.1, stagger: 0.1 }, "-=0.25");
             masterTimeline.fromTo('.st2', { scale: 0 }, { scale: 1, duration: 1, stagger: 0.1, ease: 'elastic.out(1, 0.3)' }, "-=0.5");
 
-            // Setting initial state for gallery items
-            galleryRefs.current.forEach((galleryItem) => {
-                gsap.set(galleryItem, { autoAlpha: 0, y: 50 });
-            });
+          
+  
+       
+    }, []); // Dependency on isLoading
 
-            // Intersection Observer for gallery items
-            const observerOptions = {
-                root: null,
-                rootMargin: "-100px 0px",
-                threshold: 0
-            };
-
-            const handleIntersection = (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        gsap.to(entry.target, {
-                            autoAlpha: 1,
-                            y: 0,
-                            ease: "power3.out",
-                            overwrite: "auto"
-                        });
-                    }
-                });
-            };
-
-            const observer = new IntersectionObserver(handleIntersection, observerOptions);
-
-            galleryRefs.current.forEach((galleryItem) => {
-                if (galleryItem) {
-                    observer.observe(galleryItem);
-                }
-            });
-
-
-            return () => {
-                galleryRefs.current.forEach((galleryItem) => {
-                    if (galleryItem) {
-                        observer.unobserve(galleryItem);
-                    }
-                });
-                return () => masterTimeline.kill();
-            }
-        }
-    }, [isLoading]); // Dependency on isLoading
-
-    if (isLoading) {
-        return <div>
-
-
-        </div>;
-    }
-
+  
 
     return (
 
@@ -168,7 +102,7 @@ const AcademyOfPop = () => {
                         <div className="animation-container asvg-container">
 
                             <video width="100%" height="100%" loop autoPlay muted playsInline>
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/00.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/00.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -229,7 +163,7 @@ const AcademyOfPop = () => {
 
                         <div className="aop-video-container 169">
                             <video width="100%" height="100%" loop autoPlay muted playsInline>
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/03.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/03.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -262,7 +196,7 @@ const AcademyOfPop = () => {
 
 
                         <div className="aop-video-container">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/20.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/20.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
 
 

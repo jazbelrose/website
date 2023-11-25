@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-ca957af6-d657-4c2b-9065-da71877675bf" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2041.5 2750">
+  <defs>
+    <style>
+      .uuid-73855d54-c1fe-40c3-9b50-1b8b156688e3 {
+        clip-path: url(#uuid-5175e950-b366-4652-bc1a-e6074d908143);
+      }
+
+      .uuid-90b3e4fc-efa9-4c60-b3c0-553f784abf60 {
+        clip-path: url(#uuid-0221800a-daa6-404e-8c75-c37655931e12);
+      }
+
+      .uuid-b1950dc4-4e22-44f4-ac71-084db085bcc1 {
+        isolation: isolate;
+      }
+
+      .uuid-e6bada29-20f4-46a6-9e34-bb987a23312a {
+        fill: none;
+      }
+
+      .uuid-e6bada29-20f4-46a6-9e34-bb987a23312a, .uuid-c17642e2-e846-4d23-a08a-17ddd5c705ab, .uuid-afa8ae25-cc1b-4387-997a-cbfa9bcc96fe {
+        stroke-width: 0px;
+      }
+
+      .uuid-96250585-5161-46f1-95d1-fde1f2497196 {
+        clip-path: url(#uuid-0b627ba4-37ad-4a11-80c4-ad912d292dcc);
+      }
+
+      .uuid-c17642e2-e846-4d23-a08a-17ddd5c705ab {
+        fill: url(#uuid-56fe81db-a6aa-4f68-9d20-db4fcb8287f0);
+      }
+
+      .uuid-4f0bac23-e249-454c-8130-525c0d9009b6 {
+        clip-path: url(#uuid-5d3c478f-c396-4710-9ce9-fd1226ec6304);
+      }
+
+      .uuid-afa8ae25-cc1b-4387-997a-cbfa9bcc96fe {
+        fill: #f29ff8;
+      }
+    </style>
+    <clipPath id="uuid-0b627ba4-37ad-4a11-80c4-ad912d292dcc">
+      <rect id="uuid-988ba6d1-8dcd-4356-be65-2fa2d9f48f18" data-name="Screen Shot 2022-11-09 at 8.15.55 PM" class="uuid-e6bada29-20f4-46a6-9e34-bb987a23312a" y="22" width="1560" height="1080" rx="70" ry="70"/>
+    </clipPath>
+    <clipPath id="uuid-0221800a-daa6-404e-8c75-c37655931e12">
+      <rect id="uuid-0d53e149-7f0b-41d2-9c8f-81f04d1d3b10" data-name=" 3600fb5c-0c08-43b8-87de-8ab361672699- d106284 0d1d8621-c912-40a1-b8da-fe92ef2d78d7" class="uuid-e6bada29-20f4-46a6-9e34-bb987a23312a" y="1122" width="928" height="804" rx="70" ry="70"/>
+    </clipPath>
+    <clipPath id="uuid-5d3c478f-c396-4710-9ce9-fd1226ec6304">
+      <rect id="uuid-1eec3801-1dac-4286-9c1a-010bc02f4830" data-name="Nylon1" class="uuid-e6bada29-20f4-46a6-9e34-bb987a23312a" x="948" y="1122" width="612" height="804" rx="70" ry="70"/>
+    </clipPath>
+    <pattern id="uuid-56fe81db-a6aa-4f68-9d20-db4fcb8287f0" data-name="pattern 3" x="0" y="0" width="2826" height="561" patternTransform="translate(1518.82 -229.27) rotate(90) scale(.98 -.98)" patternUnits="userSpaceOnUse" viewBox="0 0 2826 561">
+      <g>
+        <rect class="uuid-e6bada29-20f4-46a6-9e34-bb987a23312a" width="2826" height="561"/>
+        <image class="uuid-b1950dc4-4e22-44f4-ac71-084db085bcc1" width="2826" height="561" transform="translate(0 561) scale(1 -1)" xlink:href="../../../../../../../../../AITEMP/AI_28_0/Adobe/AISVG/10/Untitled-1/Untitled-12.png"/>
+      </g>
+    </pattern>
+    <clipPath id="uuid-5175e950-b366-4652-bc1a-e6074d908143">
+      <rect id="uuid-23d464f9-2c1b-4b83-8252-9d197cba6e41" data-name=" 1ddcf6ef-cf35-47a1-b6c7-4c2a3f3bb5f2-dsc 9743 3507e3f2-27c3-40fb-bb52-1aec28c04cac" class="uuid-e6bada29-20f4-46a6-9e34-bb987a23312a" x="316" y="1946" width="1244" height="804" rx="70" ry="70"/>
+    </clipPath>
+  </defs>
+  <g class="uuid-96250585-5161-46f1-95d1-fde1f2497196">
+    <image width="2287" height="1236" transform="translate(1.62 22) scale(.87)" xlink:href="../../../../../../../Desktop/elfmakeup/compressed/16.jpg"/>
+  </g>
+  <g class="uuid-90b3e4fc-efa9-4c60-b3c0-553f784abf60">
+    <image width="1200" height="630" transform="translate(-315.25 1122.5) scale(1.27)" xlink:href="../../../../../../../Desktop/elfmakeup/compressed/14.jpg"/>
+  </g>
+  <g class="uuid-4f0bac23-e249-454c-8130-525c0d9009b6">
+    <image width="2850" height="1900" transform="translate(610.25 897) scale(.68)" xlink:href="../../../../../../../Desktop/elfmakeup/compressed/15.jpg"/>
+  </g>
+  <rect id="uuid-950827ab-f06d-4451-b00c-c370e616868c" data-name="FLAWLESS WHITE" class="uuid-e6bada29-20f4-46a6-9e34-bb987a23312a" x="1532.5" width="509" height="2566"/>
+  <g id="uuid-20843160-f083-4038-91e5-c6bc0c831e12" data-name="Rectangle 944">
+    <rect class="uuid-afa8ae25-cc1b-4387-997a-cbfa9bcc96fe" y="1946" width="296" height="804" rx="42" ry="42"/>
+    <rect class="uuid-afa8ae25-cc1b-4387-997a-cbfa9bcc96fe" x=".5" y="1946.5" width="295" height="803" rx="41.5" ry="41.5"/>
+  </g>
+  <image id="uuid-e299b569-9a02-43cf-9e36-28ece960706e" data-name="ExpressYourElf-White" class="uuid-b1950dc4-4e22-44f4-ac71-084db085bcc1" width="1081" height="1081" transform="translate(-283.25 2782) rotate(-90) scale(.79)" xlink:href="../../../../../../../../../AITEMP/AI_28_0/Adobe/AISVG/10/Untitled-1/Untitled-11.png"/>
+  <rect id="uuid-65eec8f3-85e8-4c10-9129-77cd0b9e03ca" data-name="FLAWLESS WHITE" class="uuid-c17642e2-e846-4d23-a08a-17ddd5c705ab" x="1565.5" y="112" width="549.07" height="2768"/>
+  <g class="uuid-73855d54-c1fe-40c3-9b50-1b8b156688e3">
+    <image width="1920" height="1046" transform="translate(192.85 1946) scale(.77)" xlink:href="../../../../../../../Desktop/elfmakeup/compressed/13.jpg"/>
+  </g>
+</svg>
