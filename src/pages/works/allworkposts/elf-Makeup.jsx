@@ -122,6 +122,7 @@ const AcademyOfPop = () => {
 
 
                     </div>
+
                     <div className="rendering-row-img">
 
 

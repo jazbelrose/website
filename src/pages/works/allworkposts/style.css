@@ -26,7 +26,7 @@
 
 .rendering-layout {
   background-color: var(--bg-color);
-  padding: min(20px, 2vw) 0;
+  /* padding: min(20px, 2vw) 0; */
   margin-bottom: min(100px, 10vw);
   overflow: hidden;
   max-width: 1920px;
@@ -96,12 +96,13 @@
 
 
 .rendering-row{
-  margin: 10px;
+  margin: 10px 0;
+ 
 
 }
 .rendering-row-video {
   
-  padding: min(5px, .5vw) min(20px, 2vw);
+  padding: min(10px, .3vw);
 
   display: flex;
   justify-content: space-between; /* Equal spacing and centering */
@@ -111,19 +112,21 @@
 
 .rendering-row-img {
   
-  padding: min(5px, .5vw) min(20px, 2vw);
-
+  padding: min(5px, .25vw) 0 ;
+  
   display: flex;
-  justify-content: space-between; /* Equal spacing and centering */
-  align-items: center; /* Vertical centering */
+  margin: 0 auto; /* Equal spacing and centering */
+  align-items: stretch;/* Vertical centering */
+  gap: min(7px, .3vw);
+
   
 }
 
 .img-container {
 
-  
+  flex-grow: 1;
   object-fit: cover;
-  padding-right: 10px; /* Add padding to the right of the video container */
+  padding: 0 2px;
   
 }
 
@@ -170,6 +173,7 @@
 }
 
 .aop-youtube-container {
+ margin-top: 5px;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -177,6 +181,7 @@
 }
 
 .aop-youtube-container::before {
+  
   content: '';
   display: block;
   padding-top: 56.25%; /* Aspect ratio 16:9; adjust as needed */
@@ -311,9 +316,25 @@
     h1.works-title {
       font-size: 30px;
     }
-    .rendering-row{
-      margin: 2.5px;
+    .rendering-row-img {
+  
+      padding: min(6px, .6vw) 0 ;
+      gap: min(10px, .3vw);
+      
     
     }
+
+    .rendering-row-video {
+  
+      padding: min(6px, .6vw);
+    }
+
+    .rendering-row{
+      margin: 5px 0;
+     
+    
+    }
+
+
   }
   
