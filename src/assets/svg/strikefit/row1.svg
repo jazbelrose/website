@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-d3292f36-7905-437c-a48b-21cc81617ef0" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .uuid-4ed5796e-61e8-41b2-bf70-68678137372b {
+        isolation: isolate;
+      }
+
+      .uuid-d3bdfa45-2843-49a8-af04-d75fcf03c720 {
+        fill: #029bc1;
+      }
+
+      .uuid-d3bdfa45-2843-49a8-af04-d75fcf03c720, .uuid-ff8e978f-1579-4f82-b2e6-d6eb52d8460e {
+        stroke-width: 0px;
+      }
+
+      .uuid-ff8e978f-1579-4f82-b2e6-d6eb52d8460e {
+        fill: #f4f4f4;
+      }
+
+      .uuid-1b2fddbd-c8a1-4fdd-9c72-04505350f992 {
+        fill: none;
+        stroke: #707070;
+      }
+    </style>
+  </defs>
+  <g id="uuid-f34fa34b-81b5-4fa1-b4c3-b1fa2c92bea0" data-name=" STRIKEFIT" class="uuid-4ed5796e-61e8-41b2-bf70-68678137372b">
+    <image width="1920" height="1080" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/17-Jack+Masai/01.png"/>
+    <g class="uuid-4ed5796e-61e8-41b2-bf70-68678137372b">
+      <path class="uuid-ff8e978f-1579-4f82-b2e6-d6eb52d8460e" d="m92.84,65.53h41v16.17h-32.21c-1.95,0-2.93.98-2.93,2.93v22.61c0,1.95.98,2.93,2.93,2.93h23.43c3.28,0,6.05,1.13,8.32,3.4,2.26,2.27,3.4,5.04,3.4,8.32v37.37c0,3.28-1.13,6.05-3.4,8.32-2.27,2.27-5.04,3.4-8.32,3.4h-43.93v-16.17h35.03c.86,0,1.58-.27,2.17-.82.59-.55.88-1.25.88-2.11v-22.61c0-1.95-.98-2.93-2.93-2.93h-23.43c-3.28,0-6.05-1.13-8.32-3.4-2.27-2.26-3.4-5.04-3.4-8.32v-37.37c0-3.28,1.13-6.05,3.4-8.32,2.26-2.26,5.04-3.4,8.32-3.4Z"/>
+      <path class="uuid-ff8e978f-1579-4f82-b2e6-d6eb52d8460e" d="m140.76,65.53h52.71v16.17h-17.57v89.26h-17.57v-89.26h-17.57v-16.17Z"/>
+      <path class="uuid-ff8e978f-1579-4f82-b2e6-d6eb52d8460e" d="m197.45,65.53h46.86c3.2,0,5.95,1.15,8.26,3.46,2.3,2.3,3.46,5.06,3.46,8.26v37.37c0,3.28-1.13,6.05-3.4,8.32-2.27,2.27-5.04,3.4-8.32,3.4h-6.44l21.09,44.63h-19.45l-21.2-44.63h-3.28v44.63h-17.57v-105.43Zm38.07,16.17h-20.5v28.47h20.5c1.95,0,2.93-.98,2.93-2.93v-22.61c0-1.95-.98-2.93-2.93-2.93Z"/>
+      <path class="uuid-ff8e978f-1579-4f82-b2e6-d6eb52d8460e" d="m264.34,65.53h17.57v105.43h-17.57v-105.43Z"/>
+      <path class="uuid-ff8e978f-1579-4f82-b2e6-d6eb52d8460e" d="m290.34,65.53h17.57v44.63h3.28l21.2-44.63h19.45l-24.95,52.71,24.95,52.71h-19.45l-21.2-44.63h-3.28v44.63h-17.57v-105.43Z"/>
+      <path class="uuid-ff8e978f-1579-4f82-b2e6-d6eb52d8460e" d="m351.49,65.53h49.79v16.17h-32.21v28.47h29.29v16.17h-29.29v28.47h35.14v16.17h-52.71v-105.43Z"/>
+      <path class="uuid-ff8e978f-1579-4f82-b2e6-d6eb52d8460e" d="m408.19,65.53h52.71v16.17h-35.14v28.47h32.21v16.17h-32.21v44.63h-17.57v-105.43Z"/>
+      <path class="uuid-ff8e978f-1579-4f82-b2e6-d6eb52d8460e" d="m472.15,65.53h17.57v105.43h-17.57v-105.43Z"/>
+      <path class="uuid-ff8e978f-1579-4f82-b2e6-d6eb52d8460e" d="m498.15,65.53h52.71v16.17h-17.57v89.26h-17.57v-89.26h-17.57v-16.17Z"/>
+    </g>
+  </g>
+  <g id="uuid-85390290-5ea9-4bc9-9c6d-17a00c1b1b72" data-name="Ellipse 92">
+    <ellipse class="uuid-d3bdfa45-2843-49a8-af04-d75fcf03c720" cx="1803.96" cy="649.46" rx="36.5" ry="38.5"/>
+    <ellipse class="uuid-1b2fddbd-c8a1-4fdd-9c72-04505350f992" cx="1803.96" cy="649.46" rx="36" ry="38"/>
+  </g>
+  <g id="uuid-bd4baf20-93b5-461a-8a1b-ecde21f75501" data-name="Ellipse 93">
+    <ellipse class="uuid-d3bdfa45-2843-49a8-af04-d75fcf03c720" cx="1803.96" cy="751.46" rx="36.5" ry="38.5"/>
+    <ellipse class="uuid-1b2fddbd-c8a1-4fdd-9c72-04505350f992" cx="1803.96" cy="751.46" rx="36" ry="38"/>
+  </g>
+  <g id="uuid-2fd2b4d2-7635-4f67-8dc4-d2adf83c453e" data-name="Ellipse 94">
+    <ellipse class="uuid-d3bdfa45-2843-49a8-af04-d75fcf03c720" cx="1803.96" cy="853.46" rx="36.5" ry="38.5"/>
+    <ellipse class="uuid-1b2fddbd-c8a1-4fdd-9c72-04505350f992" cx="1803.96" cy="853.46" rx="36" ry="38"/>
+  </g>
+  <g id="uuid-4e21c43f-17f9-4e87-a01c-f0a817fc14eb" data-name="Ellipse 95">
+    <ellipse class="uuid-d3bdfa45-2843-49a8-af04-d75fcf03c720" cx="1803.96" cy="955.46" rx="36.5" ry="38.5"/>
+    <ellipse class="uuid-1b2fddbd-c8a1-4fdd-9c72-04505350f992" cx="1803.96" cy="955.46" rx="36" ry="38"/>
+  </g>
+</svg>
