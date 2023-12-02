@@ -35,7 +35,7 @@ function BlogCard({type = 'blog', className, title, description, slug, date, tag
       
           <div className="tag-row">{tags && <span className="blog-tag">{tags.join(', ')}</span>}</div>
           <div className="row2-image">
-          <Link to={`/blog/${slug}`}>
+          <Link to={`/${type}/${slug}`}>
           <img src={images[0]} alt={title} className="card-image" />
             </Link>
 </div>

@@ -149,7 +149,7 @@ export const Works = ({ maxPosts = 45 }) => {
         case 4:
           renderedCards.push(
             <div className="blog-row double-card-row" key={currentIndex}>
-              <BlogCard {...works[currentIndex]} layout="row2" />
+              <BlogCard type="works" {...works[currentIndex]} layout="row2" />
               {works[currentIndex + 1] && <BlogCard {...works[currentIndex + 1]} layout="row2" />}
             </div>
           );
