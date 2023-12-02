@@ -8,8 +8,7 @@ import { ReactComponent as BloomAndBlissHeader } from "../../../assets/svg/bloom
 
 import { ReactComponent as Row1 } from "../../../assets/svg/bloomandbliss/row1.svg";
 import { ReactComponent as Row2 } from "../../../assets/svg/bloomandbliss/row2.svg";
-import { ReactComponent as Row31 } from "../../../assets/svg/bloomandbliss/row31.svg";
-import { ReactComponent as Row32 } from "../../../assets/svg/bloomandbliss/row32.svg";
+import { ReactComponent as Row3 } from "../../../assets/svg/bloomandbliss/row3.svg";
 import { ReactComponent as Row4 } from "../../../assets/svg/bloomandbliss/row4.svg";
 import { ReactComponent as Row5 } from "../../../assets/svg/bloomandbliss/row5.svg";
 import { ReactComponent as Row6 } from "../../../assets/svg/bloomandbliss/row6.svg";
@@ -88,9 +87,17 @@ const AcademyOfPop = () => {
 
                     <div className="rendering-row-video">
 
-                        <div className="aop-video-container">
-                            <video width="100%" height="100%" loop autoPlay muted playsInline>
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/01.mp4" type="video/mp4" />
+                        <div className="bb-video-container">
+                            <video
+                                style={{ borderRadius: '40px', overflow: 'hidden' }}
+                                width="100%"
+                                height="100%"
+                                loop
+                                autoPlay
+                                muted
+                                playsInline
+                            >
+                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/bbvideo.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -123,13 +130,26 @@ const AcademyOfPop = () => {
 
                     </div>
 
+
+
                     <div className="rendering-row-img">
 
-                        <Row31 className="rendering-row" />
-                        <Row32 className="rendering-row" />
+                        <div className="img-container ">
+
+
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/row31.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/row32.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                        </div>
+
 
 
                     </div>
+
+
 
 
                     <div className="rendering-row-img">
@@ -231,7 +251,7 @@ const AcademyOfPop = () => {
 
 
 
-                    <Row4 className="rendering-row" />
+                    <Row4 className="rendering-row-svg" />
 
 
 
@@ -248,15 +268,15 @@ const AcademyOfPop = () => {
 
                     </div>
 
-                    
-
-                        <Row5 className="rendering-row" />
-                        <Row6 className="rendering-row" />
-                        <Row7 className="rendering-row" />
 
 
+                    <Row5 className="rendering-row-svg" />
+                    <Row6 className="rendering-row" />
+                    <Row7 className="rendering-row" />
 
-                    
+
+
+
 
 
 

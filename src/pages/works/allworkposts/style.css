@@ -122,6 +122,12 @@
   
 }
 
+.rendering-row-svg{
+  margin: 3px 0;
+ 
+
+}
+
 .img-container {
 
   flex-grow: 1;
@@ -170,6 +176,16 @@
   flex: 1; /* Flex grow to fill available space */
   padding-top: 50%; /* For 16:9 aspect ratio */
   margin-right: min(10px, 1vw); /* Adjust this value for the desired spacing */
+}
+
+.bb-video-container {
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  width: 100%; /* Adjust as necessary */
+  flex: 1; /* Flex grow to fill available space */
+  margin-right: min(10px, 1vw); /* Adjust this value for the desired spacing */
+  padding: 10px;
 }
 
 .aop-youtube-container {

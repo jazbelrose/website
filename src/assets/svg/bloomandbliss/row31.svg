@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="uuid-fc040f31-afb6-40b0-8214-02990f7e791a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 950 1067">
+<svg id="uuid-dce6033e-654e-48fd-9ac3-8695392c2346" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 951.11 1067">
   <defs>
     <style>
-      .uuid-759a2d37-d701-40cb-8101-914baffa48b0 {
+      .uuid-243e0ca8-d5a6-4a3c-890a-db57fe03eb3f {
         fill: #f7efde;
         stroke-width: 0px;
       }
     </style>
   </defs>
-  <rect id="uuid-14fd39da-8cc9-4a09-ba98-f6431f75e315" data-name="Screen Shot 2023-11-27 at 3.24.30 PM" class="uuid-759a2d37-d701-40cb-8101-914baffa48b0" width="950" height="1067" rx="38" ry="38"/>
-  <image width="910" height="329" transform="translate(19.42 19.01)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/04.png"/>
-  <image width="910" height="329" transform="translate(19.42 369.01)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/05.png"/>
-  <image width="910" height="329" transform="translate(18.42 718.01)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/06.png"/>
+  <path id="uuid-527eb171-1afe-4771-bb13-06b5c0c78966" data-name="Screen Shot 2023-11-27 at 3.24.30 PM" class="uuid-243e0ca8-d5a6-4a3c-890a-db57fe03eb3f" d="m38.04,0h875.02c21.01,0,38.04,17.01,38.04,38v991c0,20.99-17.03,38-38.04,38H38.04c-21.01,0-38.04-17.01-38.04-38V38C0,17.01,17.03,0,38.04,0Z"/>
+  <image width="910" height="329" transform="translate(20.02 18)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/04.png"/>
+  <image width="910" height="329" transform="translate(20.02 368)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/05.png"/>
+  <image width="910" height="329" transform="translate(21.02 718)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/06.png"/>
 </svg>
