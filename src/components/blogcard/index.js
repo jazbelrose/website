@@ -82,7 +82,7 @@ function BlogCard({type = 'blog', className, title, description, slug, date, tag
       {layout === "row4" && (
         <>
         <div className="row1-image">
-        <Link to={`/works/${slug}`}>
+        <Link to={`/${type}/${slug}`}>
           <img src={images[0]} alt={title} className="card-image" />
             </Link>
 </div>
