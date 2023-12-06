@@ -97,7 +97,7 @@ const AcademyOfPop = () => {
                                 muted
                                 playsInline
                             >
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/bbvideo.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/bbvideo.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -114,17 +114,17 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/01.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/01.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/02.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/02.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/03.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/03.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
 
 
@@ -137,12 +137,12 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/row31.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/row31.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/row32.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/row32.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
 
 
@@ -157,12 +157,12 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/08.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/08.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/09.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/09.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
 
 
@@ -179,17 +179,17 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/10.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/10.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/11.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/11.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/12.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/12.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
 
 
@@ -205,7 +205,7 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/13.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/13.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
 
 
@@ -219,12 +219,12 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/14.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/14.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/15.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/15.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
 
 
@@ -236,12 +236,12 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/16.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/16.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/17.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/17.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
 
 
@@ -263,7 +263,7 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/27.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/27.png" alt="Bloom & Bliss Image" width="100%" height="100%" />
                         </div>
 
                     </div>

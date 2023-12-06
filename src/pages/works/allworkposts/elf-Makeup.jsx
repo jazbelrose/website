@@ -84,7 +84,7 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/05.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/05.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
 
 
@@ -95,12 +95,12 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/06.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/06.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/07.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/07.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
 
 
@@ -113,12 +113,12 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/08.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/08.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/09.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/09.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
 
 
@@ -131,12 +131,12 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/10.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/10.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/11.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/11.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
 
 
@@ -148,12 +148,12 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/12.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/12.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/13.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/13.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
 
 
@@ -168,39 +168,17 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/19.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/19.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/28.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/28.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/22.png" alt="Academy of Pop Image" width="100%" height="100%" />
-                        </div>
-
-
-                    </div>
-
-                    <div className="rendering-row-img">
-
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/24.png" alt="Academy of Pop Image" width="100%" height="100%" />
-                        </div>
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/26.png" alt="Academy of Pop Image" width="100%" height="100%" />
-                        </div>
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/23.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/22.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
 
 
@@ -212,17 +190,17 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/20.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/24.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/27.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/26.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/25.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/23.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
 
 
@@ -234,17 +212,39 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/30.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/20.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/21.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/27.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/08-elf+Makeup/29.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/25.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                        </div>
+
+
+                    </div>
+
+                    <div className="rendering-row-img">
+
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/30.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/21.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/29.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
 
 

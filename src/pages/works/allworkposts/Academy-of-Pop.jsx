@@ -228,7 +228,7 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/10.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/10.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
@@ -251,7 +251,7 @@ const AcademyOfPop = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/13.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/13.png" alt="Academy of Pop Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
@@ -320,7 +320,7 @@ const AcademyOfPop = () => {
                     <div className="rendering-row-img">
 
                         <div className="img-container ">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/20.png" alt="Academy of Pop Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/20.png" alt="Academy of Pop Image" width="100%" height="100%" />
 
                         </div>
                     </div>
@@ -329,7 +329,7 @@ const AcademyOfPop = () => {
 
                         <div className="aop-video-container">
                             <video width="100%" height="100%" loop autoPlay muted playsInline>
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/02-Academy+of+Pop/04.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/04.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 

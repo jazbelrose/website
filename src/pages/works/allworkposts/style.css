@@ -12,7 +12,7 @@
 }
 .works {
     padding-top: 50px;
-    margin: 5px;
+    margin: 20px;
   }
   
   .po_items_ho {
@@ -179,13 +179,18 @@
 }
 
 .bb-video-container {
-  border-radius: 40px;
+  
   overflow: hidden;
   position: relative;
   width: 100%; /* Adjust as necessary */
   flex: 1; /* Flex grow to fill available space */
   margin-right: min(10px, 1vw); /* Adjust this value for the desired spacing */
-  padding: 10px;
+  
+}
+
+.bb-video-container video{
+
+  border-radius: 40px;
 }
 
 .aop-youtube-container {
@@ -233,6 +238,54 @@
   height: 100%;
   object-fit: cover; /* Adjust if needed */
 }
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.6fr 0.4fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+    "top full"
+    "bottom full";
+  gap: min(10px, 1vw);
+  margin: 0;
+}
+
+.top-row {
+  grid-area: top;
+  margin-bottom: min(10px, 1vw);
+}
+
+.bottom-row {
+  grid-area: bottom;
+  
+}
+
+.full-height-column {
+  grid-area: full;
+  margin-bottom: min(10px, 1vw);
+}
+
+.second-grid {
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  grid-template-rows: auto;
+  grid-template-areas: "full top";
+  gap: min(10px, 1vw);
+}
+
+.second-grid .top-row {
+  grid-area: top;
+}
+
+.second-grid .full-height-column {
+  grid-area: full;
+  grid-row: 1 / span 2;
+}
+
+
+
 
   @media screen and (min-width: 1600px) {
     .po_items_ho {
@@ -330,6 +383,7 @@
   
   @media only screen and (max-width: 575px) {
     h1.works-title {
+      
       font-size: 30px;
     }
     .rendering-row-img {
@@ -350,7 +404,15 @@
      
     
     }
+    .works {
+      padding-top: 50px;
+      margin: 0px;
+    }
+    .bb-video-container video{
 
+      border-radius: 20px;
+    }
+    
 
   }
   

@@ -97,12 +97,12 @@ const StrikeFit = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-Jack+Masai/05.png" alt="Strike Fit Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/17-Jack+Masai/05.png" alt="Strike Fit Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-Jack+Masai/06.png" alt="Strike Fit Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/17-Jack+Masai/06.png" alt="Strike Fit Image" width="100%" height="100%" />
                         </div>
 
 
@@ -119,7 +119,7 @@ const StrikeFit = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-Jack+Masai/07.png" alt="Strike Fit Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/17-Jack+Masai/07.png" alt="Strike Fit Image" width="100%" height="100%" />
                         </div>
 
 
@@ -134,12 +134,12 @@ const StrikeFit = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-Jack+Masai/08.png" alt="Strike Fit Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/17-Jack+Masai/08.png" alt="Strike Fit Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-Jack+Masai/03.png" alt="Strike Fit Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/17-Jack+Masai/03.png" alt="Strike Fit Image" width="100%" height="100%" />
                         </div>
 
 
@@ -156,12 +156,12 @@ const StrikeFit = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-Jack+Masai/09.png" alt="Strike Fit Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/17-Jack+Masai/09.png" alt="Strike Fit Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-Jack+Masai/10.png" alt="Strike Fit Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/17-Jack+Masai/10.png" alt="Strike Fit Image" width="100%" height="100%" />
                         </div>
 
 
@@ -174,12 +174,12 @@ const StrikeFit = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-Jack+Masai/11.png" alt="Strike Fit Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/17-Jack+Masai/11.png" alt="Strike Fit Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-Jack+Masai/12.png" alt="Strike Fit Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/17-Jack+Masai/12.png" alt="Strike Fit Image" width="100%" height="100%" />
                         </div>
 
 

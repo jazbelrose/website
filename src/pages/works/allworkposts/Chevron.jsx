@@ -124,12 +124,12 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/04.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/04.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/05.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/05.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
 
 
@@ -142,12 +142,12 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/06.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/06.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/07.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/07.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
 
 
@@ -161,7 +161,7 @@ const Chevron = () => {
 
                         <div className="bb-video-container">
                             <video
-                                style={{ borderRadius: '40px', overflow: 'hidden' }}
+                               
                                 width="100%"
                                 height="100%"
                                 loop
@@ -169,7 +169,7 @@ const Chevron = () => {
                                 muted
                                 playsInline
                             >
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/00.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/00.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -187,12 +187,12 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/08.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/08.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/09.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/09.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
 
 
@@ -209,7 +209,7 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/10.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/10.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
 
 
@@ -225,17 +225,17 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/11.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/11.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/12.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/12.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/13.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/13.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
 
 
@@ -250,17 +250,17 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/14.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/14.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/15.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/15.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/16.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/16.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
 
 
@@ -276,12 +276,12 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/17.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/17.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/18.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/18.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
 
 
@@ -296,7 +296,7 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/19.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/19.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
 
 
@@ -310,12 +310,12 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/20.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/20.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/21.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/21.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
 
 
@@ -341,12 +341,12 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/22.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/22.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/06-Chevron/23.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/06-Chevron/23.png" alt="Chevron Image" width="100%" height="100%" />
                         </div>
 
 
