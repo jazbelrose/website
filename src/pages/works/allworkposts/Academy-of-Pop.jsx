@@ -189,15 +189,7 @@ const AcademyOfPop = () => {
                     </div>
 
 
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-                            <img src="https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/06.png" alt="Academy of Pop Image" width="100%" height="100%" />
-
-                        </div>
-                    </div>
-
-
+                  
 
 
                     <div className="rendering-row-img">
