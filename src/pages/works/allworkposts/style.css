@@ -315,7 +315,7 @@
 
 .masonry {
   display: grid;
-  grid-template-columns: 34.8% 64.65% 1fr;
+  grid-template-columns: 40% 60%  1fr;
   gap: min(10px, 1vw);
   
 }

@@ -194,7 +194,7 @@ const Chevron = () => {
 
 
                     </div>
-                    <div className="rendering-row-img" >
+                    <div className="rendering-row-img"  style={{ paddingBottom: "1vw", paddingTop: "0px"}}>
 
                         <div className="img-container "  >
 
@@ -240,7 +240,7 @@ const Chevron = () => {
 
 
 
-                    <div className="rendering-row-img">
+                    <div className="rendering-row-img"  style={{ paddingBottom: "1vw", paddingTop: "0px"}}>
 
                         <div className="img-container ">
 
@@ -254,7 +254,7 @@ const Chevron = () => {
                     <Row3 className="rendering-row" />
                     <Row4 className="rendering-row" />
 
-                    <div className="rendering-row-img">
+                    <div className="rendering-row-img"  style={{ paddingTop: "5vw"}}>
 
                         <div className="img-container ">
 
@@ -289,7 +289,7 @@ const Chevron = () => {
 
 
 
-                    <div className="rendering-row-img">
+                    <div className="rendering-row-img" style={{ paddingBottom: "1vw", paddingTop: "0px"}}>
 
 
                         <div className="img-container ">
