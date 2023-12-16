@@ -252,6 +252,41 @@
   margin: 0;
 }
 
+
+.second-grid {
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  grid-template-rows: auto;
+  grid-template-areas: "full top";
+  gap: min(10px, 1vw);
+}
+
+
+.grid-container-gca {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+    "top full"
+    "bottom full";
+  gap: min(10px, 1vw);
+  margin-top: 0;
+}
+
+.second-grid-gca {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  
+  grid-template-areas: "full top";
+  
+}
+.top-row-gca {
+  grid-area: full;
+  margin-bottom: min(10px, 1vw);
+}
+
+
+
 .top-row {
   grid-area: top;
   margin-bottom: min(10px, 1vw);
@@ -267,13 +302,6 @@
   margin-bottom: min(10px, 1vw);
 }
 
-.second-grid {
-  display: grid;
-  grid-template-columns: 0.4fr 0.6fr;
-  grid-template-rows: auto;
-  grid-template-areas: "full top";
-  gap: min(10px, 1vw);
-}
 
 .second-grid .top-row {
   grid-area: top;
@@ -284,6 +312,29 @@
   grid-row: 1 / span 2;
 }
 
+
+.masonry {
+  display: grid;
+  grid-template-columns: 34.8% 64.65% 1fr;
+  gap: min(10px, 1vw);
+  
+}
+
+.masonry-column img {
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: min(10px, 1vw); /* Adds a bottom margin to each image */
+}
+
+.masonry-column {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.masonry-column:nth-child(even) {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
 
 
 
