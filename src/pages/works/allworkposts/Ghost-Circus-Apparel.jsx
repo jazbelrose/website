@@ -22,7 +22,7 @@ import SingleTicker from "../../../components/singleticker/index.jsx";
 
 import Counter from "../../../counter.jsx";
 
-const Chevron = () => {
+const GhostCircusApparel = () => {
 
 
     let galleryRefs = useRef([]);
@@ -110,7 +110,7 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/00.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/00.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
 
 
@@ -142,7 +142,7 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/05.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/05.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
 
 
@@ -153,12 +153,12 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/06.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/06.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/07.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/07.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
 
 
@@ -170,7 +170,7 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/08.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/08.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
 
 
@@ -184,12 +184,12 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/10.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/10.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/09.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/09.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
 
 
@@ -199,7 +199,7 @@ const Chevron = () => {
                         <div className="img-container "  >
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/11.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/11.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
 
 
@@ -213,11 +213,11 @@ const Chevron = () => {
                     <div class="grid-container-gca second-grid-gca">
 
                         <div class="full-height-column-gca content-item">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/12.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/12.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
                         <div class="column-gca">
-                            <div class="top-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/13.png" alt="Chevron Image" width="100%" /></div>
-                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/14.png" alt="Chevron Image" width="100%" /></div>
+                            <div class="top-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/13.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
+                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/14.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
                         </div>
 
                     </div>
@@ -227,11 +227,11 @@ const Chevron = () => {
 
                     <div class="grid-container-gca">
                         <div class="column-gca">
-                            <div class="top-row content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/15.png" alt="Chevron Image" width="100%" height="100%" /></div>
-                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/16.png" alt="Chevron Image" width="100%" height="100%" /></div>
+                            <div class="top-row content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/15.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" /></div>
+                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/16.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" /></div>
                         </div>
                         <div class="full-height-column-gca content-item">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/17.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/17.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
                     </div>
 
@@ -245,7 +245,7 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/18.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/18.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
 
 
@@ -259,7 +259,7 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/21.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/21.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
 
 
@@ -273,11 +273,11 @@ const Chevron = () => {
                     <div class="grid-container-gca second-grid-gca">
 
                         <div class="full-height-column-gca content-item">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/23.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/23.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
                         <div class="column-gca">
-                            <div class="top-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/22.png" alt="Chevron Image" width="100%" height="100%" /></div>
-                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/24.png" alt="Chevron Image" width="100%" height="100%" /></div>
+                            <div class="top-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/22.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" /></div>
+                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/24.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" /></div>
                         </div>
 
                     </div>
@@ -295,7 +295,7 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/25.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/25.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
 
 
@@ -303,11 +303,11 @@ const Chevron = () => {
                     
                     <div class="grid-container-gca">
                         <div class="column-gca">
-                            <div class="top-row content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/26.png" alt="Chevron Image" width="100%" height="100%" /></div>
-                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/27.png" alt="Chevron Image" width="100%" height="100%" /></div>
+                            <div class="top-row content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/26.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" /></div>
+                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/27.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" /></div>
                         </div>
                         <div class="full-height-column-gca content-item">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/28.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/14-Ghost+Circus+Apparel/28.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
                     </div>
 
@@ -360,4 +360,4 @@ const Chevron = () => {
     );
 };
 
-export default Chevron;
+export default GhostCircusApparel;

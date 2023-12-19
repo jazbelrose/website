@@ -12,8 +12,7 @@ import { ReactComponent as Row3 } from "../../../assets/svg/pipedreamevents/row3
 import { ReactComponent as Row4 } from "../../../assets/svg/pipedreamevents/row4.svg";
 import { ReactComponent as Row5 } from "../../../assets/svg/pipedreamevents/row5.svg";
 import { ReactComponent as Row6 } from "../../../assets/svg/pipedreamevents/row6.svg";
-import { ReactComponent as Row7 } from "../../../assets/svg/chevron/row7.svg";
-import { ReactComponent as Row8 } from "../../../assets/svg/chevron/row8.svg";
+
 
 
 import Ticker from "../../../components/ticker/index.jsx";
@@ -22,7 +21,7 @@ import SingleTicker from "../../../components/singleticker/index.jsx";
 
 import Counter from "../../../counter.jsx";
 
-const Chevron = () => {
+const pipedreamevents = () => {
 
 
     let galleryRefs = useRef([]);
@@ -167,7 +166,7 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/03.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/03.png" alt="pipedreamevents Image" width="100%" height="100%" />
                         </div>
                       
 
@@ -180,12 +179,12 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/04.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/04.png" alt="pipedreamevents Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/05.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/05.png" alt="pipedreamevents Image" width="100%" height="100%" />
                         </div>
 
 
@@ -225,12 +224,12 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/07.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/07.png" alt="pipedreamevents Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/08.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/08.png" alt="pipedreamevents Image" width="100%" height="100%" />
                         </div>
 
 
@@ -247,7 +246,7 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/09.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/09.png" alt="pipedreamevents Image" width="100%" height="100%" />
                         </div>
 
 
@@ -266,7 +265,7 @@ const Chevron = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/10.png" alt="Chevron Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/10.png" alt="pipedreamevents Image" width="100%" height="100%" />
                         </div>
                       
 
@@ -324,4 +323,4 @@ const Chevron = () => {
     );
 };
 
-export default Chevron;
+export default pipedreamevents;

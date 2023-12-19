@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import "./style.css";
 
-const Ticker = ({ lines, fontSize = '10vh' }) => {
+const Ticker = ({ lines, fontSizes = ['14vh', '12vh', '10vh'], padding }) => {
     const lastScrollY = useRef(0);
     const lastScrollTime = useRef(Date.now());
 
@@ -67,7 +67,10 @@ const Ticker = ({ lines, fontSize = '10vh' }) => {
                 <div key={index} className="ticker">
                     <span
                         className={`ticker-text ticker-text-${(index % 3) + 1}`}
-                        style={{ fontSize: fontSize }} // Apply font size here
+                        style={{ 
+                            fontSize: fontSizes[index % fontSizes.length], // Dynamic font size
+                            padding: padding 
+                        }}
                     >
                         {repeatedContent(line)}
                     </span>
