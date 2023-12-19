@@ -30,7 +30,7 @@ const GhostCircusApparel = () => {
 
     const tickerLines = [
         "GHOST CIRCUS APPAREL ",
-        "ELI JAMES & FAMILY LOS ANGELES ALL STARS",
+        "ELI JAMES & FAMILY LOS ANGELES ALL STARS ",
         "DIGITAL ART BY *MYLG!*"
     ];
 
