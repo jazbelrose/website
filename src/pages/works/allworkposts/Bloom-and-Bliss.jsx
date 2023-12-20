@@ -24,15 +24,9 @@ import Counter from "../../../counter.jsx";
 const AcademyOfPop = () => {
 
 
-    let galleryRefs = useRef([]);
+  
 
-
-    const tickerLines = [
-        "PROJECT DESIGNED BY MOKIBABY ",
-        "ACADEMY OF POP ",
-        "DIGITAL ART BY *MYLG!*"
-    ];
-
+    
     // GSAP animation after images have loaded
 
     useEffect(() => {

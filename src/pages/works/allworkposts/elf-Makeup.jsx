@@ -2,8 +2,9 @@ import React, { useRef, useEffect, useState } from "react";
 
 import { gsap } from "gsap";
 import "./style.css";
-import worksData from '../works.json';
-import aFLowerBathData from './A-Flower-Bath.json';
+
+import works from '../works.json';
+import BlogPostButton from "../../../pages/blog/blogpostbutton/BlogPostButton.js";
 import { ReactComponent as ElfHeader } from "../../../assets/svg/elf-makeup/elfmakeupheader.svg";
 
 import { ReactComponent as Row0 } from "../../../assets/svg/elf-makeup/row0.svg";
@@ -18,16 +19,22 @@ import Counter from "../../../counter.jsx";
 const AcademyOfPop = () => {
 
 
-    let galleryRefs = useRef([]);
+    let worksRefs = useRef([]);
+    const maxPosts = 16;
+    const [displayedWorks, setDisplayedWorks] = useState([]);
 
 
-    const tickerLines = [
-        "PROJECT DESIGNED BY MOKIBABY ",
-        "ACADEMY OF POP ",
-        "DIGITAL ART BY *MYLG!*"
-    ];
+   
 
-    // GSAP animation after images have loaded
+    useEffect(() => {
+        console.log("Current worksRefs:", worksRefs.current);
+    }, [displayedWorks]);
+
+    useEffect(() => {
+        setDisplayedWorks(works.slice(0, maxPosts)); // Adjust 'maxPosts' as needed
+      }, [maxPosts]);
+      
+     // GSAP animation after images have loaded
 
     useEffect(() => {
 
@@ -260,24 +267,51 @@ const AcademyOfPop = () => {
 
 
 
-                </div>
-
-                <div className="rendering-infosection">
-
-
-
-                    <InfoSection />
-                    <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff", margin: "0.5rem", }} />
-
-                    <div className="single-ticker-section">
-
-                        <SingleTicker />
                     </div>
-                </div>
 
-            </div >
-        </>
-    );
+
+
+
+<div className="rendering-layout">
+
+    <div className="works-titles">
+
+        {displayedWorks.map((work, index) => (
+            <div className="blog-title-container" key={index} ref={(el) => {
+                if (el && !worksRefs.current.includes(el)) { // Only add if it's a new element
+                    worksRefs.current[index] = el;
+                }
+            }}
+            >
+
+
+
+                <BlogPostButton post={work} />
+            </div>
+
+        ))}
+
+    </div>
+
+</div>
+
+<div className="rendering-infosection">
+
+
+
+    <InfoSection />
+    <hr style={{ opacity: "1", color: "fff", height: "2px", backgroundColor: "#fff", margin: "0.5rem", }} />
+
+    <div className="single-ticker-section">
+
+        <SingleTicker />
+    </div>
+</div>
+
+</div >
+</>
+);
 };
+
 
 export default AcademyOfPop;

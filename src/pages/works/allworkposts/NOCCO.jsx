@@ -33,7 +33,7 @@ const Nocco = () => {
 
     ];
 
-    
+
 
     // GSAP animation after images have loaded
 
@@ -116,28 +116,28 @@ const Nocco = () => {
 
 
 
-                    
+
 
 
 
                     <div className="rendering-row-img">
-    <div className="img-container">
-        <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/26-NOCCO/52.png" alt="nocco image" width="100%" height="auto" />
-    </div>
-    <div className="img-container">
-        <video width="100%" height="auto" loop autoPlay muted playsInline>
-            <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/26-NOCCO/00.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
-    </div>
-</div>
+                        <div className="img-container">
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/26-NOCCO/52.png" alt="nocco image" width="100%" height="auto" />
+                        </div>
+                        <div className="img-container">
+                            <video width="100%" height="auto" loop autoPlay muted playsInline>
+                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/26-NOCCO/00.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
 
 
                 </div>
                 <div className="rendering-ticker-section">
-    
-    <Ticker lines={tickerLines} fontSizes={["25vh"]} padding="2vh" />
-</div>
+
+                    <Ticker lines={tickerLines} fontSizes={["25vh"]} padding="2vh" />
+                </div>
 
                 <div className="rendering-layout">
                     <div className="rendering-row">
