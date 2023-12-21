@@ -22,7 +22,7 @@ import SingleTicker from "../../../components/singleticker/index.jsx";
 
 
 
-const KeysArtBasel = () => {
+const Barebells = () => {
 
     const tickerLines = [
         "YOU ARE THE CAUSE OF MY EUPHORIA ",
@@ -133,12 +133,12 @@ const KeysArtBasel = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/01.png" alt="Keys Art Basel image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '40px' }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/01.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/02.png" alt="Keys Art Basel image"style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '40px' }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/02.png" alt="Barebells image"style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                         </div>
 
 
@@ -148,9 +148,9 @@ const KeysArtBasel = () => {
 
                     <div className="rendering-row-img">
 
-                        <div className="img-container" style={{ overflow: 'hidden', borderRadius: '40px' }}>
+                        <div className="img-container" style={{ overflow: 'hidden', borderRadius: '20px' }}>
 
-                            <video style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '40px' }} loop autoPlay muted playsInline>
+                            <video style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} loop autoPlay muted playsInline>
                                 <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/03.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
@@ -161,16 +161,16 @@ const KeysArtBasel = () => {
 
                     <div className="rendering-row-img">
 
-                        <div className="img-container" style={{ overflow: 'hidden', borderRadius: '40px' }}>
+                        <div className="img-container" style={{ overflow: 'hidden', borderRadius: '20px' }}>
 
-                            <video style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '40px' }} loop autoPlay muted playsInline>
+                            <video style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} loop autoPlay muted playsInline>
                                 <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/01.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
 
-                        <div className="img-container" style={{ overflow: 'hidden', borderRadius: '40px' }}>
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/03.png" alt="nocco image" style={{ width: '100%', height: '100%', borderRadius: '40px' }} />
+                        <div className="img-container" style={{ overflow: 'hidden', borderRadius: '20px' }}>
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/03.png" alt="Barebells image" style={{ width: '100%', height: '100%', borderRadius: '20px' }} />
                         </div>
 
                     </div>
@@ -180,15 +180,15 @@ const KeysArtBasel = () => {
 
                         <div class="column-gca">
                             <div class="top-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/04.png" alt="Ghost-Circus-Apparel Image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '40px' }} />
+                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/04.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                             <div class="bottom-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/05.png" alt="Ghost-Circus-Apparel Image"style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '40px' }} />
+                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/05.png" alt="Barebells image"style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                         </div>
 
-                        <div class="full-height-column-gca" style={{ overflow: 'hidden', borderRadius: '40px' }}>
-                            <video style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '40px' }} loop autoPlay muted playsInline>
+                        <div class="full-height-column-gca" style={{ overflow: 'hidden', borderRadius: '20px' }}>
+                            <video style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} loop autoPlay muted playsInline>
                                 <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/02.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
@@ -206,7 +206,7 @@ const KeysArtBasel = () => {
                         <div className="img-container ">
 
 
-                            <img src= "https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/06.png" alt="Keys Art Basel image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '40px' }}/>
+                            <img src= "https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/06.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }}/>
                         </div>
 
 
@@ -245,7 +245,7 @@ const KeysArtBasel = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/07.png" alt="Keys Art Basel image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '40px' }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/07.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                         </div>
 
 
@@ -255,12 +255,12 @@ const KeysArtBasel = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/08.png" alt="Keys Art Basel image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '40px' }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/08.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/09.png" alt="Keys Art Basel image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '40px' }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/09.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                         </div>
 
 
@@ -277,7 +277,7 @@ const KeysArtBasel = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/10.png" alt="Keys Art Basel image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '40px' }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/10.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                         </div>
 
 
@@ -290,7 +290,7 @@ const KeysArtBasel = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/11.png" alt="Keys Art Basel image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '40px' }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/11.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                         </div>
 
 
@@ -370,4 +370,4 @@ const KeysArtBasel = () => {
     );
 };
 
-export default KeysArtBasel;
+export default Barebells;

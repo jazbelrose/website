@@ -129,12 +129,12 @@ const BeSweet16 = () => {
 
 
                         <div class="column-gca">
-                            <div class="top-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/02+(2).png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
-                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/02.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
+                            <div class="top-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/02+(2).png" alt="Be Sweet 16 Image" width="100%" /></div>
+                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/02.png" alt="Be Sweet 16 Image" width="100%" /></div>
                         </div>
 
                         <div class="full-height-column-gca content-item">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/03.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/03.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
                         </div>
 
 
