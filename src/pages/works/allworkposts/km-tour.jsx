@@ -203,33 +203,8 @@ const KmTour = () => {
 
                     </div>
 
-                    <Row3 className="rendering-row" />
-
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/09.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
-                        </div>
-
-
-
-
-                    </div>
-
-                     <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/08.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
-                        </div>
-
-
-
-
-                    </div>
 
                     <Row3 className="rendering-row" />
 
@@ -267,10 +242,27 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/12.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/10.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/11.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
-                        
+
+
+
+                    </div>
+                    
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/12.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                        </div>
+                       
 
 
 
@@ -297,7 +289,7 @@ const KmTour = () => {
 
                     <Row4 className="rendering-row" />
 
-        
+
 
 
 
@@ -312,7 +304,7 @@ const KmTour = () => {
 
 
 
-              
+
 
 
                 <div className="rendering-layout">
