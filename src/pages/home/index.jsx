@@ -75,6 +75,7 @@ export const Home = () => {
 
         <div className="portfolio-row single-card-row">
           <PortfolioCard
+            link="http://localhost:3000/works/elf-Makeup"
             className="single-card elf"
             imageSrc="https://d2qb21tb4meex0.cloudfront.net/images/Elf.jpg"
             imageAlt="e.l.f. Beauty Design"

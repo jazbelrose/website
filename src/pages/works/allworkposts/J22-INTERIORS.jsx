@@ -23,7 +23,7 @@ import SingleTicker from "../../../components/singleticker/index.jsx";
 
 
 
-const KmTour = () => {
+const J22Interiors = () => {
 
     const tickerLines = [
         "PROJECT DESIGNED BY ADPTV ",
@@ -135,7 +135,7 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/01.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/01.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -151,7 +151,7 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/02.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/02.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -181,12 +181,12 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/03.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/03.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/04.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/04.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -200,7 +200,7 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/05.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/05.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -218,42 +218,12 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/06.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/06.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/07.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
-                        </div>
-
-
-
-                    </div>
-
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/08.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
-                        </div>
-
-
-
-
-                    </div>
-
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/09.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
-                        </div>
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/10.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/07.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -265,7 +235,7 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/11.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/08.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -278,42 +248,12 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/12.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/09.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/13.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
-                        </div>
-
-
-
-                    </div>
-
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/14.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
-                        </div>
-
-
-
-
-                    </div>
-
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/15.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
-                        </div>
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/16.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/10.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -325,7 +265,7 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/17.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/11.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -338,42 +278,12 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/18.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/12.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/19.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
-                        </div>
-
-
-
-                    </div>
-
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/20.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
-                        </div>
-
-
-
-
-                    </div>
-
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/21.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
-                        </div>
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/22.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/13.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -385,7 +295,7 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/23.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/14.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -398,12 +308,12 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/24.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/15.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/25.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/16.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -415,7 +325,97 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/26.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/17.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/18.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/19.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                        </div>
+
+
+
+                    </div>
+
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/20.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/21.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/22.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                        </div>
+
+
+
+                    </div>
+
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/23.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/24.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/25.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                        </div>
+
+
+
+                    </div>
+
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/17-J22+Gymfinity/26.png" alt="J22 interiors image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -489,4 +489,4 @@ const KmTour = () => {
     );
 };
 
-export default KmTour;
+export default J22Interiors;
