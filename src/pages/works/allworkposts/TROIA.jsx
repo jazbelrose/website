@@ -24,7 +24,7 @@ import SingleTicker from "../../../components/singleticker/index.jsx";
 
 
 
-const gucci = () => {
+const troia = () => {
 
     const tickerLines = [
         "PROJECT DESIGNED BY ADPTV ",
@@ -136,7 +136,7 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/01.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/01.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -148,19 +148,19 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/02.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/02.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/03.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/03.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/04.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/04.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -172,13 +172,13 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/05.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/05.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/06.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/06.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -194,7 +194,7 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/07.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/07.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -231,7 +231,7 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/11.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/11.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -299,7 +299,7 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/21.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/21.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -314,13 +314,13 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/22.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/22.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/23.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/23.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         
@@ -337,13 +337,13 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/24.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/24.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/25.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/25.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         
@@ -374,7 +374,7 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/29.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/29.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -406,7 +406,7 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/33.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/33.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -483,4 +483,4 @@ const gucci = () => {
     );
 };
 
-export default gucci;
+export default troia;
