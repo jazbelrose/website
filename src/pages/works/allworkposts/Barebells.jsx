@@ -133,12 +133,12 @@ const Barebells = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/01.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/03-Barebells/01.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/02.png" alt="Barebells image"style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/03-Barebells/02.png" alt="Barebells image"style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                         </div>
 
 
@@ -151,7 +151,7 @@ const Barebells = () => {
                         <div className="img-container" style={{ overflow: 'hidden', borderRadius: '20px' }}>
 
                             <video style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} loop autoPlay muted playsInline>
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/03.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/03-Barebells/03.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -164,13 +164,13 @@ const Barebells = () => {
                         <div className="img-container" style={{ overflow: 'hidden', borderRadius: '20px' }}>
 
                             <video style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} loop autoPlay muted playsInline>
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/01.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/03-Barebells/01.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
 
                         <div className="img-container" style={{ overflow: 'hidden', borderRadius: '20px' }}>
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/03.png" alt="Barebells image" style={{ width: '100%', height: '100%', borderRadius: '20px' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/03-Barebells/03.png" alt="Barebells image" style={{ width: '100%', height: '100%', borderRadius: '20px' }} />
                         </div>
 
                     </div>
@@ -180,16 +180,16 @@ const Barebells = () => {
 
                         <div class="column-gca">
                             <div class="top-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/04.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/03-Barebells/04.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                             <div class="bottom-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/05.png" alt="Barebells image"style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/03-Barebells/05.png" alt="Barebells image"style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                         </div>
 
                         <div class="full-height-column-gca" style={{ overflow: 'hidden', borderRadius: '20px' }}>
                             <video style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} loop autoPlay muted playsInline>
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/02.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/03-Barebells/02.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -206,7 +206,7 @@ const Barebells = () => {
                         <div className="img-container ">
 
 
-                            <img src= "https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/06.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }}/>
+                            <img src= "https://d2qb21tb4meex0.cloudfront.net/03-Barebells/06.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }}/>
                         </div>
 
 
@@ -225,7 +225,7 @@ const Barebells = () => {
                                 muted
                                 playsInline
                             >
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/04.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/03-Barebells/04.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -245,7 +245,7 @@ const Barebells = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/07.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/03-Barebells/07.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                         </div>
 
 
@@ -255,12 +255,12 @@ const Barebells = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/08.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/03-Barebells/08.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/09.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/03-Barebells/09.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                         </div>
 
 
@@ -277,7 +277,7 @@ const Barebells = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/10.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/03-Barebells/10.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                         </div>
 
 
@@ -290,7 +290,7 @@ const Barebells = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/03-Barebells/11.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/03-Barebells/11.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                         </div>
 
 

@@ -125,7 +125,7 @@ const pipedreamevents = () => {
                                 muted
                                 playsInline
                             >
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/01.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/31-Pipedream+Events/01.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -152,7 +152,7 @@ const pipedreamevents = () => {
                                 muted
                                 playsInline
                             >
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/02.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/31-Pipedream+Events/02.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -166,7 +166,7 @@ const pipedreamevents = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/03.png" alt="pipedreamevents Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/31-Pipedream+Events/03.png" alt="pipedreamevents Image" width="100%" height="100%" />
                         </div>
                       
 
@@ -179,12 +179,12 @@ const pipedreamevents = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/04.png" alt="pipedreamevents Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/31-Pipedream+Events/04.png" alt="pipedreamevents Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/05.png" alt="pipedreamevents Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/31-Pipedream+Events/05.png" alt="pipedreamevents Image" width="100%" height="100%" />
                         </div>
 
 
@@ -206,7 +206,7 @@ const pipedreamevents = () => {
                                 muted
                                 playsInline
                             >
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/03.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/31-Pipedream+Events/03.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -224,12 +224,12 @@ const pipedreamevents = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/07.png" alt="pipedreamevents Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/31-Pipedream+Events/07.png" alt="pipedreamevents Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/08.png" alt="pipedreamevents Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/31-Pipedream+Events/08.png" alt="pipedreamevents Image" width="100%" height="100%" />
                         </div>
 
 
@@ -246,7 +246,7 @@ const pipedreamevents = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/09.png" alt="pipedreamevents Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/31-Pipedream+Events/09.png" alt="pipedreamevents Image" width="100%" height="100%" />
                         </div>
 
 
@@ -265,7 +265,7 @@ const pipedreamevents = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/31-Pipedream+Events/10.png" alt="pipedreamevents Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/31-Pipedream+Events/10.png" alt="pipedreamevents Image" width="100%" height="100%" />
                         </div>
                       
 

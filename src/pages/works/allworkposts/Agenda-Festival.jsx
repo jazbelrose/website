@@ -123,7 +123,7 @@ const AgendaFestival = () => {
                                 muted
                                 playsInline
                             >
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/00.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/00.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -149,60 +149,17 @@ const AgendaFestival = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/01.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/01.png" alt="nocco image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/02.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/02.png" alt="nocco image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/03.png" alt="nocco image" width="100%" height="100%" />
-                        </div>
-
-
-
-                    </div>
-
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/04.png" alt="nocco image" width="100%" height="100%" />
-                        </div>
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/05.png" alt="nocco image" width="100%" height="100%" />
-                        </div>
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/06.png" alt="nocco image" width="100%" height="100%" />
-                        </div>
-
-
-
-                    </div>
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/07.png" alt="nocco image" width="100%" height="100%" />
-                        </div>
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/08.png" alt="nocco image" width="100%" height="100%" />
-                        </div>
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/09.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/03.png" alt="nocco image" width="100%" height="100%" />
                         </div>
 
 
@@ -214,17 +171,60 @@ const AgendaFestival = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/10.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/04.png" alt="nocco image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/11.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/05.png" alt="nocco image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/12.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/06.png" alt="nocco image" width="100%" height="100%" />
+                        </div>
+
+
+
+                    </div>
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/07.png" alt="nocco image" width="100%" height="100%" />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/08.png" alt="nocco image" width="100%" height="100%" />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/09.png" alt="nocco image" width="100%" height="100%" />
+                        </div>
+
+
+
+                    </div>
+
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/10.png" alt="nocco image" width="100%" height="100%" />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/11.png" alt="nocco image" width="100%" height="100%" />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/12.png" alt="nocco image" width="100%" height="100%" />
                         </div>
 
 
@@ -249,7 +249,7 @@ const AgendaFestival = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/13.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/13.png" alt="nocco image" width="100%" height="100%" />
                         </div>
 
 
@@ -260,14 +260,14 @@ const AgendaFestival = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/14.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/14.png" alt="nocco image" width="100%" height="100%" />
                         </div>
 
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/15.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/15.png" alt="nocco image" width="100%" height="100%" />
                         </div>
                     </div>
 
@@ -279,7 +279,7 @@ const AgendaFestival = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/16.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/16.png" alt="nocco image" width="100%" height="100%" />
                         </div>
 
 
@@ -291,14 +291,14 @@ const AgendaFestival = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/17.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/17.png" alt="nocco image" width="100%" height="100%" />
                         </div>
 
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/01-Agenda+Festival/18.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/01-Agenda+Festival/18.png" alt="nocco image" width="100%" height="100%" />
                         </div>
                     </div>
 

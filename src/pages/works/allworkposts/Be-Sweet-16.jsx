@@ -129,12 +129,12 @@ const BeSweet16 = () => {
 
 
                         <div class="column-gca">
-                            <div class="top-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/02+(2).png" alt="Be Sweet 16 Image" width="100%" /></div>
-                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/02.png" alt="Be Sweet 16 Image" width="100%" /></div>
+                            <div class="top-row-gca content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/02+(2).png" alt="Be Sweet 16 Image" width="100%" /></div>
+                            <div class="bottom-row-gca content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/02.png" alt="Be Sweet 16 Image" width="100%" /></div>
                         </div>
 
                         <div class="full-height-column-gca content-item">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/03.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/03.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
                         </div>
 
 
@@ -149,7 +149,7 @@ const BeSweet16 = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/04.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/04.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
                         </div>
 
 
@@ -163,12 +163,12 @@ const BeSweet16 = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/05.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/05.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/06.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/06.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
                         </div>
 
 
@@ -184,7 +184,7 @@ const BeSweet16 = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/07.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/07.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
                         </div>
 
 
@@ -197,13 +197,13 @@ const BeSweet16 = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/08.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/08.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/09.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/09.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
                         </div>
 
 
@@ -233,42 +233,20 @@ const BeSweet16 = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/10.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/10.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/11.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
-
-                        </div>
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/12.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
-                        </div>
-
-
-                    </div>   <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/13.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
-                        </div>
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/14.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/11.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
 
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/15.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/12.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
                         </div>
 
 
@@ -277,42 +255,20 @@ const BeSweet16 = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/16.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/13.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/17.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
-
-                        </div>
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/18.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
-                        </div>
-
-
-                    </div>   <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/19.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
-                        </div>
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/20.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/14.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
 
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/21.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/15.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
                         </div>
 
 
@@ -321,20 +277,64 @@ const BeSweet16 = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/22.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/16.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/23.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/17.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
 
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/13-Be+Sweet+16/24.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/18.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                        </div>
+
+
+                    </div>   <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/19.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                        </div>
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/20.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+
+                        </div>
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/21.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                        </div>
+
+
+                    </div>   <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/22.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+                        </div>
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/23.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
+
+                        </div>
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/13-Be+Sweet+16/24.png" alt="Be Sweet 16 Image" width="100%" height="100%" />
                         </div>
 
 

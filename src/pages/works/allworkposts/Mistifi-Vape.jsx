@@ -141,7 +141,7 @@ const MistifiVape = () => {
                                 muted
                                 playsInline
                             >
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/00.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/00.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -155,12 +155,12 @@ const MistifiVape = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/01.png" alt="Mistifi Vape Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/01.png" alt="Mistifi Vape Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/02.png" alt="Mistifi Vape Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/02.png" alt="Mistifi Vape Image" width="100%" height="100%" />
                         </div>
 
 
@@ -174,7 +174,7 @@ const MistifiVape = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/03.png" alt="Mistifi Vape Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/03.png" alt="Mistifi Vape Image" width="100%" height="100%" />
                         </div>
 
 
@@ -186,17 +186,17 @@ const MistifiVape = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/31.png" alt="Mistifi Vape Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/31.png" alt="Mistifi Vape Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/32.png" alt="Mistifi Vape Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/32.png" alt="Mistifi Vape Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/33.png" alt="Mistifi Vape Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/33.png" alt="Mistifi Vape Image" width="100%" height="100%" />
                         </div>
 
 
@@ -207,11 +207,11 @@ const MistifiVape = () => {
 
                     <div className="rendering-row-img">
                         <div className="img-container">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/04.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/04.png" alt="nocco image" width="100%" height="100%" />
                         </div>
                         <div className="img-container">
                             <video width="100%" height="auto" loop autoPlay muted playsInline>
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/01.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/01.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -223,12 +223,12 @@ const MistifiVape = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/05.png" alt="Mistifi Vape Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/05.png" alt="Mistifi Vape Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/06.png" alt="Mistifi Vape Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/06.png" alt="Mistifi Vape Image" width="100%" height="100%" />
                         </div>
 
 
@@ -239,12 +239,12 @@ const MistifiVape = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/07.png" alt="Mistifi Vape Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/07.png" alt="Mistifi Vape Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/08.png" alt="Mistifi Vape Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/08.png" alt="Mistifi Vape Image" width="100%" height="100%" />
                         </div>
 
 
@@ -258,12 +258,12 @@ const MistifiVape = () => {
                     <div class="grid-container-gca second-grid-gca" style={{ gridTemplateColumns: '0.4fr 0.6fr', padding: '0.25vw' }}>
 
                         <div class="full-height-column-gca content-item">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/09.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/09.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
 
                         <div class="column-gca">
-                            <div class="top-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/10.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
-                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/11.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
+                            <div class="top-row-gca content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/10.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
+                            <div class="bottom-row-gca content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/11.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
                         </div>
 
 
@@ -281,7 +281,7 @@ const MistifiVape = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/12.png" alt="Mistifi Vape Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/12.png" alt="Mistifi Vape Image" width="100%" height="100%" />
                         </div>
 
 
@@ -294,7 +294,7 @@ const MistifiVape = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/13.png" alt="Mistifi Vape Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/13.png" alt="Mistifi Vape Image" width="100%" height="100%" />
                         </div>
 
 
@@ -306,7 +306,7 @@ const MistifiVape = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/14.png" alt="Mistifi Vape Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/14.png" alt="Mistifi Vape Image" width="100%" height="100%" />
                         </div>
 
 
@@ -318,7 +318,7 @@ const MistifiVape = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/24-Mistifi+Vape/15.png" alt="Mistifi Vape Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/24-Mistifi+Vape/15.png" alt="Mistifi Vape Image" width="100%" height="100%" />
                         </div>
 
 

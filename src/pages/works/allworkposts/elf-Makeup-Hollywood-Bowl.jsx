@@ -115,12 +115,12 @@ const TheOscars = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/10-elf+Makeup+hollywood+bowl/02.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/02.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/10-elf+Makeup+hollywood+bowl/03.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/03.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
 
@@ -136,7 +136,7 @@ const TheOscars = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/10-elf+Makeup+hollywood+bowl/04.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/04.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
 
@@ -149,13 +149,13 @@ const TheOscars = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/10-elf+Makeup+hollywood+bowl/05.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/05.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/10-elf+Makeup+hollywood+bowl/06.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/06.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
 
@@ -167,11 +167,11 @@ const TheOscars = () => {
                     <div class="grid-container-gca second-grid-gca" style={{ gridTemplateColumns: '0.7fr 0.3fr', padding: '0.25vw' }}>
 
                         <div class="full-height-column-gca content-item">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/10-elf+Makeup+hollywood+bowl/07.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/07.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
                         <div class="column-gca">
-                            <div class="top-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/10-elf+Makeup+hollywood+bowl/08.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
-                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/10-elf+Makeup+hollywood+bowl/09.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
+                            <div class="top-row-gca content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/08.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
+                            <div class="bottom-row-gca content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/09.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
                         </div>
 
                     </div>
@@ -187,19 +187,19 @@ const TheOscars = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/10-elf+Makeup+hollywood+bowl/10.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/10.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/10-elf+Makeup+hollywood+bowl/11.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/11.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/10-elf+Makeup+hollywood+bowl/12.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/12.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
 
@@ -213,19 +213,19 @@ const TheOscars = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/10-elf+Makeup+hollywood+bowl/13.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/13.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/10-elf+Makeup+hollywood+bowl/14.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/14.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/10-elf+Makeup+hollywood+bowl/15.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/15.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
 

@@ -487,9 +487,9 @@
       <path class="uuid-c41d2f34-6c9f-467a-b412-983e070e0cb1" d="m1152.14,981.79c.4.23.71.54.94.94s.34.82.34,1.28-.11.88-.34,1.27-.54.7-.94.94-.82.35-1.28.35-.88-.12-1.28-.35-.71-.55-.94-.94-.34-.81-.34-1.27.11-.88.34-1.28.54-.71.94-.94.82-.34,1.28-.34.88.11,1.28.34Z"/>
     </g>
   </g>
-  <image width="910" height="329" transform="translate(20 18)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/04.png"/>
-  <image width="910" height="329" transform="translate(20 368)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/05.png"/>
-  <image width="910" height="329" transform="translate(21 718)" xlink:href="https://mylgcontent.s3.us-west-1.amazonaws.com/04-Bloom+%26+Bliss/06.png"/>
+  <image width="910" height="329" transform="translate(20 18)" xlink:href="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/04.png"/>
+  <image width="910" height="329" transform="translate(20 368)" xlink:href="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/05.png"/>
+  <image width="910" height="329" transform="translate(21 718)" xlink:href="https://d2qb21tb4meex0.cloudfront.net/04-Bloom+%26+Bliss/06.png"/>
   <g>
     <path class="uuid-ea238516-2824-4c03-aa50-5218bc4993a7" d="m1844.24,1000.83h-117.91c-5.04,0-9.52-2.63-11.97-7.03-2.45-4.41-2.33-9.59.32-13.88l58.95-95.18c2.52-4.06,6.87-6.49,11.65-6.49s9.13,2.42,11.65,6.49l58.95,95.18c2.66,4.29,2.78,9.48.32,13.88-2.45,4.41-6.93,7.03-11.97,7.03Zm-62.05-110.8l-58.95,95.18c-1.02,1.64-.4,3.12-.09,3.69.31.56,1.25,1.87,3.18,1.87h117.91c1.93,0,2.87-1.31,3.18-1.87.31-.56.93-2.05-.09-3.69l-58.95-95.18c-.96-1.55-2.48-1.72-3.09-1.72s-2.13.17-3.09,1.72Z"/>
     <path class="uuid-ea238516-2824-4c03-aa50-5218bc4993a7" d="m1766.46,1045.14c-11.54,0-20.94-8.96-20.94-19.96s9.39-19.96,20.94-19.96c5.36,0,10.46,1.93,14.36,5.43l-8.68,9.66c-1.51-1.36-3.53-2.11-5.68-2.11-4.38,0-7.95,3.13-7.95,6.98s3.57,6.98,7.95,6.98c2.16,0,4.18-.75,5.69-2.12l8.7,9.64c-3.9,3.52-9.01,5.46-14.39,5.46Z"/>

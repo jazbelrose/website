@@ -121,12 +121,12 @@ const KeysSoulcare = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/02.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/02.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/03.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/03.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
 
 
@@ -139,12 +139,12 @@ const KeysSoulcare = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/05.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/05.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/04.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/04.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
 
 
@@ -164,7 +164,7 @@ const KeysSoulcare = () => {
                                 muted
                                 playsInline
                             >
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/03.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/03.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -179,11 +179,11 @@ const KeysSoulcare = () => {
 
                     <div class="grid-container">
                         <div class="column">
-                            <div class="top-row content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/06.png" alt="Keys-Soulcare Image" width="100%" height="100%" /></div>
-                            <div class="bottom-row content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/07.png" alt="Keys-Soulcare Image" width="100%" height="100%" /></div>
+                            <div class="top-row content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/06.png" alt="Keys-Soulcare Image" width="100%" height="100%" /></div>
+                            <div class="bottom-row content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/07.png" alt="Keys-Soulcare Image" width="100%" height="100%" /></div>
                         </div>
                         <div class="full-height-column content-item">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/08.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/08.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
                     </div>
 
@@ -191,11 +191,11 @@ const KeysSoulcare = () => {
                     <div class="grid-container second-grid">
 
                         <div class="full-height-column content-item">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/09.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/09.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
                         <div class="column">
-                            <div class="top-row content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/11.png" alt="Keys-Soulcare Image" width="100%" height="100%" /></div>
-                            <div class="bottom-row content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/10.png" alt="Keys-Soulcare Image" width="100%" height="100%" /></div>
+                            <div class="top-row content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/11.png" alt="Keys-Soulcare Image" width="100%" height="100%" /></div>
+                            <div class="bottom-row content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/10.png" alt="Keys-Soulcare Image" width="100%" height="100%" /></div>
                         </div>
 
                     </div>
@@ -211,7 +211,7 @@ const KeysSoulcare = () => {
                         </div>
 
                         <div className="img-container" style={{ flex: '1' }}>
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/12.png" alt="Keys-Soulcare Image" style={{ width: '100%', height: 'auto' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/12.png" alt="Keys-Soulcare Image" style={{ width: '100%', height: 'auto' }} />
                         </div>
 
                     </div>
@@ -228,12 +228,12 @@ const KeysSoulcare = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/13.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/13.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/14.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/14.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
 
 
@@ -246,12 +246,12 @@ const KeysSoulcare = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/15.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/15.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/16.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/16.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
 
 
@@ -266,12 +266,12 @@ const KeysSoulcare = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/16.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/16.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/17.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/17.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
 
 
@@ -285,12 +285,12 @@ const KeysSoulcare = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/18.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/18.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/19.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/19.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
 
 
@@ -317,12 +317,12 @@ const KeysSoulcare = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/20.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/20.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/21.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/21.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
 
 
@@ -338,7 +338,7 @@ const KeysSoulcare = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/22.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/22.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
 
 
@@ -353,31 +353,12 @@ const KeysSoulcare = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/23.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/23.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/24.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
-                        </div>
-
-
-
-
-                    </div>
-
-                    <div className="rendering-row-img">
-
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/25.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
-                        </div>
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/26.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/24.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
 
 
@@ -391,7 +372,26 @@ const KeysSoulcare = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/27.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/25.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/26.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div className="rendering-row-img">
+
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/27.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
 
 
@@ -406,12 +406,12 @@ const KeysSoulcare = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/28.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/28.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/29.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/29.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
 
 
@@ -426,7 +426,7 @@ const KeysSoulcare = () => {
                         </div>
 
                         <div className="img-container" style={{ flex: '1' }}>
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/30.png" alt="Keys-Soulcare Image" style={{ width: '100%', height: 'auto' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/30.png" alt="Keys-Soulcare Image" style={{ width: '100%', height: 'auto' }} />
                         </div>
 
                     </div>
@@ -437,12 +437,12 @@ const KeysSoulcare = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/31.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/31.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/32.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/32.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
 
 
@@ -456,18 +456,18 @@ const KeysSoulcare = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/33.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/33.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/34.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/34.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/35.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/35.png" alt="Keys-Soulcare Image" width="100%" height="100%" />
                         </div>
 
 
@@ -488,7 +488,7 @@ const KeysSoulcare = () => {
                                 muted
                                 playsInline
                             >
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/19-Keys+Soulcare/00.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/00.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 

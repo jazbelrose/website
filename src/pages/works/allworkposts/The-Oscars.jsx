@@ -109,7 +109,7 @@ const TheOscars = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/000.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/000.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
 
@@ -125,7 +125,7 @@ const TheOscars = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/01.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/01.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
 
@@ -139,12 +139,12 @@ const TheOscars = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/02.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/02.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/03.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/03.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
 
@@ -158,73 +158,13 @@ const TheOscars = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/04.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/04.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/05.png" alt="The Oscars image" width="100%" height="100%" />
-                        </div>
-
-
-
-
-                    </div>
-
-
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/06.png" alt="The Oscars image" width="100%" height="100%" />
-                        </div>
-
-
-
-
-                    </div>
-
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/07.png" alt="The Oscars image" width="100%" height="100%" />
-                        </div>
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/08.png" alt="The Oscars image" width="100%" height="100%" />
-                        </div>
-
-
-
-
-                    </div>
-
-
-
-
-
-
-
-
-
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/09.png" alt="The Oscars image" width="100%" height="100%" />
-                        </div>
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/10.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/05.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
 
@@ -238,13 +178,53 @@ const TheOscars = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/11.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/06.png" alt="The Oscars image" width="100%" height="100%" />
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/07.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/12.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/08.png" alt="The Oscars image" width="100%" height="100%" />
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/09.png" alt="The Oscars image" width="100%" height="100%" />
+                        </div>
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/10.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
 
@@ -258,7 +238,27 @@ const TheOscars = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/13.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/11.png" alt="The Oscars image" width="100%" height="100%" />
+                        </div>
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/12.png" alt="The Oscars image" width="100%" height="100%" />
+                        </div>
+
+
+
+
+                    </div>
+
+
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/13.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
 
@@ -272,13 +272,13 @@ const TheOscars = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/14.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/14.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/15.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/15.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
 
@@ -290,12 +290,12 @@ const TheOscars = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/16.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/16.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/29-The+Oscars/17.png" alt="The Oscars image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/29-The+Oscars/17.png" alt="The Oscars image" width="100%" height="100%" />
                         </div>
 
 

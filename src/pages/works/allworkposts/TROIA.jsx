@@ -136,7 +136,7 @@ const troia = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/01.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/01.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -148,19 +148,19 @@ const troia = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/02.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/02.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/03.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/03.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/04.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/04.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -172,13 +172,13 @@ const troia = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/05.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/05.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/06.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/06.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -194,7 +194,7 @@ const troia = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/07.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/07.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -209,14 +209,14 @@ const troia = () => {
 
 
                         <div class="full-height-column-gca" >
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/08.png" alt="Barebells image" style={{ width: '100%', height: '100%' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/08.png" alt="Barebells image" style={{ width: '100%', height: '100%' }} />
                         </div>
                         <div class="column-gca">
                             <div class="top-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/09.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/09.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                             <div class="bottom-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/10.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/10.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                         </div>
 
@@ -231,7 +231,7 @@ const troia = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/11.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/11.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -244,15 +244,15 @@ const troia = () => {
 
                         <div class="column-gca">
                             <div class="top-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/12.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/12.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                             <div class="bottom-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/13.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/13.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                         </div>
 
                         <div class="full-height-column-gca" >
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/14.png" alt="Barebells image" style={{ width: '100%', height: '100%' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/14.png" alt="Barebells image" style={{ width: '100%', height: '100%' }} />
                         </div>
 
                     </div>
@@ -262,14 +262,14 @@ const troia = () => {
 
 
                         <div class="full-height-column-gca" >
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/15.png" alt="Barebells image" style={{ width: '100%', height: '100%' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/15.png" alt="Barebells image" style={{ width: '100%', height: '100%' }} />
                         </div>
                         <div class="column-gca">
                             <div class="top-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/16.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/16.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                             <div class="bottom-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/17.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/17.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                         </div>
 
@@ -281,15 +281,15 @@ const troia = () => {
 
                         <div class="column-gca">
                             <div class="top-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/18.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/18.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                             <div class="bottom-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/19.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/19.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                         </div>
 
                         <div class="full-height-column-gca" >
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/20.png" alt="Barebells image" style={{ width: '100%', height: '100%' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/20.png" alt="Barebells image" style={{ width: '100%', height: '100%' }} />
                         </div>
 
                     </div>
@@ -299,7 +299,7 @@ const troia = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/21.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/21.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -314,13 +314,13 @@ const troia = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/22.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/22.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/23.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/23.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         
@@ -337,13 +337,13 @@ const troia = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/24.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/24.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/25.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/25.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         
@@ -356,15 +356,15 @@ const troia = () => {
 
                         <div class="column-gca">
                             <div class="top-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/26.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/26.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                             <div class="bottom-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/27.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/27.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                         </div>
 
                         <div class="full-height-column-gca" >
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/28.png" alt="Barebells image" style={{ width: '100%', height: '100%' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/28.png" alt="Barebells image" style={{ width: '100%', height: '100%' }} />
                         </div>
 
                     </div>
@@ -374,7 +374,7 @@ const troia = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/29.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/29.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -386,14 +386,14 @@ const troia = () => {
 
 
                         <div class="full-height-column-gca" >
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/30.png" alt="Barebells image" style={{ width: '100%', height: '100%' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/30.png" alt="Barebells image" style={{ width: '100%', height: '100%' }} />
                         </div>
                         <div class="column-gca">
                             <div class="top-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/31.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/31.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                             <div class="bottom-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/32.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/32.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                         </div>
 
@@ -406,7 +406,7 @@ const troia = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/36-TROIA/33.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/33.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 

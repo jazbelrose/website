@@ -136,13 +136,13 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/01.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/01.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/02.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/02.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -153,15 +153,15 @@ const gucci = () => {
 
                         <div class="column-gca">
                             <div class="top-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/03.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/03.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                             <div class="bottom-row-gca">
-                                <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/04.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
+                                <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/04.png" alt="Barebells image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} />
                             </div>
                         </div>
 
                         <div class="full-height-column-gca" >
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/05.png" alt="Barebells image" style={{ width: '100%', height: '100%' }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/05.png" alt="Barebells image" style={{ width: '100%', height: '100%' }} />
                         </div>
 
                     </div>
@@ -171,7 +171,7 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/06.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/06.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -187,13 +187,13 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/07.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/07.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/08.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/08.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -209,7 +209,7 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/09.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/09.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -225,12 +225,12 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/10.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/10.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/11.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/11.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -245,40 +245,17 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/12.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/12.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/13.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/13.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/14.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
-                        </div>
-
-
-
-
-                    </div>
-
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/15.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
-                        </div>
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/16.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
-                        </div>
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/17.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/14.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -291,17 +268,40 @@ const gucci = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/18.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/15.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/19.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/16.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/43-NB/20.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/17.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/18.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/19.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/43-NB/20.png" alt="Gucci image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 

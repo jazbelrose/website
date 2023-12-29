@@ -132,7 +132,7 @@ const Logitech = () => {
                         <div className="img-container" style={{ overflow: 'hidden', borderRadius: '20px' }}>
 
                             <video style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} loop autoPlay muted playsInline>
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/00.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/00.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -146,12 +146,12 @@ const Logitech = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/00.png" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/00.png" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/01.png" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/01.png" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -161,11 +161,11 @@ const Logitech = () => {
 
                     <div class="grid-container-gca" style={{ gridTemplateColumns: '0.6fr 0.4fr', padding: '0.25vw' }}>
                         <div class="column-gca">
-                            <div class="top-row content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/02.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" /></div>
-                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/03.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" /></div>
+                            <div class="top-row content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/02.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" /></div>
+                            <div class="bottom-row-gca content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/03.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" /></div>
                         </div>
                         <div class="full-height-column-gca content-item">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/04.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/04.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
                     </div>
 
@@ -173,11 +173,11 @@ const Logitech = () => {
                     <div class="grid-container-gca second-grid-gca" style={{ gridTemplateColumns: '0.4fr 0.6fr', padding: '0.25vw' }}>
 
                         <div class="full-height-column-gca content-item">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/05.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/05.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
                         <div class="column-gca">
-                            <div class="top-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/06.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" /></div>
-                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/07.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" /></div>
+                            <div class="top-row-gca content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/06.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" /></div>
+                            <div class="bottom-row-gca content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/07.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" /></div>
                         </div>
 
                     </div>
@@ -192,7 +192,7 @@ const Logitech = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/08.jpg" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/08.jpg" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -206,7 +206,7 @@ const Logitech = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/09.png" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/09.png" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -219,14 +219,14 @@ const Logitech = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/10.png" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/10.png" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/11.png" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/11.png" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -238,7 +238,7 @@ const Logitech = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/12.png" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/12.png" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -252,7 +252,7 @@ const Logitech = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/21-Logitech/13.png" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/21-Logitech/13.png" alt="Logitech image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 

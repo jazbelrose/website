@@ -134,12 +134,12 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/01.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/01.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/02.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/02.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -153,17 +153,17 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/03.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/03.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/04.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/04.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/05.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/05.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -176,12 +176,12 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/06.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/06.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/07.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/07.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -195,7 +195,7 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/08.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/08.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -213,7 +213,7 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/09.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/09.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -226,7 +226,7 @@ const KmTour = () => {
                         <div className="img-container" style={{ overflow: 'hidden', borderRadius: '20px' }}>
 
                             <video style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }} loop autoPlay muted playsInline>
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/00.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/00.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -242,12 +242,12 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/10.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/10.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/11.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/11.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 
@@ -260,7 +260,7 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/12.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/12.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
                        
 
@@ -274,13 +274,13 @@ const KmTour = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/13.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/13.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/39-KM+Tour/14.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/39-KM+Tour/14.png" alt="km-tour image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
                         </div>
 
 

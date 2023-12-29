@@ -122,11 +122,11 @@ const Nocco = () => {
 
                     <div className="rendering-row-img">
                         <div className="img-container">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/26-NOCCO/52.png" alt="nocco image" width="100%" height="auto" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/26-NOCCO/52.png" alt="nocco image" width="100%" height="auto" />
                         </div>
                         <div className="img-container">
                             <video width="100%" height="auto" loop autoPlay muted playsInline>
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/26-NOCCO/00.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/26-NOCCO/00.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -158,7 +158,7 @@ const Nocco = () => {
                                 playsInline
                                 style={{ borderRadius: '0' }}
                             >
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/26-NOCCO/01.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/26-NOCCO/01.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -172,12 +172,12 @@ const Nocco = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/26-NOCCO/01.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/26-NOCCO/01.png" alt="nocco image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/26-NOCCO/02.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/26-NOCCO/02.png" alt="nocco image" width="100%" height="100%" />
                         </div>
 
 
@@ -188,12 +188,12 @@ const Nocco = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/26-NOCCO/04.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/26-NOCCO/04.png" alt="nocco image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/26-NOCCO/05.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/26-NOCCO/05.png" alt="nocco image" width="100%" height="100%" />
                         </div>
 
 
@@ -212,12 +212,12 @@ const Nocco = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/26-NOCCO/03.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/26-NOCCO/03.png" alt="nocco image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/26-NOCCO/04.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/26-NOCCO/04.png" alt="nocco image" width="100%" height="100%" />
                         </div>
 
 
@@ -227,7 +227,7 @@ const Nocco = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/26-NOCCO/06.png" alt="nocco image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/26-NOCCO/06.png" alt="nocco image" width="100%" height="100%" />
                         </div>
                     </div>
 

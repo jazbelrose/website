@@ -133,17 +133,17 @@ const KeysArtBasel = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/01.png" alt="Keys Art Basel image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/01.png" alt="Keys Art Basel image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/02.png" alt="Keys Art Basel image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/02.png" alt="Keys Art Basel image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/03.png" alt="Keys Art Basel image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/03.png" alt="Keys Art Basel image" width="100%" height="100%" />
                         </div>
 
 
@@ -154,12 +154,12 @@ const KeysArtBasel = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/04.png" alt="Keys Art Basel image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/04.png" alt="Keys Art Basel image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/05.png" alt="Keys Art Basel image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/05.png" alt="Keys Art Basel image" width="100%" height="100%" />
                         </div>
 
 
@@ -171,12 +171,12 @@ const KeysArtBasel = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/06.png" alt="Keys Art Basel image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/06.png" alt="Keys Art Basel image" width="100%" height="100%" />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/07.png" alt="Keys Art Basel image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/07.png" alt="Keys Art Basel image" width="100%" height="100%" />
                         </div>
 
 
@@ -202,7 +202,7 @@ const KeysArtBasel = () => {
                                 muted
                                 playsInline
                             >
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/00.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/00.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -213,12 +213,12 @@ const KeysArtBasel = () => {
                     <div class="grid-container-gca second-grid-gca" style={{ gridTemplateColumns: '0.4fr 0.6fr', padding: '0.25vw' }}>
 
                         <div class="full-height-column-gca content-item">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/08.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/08.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
                         </div>
 
                         <div class="column-gca">
-                            <div class="top-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/09.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
-                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/10.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
+                            <div class="top-row-gca content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/09.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
+                            <div class="bottom-row-gca content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/10.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
                         </div>
 
 
@@ -234,7 +234,7 @@ const KeysArtBasel = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/11.png" alt="Keys Art Basel image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/11.png" alt="Keys Art Basel image" width="100%" height="100%" />
                         </div>
 
 
@@ -247,13 +247,13 @@ const KeysArtBasel = () => {
 
 
                     <div class="column-gca">
-                            <div class="top-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/12.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
-                            <div class="bottom-row-gca content-item"> <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/13.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
+                            <div class="top-row-gca content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/12.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
+                            <div class="bottom-row-gca content-item"> <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/13.png" alt="Ghost-Circus-Apparel Image" width="100%" /></div>
                         </div>
 
 
                         <div class="full-height-column-gca content-item">
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/14.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/14.png" alt="Ghost-Circus-Apparel Image" width="100%" height="100%" />
 
                             
                         </div>
@@ -269,7 +269,7 @@ const KeysArtBasel = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/20-Keys+Art+Basel/15.png" alt="Keys Art Basel image" width="100%" height="100%" />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/15.png" alt="Keys Art Basel image" width="100%" height="100%" />
                         </div>
 
 

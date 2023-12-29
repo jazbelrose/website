@@ -131,7 +131,7 @@ const ThePartyNeverEnds = () => {
                         <div className="img-container" style={{ overflow: 'hidden', borderRadius: '20px'  }}>
 
                             <video style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px'   }} loop autoPlay muted playsInline>
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/00.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/00.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -145,41 +145,12 @@ const ThePartyNeverEnds = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/01.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/01.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/02.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
-                        </div>
-
-
-
-                    </div>
-
-
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/03.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
-                        </div>
-
-
-
-                    </div>
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/04.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
-                        </div>
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/05.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/02.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
 
 
@@ -192,7 +163,36 @@ const ThePartyNeverEnds = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/06.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/03.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                        </div>
+
+
+
+                    </div>
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/04.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/05.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/06.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
 
 
@@ -204,12 +204,12 @@ const ThePartyNeverEnds = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/07.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/07.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/08.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/08.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
 
 
@@ -222,7 +222,7 @@ const ThePartyNeverEnds = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/09.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/09.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
 
 
@@ -241,13 +241,13 @@ const ThePartyNeverEnds = () => {
                         <div className="img-container" style={{ overflow: 'hidden', borderRadius: '20px'   }}>
 
                             <video style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px'   }} loop autoPlay muted playsInline>
-                                <source src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/01.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/01.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
 
                         <div className="img-container" style={{ overflow: 'hidden',  }}>
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/10.png" alt="the party never ends image" style={{ width: '100%', height: '100%',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/10.png" alt="the party never ends image" style={{ width: '100%', height: '100%',  }} />
                         </div>
 
                     </div>
@@ -260,7 +260,7 @@ const ThePartyNeverEnds = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/11.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/11.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
 
 
@@ -272,12 +272,12 @@ const ThePartyNeverEnds = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/12.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/12.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/13.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/13.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
 
 
@@ -290,12 +290,12 @@ const ThePartyNeverEnds = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/14.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/14.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/15.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/15.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
 
 
@@ -306,24 +306,7 @@ const ThePartyNeverEnds = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/16.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
-                        </div>
-
-
-
-                    </div>
-
-                    <div className="rendering-row-img">
-
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/17.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
-                        </div>
-                        <div className="img-container ">
-
-
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/18.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/16.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
 
 
@@ -335,12 +318,29 @@ const ThePartyNeverEnds = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/19.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/17.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/20.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/18.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                        </div>
+
+
+
+                    </div>
+
+                    <div className="rendering-row-img">
+
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/19.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                        </div>
+                        <div className="img-container ">
+
+
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/20.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
 
 
@@ -355,7 +355,7 @@ const ThePartyNeverEnds = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://mylgcontent.s3.us-west-1.amazonaws.com/05-The+Party+Never+Ends/21.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/05-The+Party+Never+Ends/21.png" alt="the party never ends image" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
                         </div>
 
 
