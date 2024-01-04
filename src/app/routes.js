@@ -15,6 +15,12 @@ import { Works } from "../pages/works";
 import { ContactUs } from "../pages/contact";
 import { About } from "../pages/about";
 import { Blog } from "../pages/blog";
+import { Dashboard } from '../pages/dashboard';
+import { Login } from '../pages/auth/Login';
+import { Register } from '../pages/auth/Register';
+import { Forgotpassword } from '../pages/auth/Forgot-password';
+
+
 import BlogPost from "../pages/blog/blogpost/BlogPost";
 import WorkPost from "../pages/works/workpage/WorkPost";
 import { AnimatePresence, motion } from "framer-motion";
@@ -75,6 +81,7 @@ const ActualRoutes = ({ location }) => {
 
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
+
         <Route
           path="/"
           element={
@@ -89,6 +96,7 @@ const ActualRoutes = ({ location }) => {
             </motion.div>
           }
         />
+
         <Route
           path="/about"
           element={
@@ -176,6 +184,68 @@ const ActualRoutes = ({ location }) => {
             </motion.div>
           }
         />
+
+        <Route
+          path="/dashboard"
+          element={
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <Dashboard />
+            </motion.div>
+          }
+        />
+
+        {/* Add Login and Register Routes */}
+        <Route
+          path="/login"
+          element={
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <Login />
+            </motion.div>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <Register />
+            </motion.div>
+          }
+        />
+
+        <Route
+          path="/forgot-password"
+          element={
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <Forgotpassword />
+            </motion.div>
+          }
+        />
+
+
 
 
       </Routes>
