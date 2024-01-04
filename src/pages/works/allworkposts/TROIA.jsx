@@ -37,6 +37,11 @@ const troia = () => {
     let worksRefs = useRef([]);
     const maxPosts = 16;
     const [displayedWorks, setDisplayedWorks] = useState([]);
+    const calculateMinValue = () => {
+        // Example calculation, adjust as needed
+        const vw = window.innerWidth * 0.006;
+        return Math.min(10, vw) + 'px';
+      };
 
 
 
@@ -178,7 +183,7 @@ const troia = () => {
                         <div className="img-container ">
 
 
-                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/06.png" alt="troia image" style={{ width: '100%', height: '100%', objectFit: 'cover', }} />
+                            <img src="https://d2qb21tb4meex0.cloudfront.net/36-TROIA/06.png" alt="troia image" style={{ width: '100%', height: '100%',  }} />
                         </div>
 
 
@@ -205,7 +210,7 @@ const troia = () => {
 
 
 
-                    <div class="second-grid-gca" style={{ gridTemplateColumns: '0.6fr 0.4fr', columnGap: '.5vw', padding: '0.25vw' }}>
+                    <div class="second-grid-gca" style={{ gridTemplateColumns: '0.6fr 0.4fr', columnGap: calculateMinValue(), padding: '0.25vw' }}>
 
 
                         <div class="full-height-column-gca" >
@@ -240,7 +245,7 @@ const troia = () => {
                     </div>
 
 
-                    <div class="second-grid-gca" style={{ gridTemplateColumns: '0.4fr 0.6fr', columnGap: '.5vw', padding: '0.25vw' }}>
+                    <div class="second-grid-gca" style={{ gridTemplateColumns: '0.4fr 0.6fr', columnGap: calculateMinValue(), padding: '0.25vw' }}>
 
                         <div class="column-gca">
                             <div class="top-row-gca">
@@ -258,7 +263,7 @@ const troia = () => {
                     </div>
 
 
-                    <div class="second-grid-gca" style={{ gridTemplateColumns: '0.6fr 0.4fr', columnGap: '.5vw', padding: '0.25vw' }}>
+                    <div class="second-grid-gca" style={{ gridTemplateColumns: '0.6fr 0.4fr', columnGap: calculateMinValue(), padding: '0.25vw' }}>
 
 
                         <div class="full-height-column-gca" >
@@ -277,7 +282,7 @@ const troia = () => {
 
                     </div>
 
-                    <div class="second-grid-gca" style={{ gridTemplateColumns: '0.4fr 0.6fr', columnGap: '.5vw', padding: '0.25vw' }}>
+                    <div class="second-grid-gca" style={{ gridTemplateColumns: '0.4fr 0.6fr', columnGap: calculateMinValue(), padding: '0.25vw' }}>
 
                         <div class="column-gca">
                             <div class="top-row-gca">
@@ -352,7 +357,7 @@ const troia = () => {
 
                     </div>
 
-                    <div class="second-grid-gca" style={{ gridTemplateColumns: '0.4fr 0.6fr', columnGap: '.5vw', padding: '0.25vw' }}>
+                    <div class="second-grid-gca" style={{ gridTemplateColumns: '0.4fr 0.6fr', columnGap: calculateMinValue(), padding: '0.25vw' }}>
 
                         <div class="column-gca">
                             <div class="top-row-gca">
@@ -382,7 +387,7 @@ const troia = () => {
 
                     </div>
 
-                    <div class="second-grid-gca" style={{ gridTemplateColumns: '0.6fr 0.4fr', columnGap: '.5vw', padding: '0.25vw' }}>
+                    <div class="second-grid-gca" style={{ gridTemplateColumns: '0.6fr 0.4fr', columnGap: calculateMinValue(), padding: '0.25vw' }}>
 
 
                         <div class="full-height-column-gca" >
