@@ -1,0 +1,51 @@
+.collapse-item {
+
+display: block;
+margin-bottom: 10px;
+
+}
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Make the container fill the entire viewport height */
+    padding-bottom: 20px;
+  }
+
+
+.sidebar-heading {
+    font-size: 20px; 
+    margin-bottom: 20px;
+  }
+  
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 100% of the viewport height */
+  }
+
+  .message-center {
+    margin-top: auto; /* Push the Message Center section to the bottom */
+    /* Add any other styles you want */
+  }
+
+#accordionSidebar {
+    max-width: 250px;
+    padding-top: 150px;
+    padding-right: 20px;
+    padding-left: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    border-right: 1px solid #d1d3e2; /* Adjust the color and width as needed */
+    padding-right: 1rem; /* Add some spacing to separate content from the rule */
+  }
+  
+ 
+.nav-item {
+    margin-bottom: 10px; 
+  }
+ 
+.nav-link span {
+    font-size: 15px; 
+  }
+  
