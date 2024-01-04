@@ -14,11 +14,16 @@ export function Dashboard() {
   const [isNewProjectCollapsed, setIsNewProjectCollapsed] = useState(true);
   const [isYourProjectsCollapsed, setIsYourProjectsCollapsed] = useState(true);
   const [isUploadsCollapsed, setIsUploadsCollapsed] = useState(true);
+  const [isDownloadsCollapsed, setIsDownloadsCollapsed] = useState(true);
+
+  
+
   const [isMessageCenterCollapsed, setIsMessageCenterCollapsed] = useState(true);
 
   const toggleNewProjectCollapse = () => setIsNewProjectCollapsed(!isNewProjectCollapsed);
   const toggleYourProjectsCollapse = () => setIsYourProjectsCollapsed(!isYourProjectsCollapsed);
   const toggleUploadsCollapse = () => setIsUploadsCollapsed(!isUploadsCollapsed);
+  const toggleDownloadsCollapse = () => setIsDownloadsCollapsed(!isDownloadsCollapsed);
   const toggleMessageCenterCollapse = () => setIsMessageCenterCollapsed(!isMessageCenterCollapsed);
 
   return (
@@ -98,6 +103,20 @@ export function Dashboard() {
               </div>
             </li>
 
+            {/* Downloads */}
+            <li className="nav-item">
+              <a className="nav-link collapsed" onClick={toggleDownloadsCollapse}>
+                <i className="fas fa-fw fa-download"></i>
+                <span>Downloads</span>
+              </a>
+              <div className={`collapse ${isDownloadsCollapsed ? '' : 'show'}`} id="collapseDownloads">
+                <div className="bg-black py-2 collapse-inner rounded">
+                  <a className="collapse-item" href="utilities-color.html">All</a>
+                  <a className="collapse-item" href="utilities-border.html">By project</a>
+                </div>
+              </div>
+            </li>
+
 
 
 
@@ -133,7 +152,7 @@ export function Dashboard() {
             </div>
 
 
-            
+
 
 
           </ul>
