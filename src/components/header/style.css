@@ -241,10 +241,17 @@ display: inline-block;
   .nav-links {
     display: none;
   }
+  .nav-bar {
+    height: 100%;
+    padding: 10px 20px;
+  
+  }
 
 .site-logo {
-  font-size: 18px; /* slightly smaller for mobile */
+  
+  font-size: 28px; /* slightly smaller for mobile */
 }
+
 
 }
 
@@ -255,12 +262,13 @@ display: inline-block;
  
 
 .site-logo {
-  font-size: 24px; /* slightly smaller for mobile */
+  font-size: 28px; /* slightly smaller for mobile */
 }
 
-.nav-link {
-  font-size: 18px; /* Adjust size as needed for mobile */
+.nav-links {
+  display: none;
 }
+
 
 }
 
@@ -273,9 +281,10 @@ display: inline-block;
     font-size: 28px;
   }
 
-  .nav-link {
-    font-size: 18px;
+  .nav-links {
+    display: none;
   }
+  
  
 
 .menu-footer {
