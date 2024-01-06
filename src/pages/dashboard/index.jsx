@@ -8,52 +8,39 @@ import "./style.css";
 
 export function Dashboard() {
 
-
-
-  const [showAllProjects, setShowAllProjects] = useState(false);
+  const [projectsViewState, setProjectsViewState] = useState('collapsed'); // 'collapsed' or 'show-all'
 
   const projects = usersData?.users?.[0]?.projects || [];
-  const [selectedProjects, setSelectedProjects] = useState(projects);
+  const [selectedProjects, setSelectedProjects] = useState([]);
   const [activeProject, setActiveProject] = useState(null);
 
-
-
-  const selectAllProjects = () => {
-    setSelectedProjects([...projects]);
-  };
-
-  const selectProject = (project) => {
-    setSelectedProjects([project]);
-    setActiveProject(project); // Set active project
-  };
-
-
   const [isNewProjectCollapsed, setIsNewProjectCollapsed] = useState(true);
-  const [isYourProjectsCollapsed, setIsYourProjectsCollapsed] = useState(true);
-  const [isUploadsCollapsed, setIsUploadsCollapsed] = useState(true);
-  const [isDownloadsCollapsed, setIsDownloadsCollapsed] = useState(true);
-
-
-
   const [isMessageCenterCollapsed, setIsMessageCenterCollapsed] = useState(true);
 
-  const toggleNewProjectCollapse = () => setIsNewProjectCollapsed(!isNewProjectCollapsed);
-  const toggleYourProjectsCollapse = () => setIsYourProjectsCollapsed(!isYourProjectsCollapsed);
-  console.log('Your Projects Collapsed:', isYourProjectsCollapsed);
-
-  const showAllProjectsHandler = () => {
-    setShowAllProjects(!showAllProjects);
-    toggleYourProjectsCollapse();
-    console.log('Show All Projects:', showAllProjects);
+  const selectProject = (project) => {
+    setActiveProject(project);
+    setProjectsViewState('single-project'); // New state to indicate single project view
   };
 
-  const toggleUploadsCollapse = () => setIsUploadsCollapsed(!isUploadsCollapsed);
-  const toggleDownloadsCollapse = () => setIsDownloadsCollapsed(!isDownloadsCollapsed);
+  const toggleAllProjectsView = () => {
+    if (projectsViewState !== 'show-all') {
+      setSelectedProjects([...projects]);
+      setProjectsViewState('show-all');
+    } else {
+      setSelectedProjects([]);
+      setProjectsViewState('collapsed');
+    }
+    setActiveProject(null); // Reset active project when toggling all projects view
+  };
+
+  const toggleNewProjectCollapse = () => setIsNewProjectCollapsed(!isNewProjectCollapsed);
   const toggleMessageCenterCollapse = () => setIsMessageCenterCollapsed(!isMessageCenterCollapsed);
 
   useEffect(() => {
-    console.log('Show All Projects:', showAllProjects);
-  }, [showAllProjects]);
+    console.log('Projects View State:', projectsViewState);
+  }, [projectsViewState]);
+
+
 
   return (
 
@@ -87,34 +74,25 @@ export function Dashboard() {
 
           <div className="sidebar-heading">Project Navigation</div>
 
+
           {/* All Projects */}
-
-
           <li className="nav-item">
-            <a
-              className="nav-link collapsed"
-              onClick={() => {
-                toggleYourProjectsCollapse();
-                setShowAllProjects(!showAllProjects);
-              }}
-            >
-
+            <a className="nav-link collapsed" onClick={toggleAllProjectsView}>
               <i className="fas fa-fw fa-user icon-with-padding"></i>
               <span>All Projects</span>
             </a>
-            <div className={`collapse ${isYourProjectsCollapsed ? '' : 'show'}`} id="collapseYourProjects">
-              <div className=" py-2 collapse-inner rounded">
+            <div className={`collapse ${projectsViewState === 'show-all' ? 'show' : ''}`} id="collapseYourProjects">
+              <div className="py-2 collapse-inner rounded">
                 <h6 className="collapse-header">Projects:</h6>
-                {
-                  projects.map((project) => (
-                    <div
-            key={project.projectId}
-            className={`collapse-item ${selectedProjects.some(selectedProject => selectedProject.projectId === project.projectId) ? 'active' : ''}`}
-            onClick={() => selectProject(project)}
-          >
-                      {project.title}
-                      </div>
-                  ))
+                {projects.map((project) => (
+                  <div
+                    key={project.projectId}
+                    className={`collapse-item ${activeProject && activeProject.projectId === project.projectId ? 'active' : ''}`}
+                    onClick={() => selectProject(project)}
+                  >
+                    {project.title}
+                  </div>
+                ))
                 }
 
               </div>
@@ -182,29 +160,74 @@ export function Dashboard() {
 
 
 
- {/* Right Sidebar */}
- <div className="sidebar-right">
-          {showAllProjects && selectedProjects.map(project => (
+        {/* Right Sidebar */}
+        <div className={`sidebar-right ${projectsViewState === 'single-project' ? 'full-width' : ''}`}>
+
+          {projectsViewState === 'show-all' && selectedProjects.map(project => (
             <div key={project.projectId} className="project-container" onClick={() => selectProject(project)}>
-              <img
-                src={project.thumbnails[0]} // Assuming you want to use the first thumbnail
-                alt={`Thumbnail of ${project.title}`}
-                className="project-thumbnail"
-              />
+              <img src={project.thumbnails[0]} alt={`Thumbnail of ${project.title}`} className="project-thumbnail" />
               <h6 className="project-title">{project.title}</h6>
             </div>
           ))}
 
-          {/* Active Project Details */}
-          {activeProject && (
+          {projectsViewState === 'single-project' && activeProject && (
             <div className="active-project-details">
-              <h3>{activeProject.title}</h3>
-              {/* Render other details of the active project here */}
+              <div className='project-header'>
+                <h2>Summary</h2>
+              </div>
+              <div className='dashboard-layout'>
+                {/* Column 1 */}
+                <div className="column-1">
+
+                  <div className="dashboard-item budget">
+                    <span>Budget</span>
+
+                    <span>
+                      ${activeProject.budget && activeProject.budget.total ? activeProject.budget.total : 'Not available'}
+
+                    </span>
+                    <span>{activeProject.budget && activeProject.budget.date}</span>
+                  </div>
+
+
+                  <div className="dashboard-item uploads">
+                    <span>Uploads</span>
+                    <span>></span>
+                  </div>
+
+                  <div className="dashboard-item downloads">
+                    <span>Downloads</span>
+                    <span>></span>
+                  </div>
+                </div>
+
+                {/* Column 2 */}
+                <div className="column-2">
+                  <div className="dashboard-item view-gallery">
+                    <span>View Gallery</span>
+                    <span>></span>
+                  </div>
+
+                  <div className="dashboard-item view-invoices">
+                    <div className="top-row">
+                      <span>View Invoices</span>
+                      <span>></span>
+                    </div>
+                    <div className="bottom-row">
+                      <span>{activeProject.invoiceDate}</span>
+                    </div>
+                  </div>
+
+
+
+
+                </div>
+              </div>
             </div>
           )}
+
         </div>
       </div>
     </div>
   );
 }
-

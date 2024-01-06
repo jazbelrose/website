@@ -24,10 +24,10 @@
                     "status":"100%",
                 
                     "budget": {
-                        "total": 10000,
-                        "spent": 4000,
-                        "remaining": 6000
-                    },
+                        "total": "20,725.21",
+                        "date": "2024-01-05"
+                      },
+                
                     "uploads": [
                         {
                             "fileName": "01.jpg",
@@ -42,6 +42,7 @@
                     ],
                     "gallery": "/works/Academy-of-Pop",
                     "invoices":"/mokibaby/invoices",
+                    "invoiceDate":"2024-01-05",
                     
                     
                     
