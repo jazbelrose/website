@@ -2,7 +2,8 @@ import React, { useState, useEffect, } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import usersData from './users.json';
-import { ReactComponent as TitleStatus } from "../../assets/svg/dashboard/title-status.svg";
+import teamData from './team.json';
+import Map from "../../components/map";
 import "./style.css";
 
 
@@ -53,6 +54,7 @@ export const Dashboard = () => {
     const number = parseFloat(statusString.replace('%', ''));
     return number;
   };
+  const activeProjectLocation = activeProject ? activeProject.location : null;
 
 
 
@@ -390,15 +392,20 @@ export const Dashboard = () => {
                 {/* Column 3 */}
 
                 <div className="column-3">
-
                   <div className="dashboard-item project-team">
-                    <span>Project Team</span>
-
-                   
+                    <span className="project-team-title">Project Team</span>
+                    <div className="team-members-container">
+                      {teamData.members.map((member, index) => (
+                        <div key={index} className="team-member">
+                          <img src={member.thumbnail[0]} alt={member.name} className="team-member-thumbnail" />
+                          <div className="team-member-info">
+                            <span className="team-member-name">{member.name}</span>
+                            <span className="team-member-role">{member.role}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-
-
-
                 </div>
 
 
@@ -406,11 +413,9 @@ export const Dashboard = () => {
                 <div className="column-4">
                   <div className="dashboard-item finish-line">
                     <span>Finish line</span>
-                    
+                    <span>{activeProject?.finishline || 'Date not available'}</span>
                   </div>
-
                 </div>
-
 
 
 
@@ -420,18 +425,16 @@ export const Dashboard = () => {
               <div className='dashboard-layout'>
 
 
-                {/* Column 5 */}
-
-
+                {/* Column 5 - Location */}
                 <div className="column-5">
                   <div className="dashboard-item location">
-                    <span>Location</span>
-                    
+
+                    {activeProjectLocation &&  <Map 
+            location={{ lat: activeProject.location.lat, lng: activeProject.location.lng }} 
+            address={activeProject.address} 
+          />}
                   </div>
-
-                  
                 </div>
-
 
 
                 {/* Column 6 */}
@@ -442,7 +445,7 @@ export const Dashboard = () => {
                     <span>Floorplan</span>
                     <span>></span>
 
-                    
+
                   </div>
 
 
@@ -451,22 +454,23 @@ export const Dashboard = () => {
                     <span>></span>
                   </div>
 
-                 
+
                 </div>
 
 
 
-
+                {/* Column 7*/}
 
               </div>
               <div className="column-7">
-                  <div className="dashboard-item view-gallery">
-                    <span>Notes</span>
-                    
-                  </div>
+                <div className="dashboard-item notes
+                ">
+                  <span>Notes</span>
 
-                  
                 </div>
+
+
+              </div>
 
 
 

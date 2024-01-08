@@ -1,0 +1,22 @@
+{
+    "members": [
+     
+        {
+            "id": "00",
+            "name": "Leah",
+            "role": "Project Manager",
+            "thumbnail": [
+                "https://mylgcontent.s3.us-west-1.amazonaws.com/users/thumbnails/leah.png"
+            ]
+
+        },
+        {
+            "id": "01",
+            "name": "Jaz",
+            "role": "3D Designer",
+            "thumbnail": [
+                "https://mylgcontent.s3.us-west-1.amazonaws.com/users/thumbnails/jaz.png"
+            ]
+        }
+    ]
+}

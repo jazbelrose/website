@@ -178,7 +178,7 @@ height: 100vh;
 }
 .dashboard-item {
   border: 2px solid white ;
-  padding: 50px;
+  padding: 25px;
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
@@ -214,24 +214,25 @@ height: 100vh;
  
 }
 
-.dashboard-item.budget span:last-child {
+.dashboard-item.budget span:last-child{
   font-size: min(2rem, 3vw);
   color: #FA3356;
 }
 
+
+
+
 .dashboard-item.uploads span,
 .dashboard-item.downloads span,
 .dashboard-item.floorplan span,
-.dashboard-item.links span {
+.dashboard-item.links span{
   margin: 10px 0;
   font-size: min(2rem, 3vw);
 }
 
 .dashboard-item.view-gallery span,
 .dashboard-item.view-invoices span,
-.dashboard-item.project-team span,
-.dashboard-item.finish-line span,
-.dashboard-item.location span {
+.dashboard-item.finish-line span{
   margin: 10px 0;
   font-size: min(3rem, 4vw);
 }
@@ -302,17 +303,22 @@ height: 100vh;
 
 .column-5, .column-6 {
   height: 384px;
+  
 
+}
+
+.column-7 {
+  height: 384px;
 }
 
 
 
-.budget, .uploads, .downloads, .floorplan, .links {
+.budget, .uploads, .downloads, .floorplan, .links{
   align-items: flex-start; 
   flex: 1;
 }
 
-.view-gallery, .view-invoices, .location {
+.view-gallery, .view-invoices {
   align-items: flex-start; 
   flex: 2; 
 }
@@ -388,8 +394,91 @@ height: 100vh;
     flex: 2; 
   }
 
+  .dashboard-item.dashboard-item.finish-line span:last-child {
+    font-size: min(2.5rem, 3vw);
+    color: #FA3356;
+  }
 
+
+  .project-team-title {
+    font-size: 2.5rem; /* Larger font size for the title */
+    
+  }
   
+.team-members-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 10px; /* Space between items */
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.team-member-thumbnail {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  border-radius: 50%; /* Circular image */
+  margin-bottom: 10px;
+}
+
+.team-member-info {
+  text-align: center;
+  font-size: min(2.5rem, 3vw);
+}
+
+
+
+.team-member-role {
+  font-size: min(1.2rem, 1.5vw);
+  color: #808080; /* Optional: change color for role text */
+}
+
+
+.dashboard-item.notes span{
+  margin: 10px 0;
+  font-size: min(2rem, 3vw);
+  height: 256px;
+}
+  
+
+.dashboard-layout .dashboard-item.location {
+  
+  margin: 5px;
+  
+  height: 100%; /* Full height */
+  padding: 0;
+  overflow: hidden;
+  border-radius: 20px; /* Your desired border-radius */
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  /* Remove any margin or padding if present */
+  margin: 0;
+  padding: 0;
+}
+
+
+.info.legend {
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, 0.8);
+  
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  font-size: min(1.2rem, 1.5vw);
+  color: #fff;
+}
+.info.legend h4 {
+  margin: 0 0 5px;
+  color: #fff;
+}
 
 
    @media (max-width: 768px) {

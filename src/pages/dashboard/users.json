@@ -61,6 +61,11 @@
                         }
                     ],
                     "finishline": "2023-01-12",
+
+                    "location": {
+                        "lat": 34.09021401042611,
+                        "lng": -118.38789923281713}, 
+                        "address": "9000 Sunset Bd, Los Angeles, CA",
                     
                     "revisionHistory": [
                         {
@@ -147,6 +152,12 @@
                         }
                     ],
                     "finishline": "2023-01-12",
+
+
+                    "location": {
+                        "lat": 25.775812998862712,
+                        "lng": -80.13369807010459}, 
+                        "address": "Strawberry Moon, Miami, FL",
                     
                     "revisionHistory": [
                         {
@@ -216,6 +227,11 @@
                     "gallery": "/works/Academy-of-Pop",
                     "invoices":"/mokibaby/invoices",
                     "invoiceDate":"23-01-17",
+
+                    "location": {
+                        "lat": 53.572110550540124,
+                        "lng": 9.980045148357336}, 
+                        "address": "Haller 6, Hamburg, DE",
                     
                     
                     
@@ -234,6 +250,8 @@
                         }
                     ],
                     "finishline": "23-01-17",
+
+                  
                     
                     "revisionHistory": [
                         {
@@ -329,6 +347,11 @@
                         }
                     ],
                     "finishline": "22-12-10",
+
+                    "location": {
+                        "lat": 25.775812998862712,
+                        "lng": -80.13369807010459}, 
+                        "address": "Strawberry Moon, Miami, FL",
                     
                     "revisionHistory": [
                         {
@@ -418,6 +441,11 @@
                         }
                     ],
                     "finishline": "23-03-24",
+
+                    "location": {
+                        "lat": 32.32792976081814,
+                        "lng": -110.85011913585079}, 
+                        "address": "Canyon Resort, Tucson, AZ",
                     
                     "revisionHistory": [
                         {
@@ -504,6 +532,11 @@
                         }
                     ],
                     "finishline": "21-12-05",
+
+                    "location": {
+                        "lat": 32.32792976081814,
+                        "lng": -110.85011913585079}, 
+                        "address": "The Webster, Miami, FL",
                     
                     "revisionHistory": [
                         {
@@ -588,6 +621,11 @@
                         }
                     ],
                     "finishline": "22-10-20",
+
+                    "location": {
+                        "lat": 34.112392579403576, 
+                        "lng": -118.33906351721298}, 
+                        "address": "Hollywood Bowl, Los Angeles, CA",
                     
                     "revisionHistory": [
                         {
@@ -672,6 +710,11 @@
                         }
                     ],
                     "finishline": "23-07-28",
+
+                    "location": {
+                        "lat": 34.09021401042611,
+                        "lng": -118.38789923281713}, 
+                        "address": "9000 Sunset Bd, Los Angeles, CA",
                     
                     "revisionHistory": [
                         {
