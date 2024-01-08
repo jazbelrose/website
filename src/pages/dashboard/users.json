@@ -24,7 +24,7 @@
                     "status":"100%",
                 
                     "budget": {
-                        "total": "20,725.21",
+                        "total": "20,700",
                         "date": "2024-01-05"
                       },
                 
@@ -46,13 +46,8 @@
                     
                     
                     
-                    "milestones": [ 
-                        {
-                            "title": "Initial Design Draft",
-                            "dueDate": "2023-02-20",
-                            "status": "Completed"
-                        }
-                    ],
+                    "milestone": "100",
+                        
                     "team": [
                         {
                             "userId": "Jaz",
@@ -112,8 +107,76 @@
                     "images": [
                         "https://d2qb21tb4meex0.cloudfront.net/08-elf+Makeup/01+elf+makeup.jpg"
                     ],
-                    "readingTime": "6",
-                    "authorName": "J&J"
+                    "status":"20%",
+                
+                    "budget": {
+                        "total": "15,100",
+                        "date": "22-12-10"
+                      },
+                
+                    "uploads": [
+                        {
+                            "fileName": "01.jpg",
+                            "url": "https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/01.jpg"
+                        }
+                    ],
+                    "downloads": [
+                        {
+                            "fileName": "01.jpg",
+                            "url": "https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/01.jpg"
+                        }
+                    ],
+                    "gallery": "/works/Academy-of-Pop",
+                    "invoices":"/mokibaby/invoices",
+                    "invoiceDate":"22-12-10",
+                    
+                    
+                    
+                    "milestone": "90",
+                        
+                    "team": [
+                        {
+                            "userId": "Jaz",
+                            "role": "3d Designer",
+                            "Icon": ""
+                        },
+                        {
+                            "userId": "Leah",
+                            "role": "Project Manager",
+                            "Icon": ""
+                        }
+                    ],
+                    "finishline": "2023-01-12",
+                    
+                    "revisionHistory": [
+                        {
+                            "revisionDate": "2023-01-20",
+                            "description": "Updated logo design",
+                            "author": "John Doe"
+                        }
+                    ],
+
+                    
+                    "contact": {
+                        "name": "Veronica Gessa",
+                        "contact": "sup@mokibaby.com",
+                        "phone": "123-456-7890"
+                    },
+                  
+                    
+                  
+                    "chat": [
+                        {
+                            "date": "2023-01-15",
+                            "comment": "Need to adjust the color scheme.",
+                            "author": "J&J"
+                        }
+                    ]
+                    
+                    
+                   
+                    
+
                 },
                 {
                     "projectId": "4271",
@@ -131,10 +194,84 @@
                     ],
                     "images": [
                         "https://d2qb21tb4meex0.cloudfront.net/19-Keys+Soulcare/01+Keys+Soulcare.jpg"
+                    ],"status":"60%",
+                
+                    "budget": {
+                        "total": "20,500",
+                        "date": "23-01-17"
+                      },
+                
+                    "uploads": [
+                        {
+                            "fileName": "01.jpg",
+                            "url": "https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/01.jpg"
+                        }
                     ],
-                    "readingTime": "3",
-                    "authorName": "J&J"
+                    "downloads": [
+                        {
+                            "fileName": "01.jpg",
+                            "url": "https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/01.jpg"
+                        }
+                    ],
+                    "gallery": "/works/Academy-of-Pop",
+                    "invoices":"/mokibaby/invoices",
+                    "invoiceDate":"23-01-17",
+                    
+                    
+                    
+                    "milestone": "80",
+                        
+                    "team": [
+                        {
+                            "userId": "Jaz",
+                            "role": "3d Designer",
+                            "Icon": ""
+                        },
+                        {
+                            "userId": "Leah",
+                            "role": "Project Manager",
+                            "Icon": ""
+                        }
+                    ],
+                    "finishline": "23-01-17",
+                    
+                    "revisionHistory": [
+                        {
+                            "revisionDate": "2023-01-20",
+                            "description": "Updated logo design",
+                            "author": "John Doe"
+                        }
+                    ],
+
+                    
+                    "contact": {
+                        "name": "Veronica Gessa",
+                        "contact": "sup@mokibaby.com",
+                        "phone": "123-456-7890"
+                    },
+                  
+                    
+                  
+                    "chat": [
+                        {
+                            "date": "2023-01-15",
+                            "comment": "Need to adjust the color scheme.",
+                            "author": "J&J"
+                        }
+                    ]
+                    
+                
+                
+                
+                
+                
+                
+                
                 },
+
+
+
+
                 {
                     "projectId": "4272",
                     "slug": "Keys-Art-Basel",
@@ -152,9 +289,78 @@
                     "images": [
                         "https://d2qb21tb4meex0.cloudfront.net/20-Keys+Art+Basel/01+Keys+Art+Basel-.jpg"
                     ],
-                    "readingTime": "6",
-                    "authorName": "J&J"
+                    "status":"80%",
+                
+                    "budget": {
+                        "total": "7,500",
+                        "date": "22-12-10"
+                      },
+                
+                    "uploads": [
+                        {
+                            "fileName": "01.jpg",
+                            "url": "https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/01.jpg"
+                        }
+                    ],
+                    "downloads": [
+                        {
+                            "fileName": "01.jpg",
+                            "url": "https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/01.jpg"
+                        }
+                    ],
+                    "gallery": "/works/Academy-of-Pop",
+                    "invoices":"/mokibaby/invoices",
+                    "invoiceDate":"22-12-10",
+                    
+                    
+                    
+                    "milestone": "80",
+                        
+                    "team": [
+                        {
+                            "userId": "Jaz",
+                            "role": "3d Designer",
+                            "Icon": ""
+                        },
+                        {
+                            "userId": "Leah",
+                            "role": "Project Manager",
+                            "Icon": ""
+                        }
+                    ],
+                    "finishline": "22-12-10",
+                    
+                    "revisionHistory": [
+                        {
+                            "revisionDate": "2023-01-20",
+                            "description": "Updated logo design",
+                            "author": "John Doe"
+                        }
+                    ],
+
+                    
+                    "contact": {
+                        "name": "Veronica Gessa",
+                        "contact": "sup@mokibaby.com",
+                        "phone": "123-456-7890"
+                    },
+                  
+                    
+                  
+                    "chat": [
+                        {
+                            "date": "2023-01-15",
+                            "comment": "Need to adjust the color scheme.",
+                            "author": "J&J"
+                        }
+                    ]
+                    
+                    
+                    
                 },
+
+
+
                 {
                     "projectId": "4260",
                     "slug": "elf-Studio",
@@ -172,9 +378,75 @@
                     "images": [
                         "https://d2qb21tb4meex0.cloudfront.net/09-elf-studio/01+elf+studio.jpg"
                     ],
-                    "readingTime": "6",
-                    "authorName": "J&J"
+                    "status":"90%",
+                
+                    "budget": {
+                        "total": "5,200",
+                        "date": "23-03-24"
+                      },
+                
+                    "uploads": [
+                        {
+                            "fileName": "01.jpg",
+                            "url": "https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/01.jpg"
+                        }
+                    ],
+                    "downloads": [
+                        {
+                            "fileName": "01.jpg",
+                            "url": "https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/01.jpg"
+                        }
+                    ],
+                    "gallery": "/works/Academy-of-Pop",
+                    "invoices":"/mokibaby/invoices",
+                    "invoiceDate":"23-03-24",
+                    
+                    
+                    
+                    "milestone": "80",
+                        
+                    "team": [
+                        {
+                            "userId": "Jaz",
+                            "role": "3d Designer",
+                            "Icon": ""
+                        },
+                        {
+                            "userId": "Leah",
+                            "role": "Project Manager",
+                            "Icon": ""
+                        }
+                    ],
+                    "finishline": "23-03-24",
+                    
+                    "revisionHistory": [
+                        {
+                            "revisionDate": "2023-01-20",
+                            "description": "Updated logo design",
+                            "author": "John Doe"
+                        }
+                    ],
+
+                    
+                    "contact": {
+                        "name": "Veronica Gessa",
+                        "contact": "sup@mokibaby.com",
+                        "phone": "123-456-7890"
+                    },
+                  
+                    
+                  
+                    "chat": [
+                        {
+                            "date": "2023-01-15",
+                            "comment": "Need to adjust the color scheme.",
+                            "author": "J&J"
+                        }
+                    ]
+                    
                 },
+
+
                 {
                     "projectId": "4267",
                     "slug": "Gucci-Aria",
@@ -192,8 +464,72 @@
                     "images": [
                         "https://d2qb21tb4meex0.cloudfront.net/16-Gucci+Aria/01+Gucci+Aria+.jpg"
                     ],
-                    "readingTime": "4",
-                    "authorName": "J&J"
+                    "status":"100%",
+                
+                    "budget": {
+                        "total": "2,500",
+                        "date": "21-12-05"
+                      },
+                
+                    "uploads": [
+                        {
+                            "fileName": "01.jpg",
+                            "url": "https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/01.jpg"
+                        }
+                    ],
+                    "downloads": [
+                        {
+                            "fileName": "01.jpg",
+                            "url": "https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/01.jpg"
+                        }
+                    ],
+                    "gallery": "/works/Academy-of-Pop",
+                    "invoices":"/mokibaby/invoices",
+                    "invoiceDate":"21-12-05",
+                    
+                    
+                    
+                    "milestone": "80",
+                        
+                    "team": [
+                        {
+                            "userId": "Jaz",
+                            "role": "3d Designer",
+                            "Icon": ""
+                        },
+                        {
+                            "userId": "Leah",
+                            "role": "Project Manager",
+                            "Icon": ""
+                        }
+                    ],
+                    "finishline": "21-12-05",
+                    
+                    "revisionHistory": [
+                        {
+                            "revisionDate": "2023-01-20",
+                            "description": "Updated logo design",
+                            "author": "John Doe"
+                        }
+                    ],
+
+                    
+                    "contact": {
+                        "name": "Veronica Gessa",
+                        "contact": "sup@mokibaby.com",
+                        "phone": "123-456-7890"
+                    },
+                  
+                    
+                  
+                    "chat": [
+                        {
+                            "date": "2023-01-15",
+                            "comment": "Need to adjust the color scheme.",
+                            "author": "J&J"
+                        }
+                    ]
+                    
                 },
                 {
                     "projectId": "4261",
@@ -212,8 +548,72 @@
                     "images": [
                         "https://d2qb21tb4meex0.cloudfront.net/10-elf+Makeup+hollywood+bowl/01+elf+hollywood+bowl-.jpg"
                     ],
-                    "readingTime": "3",
-                    "authorName": "J&J"
+                    "status":"100%",
+                
+                    "budget": {
+                        "total": "1,500",
+                        "date": "22-10-20"
+                      },
+                
+                    "uploads": [
+                        {
+                            "fileName": "01.jpg",
+                            "url": "https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/01.jpg"
+                        }
+                    ],
+                    "downloads": [
+                        {
+                            "fileName": "01.jpg",
+                            "url": "https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/01.jpg"
+                        }
+                    ],
+                    "gallery": "/works/Academy-of-Pop",
+                    "invoices":"/mokibaby/invoices",
+                    "invoiceDate":"22-10-20",
+                    
+                    
+                    
+                    "milestone": "80",
+                        
+                    "team": [
+                        {
+                            "userId": "Jaz",
+                            "role": "3d Designer",
+                            "Icon": ""
+                        },
+                        {
+                            "userId": "Leah",
+                            "role": "Project Manager",
+                            "Icon": ""
+                        }
+                    ],
+                    "finishline": "22-10-20",
+                    
+                    "revisionHistory": [
+                        {
+                            "revisionDate": "2023-01-20",
+                            "description": "Updated logo design",
+                            "author": "John Doe"
+                        }
+                    ],
+
+                    
+                    "contact": {
+                        "name": "Veronica Gessa",
+                        "contact": "sup@mokibaby.com",
+                        "phone": "123-456-7890"
+                    },
+                  
+                    
+                  
+                    "chat": [
+                        {
+                            "date": "2023-01-15",
+                            "comment": "Need to adjust the color scheme.",
+                            "author": "J&J"
+                        }
+                    ]
+                    
                 },
                 {
                     "id": "4279",
@@ -232,12 +632,77 @@
                     "images": [
                         "https://d2qb21tb4meex0.cloudfront.net/27-Now+United/01+Now+United.jpg"
                     ],
-                    "readingTime": "2",
-                    "authorName": "J&J"
+                    "status":"100%",
+                
+                    "budget": {
+                        "total": "7,500",
+                        "date": "23-07-28"
+                      },
+                
+                    "uploads": [
+                        {
+                            "fileName": "01.jpg",
+                            "url": "https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/01.jpg"
+                        }
+                    ],
+                    "downloads": [
+                        {
+                            "fileName": "01.jpg",
+                            "url": "https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/01.jpg"
+                        }
+                    ],
+                    "gallery": "/works/Academy-of-Pop",
+                    "invoices":"/mokibaby/invoices",
+                    "invoiceDate":"23-07-28",
+                    
+                    
+                    
+                    "milestone": "80",
+                        
+                    "team": [
+                        {
+                            "userId": "Jaz",
+                            "role": "3d Designer",
+                            "Icon": ""
+                        },
+                        {
+                            "userId": "Leah",
+                            "role": "Project Manager",
+                            "Icon": ""
+                        }
+                    ],
+                    "finishline": "23-07-28",
+                    
+                    "revisionHistory": [
+                        {
+                            "revisionDate": "2023-01-20",
+                            "description": "Updated logo design",
+                            "author": "John Doe"
+                        }
+                    ],
+
+                    
+                    "contact": {
+                        "name": "Veronica Gessa",
+                        "contact": "sup@mokibaby.com",
+                        "phone": "123-456-7890"
+                    },
+                  
+                    
+                  
+                    "chat": [
+                        {
+                            "date": "2023-01-15",
+                            "comment": "Need to adjust the color scheme.",
+                            "author": "J&J"
+                        }
+                    ]
+                    
                 }
 
 
             ],
+
             "notifications": [
                 {
                     "notificationId": "notif1",
