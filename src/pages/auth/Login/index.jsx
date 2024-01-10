@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { signIn, signOut, signUp } from '@aws-amplify/auth';
+
+
+
 
 import { Container } from 'react-bootstrap';
 
@@ -7,11 +11,18 @@ export function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle the login logic here
-        console.log('Login with:', email, password);
+        
+        try {
+            const user = await signIn(email, password);
+            console.log(user);
+            // User is signed in, you can add logic here to redirect or perform other actions
+        } catch (error) {
+            console.log('error signing in', error);
+        }
     };
+    
 
     return (
         <Container>

@@ -3,29 +3,37 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import usersData from './users.json';
 import teamData from './team.json';
+import { ReactComponent as Snap } from "../../assets/svg/snap.svg";
 import Map from "../../components/map";
 import "./style.css";
 
 
 export const Dashboard = () => {
 
+
+  const userName = usersData.users[0].name;
+
   const [projectsViewState, setProjectsViewState] = useState('collapsed'); // 'collapsed' or 'show-all'
   const projects = usersData?.users?.[0]?.projects || [];
-
   const [selectedProjects, setSelectedProjects] = useState([]);
   const [activeProject, setActiveProject] = useState(null);
   const [progress, setProgress] = useState(0);
-
   const [isNewProjectCollapsed, setIsNewProjectCollapsed] = useState(true);
   const [isMessageCenterCollapsed, setIsMessageCenterCollapsed] = useState(true);
 
+  const [isNewProjectView, setIsNewProjectView] = useState(false);
+
+  const toggleNewProjectView = () => {
+    setIsNewProjectView(!isNewProjectView);
+  };
 
 
 
   const selectProject = (project) => {
     setActiveProject(project);
-    setProgress(parseInt(project.milestone, 10)); // Parse as an integer
+    setProgress(parseInt(project.milestone, 10));
     setProjectsViewState('single-project');
+    setIsNewProjectView(false);
   };
 
   const getMilestoneClass = (milestone, type) => {
@@ -35,25 +43,36 @@ export const Dashboard = () => {
   const projectInitial = activeProject?.title ? activeProject.title.charAt(0) : '';
 
 
-
   const toggleAllProjectsView = () => {
     if (projectsViewState !== 'show-all') {
       setSelectedProjects([...projects]);
       setProjectsViewState('show-all');
+      setIsNewProjectView(false); // Reset new project view
+      setActiveProject(null); // Reset active project
     } else {
       setSelectedProjects([]);
       setProjectsViewState('collapsed');
     }
-    setActiveProject(null); // Reset active project when toggling all projects view
   };
 
-  const toggleNewProjectCollapse = () => setIsNewProjectCollapsed(!isNewProjectCollapsed);
+  const toggleNewProjectCollapse = () => {
+    setIsNewProjectCollapsed(!isNewProjectCollapsed);
+    if (!isNewProjectView) {
+      toggleNewProjectView();
+      setProjectsViewState('collapsed');
+      setActiveProject(null); // Reset active project
+    }
+  };
+
   const toggleMessageCenterCollapse = () => setIsMessageCenterCollapsed(!isMessageCenterCollapsed);
+
 
   const parseStatusToNumber = (statusString) => {
     const number = parseFloat(statusString.replace('%', ''));
     return number;
   };
+
+
   const activeProjectLocation = activeProject ? activeProject.location : null;
 
 
@@ -64,6 +83,16 @@ export const Dashboard = () => {
   useEffect(() => {
     console.log('Projects View State:', projectsViewState);
   }, [projectsViewState]);
+
+  useEffect(() => {
+
+    if (activeProject || isNewProjectView) {
+      const rightSidebar = document.querySelector('.sidebar-right');
+      if (rightSidebar) {
+        rightSidebar.scrollTop = 0;
+      }
+    }
+  }, [activeProject, isNewProjectView]);
 
 
 
@@ -130,12 +159,7 @@ export const Dashboard = () => {
               <span>Start a new project</span>
             </a>
 
-            <div className={`collapse ${isNewProjectCollapsed ? '' : 'show'}`} id="collapseNewProject">
-              <div className=" py-2 collapse-inner rounded">
-                <h6 className="collapse-header">Design:</h6>
-                <a className="collapse-item" href="buttons.html">Questionnaire</a>
-              </div>
-            </div>
+
           </li>
 
 
@@ -183,14 +207,22 @@ export const Dashboard = () => {
 
 
         {/* Right Sidebar */}
-        <div className={`sidebar-right ${projectsViewState === 'single-project' ? 'full-width' : ''}`}>
+
+        
+        <div className={`sidebar-right ${projectsViewState === 'single-project' || isNewProjectView ? 'full-width' : ''}`}>
 
           {projectsViewState === 'show-all' && selectedProjects.map(project => (
+
             <div key={project.projectId} className="project-container" onClick={() => selectProject(project)}>
               <img src={project.thumbnails[0]} alt={`Thumbnail of ${project.title}`} className="project-thumbnail" />
               <h6 className="project-title">{project.title}</h6>
             </div>
+
           ))}
+
+
+          {/*  Single Project*/}
+
 
           {projectsViewState === 'single-project' && activeProject && (
             <div className="active-project-details">
@@ -429,10 +461,10 @@ export const Dashboard = () => {
                 <div className="column-5">
                   <div className="dashboard-item location">
 
-                    {activeProjectLocation &&  <Map 
-            location={{ lat: activeProject.location.lat, lng: activeProject.location.lng }} 
-            address={activeProject.address} 
-          />}
+                    {activeProjectLocation && <Map
+                      location={{ lat: activeProject.location.lat, lng: activeProject.location.lng }}
+                      address={activeProject.address}
+                    />}
                   </div>
                 </div>
 
@@ -478,6 +510,170 @@ export const Dashboard = () => {
 
             </div>
           )}
+
+
+          {/*  New Project*/}
+
+          {isNewProjectView && (
+            <div className="active-project-details">
+              <div className='new-project-header'>
+                <h2>New Project</h2>
+              </div>
+
+
+              {/*  Greetings  */}
+
+
+              <div className="column-0">
+
+
+
+                <div className="dashboard-item greetings">
+                  
+                  <div className="greetings-text">
+                    <span className="greeting-line">Hello <span className="username"> {userName} </span> !</span>
+                    <span className="greeting-line">Let’s get a new project started!</span>
+                    <span className="greeting-line">Upload floorplans, create your design notes, drop links... Upload files, inspiration images and just submit!</span>
+                    
+                  </div>
+
+                  <div className="snap-container">
+                    <Snap />
+                  </div>
+                </div>
+
+
+
+                <div className="dashboard-item project-name
+                ">
+                  <span>Project Name</span>
+                  <span>+</span>
+
+                </div>
+
+
+              </div>
+
+
+
+
+
+
+
+              <div className='dashboard-layout'>
+
+
+
+
+
+
+                {/* Column 1 */}
+
+                <div className="new-project-col1">
+
+
+
+                  <div className="dashboard-item new-project-budget">
+                    <span>Budget</span>
+                    <span>+</span>
+                  </div>
+
+                  <div className="dashboard-item new-project-finish-line">
+                    <span>Finish Line</span>
+                    <span>+</span>
+                  </div>
+                </div>
+
+
+
+
+                {/* Column 2 */}
+
+                <div className="new-project-col2">
+
+                  <div className="dashboard-item new-project-uploads">
+                    <span>Upload your files</span>
+                    <span>+</span>
+                  </div>
+
+
+                </div>
+
+
+
+
+
+              </div>
+
+
+
+
+
+              <div className='dashboard-layout'>
+
+
+                {/* Column-3 - Location */}
+                <div className="column-5">
+                  <div className="dashboard-item location">
+                    {isNewProjectView &&
+                      <Map
+                        location={{ lat: 34.0522, lng: -118.2437 }} // Coordinates for Los Angeles
+                        address="Los Angeles, CA"
+                      />
+                    }
+                    {activeProjectLocation &&
+                      <Map
+                        location={{ lat: activeProject.location.lat, lng: activeProject.location.lng }}
+                        address={activeProject.address}
+                      />
+                    }
+                  </div>
+                </div>
+
+
+                {/* Column 4 */}
+                <div className="column-4">
+                  <div className="dashboard-item new-project-floor-plan">
+                    <span>Floor Plan</span>
+                    <span>+</span>
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
+
+              <div className='dashboard-layout'>
+
+
+
+
+
+
+                {/* Column 7*/}
+
+              </div>
+              <div className="column-7">
+                <div className="dashboard-item notes
+                ">
+                  <span>Notes</span>
+                  <span>+</span>
+
+                </div>
+
+
+              </div>
+
+
+
+
+
+            </div>
+          )}
+
+
 
         </div>
       </div>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { signIn, signOut, signUp } from '@aws-amplify/auth';
+
 
 export function Register() {
     const [firstName, setFirstName] = useState('');
@@ -9,11 +11,26 @@ export function Register() {
     const [password, setPassword] = useState('');
     const [repeatPassword, setRepeatPassword] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle the registration logic here
-        console.log('Registration data:', firstName, lastName, email, password);
+        
+        try {
+            const { user } = await signUp({
+                username: email,
+                password,
+                attributes: {
+                    email,
+                    given_name: firstName, // Add additional attributes as needed
+                    family_name: lastName,
+                }
+            });
+            console.log(user);
+            // Registration is successful, you can add logic here to redirect or perform other actions
+        } catch (error) {
+            console.log('error signing up:', error);
+        }
     };
+    
 
     return (
         <Container>

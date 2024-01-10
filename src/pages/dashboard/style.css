@@ -124,7 +124,25 @@ height: 100vh;
 
 }
 
+.new-project-header {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: min(50px, 3vw) 25px 0;
+  margin-bottom: 100px;
+
+}
+
 .project-header h2 {
+  line-height: 0.8;
+  font-size: min(4rem, 6vw);
+  white-space: nowrap;
+
+}
+
+.new-project-header h2 {
   line-height: 0.8;
   font-size: min(4rem, 6vw);
   white-space: nowrap;
@@ -268,6 +286,9 @@ height: 100vh;
   grid-column: span 2; 
 }
 
+.column-1, .column-6 {
+  flex: .3; 
+}
 
 .column-1, .column-2, .column-5 , .column-6  {
   height: 960px;
@@ -277,9 +298,7 @@ height: 100vh;
   
 }
 
-.column-1, .column-6 {
-  flex: .3; 
-}
+
 
 .column-2, .column-5 {
   flex: .7; 
@@ -401,14 +420,14 @@ height: 100vh;
 
 
   .project-team-title {
-    font-size: 2.5rem; /* Larger font size for the title */
+    font-size: 2.5rem; 
     
   }
   
 .team-members-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
-  gap: 10px; /* Space between items */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 10px; 
 }
 
 .team-member {
@@ -421,9 +440,9 @@ height: 100vh;
 }
 
 .team-member-thumbnail {
-  width: 100px; /* Adjust as needed */
-  height: 100px; /* Adjust as needed */
-  border-radius: 50%; /* Circular image */
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
   margin-bottom: 10px;
 }
 
@@ -436,7 +455,7 @@ height: 100vh;
 
 .team-member-role {
   font-size: min(1.2rem, 1.5vw);
-  color: #808080; /* Optional: change color for role text */
+  color: #808080;
 }
 
 
@@ -445,22 +464,22 @@ height: 100vh;
   font-size: min(2rem, 3vw);
   height: 256px;
 }
-  
+
+
 
 .dashboard-layout .dashboard-item.location {
   
   margin: 5px;
   
-  height: 100%; /* Full height */
+  height: 100%; 
   padding: 0;
   overflow: hidden;
-  border-radius: 20px; /* Your desired border-radius */
+  border-radius: 20px; 
 }
 
 #map {
   width: 100%;
   height: 100%;
-  /* Remove any margin or padding if present */
   margin: 0;
   padding: 0;
 }
@@ -481,6 +500,149 @@ height: 100vh;
 }
 
 
+
+
+ /* New Project */
+
+
+
+
+
+
+ 
+.new-project-col1{
+  height: 576px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.new-project-col1{
+  flex: .3; 
+}
+
+
+
+
+
+.dashboard-item.greetings span,
+.dashboard-item.new-project span
+{
+  margin: 10px 0;
+  font-size: min(2rem, 3vw);
+  
+}
+
+
+.dashboard-item.greetings {
+  display: flex; 
+  align-items: center; 
+  
+}
+
+.dashboard-item.greetings .greetings-text {
+  flex: 0 0 70%; 
+  display: flex;
+  flex-direction: column; 
+}
+
+
+
+.dashboard-item.greetings .greeting-line {
+  margin: 5px 0;
+  font-size: min(2rem, 3vw);
+}
+
+.dashboard-item.greetings .greeting-line:nth-child(1) {
+  display: flex; 
+  align-items: center;
+  font-size: min(3rem, 4vw);
+}
+.dashboard-item.greetings .greeting-line:nth-child(1) .username {
+  font-size: min(3rem, 4vw);
+  color: #FA3356; 
+  margin-left: 5px; 
+  margin-right: 5px; 
+}
+
+.dashboard-item.greetings .greeting-line:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.dashboard-item.greetings .greeting-line:last-child {
+  margin-bottom: 20px; 
+
+}
+
+
+
+.dashboard-item.greetings .snap-container {
+  width: 100px; 
+  height: 100px; 
+  
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+
+.dashboard-item.project-name{
+  height: 256px;
+  align-items: flex-start; 
+
+}
+
+.dashboard-item.project-name span{
+  margin: 10px 0;
+  font-size: min(2rem, 3vw);
+  
+}
+
+.dashboard-item.new-project-budget span,
+.dashboard-item.new-project-finish-line span,
+.dashboard-item.new-project-floor-plan span,
+.dashboard-item.new-project-uploads span
+{
+  margin: 10px 0;
+  font-size: min(2rem, 3vw);
+}
+
+.new-project-budget,
+.new-project-finish-line,
+.new-project-floor-plan,
+.new-project-uploads
+{
+  align-items: flex-start; 
+  flex: 1;
+}
+
+
+
+.new-project-col2{
+  height: 576px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+
+
+.new-project-col2{
+  flex: .7; 
+}
+
+
+
+
+
+
+
+
+  
+
+
    @media (max-width: 768px) {
     .custom-icon {
       width: 25px;
@@ -492,7 +654,7 @@ height: 100vh;
       align-items: center;
       text-align: center;
       justify-content: center;
-      flex-direction: column; /* Stack items vertically */
+      flex-direction: column; 
   }
 
   .nav-link {
@@ -503,11 +665,11 @@ height: 100vh;
   }
 
   .nav-link .icon-with-padding {
-    margin-bottom: 5px; /* Add space between icon and title */
+    margin-bottom: 5px; 
   }
 
   .nav-link span {
-    display: block; /* Ensure the title spans the full width */
+    display: block; 
   }
   
   }
