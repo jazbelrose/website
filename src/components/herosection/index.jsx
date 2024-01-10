@@ -12,52 +12,48 @@ export const HeroSection = () => {
   const textRef = useRef(null);
 
   useEffect(() => {
+    // Define a common animation function for reusability
+    const animateFromTo = (element, { fromProps, toProps }) => {
+      gsap.fromTo(element, fromProps, toProps);
+    };
 
-    
-    gsap.from(".heading", {
-      delay: 1.6, 
-      duration: 1,
-      opacity: 0,
-      y: 50,
-      ease: "power3.out"
-    });
-
-    gsap.from(".sub-heading", {
-      delay: 1.8, 
-      duration: 1,
-      opacity: 0,
-      y: 50,
-      ease: "power3.out"
-    });
-
-    gsap.from(".button-container", {
-      delay: 2, 
-      duration: 1,
-      opacity: 0,
-      y: 50,
-      ease: "power3.out"
-    });
-
-    gsap.from(".branding-0 ", {
-      delay: 2, 
-      duration: 1,
-      opacity: 0,
-      x: 50,
-      ease: "power3.out"
-    });
-    
-
-
-    gsap.to(".bar", 1.5, {
-      delay: 3.5,
-      height: 0,
-      stagger: {
-        amount: 0.5
+    // Define properties for each animated element
+    const animationProperties = [
+      {
+        selector: ".heading",
+        fromProps: { opacity: 0, y: 50 },
+        toProps: { opacity: 1, y: 0, delay: 1.6, duration: 1, ease: "power3.out" }
       },
+      {
+        selector: ".sub-heading",
+        fromProps: { opacity: 0, y: 50 },
+        toProps: { opacity: 1, y: 0, delay: 1.8, duration: 1, ease: "power3.out" }
+      },
+      {
+        selector: ".button-container",
+        fromProps: { opacity: 0, y: 50 },
+        toProps: { opacity: 1, y: 0, delay: 2, duration: 1, ease: "power3.out" }
+      }
+      // Add more animations here if needed
+    ];
+
+    // Run animations
+    animationProperties.forEach((anim) => {
+      animateFromTo(anim.selector, {
+        fromProps: anim.fromProps,
+        toProps: anim.toProps
+      });
+    });
+
+    // Separate animation for bar
+    gsap.to(".bar", {
+      height: 0,
+      delay: 3.5,
+      duration: 1.5,
+      stagger: { amount: 0.5 },
       ease: "power4.inOut"
     });
 
-    
   }, []);
 
   return (

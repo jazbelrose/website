@@ -13,21 +13,26 @@ export function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+        console.log(`Attempting to sign up with email: ${email}, First Name: ${firstName}, Last Name: ${lastName}`);
+    
+        if (!firstName || !lastName) {
+            console.error('First Name and Last Name are required');
+            return;
+        }
+    
         try {
             const { user } = await signUp({
                 username: email,
                 password,
                 attributes: {
-                    email,
-                    given_name: firstName, // Add additional attributes as needed
-                    family_name: lastName,
+                    email, // email is a standard attribute
+                    given_name: firstName, // given_name for first name
+                    family_name: lastName, // family_name for last name
                 }
             });
-            console.log(user);
-            // Registration is successful, you can add logic here to redirect or perform other actions
+            console.log('User signed up:', user);
         } catch (error) {
-            console.log('error signing up:', error);
+            console.error('Error signing up:', error);
         }
     };
     
@@ -166,4 +171,4 @@ export function Register() {
             </section>
         </Container>
     );
-}
+} 
