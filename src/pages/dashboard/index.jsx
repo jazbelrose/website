@@ -8,13 +8,29 @@ import Map from "../../components/map";
 import "./style.css";
 
 
+
+function formatDate(isoString) {
+  const date = new Date(isoString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+
+
 export const Dashboard = () => {
 
 
   const userName = usersData.users[0].name;
 
   const [projectsViewState, setProjectsViewState] = useState('collapsed'); // 'collapsed' or 'show-all'
-  const projects = usersData?.users?.[0]?.projects || [];
+  
+  
+  const [projects, setProjects] = useState([]);
+
+
+
   const [selectedProjects, setSelectedProjects] = useState([]);
   const [activeProject, setActiveProject] = useState(null);
   const [progress, setProgress] = useState(0);
@@ -76,8 +92,26 @@ export const Dashboard = () => {
   const activeProjectLocation = activeProject ? activeProject.location : null;
 
 
+  useEffect(() => {
 
-
+    
+    fetch('https://gui4kdsekj.execute-api.us-west-1.amazonaws.com/default/Projects')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Directly use the 'Items' array from the response
+        const projectsData = data.Items;
+        setProjects(projectsData);
+      })
+      .catch(error => {
+        console.error('Error fetching projects:', error);
+      });
+  }, []);
+  
 
 
   useEffect(() => {
