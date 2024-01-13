@@ -96,6 +96,7 @@ export const Dashboard = () => {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
+
         // Assuming the user data is the first item in the Items array
         setUserData(data.Items[0]);
       } catch (error) {
@@ -108,6 +109,7 @@ export const Dashboard = () => {
 
   // Fetch Project Details
 useEffect(() => {
+  
   const fetchProjects = async () => {
     try {
       // Check if userData exists and has projects

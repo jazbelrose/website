@@ -4,6 +4,32 @@ import { Link } from 'react-router-dom';
 import { signIn, signOut, signUp } from '@aws-amplify/auth';
 
 
+
+const updateUserProfile = async (profileData) => {
+    const apiEndpoint = 'https://rvnpu2j92m.execute-api.us-west-1.amazonaws.com/default/userProfiles'; 
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            TableName: "UserProfiles",
+            Item: {
+                userId: profileData.userId,
+                firstName: profileData.firstName,
+                lastName: profileData.lastName,
+                email: profileData.email // Assuming you pass email as part of profileData
+                // Add other profile data here if needed
+            }
+        })
+    };
+
+    const response = await fetch(apiEndpoint, requestOptions);
+    const data = await response.json();
+    return data; // This will be the response from your API
+};
+
+
+
+
 export function Register() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -13,28 +39,47 @@ export function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(`Attempting to sign up with email: ${email}, First Name: ${firstName}, Last Name: ${lastName}`);
-    
-        if (!firstName || !lastName) {
-            console.error('First Name and Last Name are required');
+        if (!firstName || !lastName || !email || !password) {
+            console.error('All fields are required');
             return;
         }
     
         try {
-            const { user } = await signUp({
+            const signUpResponse = await signUp({
                 username: email,
                 password,
-                attributes: {
-                    email, // email is a standard attribute
-                    given_name: firstName, // given_name for first name
-                    family_name: lastName, // family_name for last name
-                }
+                attributes: { email }
             });
-            console.log('User signed up:', user);
-        } catch (error) {
-            console.error('Error signing up:', error);
+    
+            console.log('Sign up response:', signUpResponse);
+    
+            // Extract the userId from the signUpResponse
+            const userId = signUpResponse.userId; // Use 'userId' from the signUpResponse
+    
+            if (userId) {
+                try {
+                    const userProfileUpdateResponse = await updateUserProfile({
+                        userId,
+                        firstName,
+                        lastName,
+                        email
+                    });
+                    console.log('User profile successfully updated:', userProfileUpdateResponse);
+                } catch (profileError) {
+                    console.error('Error updating user profile:', profileError);
+                }
+            } else {
+                console.error('User ID not available for database update.');
+            }
+        } catch (signUpError) {
+            console.error('Error signing up:', signUpError);
         }
     };
+    
+    
+    
+    
+    
     
 
     return (
@@ -132,7 +177,7 @@ export function Register() {
 
                                         
 
-                                        <div className="text-center">
+                                       {/*  <div className="text-center">
                                             
                                             <p className="mt-5 mb-3">Or register with:</p>
                                             <button type="button" className="btn btn-link btn-floating mx-">
@@ -151,7 +196,7 @@ export function Register() {
                                                 <i className="fab fa-apple text-white"></i>
                                             </button>
                                         
-                                        </div>
+                                        </div>*/}
 
                                     </div>
 
