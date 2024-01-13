@@ -9,24 +9,19 @@ import "./style.css";
 
 
 
-function formatDate(isoString) {
-  const date = new Date(isoString);
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-}
+
 
 
 export const Dashboard = () => {
 
 
   const userName = usersData.users[0].name;
+  const hardcodedUserID = '000002';
+  const [userData, setUserData] = useState(null);
 
   const [projectsViewState, setProjectsViewState] = useState('collapsed'); // 'collapsed' or 'show-all'
-  
-  
+
+
   const [projects, setProjects] = useState([]);
 
 
@@ -92,26 +87,53 @@ export const Dashboard = () => {
   const activeProjectLocation = activeProject ? activeProject.location : null;
 
 
+  // Fetch User Data
   useEffect(() => {
-
-    
-    fetch('https://gui4kdsekj.execute-api.us-west-1.amazonaws.com/default/Projects')
-      .then(response => {
+    const fetchUserData = async () => {
+      try {
+        const response = await fetch(`https://rvnpu2j92m.execute-api.us-west-1.amazonaws.com/default/userProfiles?userId=${hardcodedUserID}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.json();
-      })
-      .then(data => {
-        // Directly use the 'Items' array from the response
-        const projectsData = data.Items;
-        setProjects(projectsData);
-      })
-      .catch(error => {
-        console.error('Error fetching projects:', error);
-      });
-  }, []);
-  
+        const data = await response.json();
+        // Assuming the user data is the first item in the Items array
+        setUserData(data.Items[0]);
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+
+    fetchUserData();
+  }, [hardcodedUserID]);
+
+  // Fetch Project Details
+useEffect(() => {
+  const fetchProjects = async () => {
+    try {
+      // Check if userData exists and has projects
+      if (userData && userData.projects) {
+        const projectsData = await Promise.all(userData.projects.map(async (projectId) => {
+          const response = await fetch(`https://gui4kdsekj.execute-api.us-west-1.amazonaws.com/default/Projects?projectId=${projectId}`);
+          if (!response.ok) {
+            throw new Error(`Failed to fetch project data for projectId: ${projectId}`);
+          }
+          return await response.json();
+        }));
+
+        setProjects(projectsData.map(data => data.Items[0]));
+
+      }
+    } catch (error) {
+      console.error('Error fetching project details:', error);
+    }
+  };
+
+  if (userData && userData.projects) {
+    fetchProjects();
+  }
+}, [userData]);
+
+
 
 
   useEffect(() => {
@@ -242,7 +264,7 @@ export const Dashboard = () => {
 
         {/* Right Sidebar */}
 
-        
+
         <div className={`sidebar-right ${projectsViewState === 'single-project' || isNewProjectView ? 'full-width' : ''}`}>
 
           {projectsViewState === 'show-all' && selectedProjects.map(project => (
@@ -563,12 +585,12 @@ export const Dashboard = () => {
 
 
                 <div className="dashboard-item greetings">
-                  
+
                   <div className="greetings-text">
                     <span className="greeting-line">Hello <span className="username"> {userName} </span> !</span>
                     <span className="greeting-line">Let’s get a new project started!</span>
                     <span className="greeting-line">Upload floorplans, create your design notes, drop links... Upload files, inspiration images and just submit!</span>
-                    
+
                   </div>
 
                   <div className="snap-container">
