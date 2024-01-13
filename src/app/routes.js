@@ -18,6 +18,7 @@ import { Blog } from "../pages/blog";
 import { Dashboard } from '../pages/dashboard';
 import { Login } from '../pages/auth/Login';
 import { Register } from '../pages/auth/Register';
+import { EmailVerification } from '../pages/auth/Email-verification';
 import { Forgotpassword } from '../pages/auth/Forgot-password';
 
 
@@ -226,6 +227,21 @@ const ActualRoutes = ({ location }) => {
               transition={pageTransition}
             >
               <Register />
+            </motion.div>
+          }
+        />
+
+        <Route
+          path="/email-verification"
+          element={
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <EmailVerification />
             </motion.div>
           }
         />

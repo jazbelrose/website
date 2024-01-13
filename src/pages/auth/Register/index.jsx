@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { EmailVerification } from '../Email-verification';
 import { signIn, signOut, signUp } from '@aws-amplify/auth';
 
 
 
+
 const updateUserProfile = async (profileData) => {
-    const apiEndpoint = 'https://rvnpu2j92m.execute-api.us-west-1.amazonaws.com/default/userProfiles'; 
+    const apiEndpoint = 'https://rvnpu2j92m.execute-api.us-west-1.amazonaws.com/default/userProfiles';
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -31,11 +33,17 @@ const updateUserProfile = async (profileData) => {
 
 
 export function Register() {
+
+
+
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [repeatPassword, setRepeatPassword] = useState('');
+    const [isRegistered, setIsRegistered] = useState(false);
+
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -43,19 +51,21 @@ export function Register() {
             console.error('All fields are required');
             return;
         }
-    
+
         try {
             const signUpResponse = await signUp({
                 username: email,
                 password,
                 attributes: { email }
             });
-    
+
             console.log('Sign up response:', signUpResponse);
-    
-            // Extract the userId from the signUpResponse
-            const userId = signUpResponse.userId; // Use 'userId' from the signUpResponse
-    
+
+            // Assuming the sign-up was successful
+            setIsRegistered(true); // Update the state to indicate successful registration
+
+            const userId = signUpResponse.userId; // Use the userId from the signUpResponse
+
             if (userId) {
                 try {
                     const userProfileUpdateResponse = await updateUserProfile({
@@ -75,12 +85,18 @@ export function Register() {
             console.error('Error signing up:', signUpError);
         }
     };
-    
-    
-    
-    
-    
-    
+
+    if (isRegistered) {
+        return <EmailVerification userEmail={email} />; // Pass the email as a prop
+    }
+
+
+
+
+
+
+
+
 
     return (
         <Container>
@@ -107,7 +123,7 @@ export function Register() {
                                                             value={firstName}
                                                             placeholder="First Name"
                                                             onChange={e => setFirstName(e.target.value)}
-															style={{ fontSize: '0.9rem' }} 
+                                                            style={{ fontSize: '0.9rem' }}
                                                         />
                                                     </div>
                                                 </div>
@@ -120,7 +136,7 @@ export function Register() {
                                                             value={lastName}
                                                             placeholder="Last Name"
                                                             onChange={e => setLastName(e.target.value)}
-															style={{ fontSize: '0.9rem' }} 
+                                                            style={{ fontSize: '0.9rem' }}
                                                         />
                                                     </div>
                                                 </div>
@@ -135,7 +151,7 @@ export function Register() {
                                                     value={email}
                                                     placeholder="Email"
                                                     onChange={e => setEmail(e.target.value)}
-													style={{ fontSize: '0.9rem' }} 
+                                                    style={{ fontSize: '0.9rem' }}
                                                 />
                                             </div>
 
@@ -150,7 +166,7 @@ export function Register() {
                                                             value={password}
                                                             placeholder="Password"
                                                             onChange={e => setPassword(e.target.value)}
-															style={{ fontSize: '0.9rem' }} 
+                                                            style={{ fontSize: '0.9rem' }}
                                                         />
                                                     </div>
                                                 </div>
@@ -163,7 +179,7 @@ export function Register() {
                                                             value={repeatPassword}
                                                             placeholder="Repeat Password"
                                                             onChange={e => setRepeatPassword(e.target.value)}
-															style={{ fontSize: '0.9rem' }} 
+                                                            style={{ fontSize: '0.9rem' }}
                                                         />
                                                     </div>
                                                 </div>
@@ -175,9 +191,9 @@ export function Register() {
                                             </button>
                                         </form>
 
-                                        
 
-                                       {/*  <div className="text-center">
+
+                                        {/*  <div className="text-center">
                                             
                                             <p className="mt-5 mb-3">Or register with:</p>
                                             <button type="button" className="btn btn-link btn-floating mx-">
@@ -203,7 +219,7 @@ export function Register() {
                                     <div>
                                         <p className="mb-0">
                                             <Link to="/login" className="text-white-50 fw-bold">
-											Already have an account? Login!
+                                                Already have an account? Login!
                                             </Link>
                                         </p>
                                     </div>
