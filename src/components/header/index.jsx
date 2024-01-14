@@ -1,40 +1,57 @@
 import React, { useRef, useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom"; // Modified import
+import { ReactComponent as Menuopened } from "../../assets/svg/menu-open.svg";
+import { ReactComponent as Menuclosed } from "../../assets/svg/menu-closed.svg";
+import { ReactComponent as User } from "../../assets/svg/user.svg";
+import { ReactComponent as Dashboard } from "../../assets/svg/dashboard-icon-01.svg";
+
+import { useAuth } from "../../app/contexts/AuthContext";
+import { signOut } from 'aws-amplify/auth';
+
 
 import gsap from "gsap";
 
-const SmallLinks = () => {
-
-  return (
-    <div className="header-wrapper">
-      <Link to="/" className="site-logo">
-        *MYLG!*
-      </Link>
-      <div className="nav-links">
-        <Link to="/works" className={`nav-link ${getLinkClass("/works")}`}>
-          WORKS
-        </Link>
-        <Link to="/blog" className={`nav-link ${getLinkClass("/blog")}`}>
-          READS
-        </Link>
-        <Link to="/about" className={`nav-link ${getLinkClass("/about")}`}>
-          ABOUT
-        </Link>
-        <Link to="/contact" className={`nav-link ${getLinkClass("/contact")}`}>
-          CONTACT
-        </Link>
-      </div>
-    </div>
-  );
-};
 
 const Headermain = () => {
 
 
+
+
   const location = useLocation();
+  const navigate = useNavigate();
+  const [isActive, setActive] = useState(false);
+  const menuAnimation = useRef(null); // Ref to store the GSAP timeline
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [isVisible, setIsVisible] = useState(true);
+  const { isAuthenticated, setIsAuthenticated, setUser } = useAuth();
+  const [showDropdown, setShowDropdown] = useState(false);
+  // const toggleDropdown = () => { setShowDropdown(!showDropdown); };
+  const [showUserMenu, setShowUserMenu] = useState(false);
+  const userMenuRef = useRef(null); // Ref for the user menu
+
+
+
+
+
+  const handleSignOut = async () => {
+    try {
+      await signOut();
+      setIsAuthenticated(false);
+      setUser(null);
+      navigate('/login'); // Redirect to login page
+    } catch (error) {
+      console.error('Error during sign out:', error);
+      // Optionally, handle the error (e.g., show an error message)
+    }
+  };
+
+
+
 
   const getLinkClass = (path) => {
     const currentPath = location.pathname.endsWith("/")
@@ -45,12 +62,6 @@ const Headermain = () => {
 
 
 
-
-  const [isActive, setActive] = useState(false);
-  const menuAnimation = useRef(null); // Ref to store the GSAP timeline
-
-  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
-  const [isVisible, setIsVisible] = useState(true);
 
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
@@ -66,17 +77,49 @@ const Headermain = () => {
   };
 
   useEffect(() => {
+    // Close the dropdown when the location changes
+    setShowDropdown(false);
+  }, [location]);
+
+
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
 
+
+  const animateMenu = () => {
+    if (showDropdown) {
+      gsap.to(userMenuRef.current, {
+        duration: 0.3,
+        autoAlpha: 0, // Animates both the opacity and the visibility
+        ease: 'power1.out',
+        onComplete: () => setShowDropdown(false)
+      });
+    } else {
+      setShowDropdown(true);
+      gsap.from(userMenuRef.current, {
+        duration: 0.3,
+        autoAlpha: 0,
+        ease: 'power1.in'
+      });
+    }
+  };
+
+  // Toggle dropdown and animate
+  const toggleDropdown = () => {
+    animateMenu();
+  };
+
+
   useEffect(() => {
     // Set the initial state of the SVG path
     gsap.set(".span-open", {
       attr: { d: "M0 2S175 1 500 1s500 1 500 1V0H0Z" }
     });
+
 
     // Define the animation timeline
     menuAnimation.current = gsap
@@ -114,25 +157,27 @@ const Headermain = () => {
       });
   }, []);
 
+
+
   const handleToggle = () => {
     if (isActive) {
-        document.body.classList.remove("ovhidden");
-        if (menuAnimation.current) {
-            menuAnimation.current.reverse();
-            menuAnimation.current.eventCallback("onReverseComplete", () => setActive(false));
-        } else {
-            setActive(!isActive);
-        }
+      document.body.classList.remove("ovhidden");
+      if (menuAnimation.current) {
+        menuAnimation.current.reverse();
+        menuAnimation.current.eventCallback("onReverseComplete", () => setActive(false));
+      } else {
+        setActive(!isActive);
+      }
     } else {
-        document.body.classList.add("ovhidden");
-        if (menuAnimation.current) {
-            menuAnimation.current.play();
-            menuAnimation.current.eventCallback("onComplete", () => setActive(true));
-        } else {
-            setActive(!isActive);
-        }
+      document.body.classList.add("ovhidden");
+      if (menuAnimation.current) {
+        menuAnimation.current.play();
+        menuAnimation.current.eventCallback("onComplete", () => setActive(true));
+      } else {
+        setActive(!isActive);
+      }
     }
-};
+  };
 
 
   return (
@@ -145,10 +190,10 @@ const Headermain = () => {
           </Link>
           <div className="nav-links">
             <Link to="/works" className={`nav-link ${getLinkClass("/works")}`}>
-              WORKS
+              SHOWCASE
             </Link>
             <Link to="/blog" className={`nav-link ${getLinkClass("/blog")}`}>
-              READS
+              VISIONS
             </Link>
             <Link to="/about" className={`nav-link ${getLinkClass("/about")}`}>
               ABOUT
@@ -157,9 +202,40 @@ const Headermain = () => {
               CONTACT
             </Link>
           </div>
-           <button className="toggle-button" onClick={handleToggle}>
-            {isActive ? <VscClose /> : <VscGrabber />}
-          </button>
+          <div className="right-bar">
+            {/* <Link to="/contact" className={`nav-link ${getLinkClass("/contact")}`}>
+              LOGIN
+            </Link> */}
+            {/* <button className="toggle-button">
+              <Link to="/userprofile">
+                <Dashboard />
+              </Link>
+            </button> */}
+            <button className="toggle-button" onClick={toggleDropdown}>
+              <User />
+            </button>
+
+            {showDropdown && (
+          <div className="user-dropdown" ref={userMenuRef}>
+                {isAuthenticated ? (
+                  <>
+                    <Link to="/userprofile">Profile</Link>
+                    <Link to="/dashboard">Dashboard</Link>
+                    <button onClick={handleSignOut}>Logout</button>
+
+                  </>
+                ) : (
+                  <Link to="/login">Login</Link>
+                )}
+              </div>
+            )}
+
+
+            <button className="toggle-button" onClick={handleToggle}>
+              {isActive ? <Menuopened /> : <Menuclosed />}
+            </button>
+
+          </div>
         </div>
 
 
@@ -192,7 +268,7 @@ const Headermain = () => {
                     to="/works" // Updated path
                     className="my-3"
                   >
-                    WORKS
+                    SHOWCASE
                   </Link>
                 </li>
                 <li className="menu-item">
@@ -201,7 +277,7 @@ const Headermain = () => {
                     to="/blog" // Updated path
                     className="my-3"
                   >
-                    READS
+                    VISIONS
                   </Link>
                 </li>
                 <li className="menu-item">
@@ -216,11 +292,22 @@ const Headermain = () => {
                 <li className="menu-item">
                   <Link
                     onClick={handleToggle}
-                    to="/contact" // Updated path
+                    to="/login" // Updated path
                     className="my-3"
                   >
-                    CONTACT
+                    LOGIN
                   </Link>
+
+                </li>
+                <li className="menu-item">
+                  <Link
+                    onClick={handleToggle}
+                    to="/register" // Updated path
+                    className="my-3"
+                  >
+                    SIGN-UP
+                  </Link>
+
                 </li>
               </ul>
             </div>

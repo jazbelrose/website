@@ -25,12 +25,16 @@ export const AuthProvider = ({ children }) => {
             setIsAuthenticated(false);
             setUser(null);
         }
+
+        console.log('AuthProvider:', { isAuthenticated, setIsAuthenticated, user, setUser });
+
     };
 
     return (
-        <AuthContext.Provider value={{ isAuthenticated, user }}>
-            {children}
-        </AuthContext.Provider>
+        <AuthContext.Provider value={{ isAuthenticated, setIsAuthenticated, user, setUser }}>
+        {children}
+    </AuthContext.Provider>
+    
     );
 };
 

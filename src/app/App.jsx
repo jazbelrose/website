@@ -4,7 +4,8 @@ import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { NavigationDirectionProvider } from "./contexts/NavigationDIrectionProvider";
-
+import { Hub } from 'aws-amplify';
+import  AuthEventHandler  from "./contexts/AuthEventHandler"; 
 import { AuthProvider } from "./contexts/AuthContext"; 
 import { useAuth } from './contexts/AuthContext';
 
@@ -30,6 +31,7 @@ function ScrollToTop() {
 
 
 export default function App() {
+  
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -82,6 +84,9 @@ export default function App() {
     <NavigationDirectionProvider>
     
         <Router basename={process.env.PUBLIC_URL}>
+
+        <AuthEventHandler />
+        
           {!isLoading && <Headermain />}
 
               <ScrollToTop />

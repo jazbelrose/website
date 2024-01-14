@@ -11,6 +11,7 @@ import { Container } from 'react-bootstrap';
 
 export function Login() {
 
+    const { setIsAuthenticated } = useAuth();
     const { isAuthenticated } = useAuth();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -21,7 +22,7 @@ export function Login() {
         try {
             const signInResponse = await signIn({ username, password });
             console.log('Sign in successful', signInResponse);
-
+            setIsAuthenticated(true);
 
 
             // Additional actions upon successful sign-in, e.g., redirecting the user
@@ -33,6 +34,10 @@ export function Login() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (isAuthenticated) {
+            console.log("User already authenticated.");
+            return;
+        }
         await handleSignIn(username, password);
     };
 
@@ -62,10 +67,10 @@ export function Login() {
                                                     type="email"
                                                     id="typeEmailX"
                                                     className="form-control form-control-lg"
-                                                    value={username} 
+                                                    value={username}
                                                     placeholder="Email"
-                                                    onChange={(e) => setUsername(e.target.value)} 
-                
+                                                    onChange={(e) => setUsername(e.target.value)}
+
                                                     style={{ fontSize: '0.9rem' }}
                                                 />
                                             </div>
@@ -77,7 +82,7 @@ export function Login() {
                                                     className="form-control form-control-lg"
                                                     value={password}
                                                     placeholder="Password"
-                                                    onChange={(e) => setPassword(e.target.value)} 
+                                                    onChange={(e) => setPassword(e.target.value)}
                                                     style={{ fontSize: '0.9rem' }}
                                                 />
                                             </div>
