@@ -16,7 +16,7 @@ import Headermain from "../components/header/";
 import {
  
   NavigationDirectionProvider
-} from "../components/NavigationDirectionProvider";
+} from "./contexts/NavigationDirectionProvider";
 
 function ScrollToTop() {
   const { pathname } = useLocation();

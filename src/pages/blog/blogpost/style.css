@@ -21,9 +21,12 @@
   position: absolute;
   top: 50%; /* center vertically */
   transform: translateY(-50%); /* adjust for the height of the arrow */
+  cursor: pointer; /* Add this line to set a pointer cursor */
 }
+
 .arrow-container.left {
   left: calc((100% - 1200px) / 2 - 60px);
+  z-index: 2; /* Adjust the z-index value as needed */
 }
 
 .arrow-container.right {

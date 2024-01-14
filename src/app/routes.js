@@ -1,6 +1,6 @@
 
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -25,7 +25,7 @@ import { Forgotpassword } from '../pages/auth/Forgot-password';
 import BlogPost from "../pages/blog/blogpost/BlogPost";
 import WorkPost from "../pages/works/workpage/WorkPost";
 import { AnimatePresence, motion } from "framer-motion";
-import { NavigationDirectionContext, NavigationDirectionProvider } from "../components/NavigationDirectionProvider";
+import { NavigationDirectionContext, NavigationDirectionProvider } from "./contexts/NavigationDirectionProvider";
 
 
 const pageVariants = {
@@ -57,13 +57,22 @@ const pageTransition = {
 function AppRoutes() {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
-  const scrollRef = useRef(null);
+  const { direction } = React.useContext(NavigationDirectionContext);
+  
 
+  useLayoutEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // adjust the delay time as needed
+
+    return () => clearTimeout(timer); 
+    
+ setLastDirection(direction);
+}, [direction]);
 
   if (isLoading) {
     return <Preloader setIsLoading={setIsLoading} />;
   }
-
 
   return (
     <NavigationDirectionProvider>
@@ -72,11 +81,11 @@ function AppRoutes() {
   );
 }
 
+
 const ActualRoutes = ({ location }) => {
   const { direction } = React.useContext(NavigationDirectionContext);
+
   const chosenDirection = direction === "left" ? "left" : "right";
-
-
 
   return (
 
@@ -171,10 +180,11 @@ const ActualRoutes = ({ location }) => {
             </motion.div>
           }
         />
-        <Route
+            <Route
           path="/blog/:postSlug"
           element={
             <motion.div
+            key={direction} 
               initial="initial"
               animate="in"
               exit="out"
