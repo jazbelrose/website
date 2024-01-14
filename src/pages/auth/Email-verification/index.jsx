@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import "./style.css";
 import { confirmSignUp } from 'aws-amplify/auth';
+import { useNavigate } from 'react-router-dom';
+
 
 
 export function EmailVerification({ userEmail }) {
   const [otpInputs, setOtpInputs] = useState(['', '', '', '', '', '']);
   const [verificationStatus, setVerificationStatus] = useState('');
+  const navigate = useNavigate();
+
 
   const handleOtpInputChange = (index, value) => {
     const newOtpInputs = [...otpInputs];
@@ -29,24 +33,27 @@ export function EmailVerification({ userEmail }) {
 
   const handleVerify = async () => {
     const verificationCode = otpInputs.join('');
-
+  
     try {
-        const { isSignUpComplete, nextStep } = await confirmSignUp({
-            username: userEmail, // userEmail is used as the username
-            confirmationCode: verificationCode
-        });
-
-        if (isSignUpComplete) {
-            setVerificationStatus('Email successfully verified');
-        } else {
-            console.log('Next step:', nextStep);
-        }
+      const { isSignUpComplete, nextStep } = await confirmSignUp({
+        username: userEmail, // userEmail is used as the username
+        confirmationCode: verificationCode
+      });
+  
+      if (isSignUpComplete) {
+        setVerificationStatus('Email successfully verified');
+        // Update authentication state if needed here
+        // For example, using a context or Redux action to set the user as authenticated
+        // Redirect to the dashboard or another page
+        navigate('/dashboard'); // Replace '/dashboard' with the path you want to redirect to
+      } else {
+        console.log('Next step:', nextStep);
+      }
     } catch (error) {
-        console.error('Error confirming sign up:', error);
-        setVerificationStatus('Verification failed. Please check the code and try again.');
+      console.error('Error confirming sign up:', error);
+      setVerificationStatus('Verification failed. Please check the code and try again.');
     }
   };
-
   
 
   return (

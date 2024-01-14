@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { signIn, signOut, signUp } from '@aws-amplify/auth';
+import { signIn, signOut } from 'aws-amplify/auth';
 
 
 
@@ -8,21 +9,43 @@ import { signIn, signOut, signUp } from '@aws-amplify/auth';
 import { Container } from 'react-bootstrap';
 
 export function Login() {
-    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
+    // Renamed function
+    const handleSignIn = async (username, password) => {
+        try {
+            const signInResponse = await signIn({ username, password });
+            console.log('Sign in successful', signInResponse);
+
+
+
+          
+
+
+
+
+            // Additional actions upon successful sign-in, e.g., redirecting the user
+        } catch (error) {
+            console.error('Error signing in:', error);
+            // Handle sign-in error, e.g., displaying an error message to the user
+        }
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
-        try {
-            const user = await signIn(email, password);
-            console.log(user);
-            // User is signed in, you can add logic here to redirect or perform other actions
-        } catch (error) {
-            console.log('error signing in', error);
-        }
+        await handleSignIn(username, password);
     };
-    
+
+
+    async function handleSignOut() {
+        try {
+          await signOut();
+        } catch (error) {
+          console.log('error signing out: ', error);
+        }
+      }
 
     return (
         <Container>
@@ -43,10 +66,11 @@ export function Login() {
                                                     type="email"
                                                     id="typeEmailX"
                                                     className="form-control form-control-lg"
-                                                    value={email}
+                                                    value={username} 
                                                     placeholder="Email"
-                                                    onChange={e => setEmail(e.target.value)}
-                                                    style={{ fontSize: '0.9rem' }} 
+                                                    onChange={(e) => setUsername(e.target.value)} 
+                
+                                                    style={{ fontSize: '0.9rem' }}
                                                 />
                                             </div>
 
@@ -57,16 +81,16 @@ export function Login() {
                                                     className="form-control form-control-lg"
                                                     value={password}
                                                     placeholder="Password"
-                                                    onChange={e => setPassword(e.target.value)}
-                                                    style={{ fontSize: '0.9rem' }} 
+                                                    onChange={(e) => setPassword(e.target.value)} 
+                                                    style={{ fontSize: '0.9rem' }}
                                                 />
                                             </div>
 
 
                                             <p className="small mb-5 pb-lg-2">
-                                            <Link to="/forgot-password" className="text-white-50">
+                                                <Link to="/forgot-password" className="text-white-50">
                                                     Forgot password?
-                                                    </Link>
+                                                </Link>
                                             </p>
 
                                             <button className="btn btn-outline-light btn-lg px-5" type="submit">
@@ -97,7 +121,7 @@ export function Login() {
                                     </div>
 
 
-                                    
+
 
                                     <div>
                                         <p className="mb-0">

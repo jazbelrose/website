@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./style.css";
 import allBlogPosts from '../allblogposts/allBlogPosts.json';  
-import { NavigationDirectionContext } from "../../../app/contexts/NavigationDirectionProvider";
+import { NavigationDirectionContext } from "../../../app/contexts/NavigationDIrectionProvider";
 import LeftArrow from "../../../assets/svg/chevron-left.svg";
 import RightArrow from "../../../assets/svg/chevron-right.svg";
 

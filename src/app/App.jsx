@@ -3,6 +3,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { NavigationDirectionProvider } from "./contexts/NavigationDIrectionProvider";
+
+import { AuthProvider } from "./contexts/AuthContext"; 
+import { useAuth } from './contexts/AuthContext';
+
 
 
 
@@ -13,10 +18,7 @@ import AppRoutes from "./routes";
 import Headermain from "../components/header/";
 
 
-import {
- 
-  NavigationDirectionProvider
-} from "./contexts/NavigationDirectionProvider";
+
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -75,7 +77,7 @@ export default function App() {
 
 
   return (
-
+    <AuthProvider>
 
     <NavigationDirectionProvider>
     
@@ -89,6 +91,8 @@ export default function App() {
         </Router>
     
     </NavigationDirectionProvider>
+    
+    </AuthProvider>
 
 
   );

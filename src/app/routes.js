@@ -9,6 +9,8 @@ import {
 } from "react-router-dom";
 
 
+
+
 import Preloader from "../preloader";
 import { Home } from "../pages/home";
 import { Works } from "../pages/works";
@@ -25,7 +27,10 @@ import { Forgotpassword } from '../pages/auth/Forgot-password';
 import BlogPost from "../pages/blog/blogpost/BlogPost";
 import WorkPost from "../pages/works/workpage/WorkPost";
 import { AnimatePresence, motion } from "framer-motion";
-import { NavigationDirectionContext, NavigationDirectionProvider } from "./contexts/NavigationDirectionProvider";
+import { NavigationDirectionContext, NavigationDirectionProvider } from "./contexts/NavigationDIrectionProvider";
+
+import { useAuth } from './contexts/AuthContext';
+import  ProtectedRoute  from './contexts/ProtectedRoute';
 
 
 const pageVariants = {
@@ -53,6 +58,8 @@ const pageTransition = {
   ease: "anticipate",
   duration: 1
 };
+
+
 
 function AppRoutes() {
   const location = useLocation();
@@ -186,22 +193,23 @@ const ActualRoutes = ({ location }) => {
           }
         />
 
-        <Route
-          path="/dashboard"
-          element={
-            <motion.div
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-            >
-              <Dashboard />
-            </motion.div>
-          }
-        />
-
-        {/* Add Login and Register Routes */}
+<Route 
+    path="/dashboard" 
+    element={
+      <ProtectedRoute>
+        <motion.div
+          initial="initial"
+          animate="in"
+          exit="out"
+          variants={pageVariants}
+          transition={pageTransition}
+        >
+          <Dashboard />
+        </motion.div>
+      </ProtectedRoute>
+    }
+  />
+       
         <Route
           path="/login"
           element={
