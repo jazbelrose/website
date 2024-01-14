@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { signIn, signOut } from 'aws-amplify/auth';
+import { useAuth } from "../../../app/contexts/AuthContext";
 
 
 
@@ -9,6 +10,8 @@ import { signIn, signOut } from 'aws-amplify/auth';
 import { Container } from 'react-bootstrap';
 
 export function Login() {
+
+    const { isAuthenticated } = useAuth();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
@@ -18,11 +21,6 @@ export function Login() {
         try {
             const signInResponse = await signIn({ username, password });
             console.log('Sign in successful', signInResponse);
-
-
-
-          
-
 
 
 
@@ -39,13 +37,11 @@ export function Login() {
     };
 
 
-    async function handleSignOut() {
-        try {
-          await signOut();
-        } catch (error) {
-          console.log('error signing out: ', error);
+    useEffect(() => {
+        if (isAuthenticated) {
+            navigate('/dashboard'); // Redirect to the dashboard if already signed in
         }
-      }
+    }, [isAuthenticated]);
 
     return (
         <Container>
