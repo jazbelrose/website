@@ -145,6 +145,30 @@ height: 100vh;
 
 }
 
+.welcome-screen-header {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  padding: min(50px, 3vw) 20px 0;
+  margin-bottom: 100px;
+
+}
+
+.welcome-greeting-title {
+  font-size: min(3rem, 4vw);
+
+}
+
+.welcome-greeting-line {
+  font-size: min(2rem, 3vw);
+
+}
+
+
+
+
 .project-header h2 {
   line-height: 0.8;
   font-size: min(4rem, 6vw);
@@ -575,6 +599,14 @@ height: 100vh;
   margin-left: 5px; 
   margin-right: 5px; 
 }
+
+ .welcome-greeting-title:nth-child(1) .username {
+  font-size: min(3rem, 4vw);
+  color: #FA3356; 
+  margin-left: 5px; 
+  margin-right: 5px; 
+}
+
 
 .dashboard-item.greetings .greeting-line:nth-child(3) {
   margin-bottom: 0;

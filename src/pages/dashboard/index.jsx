@@ -17,9 +17,9 @@ import { useAuth } from "../../app/contexts/AuthContext";
 export const Dashboard = () => {
 
 
-  
- 
- 
+
+
+
   const { user } = useAuth();
   const userName = user ? `${user.firstName} ` : 'Guest';
   const [userData, setUserData] = useState(null);
@@ -279,32 +279,118 @@ export const Dashboard = () => {
 
 
         {/* Right Sidebar */}
-        <div className={`sidebar-right ${projectsViewState === 'single-project' || isNewProjectView ? 'full-width' : ''}`}>
+
+        <div className={`sidebar-right ${projectsViewState === 'single-project' || isNewProjectView || projectsViewState === 'welcome' ? 'full-width' : ''}`}>
+
+
+
+          {/*Welcome Screen*/}
+
+
+
           {projectsViewState === 'welcome' && (
+
+
             <div className="welcome-screen">
-              <div className="welcome-screen">
-                <h1>Welcome to Your Dashboard!</h1>
-                <p>Hello, and thank you for choosing ourplatform! We're excited to have you on board and look forward to helping you manage your projects efficiently.</p>
+              <div className="welcome-screen-details">
+                <div className='welcome-screen-header'>
 
-                <h2>Getting Started</h2>
-                <p>Here's a quick guide to get you up and running:</p>
-                <ul>
-                  <li><strong>View Projects:</strong> Access all your projects in one place by clicking on 'All Projects'.</li>
-                  <li><strong>Create New Project:</strong> Ready to start something new? Click 'Start a new project' and jump right in!</li>
-                  <li><strong>Team Collaboration:</strong> Easily collaborate with your team members and track project progress.</li>
-                </ul>
 
-                <h2>Need Assistance?</h2>
-                <p>Our Help Center is always available for your questions, or you can reach out to us directly through the Messages section.</p>
+                  <span className="welcome-greeting-title">Hello <span className="username"> {userName} </span> !</span>
 
-                <p>Let's make great things happen together!</p>
+                  <span className="welcome-greeting-line">Welcome to your dashboard, located here you will find</span>
+                  <span className="welcome-greeting-line">recent project quick access, user preferences, account billing, and direct messages. </span>
+                </div>
 
-                {/* Optionally, you can add a "Get Started" button or similar call-to-action */}
-                <button className="btn btn-primary">Explore Dashboard</button>
+
+
+
+
+
+
+
+
+
+                <div className='dashboard-layout'>
+
+
+
+
+
+
+                  {/* Column 1 */}
+
+                  <div className="new-project-col1">
+
+
+
+                    <div className="dashboard-item new-project-budget">
+                      <span>Account</span>
+                      <span>+</span>
+                    </div>
+
+                    <div className="dashboard-item new-project-finish-line">
+                      <span>Messages</span>
+                      <span>+</span>
+                    </div>
+                  </div>
+
+
+
+
+                  {/* Column 2 */}
+
+                  <div className="new-project-col2">
+
+                    <div className="dashboard-item new-project-uploads">
+                      <span>Projects</span>
+                      <span>+</span>
+                    </div>
+
+
+                  </div>
+
+
+
+                </div>
+
+
+
+
+
+               
+                <div className='dashboard-layout'>
+
+
+
+
+
+
+                  {/* Column 7*/}
+
+                </div>
+                <div className="column-7">
+                  <div className="dashboard-item notes
+                ">
+                    <span>Notes</span>
+                    <span>+</span>
+
+                  </div>
+
+
+                </div>
+
+
+
+
+
               </div>
 
 
             </div>
+
+
+
           )}
 
 
@@ -612,6 +698,8 @@ export const Dashboard = () => {
           {/*  New Project*/}
 
           {isNewProjectView && (
+
+
             <div className="active-project-details">
               <div className='new-project-header'>
                 <h2>New Project</h2>

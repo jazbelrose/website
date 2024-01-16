@@ -219,13 +219,13 @@ const Headermain = () => {
             )}
 
             {isAuthenticated && user ? (
-    <img
-      src={user.thumbnail[0]} // Assuming the thumbnail is an array with one URL
-      alt={`${user.firstName}'s Thumbnail`}
-      className="user-thumbnail"
-      style={{ maxWidth: '35px', maxHeight: '35px', width: 'auto', height: 'auto', cursor: 'pointer' }}
-      onClick={toggleDropdown} // Attach toggleDropdown to the thumbnail's onClick event
-    />
+              <img
+                src={user.thumbnail[0]} // Assuming the thumbnail is an array with one URL
+                alt={`${user.firstName}'s Thumbnail`}
+                className="user-thumbnail"
+                style={{ maxWidth: '35px', maxHeight: '35px', width: 'auto', height: 'auto', cursor: 'pointer' }}
+                onClick={toggleDropdown} // Attach toggleDropdown to the thumbnail's onClick event
+              />
             ) : (
               <button className="toggle-button" onClick={toggleDropdown}>
                 <User />
@@ -234,19 +234,22 @@ const Headermain = () => {
 
             {showDropdown && (
               <div className="user-dropdown" ref={userMenuRef}>
-
                 {isAuthenticated ? (
                   <>
-
-                    <Link to="/dashboard">Dashboard</Link>
-                    <Link to="/userprofile">Settings</Link>
+                    <Link to="/dashboard" className={`user-menu-link ${getLinkClass("/dashboard")}`}>
+                      Dashboard
+                    </Link>
+                    <Link to="/userprofile" className="user-menu-link">
+                      Settings
+                    </Link>
                     <button onClick={handleSignOut}>
                       <FontAwesomeIcon icon={faSignOutAlt} /> Logout
                     </button>
-
                   </>
                 ) : (
-                  <Link to="/login">Login</Link>
+                  <Link to="/login" className={`user-menu-link ${getLinkClass("/dashboard")}`}>
+                    Dashboard
+                  </Link>
                 )}
               </div>
             )}
@@ -287,7 +290,7 @@ const Headermain = () => {
                   <Link
                     onClick={handleToggle}
                     to="/works" // Updated path
-                    className="my-3"
+                    className={`my-3 sign-out-link ${getLinkClass("/works")}`}
                   >
                     SHOWCASE
                   </Link>
@@ -296,7 +299,7 @@ const Headermain = () => {
                   <Link
                     onClick={handleToggle}
                     to="/blog" // Updated path
-                    className="my-3"
+                    className={`my-3 sign-out-link ${getLinkClass("/blog")}`}
                   >
                     VISIONS
                   </Link>
@@ -305,30 +308,32 @@ const Headermain = () => {
                   <Link
                     onClick={handleToggle}
                     to="/about"
-                    className="my-3"
+                    className={`my-3 sign-out-link ${getLinkClass("/about")}`}
                   >
                     ABOUT
                   </Link>
                 </li>
+
                 <li className="menu-item">
                   {isAuthenticated ? (
                     <Link
                       onClick={handleToggle}
                       to="/dashboard" // Link to Dashboard when authenticated
-                      className="my-3"
-                    >
+                      className={`my-3 sign-out-link ${getLinkClass("/dashboard")}`}
+    >
                       DASHBOARD
                     </Link>
                   ) : (
                     <Link
                       onClick={handleToggle}
                       to="/login" // Link to Login when not authenticated
-                      className="my-3"
-                    >
+                      className={`my-3 sign-out-link ${getLinkClass("/login")}`}
+    >
                       LOGIN
                     </Link>
                   )}
                 </li>
+
                 <li className="menu-item">
                   {isAuthenticated ? (
                     <Link
