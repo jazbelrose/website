@@ -1,17 +1,17 @@
 import React, { useRef, useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import "./style.css";
-import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom"; // Modified import
 import { ReactComponent as Menuopened } from "../../assets/svg/menu-open.svg";
 import { ReactComponent as Menuclosed } from "../../assets/svg/menu-closed.svg";
 import { ReactComponent as User } from "../../assets/svg/user.svg";
-import { ReactComponent as Dashboard } from "../../assets/svg/dashboard-icon-01.svg";
-
 import { useAuth } from "../../app/contexts/AuthContext";
 import { signOut } from 'aws-amplify/auth';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import useInactivityLogout from '../../app/contexts/useInactivityLogout';
+import Cookies from 'js-cookie';
 
 
 import gsap from "gsap";
@@ -20,7 +20,7 @@ import gsap from "gsap";
 const Headermain = () => {
 
 
-
+  useInactivityLogout();
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -28,9 +28,8 @@ const Headermain = () => {
   const menuAnimation = useRef(null); // Ref to store the GSAP timeline
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [isVisible, setIsVisible] = useState(true);
-  const { isAuthenticated, setIsAuthenticated, setUser } = useAuth();
+  const { isAuthenticated, setIsAuthenticated, setUser, user } = useAuth();
   const [showDropdown, setShowDropdown] = useState(false);
-  // const toggleDropdown = () => { setShowDropdown(!showDropdown); };
   const [showUserMenu, setShowUserMenu] = useState(false);
   const userMenuRef = useRef(null); // Ref for the user menu
 
@@ -38,12 +37,15 @@ const Headermain = () => {
 
 
 
+
   const handleSignOut = async () => {
+
     try {
       await signOut();
       setIsAuthenticated(false);
       setUser(null);
       navigate('/login'); // Redirect to login page
+      Cookies.remove('myCookie');
     } catch (error) {
       console.error('Error during sign out:', error);
       // Optionally, handle the error (e.g., show an error message)
@@ -179,6 +181,12 @@ const Headermain = () => {
     }
   };
 
+  console.log(user); // Add this inside your component to log the user object
+  useEffect(() => {
+    console.log('User updated:', user);
+  }, [user]);
+
+
 
   return (
     <>
@@ -203,25 +211,38 @@ const Headermain = () => {
             </Link>
           </div>
           <div className="right-bar">
-            {/* <Link to="/contact" className={`nav-link ${getLinkClass("/contact")}`}>
-              LOGIN
-            </Link> */}
-            {/* <button className="toggle-button">
-              <Link to="/userprofile">
-                <Dashboard />
-              </Link>
-            </button> */}
-            <button className="toggle-button" onClick={toggleDropdown}>
-              <User />
-            </button>
+
+            {isAuthenticated && user && (
+              <div className="user-first-name">
+                {user.firstName}
+              </div>
+            )}
+
+            {isAuthenticated && user ? (
+    <img
+      src={user.thumbnail[0]} // Assuming the thumbnail is an array with one URL
+      alt={`${user.firstName}'s Thumbnail`}
+      className="user-thumbnail"
+      style={{ maxWidth: '35px', maxHeight: '35px', width: 'auto', height: 'auto', cursor: 'pointer' }}
+      onClick={toggleDropdown} // Attach toggleDropdown to the thumbnail's onClick event
+    />
+            ) : (
+              <button className="toggle-button" onClick={toggleDropdown}>
+                <User />
+              </button>
+            )}
 
             {showDropdown && (
-          <div className="user-dropdown" ref={userMenuRef}>
+              <div className="user-dropdown" ref={userMenuRef}>
+
                 {isAuthenticated ? (
                   <>
-                    <Link to="/userprofile">Profile</Link>
+
                     <Link to="/dashboard">Dashboard</Link>
-                    <button onClick={handleSignOut}>Logout</button>
+                    <Link to="/userprofile">Settings</Link>
+                    <button onClick={handleSignOut}>
+                      <FontAwesomeIcon icon={faSignOutAlt} /> Logout
+                    </button>
 
                   </>
                 ) : (
@@ -283,31 +304,49 @@ const Headermain = () => {
                 <li className="menu-item">
                   <Link
                     onClick={handleToggle}
-                    to="/about" // Updated path
+                    to="/about"
                     className="my-3"
                   >
                     ABOUT
                   </Link>
                 </li>
                 <li className="menu-item">
-                  <Link
-                    onClick={handleToggle}
-                    to="/login" // Updated path
-                    className="my-3"
-                  >
-                    LOGIN
-                  </Link>
-
+                  {isAuthenticated ? (
+                    <Link
+                      onClick={handleToggle}
+                      to="/dashboard" // Link to Dashboard when authenticated
+                      className="my-3"
+                    >
+                      DASHBOARD
+                    </Link>
+                  ) : (
+                    <Link
+                      onClick={handleToggle}
+                      to="/login" // Link to Login when not authenticated
+                      className="my-3"
+                    >
+                      LOGIN
+                    </Link>
+                  )}
                 </li>
                 <li className="menu-item">
-                  <Link
-                    onClick={handleToggle}
-                    to="/register" // Updated path
-                    className="my-3"
-                  >
-                    SIGN-UP
-                  </Link>
-
+                  {isAuthenticated ? (
+                    <Link
+                      onClick={handleSignOut}
+                      to="/login" // Redirect to the login page when signing out
+                      className="my-3 sign-out-link" // Add a custom class for styling
+                    >
+                      SIGN-OUT
+                    </Link>
+                  ) : (
+                    <Link
+                      onClick={handleToggle}
+                      to="/register"
+                      className="my-3"
+                    >
+                      SIGN UP
+                    </Link>
+                  )}
                 </li>
               </ul>
             </div>

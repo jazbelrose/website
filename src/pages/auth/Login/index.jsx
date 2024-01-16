@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { signIn, signOut } from 'aws-amplify/auth';
+import { signIn } from 'aws-amplify/auth';
 import { useAuth } from "../../../app/contexts/AuthContext";
+import Cookies from 'js-cookie';
 
 
 
@@ -12,23 +13,27 @@ import { Container } from 'react-bootstrap';
 export function Login() {
 
     const { setIsAuthenticated } = useAuth();
-    const { isAuthenticated } = useAuth();
+    const { isAuthenticated, checkCurrentUser, checkSessionValidity } = useAuth();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    // Renamed function
+
+
+
     const handleSignIn = async (username, password) => {
+
         try {
+
             const signInResponse = await signIn({ username, password });
             console.log('Sign in successful', signInResponse);
+            Cookies.set('myCookie', 'newValue', { expires: 7 });
             setIsAuthenticated(true);
 
 
-            // Additional actions upon successful sign-in, e.g., redirecting the user
+            await checkCurrentUser();
         } catch (error) {
             console.error('Error signing in:', error);
-            // Handle sign-in error, e.g., displaying an error message to the user
         }
     };
 
@@ -39,14 +44,34 @@ export function Login() {
             return;
         }
         await handleSignIn(username, password);
+        await checkCurrentUser();
     };
 
 
     useEffect(() => {
-        if (isAuthenticated) {
-            navigate('/dashboard'); // Redirect to the dashboard if already signed in
-        }
-    }, [isAuthenticated]);
+        checkCurrentUser().then((userData) => {
+            if (userData) {
+
+                setUsername(userData.username);
+
+            }
+        });
+    }, []);
+
+
+
+    useEffect(() => {
+
+        checkSessionValidity().then(() => {
+
+            if (isAuthenticated) {
+                navigate('/dashboard');
+            }
+        });
+    }, [isAuthenticated, checkSessionValidity, navigate]);
+
+    console.log(username); 
+    
 
     return (
         <Container>

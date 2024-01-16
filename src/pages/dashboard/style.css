@@ -101,6 +101,16 @@ height: 100vh;
     cursor: pointer; 
     color: #FA3356; 
   }
+
+  .nav-item-dashboard:hover,
+  .nav-item-dashboard:hover img {
+    cursor: pointer;
+    color: #fa3356; /* Use the desired color for hover state */
+  }
+  .nav-item-dashboard:hover .custom-icon path {
+    fill: #fa3356; /* New color for SVG paths on hover */
+  }
+  
   
   .collapse-item.active {
     background-color: red; 

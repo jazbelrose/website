@@ -5,7 +5,9 @@ import usersData from './users.json';
 import teamData from './team.json';
 import { ReactComponent as Snap } from "../../assets/svg/snap.svg";
 import Map from "../../components/map";
+import Headermain from '../../components/header';
 import "./style.css";
+import { useAuth } from "../../app/contexts/AuthContext";
 
 
 
@@ -15,17 +17,21 @@ import "./style.css";
 export const Dashboard = () => {
 
 
-  const userName = usersData.users[0].name;
-  const hardcodedUserID = '000002';
+  
+ 
+ 
+  const { user } = useAuth();
+  const userName = user ? `${user.firstName} ` : 'Guest';
   const [userData, setUserData] = useState(null);
 
-  const [projectsViewState, setProjectsViewState] = useState('collapsed'); // 'collapsed' or 'show-all'
+  const [projectsViewState, setProjectsViewState] = useState('welcome'); // Initialize to 'welcome'
 
+  const showWelcomeScreen = () => {
+    setProjectsViewState('welcome');
+    setIsNewProjectView(false); // Add this line
+  };
 
   const [projects, setProjects] = useState([]);
-
-
-
   const [selectedProjects, setSelectedProjects] = useState([]);
   const [activeProject, setActiveProject] = useState(null);
   const [progress, setProgress] = useState(0);
@@ -36,10 +42,10 @@ export const Dashboard = () => {
 
   const toggleNewProjectView = () => {
     setIsNewProjectView(!isNewProjectView);
+    if (!isNewProjectView) {
+      setProjectsViewState('new-project'); // Set to a new state like 'new-project'
+    }
   };
-
-
-
   const selectProject = (project) => {
     setActiveProject(project);
     setProgress(parseInt(project.milestone, 10));
@@ -91,13 +97,11 @@ export const Dashboard = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch(`https://rvnpu2j92m.execute-api.us-west-1.amazonaws.com/default/userProfiles?userId=${hardcodedUserID}`);
+        const response = await fetch(`https://rvnpu2j92m.execute-api.us-west-1.amazonaws.com/default/userProfiles?userId=${user.userId}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-
-        // Assuming the user data is the first item in the Items array
         setUserData(data.Items[0]);
       } catch (error) {
         console.error('Error fetching user data:', error);
@@ -105,36 +109,32 @@ export const Dashboard = () => {
     };
 
     fetchUserData();
-  }, [hardcodedUserID]);
+  }, [user.userId]); // Corrected dependency array
 
   // Fetch Project Details
-useEffect(() => {
-  
-  const fetchProjects = async () => {
-    try {
-      // Check if userData exists and has projects
-      if (userData && userData.projects) {
-        const projectsData = await Promise.all(userData.projects.map(async (projectId) => {
-          const response = await fetch(`https://gui4kdsekj.execute-api.us-west-1.amazonaws.com/default/Projects?projectId=${projectId}`);
-          if (!response.ok) {
-            throw new Error(`Failed to fetch project data for projectId: ${projectId}`);
-          }
-          return await response.json();
-        }));
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        if (userData && userData.projects) {
+          const projectsData = await Promise.all(userData.projects.map(async (projectId) => {
+            const response = await fetch(`https://gui4kdsekj.execute-api.us-west-1.amazonaws.com/default/Projects?projectId=${projectId}`);
+            if (!response.ok) {
+              throw new Error(`Failed to fetch project data for projectId: ${projectId}`);
+            }
+            return await response.json();
+          }));
 
-        setProjects(projectsData.map(data => data.Items[0]));
-
+          setProjects(projectsData.map(data => data.Items[0]));
+        }
+      } catch (error) {
+        console.error('Error fetching project details:', error);
       }
-    } catch (error) {
-      console.error('Error fetching project details:', error);
+    };
+
+    if (userData && userData.projects) {
+      fetchProjects();
     }
-  };
-
-  if (userData && userData.projects) {
-    fetchProjects();
-  }
-}, [userData]);
-
+  }, [userData]); // Dependency on userData
 
 
 
@@ -154,6 +154,14 @@ useEffect(() => {
 
 
 
+  console.log(user); // Add this inside your component to log the user object
+  useEffect(() => {
+    console.log('User updated:', user);
+  }, [user]);
+
+
+
+
   return (
 
     <div id="page-top">
@@ -162,20 +170,26 @@ useEffect(() => {
 
         <ul className="navbar-nav" id="accordionSidebar" >
 
-
-          <li className="nav-item active">
+          <li className="nav-item-dashboard active" onClick={showWelcomeScreen}>
             <div className="sidebar-heading">
-              <img
-                src="data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D%22a%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024.41%2024.41%22%3E%0A%20%20%3Cg%20id%3D%22b%22%20data-name%3D%22dashboard-2%22%3E%0A%20%20%20%20%3Cpath%20id%3D%22c%22%20data-name%3D%22Path-7%22%20d%3D%22M9.41%2C0H1.78C.80%2C0%2C0%2C.80%2C0%2C1.78v4.58c0%2C.98.80%2C1.78%2C1.78%2C1.78h7.63c.98%2C0%2C1.78-.80%2C1.78-1.78V1.78c0-.98-.80-1.78-1.78-1.78Z%22%20style%3D%22fill%3A%20%23fff%3B%20stroke-width%3A%200px%3B%22%2F%3E%0A%20%20%20%20%3Cpath%20id%3D%22d%22%20data-name%3D%22Path-8%22%20d%3D%22M9.41%2C10.16H1.78c-.98%2C0-1.78.80-1.78%2C1.78v10.68c0%2C.98.80%2C1.78%2C1.78%2C1.78h7.63c.98%2C0%2C1.78-.80%2C1.78-1.78v-10.68c0-.98-.80-1.78-1.78-1.78Z%22%20style%3D%22fill%3A%20%23fff%3B%20stroke-width%3A%200px%3B%22%2F%3E%0A%20%20%20%20%3Cpath%20id%3D%22e%22%20data-name%3D%22Path-9%22%20d%3D%22M22.63%2C16.27h-7.63c-.98%2C0-1.78.80-1.78%2C1.78v4.58c0%2C.98.80%2C1.78%2C1.78%2C1.78h7.63c.98%2C0%2C1.78-.80%2C1.78-1.78v-4.58c0-.98-.80-1.78-1.78-1.78Z%22%20style%3D%22fill%3A%20%23fff%3B%20stroke-width%3A%200px%3B%22%2F%3E%0A%20%20%20%20%3Cpath%20id%3D%22f%22%20data-name%3D%22Path-10%22%20d%3D%22M22.63%2C0h-7.63c-.98%2C0-1.78.80-1.78%2C1.78v10.68c0%2C.98.80%2C1.78%2C1.78%2C1.78h7.63c.98%2C0%2C1.78-.80%2C1.78-1.78V1.78c0-.98-.80-1.78-1.78-1.78Z%22%20style%3D%22fill%3A%20%23fff%3B%20stroke-width%3A%200px%3B%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E"
-                alt="Custom Icon"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24.41 24.41"
                 className="custom-icon"
-                width="25"
-                height="25"
-                style={{ padding: '5px', marginBottom: '3px', marginRight: '10px' }}
-              />
+                style={{ padding: '5px', marginBottom: '3px', marginRight: '10px', width: '25', height: '25' }}
+              >
+                <g id="dashboard-2">
+                  <path id="Path-7" d="M9.41,0H1.78C.80,0,0,.80,0,1.78v4.58c0,.98.80,1.78,1.78,1.78h7.63c.98,0,1.78-.80,1.78-1.78V1.78c0-.98-.80-1.78-1.78-1.78Z" fill="#fff" />
+                  <path id="Path-8" d="M9.41,10.16H1.78c-.98,0-1.78.80-1.78,1.78v10.68c0,.98.80,1.78,1.78,1.78h7.63c.98,0,1.78-.80,1.78-1.78v-10.68c0-.98-.80-1.78-1.78-1.78Z" fill="#fff" />
+                  <path id="Path-9" d="M22.63,16.27h-7.63c-.98,0-1.78.80-1.78,1.78v4.58c0,.98.80,1.78,1.78,1.78h7.63c.98,0,1.78-.80,1.78-1.78v-4.58c0-.98-.80-1.78-1.78-1.78Z" fill="#fff" />
+                  <path id="Path-10" d="M22.63,0h-7.63c-.98,0-1.78.80-1.78,1.78v10.68c0,.98.80,1.78,1.78,1.78h7.63c.98,0,1.78-.80,1.78-1.78V1.78c0-.98-.80-1.78-1.78-1.78Z" fill="#fff" />
+                </g>
+              </svg>
               <span>Dashboard</span>
+
             </div>
           </li>
+
 
 
 
@@ -265,9 +279,34 @@ useEffect(() => {
 
 
         {/* Right Sidebar */}
-
-
         <div className={`sidebar-right ${projectsViewState === 'single-project' || isNewProjectView ? 'full-width' : ''}`}>
+          {projectsViewState === 'welcome' && (
+            <div className="welcome-screen">
+              <div className="welcome-screen">
+                <h1>Welcome to Your Dashboard!</h1>
+                <p>Hello, and thank you for choosing ourplatform! We're excited to have you on board and look forward to helping you manage your projects efficiently.</p>
+
+                <h2>Getting Started</h2>
+                <p>Here's a quick guide to get you up and running:</p>
+                <ul>
+                  <li><strong>View Projects:</strong> Access all your projects in one place by clicking on 'All Projects'.</li>
+                  <li><strong>Create New Project:</strong> Ready to start something new? Click 'Start a new project' and jump right in!</li>
+                  <li><strong>Team Collaboration:</strong> Easily collaborate with your team members and track project progress.</li>
+                </ul>
+
+                <h2>Need Assistance?</h2>
+                <p>Our Help Center is always available for your questions, or you can reach out to us directly through the Messages section.</p>
+
+                <p>Let's make great things happen together!</p>
+
+                {/* Optionally, you can add a "Get Started" button or similar call-to-action */}
+                <button className="btn btn-primary">Explore Dashboard</button>
+              </div>
+
+
+            </div>
+          )}
+
 
           {projectsViewState === 'show-all' && selectedProjects.map(project => (
 

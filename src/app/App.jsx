@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, useLocation, useNavigate  } from "react-router-dom";
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { NavigationDirectionProvider } from "./contexts/NavigationDIrectionProvider";
@@ -8,6 +8,7 @@ import { Hub } from 'aws-amplify';
 import  AuthEventHandler  from "./contexts/AuthEventHandler"; 
 import { AuthProvider } from "./contexts/AuthContext"; 
 import { useAuth } from './contexts/AuthContext';
+
 
 
 
@@ -38,11 +39,13 @@ export default function App() {
     return storedTheme || "dark";
   });
 
-
+ 
+ 
 
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
   }, [theme]);
+
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
@@ -54,6 +57,8 @@ export default function App() {
       ScrollTrigger.refresh();
     }, 2500);
   }
+
+
   useEffect(() => {
     const setFavicon = (darkMode) => {
       const link = document.querySelector("link[rel~='icon']");
@@ -76,9 +81,12 @@ export default function App() {
     };
   }, []);
 
+  
+
 
 
   return (
+
     <AuthProvider>
 
     <NavigationDirectionProvider>

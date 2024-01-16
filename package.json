@@ -36,6 +36,7 @@
     "imagesloaded": "5.0.0",
     "import-google-fonts": "0.0.2",
     "intersection-observer": "0.12.2",
+    "js-cookie": "^3.0.5",
     "leaflet": "^1.9.4",
     "loader-utils": "3.2.1",
     "locomotive-scroll": "^4.1.4",
