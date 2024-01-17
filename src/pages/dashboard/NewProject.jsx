@@ -1,7 +1,8 @@
  
- 
- 
- 
+ import React, { useState } from 'react';
+
+ const NewProject = () => {
+  return (
  
  
  
@@ -143,11 +144,10 @@
       </div>
 
 
+      </div>
+      )}
     </div>
-  )}
+  );
+};
 
-
-
-</div>
-</div>
-</div>
+export default NewProject;
