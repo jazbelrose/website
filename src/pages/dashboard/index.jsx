@@ -1,11 +1,8 @@
 import React, { useState, useEffect, } from 'react';
-import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import usersData from './users.json';
 import teamData from './team.json';
 import { ReactComponent as Snap } from "../../assets/svg/snap.svg";
 import Map from "../../components/map";
-import Headermain from '../../components/header';
 import "./style.css";
 import { useAuth } from "../../app/contexts/AuthContext";
 
@@ -17,18 +14,14 @@ import { useAuth } from "../../app/contexts/AuthContext";
 export const Dashboard = () => {
 
 
-
-
-
   const { user } = useAuth();
   const userName = user ? `${user.firstName} ` : 'Guest';
   const [userData, setUserData] = useState(null);
-
-  const [projectsViewState, setProjectsViewState] = useState('welcome'); // Initialize to 'welcome'
+  const [projectsViewState, setProjectsViewState] = useState('welcome'); 
 
   const showWelcomeScreen = () => {
     setProjectsViewState('welcome');
-    setIsNewProjectView(false); // Add this line
+    setIsNewProjectView(false); 
   };
 
   const [projects, setProjects] = useState([]);
@@ -37,15 +30,14 @@ export const Dashboard = () => {
   const [progress, setProgress] = useState(0);
   const [isNewProjectCollapsed, setIsNewProjectCollapsed] = useState(true);
   const [isMessageCenterCollapsed, setIsMessageCenterCollapsed] = useState(true);
-
   const [isNewProjectView, setIsNewProjectView] = useState(false);
+
 
   const toggleNewProjectView = () => {
     setIsNewProjectView(!isNewProjectView);
-    if (!isNewProjectView) {
-      setProjectsViewState('new-project'); // Set to a new state like 'new-project'
-    }
+    if (!isNewProjectView) {setProjectsViewState('new-project');}
   };
+
   const selectProject = (project) => {
     setActiveProject(project);
     setProgress(parseInt(project.milestone, 10));
@@ -94,6 +86,7 @@ export const Dashboard = () => {
 
 
   // Fetch User Data
+
   useEffect(() => {
     const fetchUserData = async () => {
       try {
@@ -222,8 +215,6 @@ export const Dashboard = () => {
             </div>
           </li>
 
-
-
           {/* Start a new project */}
           <li className="nav-item">
             <a className="nav-link collapsed" onClick={toggleNewProjectCollapse}>
@@ -233,10 +224,6 @@ export const Dashboard = () => {
 
 
           </li>
-
-
-
-
 
           <hr className="sidebar-divider" />
 
@@ -254,24 +241,8 @@ export const Dashboard = () => {
                 <i className="fas fa-fw fa-comment"></i>
                 <span>Messages</span>
               </a>
-              <div className={`collapse ${isMessageCenterCollapsed ? '' : 'show'}`} id="collapseMessageCenter">
-                <div className=" py-2 collapse-inner rounded">
-                  <h6 className="collapse-header">Login Screens:</h6>
-                  <a className="collapse-item" href="login.html">Login</a>
-                  <a className="collapse-item" href="register.html">Register</a>
-                  <a className="collapse-item" href="forgot-password.html">Forgot Password</a>
-                  <div className="collapse-divider"></div>
-                  <h6 className="collapse-header">Other Pages:</h6>
-                  <a className="collapse-item" href="404.html">404 Page</a>
-                  <a className="collapse-item" href="blank.html">Blank Page</a>
-                </div>
-              </div>
             </li>
           </div>
-
-
-
-
 
         </ul>
 
@@ -284,9 +255,9 @@ export const Dashboard = () => {
 
 
 
+
+
           {/*Welcome Screen*/}
-
-
 
           {projectsViewState === 'welcome' && (
 
@@ -303,25 +274,12 @@ export const Dashboard = () => {
                 </div>
 
 
-
-
-
-
-
-
-
-
                 <div className='dashboard-layout'>
-
-
-
-
 
 
                   {/* Column 1 */}
 
                   <div className="new-project-col1">
-
 
 
                     <div className="dashboard-item new-project-budget">
@@ -334,9 +292,6 @@ export const Dashboard = () => {
                       <span>+</span>
                     </div>
                   </div>
-
-
-
 
                   {/* Column 2 */}
 
@@ -354,44 +309,30 @@ export const Dashboard = () => {
 
                 </div>
 
-
-
-
-
                
                 <div className='dashboard-layout'>
-
-
-
-
-
 
                   {/* Column 7*/}
 
                 </div>
+
+
                 <div className="column-7">
-                  <div className="dashboard-item notes
-                ">
+                  <div className="dashboard-item notes">
                     <span>Notes</span>
                     <span>+</span>
 
                   </div>
 
-
                 </div>
-
-
-
-
 
               </div>
 
-
             </div>
 
-
-
           )}
+
+
 
 
           {projectsViewState === 'show-all' && selectedProjects.map(project => (
@@ -402,6 +343,8 @@ export const Dashboard = () => {
             </div>
 
           ))}
+
+
 
 
           {/*  Single Project*/}
@@ -483,11 +426,7 @@ export const Dashboard = () => {
 
 
 
-
-
               <div className='dashboard-layout'>
-
-
 
 
 
@@ -520,7 +459,6 @@ export const Dashboard = () => {
 
 
 
-
                 {/* Column 2 */}
                 <div className="column-2">
                   <div className="dashboard-item view-gallery">
@@ -540,14 +478,16 @@ export const Dashboard = () => {
                 </div>
 
 
-
-
-
               </div>
 
 
+
               {/* Timeline */}
+
+
               <div className="timeline-container">
+
+
 
                 <svg id="Timeline" data-name="Timeline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1344 674.33">
 
@@ -633,8 +573,6 @@ export const Dashboard = () => {
                 </div>
 
 
-
-
               </div>
 
               <div className='dashboard-layout'>
@@ -672,8 +610,6 @@ export const Dashboard = () => {
 
                 </div>
 
-
-
                 {/* Column 7*/}
 
               </div>
@@ -686,9 +622,6 @@ export const Dashboard = () => {
 
 
               </div>
-
-
-
 
 
             </div>
@@ -728,28 +661,18 @@ export const Dashboard = () => {
                 </div>
 
 
-
-                <div className="dashboard-item project-name
-                ">
+                <div className="dashboard-item project-name">
                   <span>Project Name</span>
                   <span>+</span>
 
                 </div>
-
 
               </div>
 
 
 
 
-
-
-
               <div className='dashboard-layout'>
-
-
-
-
 
 
                 {/* Column 1 */}
@@ -785,13 +708,7 @@ export const Dashboard = () => {
                 </div>
 
 
-
-
-
               </div>
-
-
-
 
 
               <div className='dashboard-layout'>
@@ -826,15 +743,9 @@ export const Dashboard = () => {
                 </div>
 
 
-
-
               </div>
 
               <div className='dashboard-layout'>
-
-
-
-
 
 
                 {/* Column 7*/}
@@ -850,9 +761,6 @@ export const Dashboard = () => {
 
 
               </div>
-
-
-
 
 
             </div>

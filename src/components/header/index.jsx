@@ -247,8 +247,8 @@ const Headermain = () => {
                     </button>
                   </>
                 ) : (
-                  <Link to="/login" className={`user-menu-link ${getLinkClass("/dashboard")}`}>
-                    Dashboard
+                  <Link to="/login" className={`user-menu-link ${getLinkClass("/login")}`}>
+                    Login
                   </Link>
                 )}
               </div>
