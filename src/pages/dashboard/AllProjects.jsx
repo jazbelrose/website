@@ -3,7 +3,8 @@ import React from 'react';
 
 const AllProjects = ({ projects, onSelectProject }) => {
     return (
-        <div>
+
+        <div className='sidebar-right'>
             {projects.map(project => (
                 <div key={project.projectId} className="project-container" onClick={() => onSelectProject(project)}>
                     <img src={project.thumbnails[0]} alt={`Thumbnail of ${project.title}`} className="project-thumbnail" />

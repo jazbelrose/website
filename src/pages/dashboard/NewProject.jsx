@@ -1,24 +1,30 @@
- 
- import React, { useState } from 'react';
+import React, { useState } from 'react';
+import Map from "../../components/map";
+import { ReactComponent as Snap } from "../../assets/svg/snap.svg";
 
- const NewProject = () => {
+const NewProject = ({ userName }) => {
+
+  const [projectName, setProjectName] = useState('');
+  const [budget, setBudget] = useState('');
+  const [isNewProjectView, ] = useState(false);
+  const activeProjectLocation = activeProject ? activeProject.location : null;
+  const [activeProject, setActiveProject] = useState(null);
+
+  
+
+
+  const handleSubmit = () => {
+    
+    console.log("Submitting New Project:", projectName, budget);
+    
+  };
+
   return (
- 
- 
- 
-<div className={`sidebar-right ${projectsViewState === 'single-project' || isNewProjectView || projectsViewState === 'welcome' ? 'full-width' : ''}`}>
- 
- 
-
-
- {isNewProjectView && (
-
 
     <div className="active-project-details">
       <div className='new-project-header'>
         <h2>New Project</h2>
       </div>
-
 
       {/*  Greetings  */}
 
@@ -145,8 +151,7 @@
 
 
       </div>
-      )}
-    </div>
+    
   );
 };
 

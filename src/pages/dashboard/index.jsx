@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ReactComponent as Snap } from "../../assets/svg/snap.svg";
 import "./style.css";
 import { useAuth } from "../../app/contexts/AuthContext";
+import WelcomeScreen from './Welcome'; 
 import NewProject from './NewProject';
 import AllProjects from './AllProjects';
 import SingleProject from './SingleProject';
@@ -20,15 +21,13 @@ export const Dashboard = () => {
   const userName = user ? `${user.firstName} ` : 'Guest';
   const [userData, setUserData] = useState(null);
   const [projectsViewState, setProjectsViewState] = useState('welcome');
-
- 
+  const [isNewProjectView, setIsNewProjectView] = useState(false);
   const [projects, setProjects] = useState([]);
   const [selectedProjects, setSelectedProjects] = useState([]);
   const [activeProject, setActiveProject] = useState(null);
-  const [progress, setProgress] = useState(0);
   const [isNewProjectCollapsed, setIsNewProjectCollapsed] = useState(true);
   const [isMessageCenterCollapsed, setIsMessageCenterCollapsed] = useState(true);
-  const [isNewProjectView, setIsNewProjectView] = useState(false);
+
 
 
   const toggleNewProjectView = () => {
@@ -41,7 +40,7 @@ export const Dashboard = () => {
     setProjectsViewState('single-project');
   };
 
-   const showWelcomeScreen = () => {
+  const showWelcomeScreen = () => {
     setProjectsViewState('welcome');
     setIsNewProjectView(false);
   };
@@ -70,9 +69,6 @@ export const Dashboard = () => {
   };
 
   const toggleMessageCenterCollapse = () => setIsMessageCenterCollapsed(!isMessageCenterCollapsed);
-
-
-
 
 
 
@@ -149,6 +145,11 @@ export const Dashboard = () => {
 
   return (
 
+
+
+   /* Left Side Navigation */
+    
+
     <div id="page-top">
       <div id="wrapper">
 
@@ -209,7 +210,7 @@ export const Dashboard = () => {
 
           {/* Start a new project */}
           <li className="nav-item">
-            <a className="nav-link collapsed" onClick={toggleNewProjectCollapse}>
+            <a className="nav-link collapsed" onClick={toggleNewProjectView}>
               <i className="fas fa-fw fa-plus icon-with-padding"></i>
               <span>Start a new project</span>
             </a>
@@ -242,20 +243,13 @@ export const Dashboard = () => {
         {/* Right Sidebar */}
 
 
-        <div className={`sidebar-right ${projectsViewState === 'single-project' || isNewProjectView || projectsViewState === 'welcome' ? 'full-width' : ''}`}>
-
-        {projectsViewState === 'new-project' && <NewProject />}
-      
-        {projectsViewState === 'show-all' && (
-                    <AllProjects projects={selectedProjects} onSelectProject={selectProject} />
-                )}
-      
-      {projectsViewState === 'single-project' && activeProject && (
-          <SingleProject activeProject={activeProject} />
-        )}
-      </div>
-
-        
+        <div className={`sidebar-right ${projectsViewState === 'single-project' || projectsViewState === 'new-project' || projectsViewState === 'welcome' ? 'full-width' : ''}`}>
+        {projectsViewState === 'welcome' && <WelcomeScreen userName={userName} />}
+          {projectsViewState === 'new-project' && <NewProject userName={userName} />}
+          {projectsViewState === 'show-all' && <AllProjects projects={selectedProjects} onSelectProject={selectProject} />}
+          {projectsViewState === 'single-project' && activeProject && <SingleProject activeProject={activeProject} />}
+          {/* ... other views ... */}
+        </div>
       </div>
     </div>
   );

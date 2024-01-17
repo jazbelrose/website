@@ -1,14 +1,10 @@
-  {/* Right Sidebar */}
 
-  <div className={`sidebar-right ${projectsViewState === 'single-project' || isNewProjectView || projectsViewState === 'welcome' ? 'full-width' : ''}`}>
+import React from 'react';
 
-
-
+const WelcomeScreen = ({ userName }) => {
 
 
-  {/*Welcome Screen*/}
-
-  {projectsViewState === 'welcome' && (
+  return (
 
 
     <div className="welcome-screen">
@@ -81,4 +77,6 @@
 
   )}
 
-</div>
+
+
+export default WelcomeScreen;
