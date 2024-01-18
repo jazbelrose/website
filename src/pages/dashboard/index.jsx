@@ -1,10 +1,10 @@
-import React, { useState, useEffect, } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { ReactComponent as Snap } from "../../assets/svg/snap.svg";
 import "./style.css";
 import { useAuth } from "../../app/contexts/AuthContext";
-import WelcomeScreen from './Welcome'; 
+import WelcomeScreen from './Welcome';
 import NewProject from './NewProject';
 import AllProjects from './AllProjects';
 import SingleProject from './SingleProject';
@@ -25,6 +25,9 @@ export const Dashboard = () => {
   const [activeProject, setActiveProject] = useState(null);
   const [isNewProjectCollapsed, setIsNewProjectCollapsed] = useState(true);
   const [isMessageCenterCollapsed, setIsMessageCenterCollapsed] = useState(true);
+  const allProjectsToggleRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(false);
+
 
 
 
@@ -41,21 +44,27 @@ export const Dashboard = () => {
   const showWelcomeScreen = () => {
     setProjectsViewState('welcome');
     setIsNewProjectView(false);
+    setActiveProject(null);
+    setSelectedProjects([]); // Reset the selected projects
   };
 
 
 
   const toggleAllProjectsView = () => {
-    if (projectsViewState !== 'show-all') {
+    if (projectsViewState === 'show-all') {
+      showWelcomeScreen();
+      
+      if (allProjectsToggleRef.current) {
+        allProjectsToggleRef.current.blur();
+      }
+    } else {
       setSelectedProjects([...projects]);
       setProjectsViewState('show-all');
-      setIsNewProjectView(false); // Reset new project view
-      setActiveProject(null); // Reset active project
-    } else {
-      setSelectedProjects([]);
-      setProjectsViewState('collapsed');
+      setIsNewProjectView(false);
+      setActiveProject(null);
     }
   };
+
 
   const toggleNewProjectCollapse = () => {
     setIsNewProjectCollapsed(!isNewProjectCollapsed);
@@ -93,6 +102,8 @@ export const Dashboard = () => {
   // Fetch Project Details
   useEffect(() => {
     const fetchProjects = async () => {
+      setIsLoading(true); 
+
       try {
         if (userData && userData.projects) {
           const projectsData = await Promise.all(userData.projects.map(async (projectId) => {
@@ -108,6 +119,7 @@ export const Dashboard = () => {
       } catch (error) {
         console.error('Error fetching project details:', error);
       }
+      setIsLoading(false);
     };
 
     if (userData && userData.projects) {
@@ -145,8 +157,8 @@ export const Dashboard = () => {
 
 
 
-   /* Left Side Navigation */
-    
+    /* Left Side Navigation */
+
 
     <div id="page-top">
       <div id="wrapper">
@@ -154,13 +166,13 @@ export const Dashboard = () => {
 
         <ul className="navbar-nav" id="accordionSidebar" >
 
-          <li className="nav-item-dashboard active" onClick={showWelcomeScreen}>
+        <li className={`nav-item-dashboard ${projectsViewState === 'welcome' ? 'active' : ''}`} onClick={showWelcomeScreen}>
             <div className="sidebar-heading">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24.41 24.41"
                 className="custom-icon"
-                style={{ padding: '5px', marginBottom: '3px', marginRight: '10px', width: '25', height: '25' }}
+                style={{ padding: '5px', marginBottom: '3px', width: '25', height: '25' }}
               >
                 <g id="dashboard-2">
                   <path id="Path-7" d="M9.41,0H1.78C.80,0,0,.80,0,1.78v4.58c0,.98.80,1.78,1.78,1.78h7.63c.98,0,1.78-.80,1.78-1.78V1.78c0-.98-.80-1.78-1.78-1.78Z" fill="#fff" />
@@ -183,14 +195,15 @@ export const Dashboard = () => {
 
 
           {/* All Projects */}
-          <li className="nav-item">
-            <a className="nav-link collapsed" onClick={toggleAllProjectsView}>
+
+          <li className={`nav-item ${projectsViewState === 'show-all' ? 'active' : ''}`}>
+  <a className="nav-link collapsed" onClick={toggleAllProjectsView} ref={allProjectsToggleRef}>
               <i className="fas fa-fw fa-user icon-with-padding"></i>
               <span>All Projects</span>
             </a>
             <div className={`collapse ${projectsViewState === 'show-all' ? 'show' : ''}`} id="collapseYourProjects">
               <div className="py-2 collapse-inner rounded">
-                <h6 className="collapse-header">Projects:</h6>
+
                 {projects.map((project) => (
                   <div
                     key={project.projectId}
@@ -241,10 +254,10 @@ export const Dashboard = () => {
         {/* Right Sidebar */}
 
 
-        <div className={`sidebar-right ${projectsViewState === 'single-project' || projectsViewState === 'new-project' || projectsViewState === 'welcome' ? 'full-width' : ''}`}>
+        <div className={`sidebar-right ${projectsViewState === 'single-project' || projectsViewState === 'new-project' || projectsViewState === 'welcome' || projectsViewState === 'show-all' ? 'full-width' : ''}`}>
           {projectsViewState === 'welcome' && <WelcomeScreen userName={userName} />}
-          {projectsViewState === 'new-project' && <NewProject userName={userName} />}
-          {projectsViewState === 'show-all' && <AllProjects projects={selectedProjects} onSelectProject={selectProject} />}
+          {projectsViewState === 'new-project' && <NewProject userName={userName} isNewProjectView={isNewProjectView} />}
+          {projectsViewState === 'show-all' && <AllProjects projects={selectedProjects} onSelectProject={selectProject} isLoading={isLoading} />}
           {projectsViewState === 'single-project' && activeProject && <SingleProject activeProject={activeProject} />}
           {/* ... other views ... */}
         </div>

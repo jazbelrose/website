@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import Map from "../../components/map";
 import { ReactComponent as Snap } from "../../assets/svg/snap.svg";
 
-const NewProject = ({ userName }) => {
+const NewProject = ({ userName, isNewProjectView }) => {
 
   const [projectName, ] = useState('');
   const [budget, ] = useState('');
-  const [isNewProjectView, ] = useState(false);
+  
   const activeProjectLocation = activeProject ? activeProject.location : null;
   const [activeProject,] = useState(null);
 
@@ -43,7 +43,7 @@ const NewProject = ({ userName }) => {
           </div>
 
           <div className="snap-container">
-            <Snap />
+          <Snap className="new-project-snap" />
           </div>
         </div>
 
@@ -104,18 +104,13 @@ const NewProject = ({ userName }) => {
         {/* Column-3 - Location */}
         <div className="column-5">
           <div className="dashboard-item location">
-            {isNewProjectView &&
-              <Map
-                location={{ lat: 34.0522, lng: -118.2437 }} // Coordinates for Los Angeles
-                address="Los Angeles, CA"
-              />
-            }
-            {activeProjectLocation &&
-              <Map
-                location={{ lat: activeProject.location.lat, lng: activeProject.location.lng }}
-                address={activeProject.address}
-              />
-            }
+          
+          {isNewProjectView &&
+            <Map
+              location={{ lat: 34.0522, lng: -118.2437 }} // Coordinates for Los Angeles
+              address="Los Angeles, CA"
+            />
+          }
           </div>
         </div>
 

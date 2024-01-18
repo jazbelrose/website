@@ -1,12 +1,12 @@
 /* style.css */
-.container {
+.preloader-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full viewport height, adjust as needed */
 }
 
-.container svg {
+.preloader-container svg {
     max-width: 200px; /* Maximum size of the SVG */
     width: 50%; /* Percentage width for flexibility */
     height: auto; /* Maintain aspect ratio */
@@ -15,14 +15,14 @@
 
 /* Larger screens */
 @media (min-width: 768px) {
-    .container svg {
+    .preloader-container svg {
         max-width: 300px; /* Slightly larger max-width for larger screens */
     }
 }
 
 /* Smaller screens */
 @media (max-width: 480px) {
-    .container svg {
+    .preloader-container svg {
         width: 75%; /* Increase width percentage for smaller screens */
     }
 }

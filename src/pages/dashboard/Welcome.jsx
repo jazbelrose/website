@@ -14,8 +14,8 @@ const WelcomeScreen = ({ userName }) => {
 
           <span className="welcome-greeting-title">Hello <span className="username"> {userName} </span> !</span>
 
-          <span className="welcome-greeting-line">Welcome to your dashboard, located here you will find</span>
-          <span className="welcome-greeting-line">recent project quick access, user preferences, account billing, and direct messages. </span>
+          <span className="welcome-greeting-line">Welcome to your dashboard, located here you will find recent project quick access, user preferences, account billing, and direct messages. </span>
+          
         </div>
 
 

@@ -8,7 +8,7 @@ import Map from "../../components/map";
 
 const SingleProject = ({ activeProject }) => {
 
-
+    const isSmallScreen = window.innerWidth <= 768;
     const activeProjectLocation = activeProject ? activeProject.location : null;
     const projectInitial = activeProject?.title ? activeProject.title.charAt(0) : '';
     const parseStatusToNumber = (statusString) => {
@@ -24,7 +24,7 @@ const SingleProject = ({ activeProject }) => {
     };
 
 
-    
+
 
     return (
 
@@ -33,14 +33,13 @@ const SingleProject = ({ activeProject }) => {
 
         <div className="active-project-details">
             <div className='project-header'>
-                <h2>Summary</h2>
+                <h2>{activeProject?.title || "Summary"}</h2> {/* Default to "Summary" if title is not available */}
             </div>
-
 
             {/*  Title & Status*/}
 
 
-            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 25 1344 674.33">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 75 1344 600">
 
 
 
@@ -61,16 +60,6 @@ const SingleProject = ({ activeProject }) => {
 
                 </g>
 
-                {/* Project Title*/}
-
-
-                <g id="project-title" transform="translate(283.58, 520)"> {/* Adjust Y coordinate for title positioning */}
-                    {activeProject?.title.split(' ').map((word, index) => (
-                        <text key={index} className="project-title" x="0" y={index * 30} textAnchor="middle">
-                            <tspan>{word}</tspan>
-                        </text>
-                    ))}
-                </g>
 
                 {/* Status*/}
 
@@ -185,28 +174,66 @@ const SingleProject = ({ activeProject }) => {
                     <path id="bubble_6" className={`bubbles ${getMilestoneClass(90, 'bubbles')}`} d="M1098.31,379.43v10h-76.29c-2.39,20.7-19.44,36.94-40.51,38.04v121.62h-4v-121.59c-23.03-.88-41.42-19.83-41.42-43.07s19.3-43.11,43.11-43.11c22.12,0,40.35,16.66,42.82,38.11h76.29Z" />
                     <path id="bubble_7" className={`bubbles ${getMilestoneClass(100, 'bubbles')}`} d="M1181.84,383.87c0,1.69-.10,3.36-.29,5-2.47,21.45-20.70,38.11-42.82,38.11-23.81,0-43.11-19.30-43.11-43.11s18.23-42.02,41.11-43.06v-118.28h4v118.28c21.21.96,38.42,17.26,40.82,38.06.19,1.64.29,3.31.29,5Z" />
 
-                    <g id="Project_Initiation" data-name="Project Initiation" >
-                        <text className={`status ${getMilestoneClass(10, 'status')}`} transform="translate(130.18 174.35)"><tspan x="0" y="0">Project</tspan><tspan x="0" y="31.09">Initiation</tspan></text>
+                    <g id="Project_Initiation" data-name="Project Initiation">
+                        <text
+                            className={`status ${getMilestoneClass(10, 'status')}`}
+                            transform={`translate(${isSmallScreen ? '110.18' : '130.18'} 174.35)`}>
+                            <tspan x="0" y="0">Project</tspan>
+                            <tspan x="0" y="31.09">Initiation</tspan>
+                        </text>
                     </g>
-                    <g id="Concept_Approval_" data-name="Concept Approval " >
-                        <text className={`status ${getMilestoneClass(20, 'status')}`} transform="translate(284.73 582.8)"><tspan x="0" y="0">Concept</tspan><tspan x="-2.07" y="31.09">Approval</tspan></text>
+                    <g id="Concept_Approval_" data-name="Concept Approval ">
+                        <text
+                            className={`status ${getMilestoneClass(20, 'status')}`}
+                            transform={`translate(${isSmallScreen ? '264.73' : '284.73'} 582.8)`}>
+                            <tspan x="0" y="0">Concept</tspan>
+                            <tspan x="-2.07" y="31.09">Approval</tspan>
+                        </text>
                     </g>
+
                     <g id="First_Draft_Completion" data-name="First Draft Completion">
-                        <text className={`status ${getMilestoneClass(40, 'status')}`} transform="translate(449.29 174.35)"><tspan x="0" y="0">First Draft</tspan><tspan x="-12.95" y="31">Completion</tspan></text>
+                        <text
+                            className={`status ${getMilestoneClass(40, 'status')}`}
+                            transform={`translate(${isSmallScreen ? '429.29' : '449.29'} 174.35)`}>
+                            <tspan x="0" y="0">First Draft</tspan>
+                            <tspan x="-12.95" y="31">Completion</tspan>
+                        </text>
                     </g>
 
-                    <g id="Review_and_Feedback" data-name="Review and Feedback" >
-                        <text className={`status ${getMilestoneClass(60, 'status')}`} transform="translate(594.08 582.8)"><tspan x="0" y="0">Review and</tspan><tspan x="8.6" y="31.09">Feedback</tspan></text>
-                    </g>
-                    <g id="Revisions_and_Modifications" data-name="Revisions and Modifications" >
-                        <text className={`status ${getMilestoneClass(80, 'status')}`} transform="translate(741.65 174.35)"><tspan x="0" y="0">Revisions and</tspan><tspan x="1.57" y="31.09">Modifications</tspan></text>
+                    <g id="Review_and_Feedback" data-name="Review and Feedback">
+                        <text
+                            className={`status ${getMilestoneClass(60, 'status')}`}
+                            transform={`translate(${isSmallScreen ? '574.08' : '594.08'} 582.8)`}>
+                            <tspan x="0" y="0">Review and</tspan>
+                            <tspan x="8.6" y="31.09">Feedback</tspan>
+                        </text>
                     </g>
 
-                    <g id="Final_Review_and_Approval" data-name="Final Review and Approval" >
-                        <text className={`status ${getMilestoneClass(90, 'status')}`} transform="translate(918.89 582.8)"><tspan x="0" y="0">Final Review</tspan><tspan x="-7.77" y="31.09">and Approval</tspan></text>
+                    <g id="Revisions_and_Modifications" data-name="Revisions and Modifications">
+                        <text
+                            className={`status ${getMilestoneClass(80, 'status')}`}
+                            transform={`translate(${isSmallScreen ? '721.65' : '741.65'} 174.35)`}>
+                            <tspan x="0" y="0">Revisions and</tspan>
+                            <tspan x="1.57" y="31.09">Modifications</tspan>
+                        </text>
                     </g>
-                    <g id="Project_Closure_and_Delivery" data-name="Project Closure and Delivery" >
-                        <text className={`status ${getMilestoneClass(100, 'status')}`} transform="translate(1060.66 174.35)"><tspan x="0" y="0">Project Closure</tspan><tspan x="13.72" y="31.09">and Delivery</tspan></text>
+
+                    <g id="Final_Review_and_Approval" data-name="Final Review and Approval">
+                        <text
+                            className={`status ${getMilestoneClass(90, 'status')}`}
+                            transform={`translate(${isSmallScreen ? '900.89' : '918.89'} 582.8)`}>
+                            <tspan x="0" y="0">Final Review</tspan>
+                            <tspan x="-7.77" y="31.09">and Approval</tspan>
+                        </text>
+                    </g>
+
+                    <g id="Project_Closure_and_Delivery" data-name="Project Closure and Delivery">
+                        <text
+                            className={`status ${getMilestoneClass(100, 'status')}`}
+                            transform={`translate(${isSmallScreen ? '1040.66' : '1060.66'} 174.35)`}>
+                            <tspan x="0" y="0">Project Closure</tspan>
+                            <tspan x="13.72" y="31.09">and Delivery</tspan>
+                        </text>
                     </g>
 
                     <text className={`percentage ${getMilestoneClass(10, 'percentage')}`} transform="translate(151.21 393.94)"><tspan >10%</tspan></text>

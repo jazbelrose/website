@@ -33,7 +33,7 @@ const Map = ({ location, address }) => {
     };
   }, [location, address]);
 
-  return <div id="map" style={{ height: '100%' }} ref={mapRef}></div>;
+  return <div id="map" style={{ height: '100%', width: '100%' }} ref={mapRef}></div>;
 };
 
 export default Map;

@@ -51,7 +51,7 @@ const Preloader = ({ setIsLoading }) => {
 
 
   return (
-    <div ref={containerRef} className='container' onClick={() => setOpen(state => !state)}>
+    <div ref={containerRef} className='preloader-container' onClick={() => setOpen(state => !state)}>
       <svg ref={svgRef} viewBox="0 0 256 256" >
         
         <text x="50%" y="50%" textAnchor="middle" fill="#fff" dy=".3em" fontSize="30">*MYLG!*</text>
