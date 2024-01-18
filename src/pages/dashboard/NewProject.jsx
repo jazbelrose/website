@@ -4,11 +4,11 @@ import { ReactComponent as Snap } from "../../assets/svg/snap.svg";
 
 const NewProject = ({ userName }) => {
 
-  const [projectName, setProjectName] = useState('');
-  const [budget, setBudget] = useState('');
+  const [projectName, ] = useState('');
+  const [budget, ] = useState('');
   const [isNewProjectView, ] = useState(false);
   const activeProjectLocation = activeProject ? activeProject.location : null;
-  const [activeProject, setActiveProject] = useState(null);
+  const [activeProject,] = useState(null);
 
   
 

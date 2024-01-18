@@ -127,7 +127,7 @@ const Headermain = () => {
     menuAnimation.current = gsap
       .timeline({ paused: true }) // Start in a paused state
       .to(".span-open", {
-        duration: 0.75,
+        duration: 0.3,
         attr: { d: "M0 502S175 272 500 272s500 230 500 230V0H0Z" },
         ease: "Power2.easeIn",
         onStart: () => {
@@ -142,13 +142,13 @@ const Headermain = () => {
       })
 
       .to(".span-open", {
-        duration: 1,
+        duration: 0.3,
         attr: { d: "M0,1005S175,995,500,995s500,5,500,5V0H0Z" },
         ease: "Power2.easeOut"
       })
 
       .to(".menu .menu-item > a", {
-        duration: .75,
+        duration: 0.3,
         opacity: 1,
         transform: "translateY(0)",
         stagger: 0.1, // This will delay each link animation by 0.1s creating a cascading effect

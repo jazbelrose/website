@@ -25,16 +25,25 @@ export const Home = () => {
   ];
 
   useEffect(() => {
-    gsap.to(".bar", 1.5, {
-      delay: 0,
-      height: 0,
-      stagger: {
-        amount: 0.5
-      },
-      ease: "power4.inOut"
-    });
-  }, []);
 
+    
+      const masterTimeline = gsap.timeline();
+
+
+  masterTimeline
+    .to("#revealPath", {
+      attr: { d: "M0,502S175,272,500,272s500,230,500,230V0H0Z" }, // Intermediate state
+      duration: 0.75,
+      ease: "Power1.easeIn"
+    })
+    .to("#revealPath", {
+      attr: { d: "M0,2S175,1,500,1s500,1,500,1V0H0Z" }, // Final state
+      duration: 0.5,
+      ease: "power1.easeOut"
+    });
+
+
+}, []);
 
   return (
     <HelmetProvider>
@@ -45,17 +54,10 @@ export const Home = () => {
       </Helmet>
 
 
-      <div class="overlay">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+      <div className="svg-overlay">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+          <path id="revealPath" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
       </div>
 
 

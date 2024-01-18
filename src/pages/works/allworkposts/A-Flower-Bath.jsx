@@ -38,6 +38,7 @@ const AFLowerBath = () => {
 // GSAP animation after images have loaded
 
   useEffect(() => {
+    
     if (!isLoading) {
     const masterTimeline = gsap.timeline();
   

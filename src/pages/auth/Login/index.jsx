@@ -71,6 +71,8 @@ export function Login() {
     }, [isAuthenticated, checkSessionValidity, navigate]);
 
     console.log(username); 
+
+    
     
 
     return (

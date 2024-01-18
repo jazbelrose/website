@@ -40,7 +40,7 @@ const FrankZummoSum41 = () => {
     if (!isLoading) {
     const masterTimeline = gsap.timeline();
   
-    // SVG Path Animation
+    
     masterTimeline
       .to("#revealPath", {
         attr: { d: "M0,502S175,272,500,272s500,230,500,230V0H0Z" }, // Intermediate state
@@ -53,7 +53,7 @@ const FrankZummoSum41 = () => {
         ease: "power1.easeOut"
       });
   
-    // Staggered Animations for SVG Elements
+    
     masterTimeline.fromTo('.st1', { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 0.1, stagger: 0.1 }, "-=0.25");
     masterTimeline.fromTo('.st2', { scale: 0 }, { scale: 1, duration: 1, stagger: 0.1, ease: 'elastic.out(1, 0.3)' }, "-=0.5");
   

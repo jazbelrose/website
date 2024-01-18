@@ -11,7 +11,7 @@ import {
 
 
 
-import Preloader from "../preloader";
+import Preloader from "../components/preloader";
 import { Home } from "../pages/home";
 import { Works } from "../pages/works";
 import { ContactUs } from "../pages/contact";
@@ -28,8 +28,6 @@ import BlogPost from "../pages/blog/blogpost/BlogPost";
 import WorkPost from "../pages/works/workpage/WorkPost";
 import { AnimatePresence, motion } from "framer-motion";
 import { NavigationDirectionContext, NavigationDirectionProvider } from "./contexts/NavigationDIrectionProvider";
-
-import { useAuth } from './contexts/AuthContext';
 import  ProtectedRoute  from './contexts/ProtectedRoute';
 
 

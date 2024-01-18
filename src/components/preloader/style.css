@@ -1,0 +1,28 @@
+/* style.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height, adjust as needed */
+}
+
+.container svg {
+    max-width: 200px; /* Maximum size of the SVG */
+    width: 50%; /* Percentage width for flexibility */
+    height: auto; /* Maintain aspect ratio */
+    min-width: 100px; /* Minimum size of the SVG */
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+    .container svg {
+        max-width: 300px; /* Slightly larger max-width for larger screens */
+    }
+}
+
+/* Smaller screens */
+@media (max-width: 480px) {
+    .container svg {
+        width: 75%; /* Increase width percentage for smaller screens */
+    }
+}

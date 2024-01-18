@@ -12,8 +12,6 @@ import SingleProject from './SingleProject';
 
 
 
-
-
 export const Dashboard = () => {
 
 
@@ -244,7 +242,7 @@ export const Dashboard = () => {
 
 
         <div className={`sidebar-right ${projectsViewState === 'single-project' || projectsViewState === 'new-project' || projectsViewState === 'welcome' ? 'full-width' : ''}`}>
-        {projectsViewState === 'welcome' && <WelcomeScreen userName={userName} />}
+          {projectsViewState === 'welcome' && <WelcomeScreen userName={userName} />}
           {projectsViewState === 'new-project' && <NewProject userName={userName} />}
           {projectsViewState === 'show-all' && <AllProjects projects={selectedProjects} onSelectProject={selectProject} />}
           {projectsViewState === 'single-project' && activeProject && <SingleProject activeProject={activeProject} />}

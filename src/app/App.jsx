@@ -4,10 +4,9 @@ import { BrowserRouter as Router, useLocation, useNavigate  } from "react-router
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { NavigationDirectionProvider } from "./contexts/NavigationDIrectionProvider";
-import { Hub } from 'aws-amplify';
 import  AuthEventHandler  from "./contexts/AuthEventHandler"; 
 import { AuthProvider } from "./contexts/AuthContext"; 
-import { useAuth } from './contexts/AuthContext';
+
 
 
 

@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { EmailVerification } from '../Email-verification';
-import { signIn, signOut, signUp } from '@aws-amplify/auth';
+import { signUp } from '@aws-amplify/auth';
 
 
 
 
 const updateUserProfile = async (profileData) => {
+
     const apiEndpoint = 'https://rvnpu2j92m.execute-api.us-west-1.amazonaws.com/default/userProfiles';
     const requestOptions = {
         method: 'POST',
@@ -61,10 +62,10 @@ export function Register() {
 
             console.log('Sign up response:', signUpResponse);
 
-            // Assuming the sign-up was successful
-            setIsRegistered(true); // Update the state to indicate successful registration
+           
+            setIsRegistered(true); 
 
-            const userId = signUpResponse.userId; // Use the userId from the signUpResponse
+            const userId = signUpResponse.userId; 
 
             if (userId) {
                 try {
