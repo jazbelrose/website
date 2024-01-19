@@ -77,7 +77,7 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             checkSessionValidity();
-        }, 1000 * 60 * 1); 
+        }, 1000 * 60 * 45); 
     
         return () => clearInterval(intervalId); // Clear interval on component unmount
     }, []);

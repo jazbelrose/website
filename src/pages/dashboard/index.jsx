@@ -53,7 +53,7 @@ export const Dashboard = () => {
   const toggleAllProjectsView = () => {
     if (projectsViewState === 'show-all') {
       showWelcomeScreen();
-      
+
       if (allProjectsToggleRef.current) {
         allProjectsToggleRef.current.blur();
       }
@@ -102,7 +102,7 @@ export const Dashboard = () => {
   // Fetch Project Details
   useEffect(() => {
     const fetchProjects = async () => {
-      setIsLoading(true); 
+      setIsLoading(true);
 
       try {
         if (userData && userData.projects) {
@@ -166,7 +166,7 @@ export const Dashboard = () => {
 
         <ul className="navbar-nav" id="accordionSidebar" >
 
-        <li className={`nav-item-dashboard ${projectsViewState === 'welcome' ? 'active' : ''}`} onClick={showWelcomeScreen}>
+          <li className={`nav-item-dashboard ${projectsViewState === 'welcome' ? 'active' : ''}`} onClick={showWelcomeScreen}>
             <div className="sidebar-heading">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +197,7 @@ export const Dashboard = () => {
           {/* All Projects */}
 
           <li className={`nav-item ${projectsViewState === 'show-all' ? 'active' : ''}`}>
-  <a className="nav-link collapsed" onClick={toggleAllProjectsView} ref={allProjectsToggleRef}>
+            <a className="nav-link collapsed" onClick={toggleAllProjectsView} ref={allProjectsToggleRef}>
               <i className="fas fa-fw fa-user icon-with-padding"></i>
               <span>All Projects</span>
             </a>

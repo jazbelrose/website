@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Modal from 'react-modal';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, useLocation, useNavigate  } from "react-router-dom";
 import "./App.css";
@@ -8,6 +9,7 @@ import  AuthEventHandler  from "./contexts/AuthEventHandler";
 import { AuthProvider } from "./contexts/AuthContext"; 
 
 
+Modal.setAppElement('#root');
 
 
 
