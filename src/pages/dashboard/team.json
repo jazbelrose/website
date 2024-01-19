@@ -6,7 +6,7 @@
             "name": "Leah",
             "role": "Project Manager",
             "thumbnail": [
-                "https://mylgcontent.s3.us-west-1.amazonaws.com/users/thumbnails/leah.png"
+                "https://d2qb21tb4meex0.cloudfront.net/users/thumbnails/leah.png"
             ]
 
         },
@@ -15,7 +15,7 @@
             "name": "Jaz",
             "role": "3D Designer",
             "thumbnail": [
-                "https://mylgcontent.s3.us-west-1.amazonaws.com/users/thumbnails/jaz.png"
+                "https://d2qb21tb4meex0.cloudfront.net/users/thumbnails/jaz.png"
             ]
         }
     ]
