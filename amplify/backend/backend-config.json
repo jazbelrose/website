@@ -29,7 +29,6 @@
   },
   "hosting": {
     "amplifyhosting": {
-      "lastPushTimeStamp": "2024-01-20T20:59:56.845Z",
       "service": "amplifyhosting",
       "type": "cicd"
     }
@@ -50,6 +49,14 @@
           "resourceName": "amplifyhosting"
         }
       ]
+    }
+  },
+  "storage": {
+    "mylg12ac1d11": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3",
+      "serviceType": "imported"
     }
   }
 }
