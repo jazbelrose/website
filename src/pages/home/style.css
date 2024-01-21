@@ -149,13 +149,13 @@
         display: none !important;
     }
     .single-card.tcs {
-      background-image: url('https://mylgcontent.s3.us-west-1.amazonaws.com/images/chain+copy-01.png');
+      background-image: url('https://d2qb21tb4meex0.cloudfront.net/images/chain+copy-01.png');
       background-size: cover;
       background-position: center;
     }
     
     .single-card.nocco {
-      background-image: url('https://mylgcontent.s3.us-west-1.amazonaws.com/images/Nocco+vertical-01.png');
+      background-image: url('https://d2qb21tb4meex0.cloudfront.net/images/Nocco+vertical-01.png');
       background-size: cover;
       background-position: center;
     }

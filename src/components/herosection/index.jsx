@@ -5,7 +5,7 @@ import { Typewritercomponent } from "../typewriter";
 import { ScrambleButton } from "../scramblebutton";
 
 import { ReactComponent as Branding0 } from "../../assets/svg/Branding3.svg";
-import backgroundVideo from '../../assets/videos/video.mp4';
+
 import "./style.css";
 
 export const HeroSection = () => {
@@ -17,7 +17,8 @@ export const HeroSection = () => {
       gsap.fromTo(element, fromProps, toProps);
     };
 
-    // Define properties for each animated element
+    
+    
     const animationProperties = [
       {
         selector: ".heading",
@@ -56,6 +57,8 @@ export const HeroSection = () => {
 
   }, []);
 
+  const backgroundVideoUrl = 'https://d2qb21tb4meex0.cloudfront.net/videos/video.mp4';
+
   return (
     
    
@@ -65,18 +68,19 @@ export const HeroSection = () => {
 <div className="herosection-container">
 
 <div className="video-wrapper">
-<video 
-    className="background-video" 
-    width="100%" 
-    height="100%" 
-    autoPlay 
-    muted 
-    loop 
+
+<div className="background-video-wrapper">
+<ReactPlayer
+          url={backgroundVideoUrl}
+    playing
+    muted
+    loop
     playsInline
->
-    <source src={backgroundVideo} type="video/mp4" />
-    Your browser does not support the video tag.
-</video>
+    width="100%"
+    height="100%"
+      />
+
+        </div>
 
         </div>
 
