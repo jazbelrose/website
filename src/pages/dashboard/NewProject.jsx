@@ -305,6 +305,8 @@ const NewProject = ({ userName, isNewProjectView }) => {
               }
             }}
           >
+
+          
             <form onSubmit={handleFileUpload} className="modal-form">
               <div className="file-upload-btn" onClick={handleFileButtonClick}>
                 Choose Files
