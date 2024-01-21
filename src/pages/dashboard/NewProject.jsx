@@ -42,6 +42,8 @@ const NewProject = ({ userName, isNewProjectView }) => {
         date: formattedDate,
         finishLine: finishLine,
         description: description,
+        location: location,
+        address: address
 
       }
     };
@@ -163,19 +165,7 @@ const NewProject = ({ userName, isNewProjectView }) => {
     }
   };
   
-
-  const updateLocationFromAddress = async (newAddress) => {
-    const geocodedLocation = await searchAddress(newAddress);
-    if (geocodedLocation) {
-      setLocation(geocodedLocation);
-      setAddress(newAddress);
-      console.log("Updated Location:", geocodedLocation);
-      console.log("Updated Address:", newAddress);
-    } else {
-      console.log("No location found for the address.");
-    }
-  };
-
+  
   const handleSearch = async () => {
     const geocodedLocation = await searchAddress(searchQuery);
     if (geocodedLocation) {
@@ -188,14 +178,11 @@ const NewProject = ({ userName, isNewProjectView }) => {
     }
   };
   
-  
-
 
   const handleAddressSubmit = () => {
     setDisplayedAddress(typedAddress);
     // Update location based on typedAddress if necessary
   };
-
 
 
 
@@ -463,7 +450,7 @@ const NewProject = ({ userName, isNewProjectView }) => {
 
 
         {/* Column-3 - Location */}
-        <div className="column-5">
+        <div className="column-new-project-address">
           <div className="dashboard-item location">
 
             {isNewProjectView && !showModal && !showBudgetModal && !showBudgetModal && !showFinishLineModal && !showFileUploadModal && !showDescriptionModal && (
@@ -473,21 +460,21 @@ const NewProject = ({ userName, isNewProjectView }) => {
 
 
           </div>
-
+<div className="address-input-container">
           <input
-            type="text"
+            type="text" className="address-input"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Enter address"
           />
-         <button onClick={handleSearch}>Search</button>
-
+         <button onClick={handleSearch} className="address-button">Search</button>
+</div>
 
         </div>
 
 
         {/* Column 4 */}
-        <div className="column-4">
+        <div className="column-new-project-description">
           <div className="dashboard-item new-project-description" onClick={openDescriptionModal}>
             <span>{description || 'Description'}</span>
             {!description && <span>+</span>}

@@ -109,7 +109,7 @@ const AcademyOfPop = () => {
                         <div className="animation-container asvg-container">
 
                             <video width="100%" height="100%" loop autoPlay muted playsInline>
-                                <source src="c/02-Academy+of+Pop/00.mp4" type="video/mp4" />
+                                <source src="https://d2qb21tb4meex0.cloudfront.net/02-Academy+of+Pop/00.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 

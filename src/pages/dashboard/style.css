@@ -229,6 +229,38 @@ svg .project-title {
 }
 
 
+.address-input-container {
+
+  padding: 5px;
+}
+
+
+.address-input {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.address-button{
+  border: solid 2px white;
+  color: white;
+  background-color: #0d0d0d;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: auto;
+  font-size: 16px;
+  width: 100%;
+
+}
+
+.address-button:hover{
+
+  /* color: #FA3356; */
+  background-color: #1b1b1b;
+  
+}
+
+
 
 
 .timeline-container {
@@ -473,6 +505,22 @@ svg .project-title {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+}
+
+.column-new-project-address{
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: .7;
+}
+.column-new-project-description{
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: .5;
 
 }
 
@@ -830,7 +878,7 @@ svg .project-title {
 }
 
 .new-project-description{
-  max-height: 400px; /* Adjust the height as needed */
+  max-height: 500px; /* Adjust the height as needed */
   overflow-y: auto; 
 
 }
