@@ -2,38 +2,32 @@ import React, { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-const Map = ({ location, address }) => {
+const Map = React.memo(({ location, address }) => {
   const mapRef = useRef(null);
-  let mapInstance = null; // To keep track of the map instance
+  const mapInstance = useRef(null);
 
   useEffect(() => {
-
-    // Only create a new map if we don't have an instance yet
-    if (mapRef.current && location && !mapInstance) {
-      mapInstance = L.map(mapRef.current).setView([location.lat, location.lng], 20);
-
+    if (mapRef.current && !mapInstance.current) {
+      // Initialize the map only once
+      mapInstance.current = L.map(mapRef.current).setView([location.lat, location.lng], 20);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '' // Customized attribution
-      }).addTo(mapInstance);
+        attribution: ''
+      }).addTo(mapInstance.current);
+    }
+  }, []); // Empty dependency array to run only once
 
-      // Create a popup and add it to the map
+  useEffect(() => {
+    if (mapInstance.current) {
+      mapInstance.current.setView([location.lat, location.lng], 13);
       L.popup()
         .setLatLng([location.lat, location.lng])
         .setContent(address)
-        .openOn(mapInstance);
+        .openOn(mapInstance.current);
     }
-
-    // Cleanup function to remove map instance
-    return () => {
-      
-      if (mapInstance) {
-        mapInstance.remove();
-        mapInstance = null;
-      }
-    };
   }, [location, address]);
+  
 
   return <div id="map" style={{ height: '100%', width: '100%' }} ref={mapRef}></div>;
-};
+});
 
-export default Map;
+export default React.memo(Map);

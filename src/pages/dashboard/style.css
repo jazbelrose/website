@@ -25,17 +25,17 @@
   overflow-y: auto;
 }
 
-.all-projects-container{
-  
+.all-projects-container {
+
   display: flex;
   flex-wrap: wrap;
   grid-gap: 10px;
   margin-top: 75px;
   overflow-y: auto;
   flex-grow: 1;
-  overflow-y: auto; 
-  height: 100vh; 
-  
+  overflow-y: auto;
+  height: 100vh;
+
 
 }
 
@@ -149,11 +149,11 @@ svg .project-title {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  
+
 }
 
-.modal-label{
-font-size: 20px;
+.modal-label {
+  font-size: 20px;
   padding-bottom: 25px;
 }
 
@@ -163,26 +163,39 @@ font-size: 20px;
   padding: 10px;
 }
 
+.modal-input-description {
+  color: white;           
+  background-color: rgb(17, 17, 17); 
+  font-size: 16px;      
+  padding: 10px;          
+  border-radius: 5px;     
+  border: 1px solid #ccc; 
+  width:80%;
+  height: 60%;
+}
+
+
 .modal-button {
-border: solid 2px white;
+  border: solid 2px white;
   color: white;
   background-color: black;
   border-radius: 20px;
   padding: 10px 20px;
-  margin-top: auto; 
+  margin-top: auto;
   font-size: 16px;
 }
 
 .modal-submit-button {
   border: solid 2px white;
-    color: #FA3356;
-    background-color: black;
-    border-radius: 20px;
-    padding: 10px 40px;
-    margin-top: auto; 
-    font-size: 16px;
-  }
-  
+  color: #FA3356;
+  background-color: black;
+  border-radius: 20px;
+  padding: 10px 40px;
+  margin-top: auto;
+  font-size: 16px;
+}
+
+
 
 .file-input {
   opacity: 0;
@@ -201,13 +214,13 @@ border: solid 2px white;
 }
 
 .selected-files {
-  height: 160px; 
-  overflow-y: auto; 
+  height: 160px;
+  overflow-y: auto;
   margin-top: 35px;
-  
-  padding: 10px; 
-  border: 1px solid #ccc; 
-  border-radius: 5px; 
+
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   color: #ccc;
   font-size: 14px;
   text-align: center;
@@ -230,7 +243,8 @@ border: solid 2px white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Vertically center */
+  align-items: center;
+  /* Vertically center */
   text-align: center;
   width: 100%;
   padding: min(75px, 4vw) 25px 0;
@@ -277,7 +291,7 @@ border: solid 2px white;
   max-width: 300px;
   line-height: 0.8;
   font-size: min(5rem, 6vw);
-  
+
 
 }
 
@@ -346,7 +360,7 @@ border: solid 2px white;
 .project-header {
   padding: 10px;
   margin-bottom: 0;
-  
+
 
 }
 
@@ -646,14 +660,14 @@ border: solid 2px white;
 
   margin: 5px;
   height: 400px;
-  
+
   padding: 0;
   overflow: hidden;
   border-radius: 20px;
 }
 
 #map {
-  
+
   width: 100%;
   height: 100%;
   margin: 0;
@@ -773,22 +787,22 @@ border: solid 2px white;
 
 
 .dashboard-item.project-name {
-  
+
   align-items: flex-start;
 
 }
 
-.dashboard-item.greetings:hover{
+.dashboard-item.greetings:hover {
   background-color: #0d0d0d;
-  cursor: auto; 
+  cursor: auto;
 
 }
 
 .dashboard-item:hover {
-  
+
   background-color: #1b1b1b;
-  cursor: pointer; 
-  
+  cursor: pointer;
+
 }
 
 
@@ -801,7 +815,7 @@ border: solid 2px white;
 
 .dashboard-item.new-project-budget span,
 .dashboard-item.new-project-finish-line span,
-.dashboard-item.new-project-floor-plan span,
+.dashboard-item.new-project-description span,
 .dashboard-item.new-project-uploads span {
   margin: 10px 0;
   font-size: min(2rem, 3vw);
@@ -809,10 +823,16 @@ border: solid 2px white;
 
 .new-project-budget,
 .new-project-finish-line,
-.new-project-floor-plan,
+.new-project-description,
 .new-project-uploads {
   align-items: flex-start;
   flex: 1;
+}
+
+.new-project-description{
+  max-height: 400px; /* Adjust the height as needed */
+  overflow-y: auto; 
+
 }
 
 
@@ -830,6 +850,46 @@ border: solid 2px white;
 .new-project-col2 {
   flex: .7;
 }
+
+
+.column-final-btn{
+
+  
+
+  
+
+
+}
+
+.final-btn-container {
+  background: #FA3356;
+  
+  border-radius: 20px;
+  display: flex;
+  justify-content: center; /* Align items to the right */
+  align-items: center;
+  margin: 5px;
+}
+
+.final-submit-button {
+  border: none;
+  border-radius: 20px;
+  color: white;
+  background-color: transparent; 
+  padding: 20px 50px;
+  font-size: min(2rem, 3vw);
+  
+  
+}
+
+.final-btn-container:hover {
+  background: #ce2a48;
+  cursor: pointer;
+
+}
+
+
+
 
 
 @media (max-width: 768px) {
@@ -876,7 +936,7 @@ border: solid 2px white;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    
+
 
   }
 
@@ -906,7 +966,7 @@ border: solid 2px white;
     margin: 2.5px;
   }
 
- 
+
 
 
   .page-top {
@@ -975,7 +1035,7 @@ border: solid 2px white;
   }
 
 
-    /* Welcome */
+  /* Welcome */
 
   .welcome-screen-header {
     color: white;
@@ -1010,16 +1070,16 @@ border: solid 2px white;
 
   .dashboard-item.greetings .greeting-line {
     font-size: 15px;
-   
+
   }
-  
+
   .dashboard-item.greetings .greeting-line:nth-child(1),
   .dashboard-item.greetings .greeting-line:nth-child(1) .username {
     font-size: 20px;
-   
+
   }
-  
-   
+
+
 
 
   .new-project-header {
@@ -1031,7 +1091,7 @@ border: solid 2px white;
 
   .new-project-header h2 {
 
-    
+
 
     font-size: 30px;
   }
@@ -1052,18 +1112,22 @@ border: solid 2px white;
   .dashboard-item.new-project-budget span,
   .dashboard-item.new-project-finish-line span,
   .dashboard-item.new-project-uploads span,
-  .dashboard-item.new-project-floor-plan span,
-  .dashboard-item.notes span{
+  .dashboard-item.new-project-description span,
+  .dashboard-item.notes span {
     font-size: 20px;
   }
 
-  .dashboard-item.project-name span {
-    
-    padding: 0px 0px;
-  
-  
+  .dashboard-item.new-project-description{
+    min-height: 256px;
   }
-  
+
+  .dashboard-item.project-name span {
+
+    padding: 0px 0px;
+
+
+  }
+
 
 
   /* All Projects */
@@ -1072,16 +1136,16 @@ border: solid 2px white;
   .project-thumbnail {
     width: 100%;
     height: auto;
-    
+
   }
 
   .project-title {
     font-size: 16px;
-    
+
     margin-top: 5px;
   }
 
-  .all-projects-container{
+  .all-projects-container {
     margin-top: 10px;
   }
 
@@ -1089,12 +1153,12 @@ border: solid 2px white;
 
     padding: 5px;
     margin-bottom: 10px;
-    
+
   }
 
 
 
-/* Single Project */
+  /* Single Project */
 
 
   .active-project-details {
@@ -1123,9 +1187,7 @@ border: solid 2px white;
   .dashboard-item.view-gallery span,
   .dashboard-item.view-invoices span,
   .dashboard-item.floorplan span,
-  .dashboard-item.links span
-
- {
+  .dashboard-item.links span {
     font-size: 20px;
   }
 
@@ -1139,23 +1201,42 @@ border: solid 2px white;
 
 
   .team-member-thumbnail {
-    width: 50px; /* Smaller size for thumbnails */
-    height: 50px; /* Maintain aspect ratio */
+    width: 50px;
+    /* Smaller size for thumbnails */
+    height: 50px;
+    /* Maintain aspect ratio */
   }
 
   .team-member-info {
-    font-size: 20px; /* Smaller font size */
+    font-size: 20px;
+    /* Smaller font size */
   }
-  .team-member-role{
+
+  .team-member-role {
     font-size: 12px;
   }
+
   .dashboard-item.finish-line span {
     font-size: 20px;
   }
+
   .dashboard-item.dashboard-item.finish-line span:last-child {
     font-size: 20px;
+
+  }
+
+  .final-submit-button {
+
+    font-size: 20px;
+    margin: 5px;
     
   }
+ .final-btn-container{
+  margin-bottom: 5px;
+ }
+
+
+
   #Project_Initiation text,
   #Concept_Approval_ text,
   #First_Draft_Completion text,
@@ -1163,11 +1244,11 @@ border: solid 2px white;
   #Revisions_and_Modifications text,
   #Final_Review_and_Approval text,
   #Project_Closure_and_Delivery text {
-      
-      font-size: 40px; 
+
+    font-size: 40px;
   }
 
 
- 
+
 
 }

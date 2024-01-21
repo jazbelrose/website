@@ -9,6 +9,7 @@ const NewProject = ({ userName, isNewProjectView }) => {
   const [projectName, setProjectName] = useState('');
   const [budget, setBudget] = useState('');
   const [finishLine, setFinishLine] = useState('');
+  const [description, setDescription] = useState('');
   const [showFinishLineModal, setShowFinishLineModal] = useState(false);
   const [showFileUploadModal, setShowFileUploadModal] = useState(false);
   const fileInputRef = useRef(null);
@@ -16,8 +17,35 @@ const NewProject = ({ userName, isNewProjectView }) => {
   const [selectedFileNames, setSelectedFileNames] = useState("");
   const openFileUploadModal = () => setShowFileUploadModal(true);
   const closeFileUploadModal = () => setShowFileUploadModal(false);
+  const [location, setLocation] = useState({ lat: 34.0522, lng: -118.2437 });
+  const [address, setAddress] = useState('Los Angeles, CA');
+  const [typedAddress, setTypedAddress] = useState('');
+  const [displayedAddress, setDisplayedAddress] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
+  const mapRef = useRef(null);
 
 
+
+
+  const collectFormData = () => {
+
+    const projectId = Math.floor(Math.random() * 9000) + 1000;
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')}`;
+
+
+    return {
+      TableName: "Projects",
+      Item: {
+        projectId: projectId.toString(),
+        title: projectName,
+        date: formattedDate,
+        finishLine: finishLine,
+        description: description,
+
+      }
+    };
+  };
 
 
 
@@ -65,7 +93,7 @@ const NewProject = ({ userName, isNewProjectView }) => {
     setSelectedFiles(event.target.files);
     setSelectedFileNames(Array.from(event.target.files).map(file => file.name).join(", "));
   };
-  
+
 
 
   const handleFileUpload = async (e) => {
@@ -86,6 +114,14 @@ const NewProject = ({ userName, isNewProjectView }) => {
   const handleFileButtonClick = () => {
     fileInputRef.current.click();
   };
+
+  const [showDescriptionModal, setShowDescriptionModal] = useState(false);
+
+  const openDescriptionModal = () => setShowDescriptionModal(true);
+  const closeDescriptionModal = () => setShowDescriptionModal(false);
+
+
+  const handleDescriptionChange = (e) => setDescription(e.target.value);
 
 
 
@@ -109,6 +145,97 @@ const NewProject = ({ userName, isNewProjectView }) => {
     closeFinishLineModal();
 
   };
+
+
+
+  const searchAddress = async (address) => {
+    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`;
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      if (data.length > 0) {
+        return { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
+      }
+      return null;
+    } catch (error) {
+      console.error("Error during address search:", error);
+      return null;
+    }
+  };
+  
+
+  const updateLocationFromAddress = async (newAddress) => {
+    const geocodedLocation = await searchAddress(newAddress);
+    if (geocodedLocation) {
+      setLocation(geocodedLocation);
+      setAddress(newAddress);
+      console.log("Updated Location:", geocodedLocation);
+      console.log("Updated Address:", newAddress);
+    } else {
+      console.log("No location found for the address.");
+    }
+  };
+
+  const handleSearch = async () => {
+    const geocodedLocation = await searchAddress(searchQuery);
+    if (geocodedLocation) {
+      setLocation(geocodedLocation);
+      setAddress(searchQuery);  // Set the address to the searched query
+      console.log("Updated Location:", geocodedLocation);
+      console.log("Updated Address:", searchQuery);
+    } else {
+      console.log("No location found for the address.");
+    }
+  };
+  
+  
+
+
+  const handleAddressSubmit = () => {
+    setDisplayedAddress(typedAddress);
+    // Update location based on typedAddress if necessary
+  };
+
+
+
+
+
+  const handleSubmitDescription = (e) => {
+    e.preventDefault();
+    console.log("Description Set:", description);
+    closeDescriptionModal();
+  };
+
+
+
+
+
+  const handleFinalSubmit = async () => {
+    const formData = collectFormData();
+
+    try {
+      const response = await fetch('https://any6qedkud.execute-api.us-west-1.amazonaws.com/default/PostProjects', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      console.log('Submission successful', data);
+      // Further actions upon successful submission
+    } catch (error) {
+      console.error('There was an error with the submission', error);
+    }
+  };
+
+
+
 
 
 
@@ -292,7 +419,7 @@ const NewProject = ({ userName, isNewProjectView }) => {
                 backgroundColor: 'rgba(0, 0, 0, 0.75)'
               },
               content: {
-                
+
                 display: 'flex',
                 overflowX: 'hidden',
                 backgroundColor: 'rgba(0, 0, 0, 0.75)',
@@ -306,7 +433,7 @@ const NewProject = ({ userName, isNewProjectView }) => {
             }}
           >
 
-          
+
             <form onSubmit={handleFileUpload} className="modal-form">
               <div className="file-upload-btn" onClick={handleFileButtonClick}>
                 Choose Files
@@ -326,13 +453,6 @@ const NewProject = ({ userName, isNewProjectView }) => {
             </form>
           </Modal>
 
-
-
-
-
-
-
-
         </div>
 
 
@@ -346,25 +466,63 @@ const NewProject = ({ userName, isNewProjectView }) => {
         <div className="column-5">
           <div className="dashboard-item location">
 
-            {isNewProjectView && !showModal && !showBudgetModal && !showBudgetModal && !showFinishLineModal && !showFileUploadModal && (
-              <Map
-                location={{ lat: 34.0522, lng: -118.2437 }}
-                address="Los Angeles, CA"
-              />
+            {isNewProjectView && !showModal && !showBudgetModal && !showBudgetModal && !showFinishLineModal && !showFileUploadModal && !showDescriptionModal && (
+              <Map location={location} address={address} />
+
             )}
 
 
           </div>
+
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Enter address"
+          />
+         <button onClick={handleSearch}>Search</button>
+
+
         </div>
 
 
         {/* Column 4 */}
         <div className="column-4">
-          <div className="dashboard-item new-project-floor-plan">
-            <span>Floor Plan</span>
-            <span>+</span>
-
+          <div className="dashboard-item new-project-description" onClick={openDescriptionModal}>
+            <span>{description || 'Description'}</span>
+            {!description && <span>+</span>}
           </div>
+
+          <Modal
+            isOpen={showDescriptionModal}
+            onRequestClose={closeDescriptionModal}
+            contentLabel="Project Description Modal"
+            style={{
+              overlay: {
+                backgroundColor: 'rgba(0, 0, 0, 0.75)'
+              },
+              content: {
+                display: 'flex',
+                backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                color: 'white',
+                width: '300px',
+                height: '400px',
+                margin: 'auto',
+                paddingTop: '50px',
+                borderRadius: '20px'
+              }
+            }}
+          >
+            <form onSubmit={handleSubmitDescription} className="modal-form">
+              <label className="modal-label">Project Description</label>
+              <textarea value={description} onChange={handleDescriptionChange} className="modal-input-description" />
+              <button type="submit" className="modal-button">Done</button>
+            </form>
+          </Modal>
+
+
+
+
         </div>
 
 
@@ -376,15 +534,12 @@ const NewProject = ({ userName, isNewProjectView }) => {
         {/* Column 7*/}
 
       </div>
-      <div className="column-7">
-        <div className="dashboard-item notes
-        ">
-          <span>Notes</span>
-          <span>+</span>
+      <div className="column-final-btn">
+
+        <div className="final-btn-container">
+          <button type="submit" className="final-submit-button" onClick={handleFinalSubmit}>Done</button>
 
         </div>
-
-
       </div>
 
 
