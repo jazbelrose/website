@@ -453,10 +453,10 @@ const NewProject = ({ userName, isNewProjectView }) => {
         <div className="column-new-project-address">
           <div className="dashboard-item location">
 
-            {isNewProjectView && !showModal && !showBudgetModal && !showBudgetModal && !showFinishLineModal && !showFileUploadModal && !showDescriptionModal && (
+            
               <Map location={location} address={address} />
 
-            )}
+            
 
 
           </div>

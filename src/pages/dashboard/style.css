@@ -706,7 +706,7 @@ svg .project-title {
 
 .dashboard-layout .dashboard-item.location {
 
-  margin: 5px;
+  
   height: 400px;
 
   padding: 0;
@@ -1175,6 +1175,27 @@ svg .project-title {
 
 
   }
+
+  .address-input-container {
+
+    padding: 2.5px;
+  }
+  
+  
+  .address-input {
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .address-button{
+  
+    margin-bottom: 2px;
+    
+    
+  
+  }
+  
 
 
 

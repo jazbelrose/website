@@ -192,6 +192,13 @@ export const Dashboard = () => {
           <hr className="sidebar-divider" />
 
           <div className="sidebar-heading">Project Navigation</div>
+   {/* Start a new project */}
+   <li className="nav-item">
+            <a className="nav-link collapsed" onClick={toggleNewProjectView}>
+              <i className="fas fa-fw fa-plus icon-with-padding"></i>
+              <span>Start a new project</span>
+            </a>
+          </li>
 
 
           {/* All Projects */}
@@ -219,14 +226,7 @@ export const Dashboard = () => {
             </div>
           </li>
 
-          {/* Start a new project */}
-          <li className="nav-item">
-            <a className="nav-link collapsed" onClick={toggleNewProjectView}>
-              <i className="fas fa-fw fa-plus icon-with-padding"></i>
-              <span>Start a new project</span>
-            </a>
-          </li>
-
+       
           <hr className="sidebar-divider" />
 
 
