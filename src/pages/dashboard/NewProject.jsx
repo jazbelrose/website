@@ -509,7 +509,7 @@ const NewProject = ({ userName, userId, isNewProjectView }) => {
         {/* Column 4 */}
         <div className="column-new-project-description">
           <div className="dashboard-item new-project-description" onClick={openDescriptionModal}>
-            <span>{description || 'Description'}</span>
+            <span className='after-input-description'>{description || 'Description'}</span>
             {!description && <span>+</span>}
           </div>
 

@@ -516,12 +516,19 @@ svg .project-title {
   flex: .7;
 }
 .column-new-project-description{
- 
+ max-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex: .5;
 
+}
+
+
+
+.after-input-description{
+
+  margin: 5px;
 }
 
 
@@ -1168,6 +1175,8 @@ svg .project-title {
   .dashboard-item.new-project-description{
     min-height: 256px;
   }
+
+  
 
   .dashboard-item.project-name span {
 
