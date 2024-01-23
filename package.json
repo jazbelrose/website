@@ -60,6 +60,7 @@
     "scrolltrigger": "1.0.1",
     "splittext": "2.0.0",
     "typewriter-effect": "2.19.0",
+    "uuid": "^9.0.1",
     "webfontloader": "1.6.28",
     "webpack": "^5.89.0",
     "webpack-dev-server": "^4.15.1"

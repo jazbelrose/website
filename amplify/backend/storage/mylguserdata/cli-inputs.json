@@ -1,0 +1,12 @@
+{
+  "resourceName": "mylguserdata",
+  "policyUUID": "b5c596c0",
+  "bucketName": "mylguserdata",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE"
+  ],
+  "triggerFunction": "S3Triggerb0684019",
+  "groupAccess": {}
+}

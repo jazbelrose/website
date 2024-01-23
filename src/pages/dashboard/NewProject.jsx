@@ -1,10 +1,10 @@
 import React, { useState, useRef } from 'react';
 import Modal from 'react-modal';
-
 import Map from "../../components/map";
 import { ReactComponent as Snap } from "../../assets/svg/snap.svg";
+import { uploadData } from 'aws-amplify/storage';
 
-const NewProject = ({ userName, isNewProjectView }) => {
+const NewProject = ({ userName, userId, isNewProjectView }) => {
 
   const [projectName, setProjectName] = useState('');
   const [budget, setBudget] = useState('');
@@ -29,7 +29,7 @@ const NewProject = ({ userName, isNewProjectView }) => {
 
   const collectFormData = () => {
 
-    const projectId = Math.floor(Math.random() * 9000) + 1000;
+
     const currentDate = new Date();
     const formattedDate = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')}`;
 
@@ -37,13 +37,14 @@ const NewProject = ({ userName, isNewProjectView }) => {
     return {
       TableName: "Projects",
       Item: {
-        projectId: projectId.toString(),
+
         title: projectName,
         date: formattedDate,
         finishLine: finishLine,
         description: description,
         location: location,
-        address: address
+        address: address,
+        uploads: []
 
       }
     };
@@ -98,20 +99,40 @@ const NewProject = ({ userName, isNewProjectView }) => {
 
 
 
-  const handleFileUpload = async (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    for (let file of selectedFiles) {
-      formData.append('files', file);
+  const handleFileUpload = async (projectId) => {
+    const uploadedFileUrls = []; // Array to store the URLs of uploaded files
+
+    try {
+      for (let file of selectedFiles) {
+        const filename = `projects/${projectId}/uploads/${file.name}`;
+
+        const result = await uploadData({
+          key: filename,
+          data: file,
+          options: {
+            accessLevel: 'protected',
+          }
+        });
+
+        console.log('File uploaded:', result);
+        // Construct the file URL and add it to the array
+        const fileUrl = `https://mylguserdata194416-dev.s3.us-west-1.amazonaws.com/protected/us-west-1%3A33762779-d3a2-c552-0eca-a287c4438602/${filename}`;
+        uploadedFileUrls.push({ fileName: file.name, url: fileUrl });
+      }
+    } catch (error) {
+      console.error('Error uploading files:', error);
+      // Handle any errors that occur during file upload
     }
 
-    const response = await fetch('/api/upload', {
-      method: 'POST',
-      body: formData,
-    });
+    // Clear the selected files and names, close the modal
+    setSelectedFiles([]);
+    setSelectedFileNames("");
     closeFileUploadModal();
 
+    return uploadedFileUrls; // Return the array of uploaded file URLs
   };
+
+
 
   const handleFileButtonClick = () => {
     fileInputRef.current.click();
@@ -164,8 +185,8 @@ const NewProject = ({ userName, isNewProjectView }) => {
       return null;
     }
   };
-  
-  
+
+
   const handleSearch = async () => {
     const geocodedLocation = await searchAddress(searchQuery);
     if (geocodedLocation) {
@@ -177,7 +198,7 @@ const NewProject = ({ userName, isNewProjectView }) => {
       console.log("No location found for the address.");
     }
   };
-  
+
 
   const handleAddressSubmit = () => {
     setDisplayedAddress(typedAddress);
@@ -194,33 +215,47 @@ const NewProject = ({ userName, isNewProjectView }) => {
   };
 
 
-
-
-
   const handleFinalSubmit = async () => {
-    const formData = collectFormData();
-
+    const initialProjectData = collectFormData();
+  
     try {
-      const response = await fetch('https://any6qedkud.execute-api.us-west-1.amazonaws.com/default/PostProjects', {
+      
+      const createResponse = await fetch('https://any6qedkud.execute-api.us-west-1.amazonaws.com/default/PostProjects', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(initialProjectData),
       });
-
-      if (!response.ok) {
+  
+      if (!createResponse.ok) {
         throw new Error('Network response was not ok');
       }
-
-      const data = await response.json();
-      console.log('Submission successful', data);
-      // Further actions upon successful submission
+  
+      const data = await createResponse.json();
+      const realProjectId = data.projectId;
+  
+     
+      const uploadedFileUrls = await handleFileUpload(realProjectId);
+  
+      
+      const updateData = {
+        uploads: uploadedFileUrls
+      };
+  
+      
+      const updateResponse = await fetch(`https://any6qedkud.execute-api.us-west-1.amazonaws.com/default/PostProjects?TableName=Projects&projectId=${realProjectId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updateData), // Update this line
+      });
+  
+      if (!updateResponse.ok) {
+        throw new Error('Error updating project with file URLs');
+      }
     } catch (error) {
-      console.error('There was an error with the submission', error);
+      console.error('There was an error with the submission:', error);
     }
   };
-
+  
 
 
 
@@ -420,15 +455,13 @@ const NewProject = ({ userName, isNewProjectView }) => {
             }}
           >
 
-
-            <form onSubmit={handleFileUpload} className="modal-form">
+            <form className="modal-form">
               <div className="file-upload-btn" onClick={handleFileButtonClick}>
                 Choose Files
               </div>
               <div className="selected-files">
                 {selectedFileNames || "No files selected"}
               </div>
-
               <input
                 type="file"
                 ref={fileInputRef}
@@ -436,7 +469,7 @@ const NewProject = ({ userName, isNewProjectView }) => {
                 multiple
                 className="file-input"
               />
-              <button type="submit" className="modal-submit-button">Upload Files</button>
+              <button type="button" className="modal-submit-button" onClick={closeFileUploadModal}>Done</button>
             </form>
           </Modal>
 
@@ -453,22 +486,22 @@ const NewProject = ({ userName, isNewProjectView }) => {
         <div className="column-new-project-address">
           <div className="dashboard-item location">
 
-            
-              <Map location={location} address={address} />
 
-            
+            <Map location={location} address={address} />
+
+
 
 
           </div>
-<div className="address-input-container">
-          <input
-            type="text" className="address-input"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Enter address"
-          />
-         <button onClick={handleSearch} className="address-button">Search</button>
-</div>
+          <div className="address-input-container">
+            <input
+              type="text" className="address-input"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Enter address"
+            />
+            <button onClick={handleSearch} className="address-button">Search</button>
+          </div>
 
         </div>
 
@@ -505,6 +538,7 @@ const NewProject = ({ userName, isNewProjectView }) => {
               <textarea value={description} onChange={handleDescriptionChange} className="modal-input-description" />
               <button type="submit" className="modal-button">Done</button>
             </form>
+
           </Modal>
 
 
@@ -524,7 +558,7 @@ const NewProject = ({ userName, isNewProjectView }) => {
       <div className="column-final-btn">
 
         <div className="final-btn-container">
-          <button type="submit" className="final-submit-button" onClick={handleFinalSubmit}>Done</button>
+          <button type="submit" className="final-submit-button" onClick={handleFinalSubmit}>Submit</button>
 
         </div>
       </div>

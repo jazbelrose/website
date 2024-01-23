@@ -15,6 +15,15 @@
       "auth": {
         "mylg4702089d": {},
         "mylgd42bc0b1": {}
+      },
+      "function": {
+        "S3Triggerb0684019": {
+          "deploymentBucketName": "amplify-mylg-dev-194416-deployment",
+          "s3Key": "amplify-builds/S3Triggerb0684019-33324a56622b4b6f4f57-build.zip"
+        }
+      },
+      "storage": {
+        "mylguserdata": {}
       }
     }
   }
