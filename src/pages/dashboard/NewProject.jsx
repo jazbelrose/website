@@ -17,12 +17,15 @@ const NewProject = ({ userName, userId, isNewProjectView }) => {
   const [selectedFileNames, setSelectedFileNames] = useState("");
   const openFileUploadModal = () => setShowFileUploadModal(true);
   const closeFileUploadModal = () => setShowFileUploadModal(false);
+  const mapRef = useRef(null);
   const [location, setLocation] = useState({ lat: 34.0522, lng: -118.2437 });
   const [address, setAddress] = useState('Los Angeles, CA');
   const [typedAddress, setTypedAddress] = useState('');
   const [displayedAddress, setDisplayedAddress] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
-  const mapRef = useRef(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionSuccess, setSubmissionSuccess] = useState(false);
+ 
 
 
 
@@ -216,46 +219,59 @@ const NewProject = ({ userName, userId, isNewProjectView }) => {
 
 
   const handleFinalSubmit = async () => {
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+
     const initialProjectData = collectFormData();
-  
+
     try {
-      
+
       const createResponse = await fetch('https://any6qedkud.execute-api.us-west-1.amazonaws.com/default/PostProjects', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(initialProjectData),
       });
-  
+
       if (!createResponse.ok) {
         throw new Error('Network response was not ok');
       }
-  
+
       const data = await createResponse.json();
       const realProjectId = data.projectId;
-  
-     
+
+
       const uploadedFileUrls = await handleFileUpload(realProjectId);
-  
-      
+
+
       const updateData = {
         uploads: uploadedFileUrls
       };
-  
-      
+
+
       const updateResponse = await fetch(`https://any6qedkud.execute-api.us-west-1.amazonaws.com/default/PostProjects?TableName=Projects&projectId=${realProjectId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updateData), // Update this line
       });
-  
+
       if (!updateResponse.ok) {
         throw new Error('Error updating project with file URLs');
       }
+  
+    
+      console.log("Success!");
+  
+     
+      setIsSubmitting(false);
+      setSubmissionSuccess(true); 
+
     } catch (error) {
       console.error('There was an error with the submission:', error);
+      
+    } finally {
+      setIsSubmitting(false); 
     }
   };
-  
 
 
 
@@ -556,15 +572,29 @@ const NewProject = ({ userName, userId, isNewProjectView }) => {
 
       </div>
       <div className="column-final-btn">
-
-        <div className="final-btn-container">
-          <button type="submit" className="final-submit-button" onClick={handleFinalSubmit}>Submit</button>
-
+  <div className={`final-btn-container ${submissionSuccess ? 'final-btn-container-success' : ''}`}>
+    {!submissionSuccess ? (
+      <button
+        type="submit"
+        className="final-submit-button"
+        onClick={handleFinalSubmit}
+        disabled={isSubmitting}
+      >
+              Submit
+            </button>
+          ) : (
+            <div className="success-animation">
+              <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle className="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+              </svg>
+            </div>
+          )}
         </div>
-      </div>
-
-
+        </div>
     </div>
+
+    
 
   );
 };
