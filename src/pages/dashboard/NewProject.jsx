@@ -4,7 +4,7 @@ import Map from "../../components/map";
 import { ReactComponent as Snap } from "../../assets/svg/snap.svg";
 import { uploadData } from 'aws-amplify/storage';
 
-const NewProject = ({ userName, userId, isNewProjectView }) => {
+const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) => {
 
   const [projectName, setProjectName] = useState('');
   const [budget, setBudget] = useState('');
@@ -43,10 +43,32 @@ const NewProject = ({ userName, userId, isNewProjectView }) => {
 
         title: projectName,
         date: formattedDate,
+        dateCreated: formattedDate,
+        milestone: '10',
         finishLine: finishLine,
         description: description,
         location: location,
         address: address,
+        budget: {
+          date: formattedDate,
+          total: budget || '0'
+        },
+        contact: {
+          contact: 'N/A', 
+          name: 'N/A', 
+          phone: 'N/A' 
+        },
+        finishline: finishLine || formattedDate,
+        gallery: '/path/to/gallery', 
+        invoiceDate: formattedDate, 
+        invoices: '/path/to/invoices',
+        slug: 'project-slug',
+        status: '10%', 
+        tags: [], 
+        team: [], 
+        revisionHistory: [],
+        thumbnails: [],
+        downloads: [],
         uploads: []
 
       }
@@ -209,8 +231,6 @@ const NewProject = ({ userName, userId, isNewProjectView }) => {
   };
 
 
-
-
   const handleSubmitDescription = (e) => {
     e.preventDefault();
     console.log("Description Set:", description);
@@ -238,6 +258,7 @@ const NewProject = ({ userName, userId, isNewProjectView }) => {
 
       const data = await createResponse.json();
       const realProjectId = data.projectId;
+      
 
 
       const uploadedFileUrls = await handleFileUpload(realProjectId);
@@ -257,13 +278,23 @@ const NewProject = ({ userName, userId, isNewProjectView }) => {
       if (!updateResponse.ok) {
         throw new Error('Error updating project with file URLs');
       }
+
+      const newProject = {
+        ...initialProjectData.Item,  
+        projectId: realProjectId,    
+        uploads: uploadedFileUrls    
+  
+      };
+
+      onProjectCreated(newProject);  
   
     
       console.log("Success!");
   
      
       setIsSubmitting(false);
-      setSubmissionSuccess(true); 
+      setSubmissionSuccess(true);
+       
 
     } catch (error) {
       console.error('There was an error with the submission:', error);
@@ -593,6 +624,10 @@ const NewProject = ({ userName, userId, isNewProjectView }) => {
         </div>
         </div>
     </div>
+
+    
+  
+
 
     
 

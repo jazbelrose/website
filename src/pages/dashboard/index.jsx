@@ -78,6 +78,14 @@ export const Dashboard = () => {
   const toggleMessageCenterCollapse = () => setIsMessageCenterCollapsed(!isMessageCenterCollapsed);
 
 
+  
+
+const handleNewProjectCreated = (newProject) => {
+  setActiveProject(newProject); 
+  setProjectsViewState('single-project'); 
+  setProjects(prevProjects => [...prevProjects, newProject]);
+};
+
 
 
   // Fetch User Data
@@ -256,7 +264,7 @@ export const Dashboard = () => {
 
         <div className={`sidebar-right ${projectsViewState === 'single-project' || projectsViewState === 'new-project' || projectsViewState === 'welcome' || projectsViewState === 'show-all' ? 'full-width' : ''}`}>
           {projectsViewState === 'welcome' && <WelcomeScreen userName={userName} />}
-          {projectsViewState === 'new-project' && <NewProject userName={userName} userId={user.userId} isNewProjectView={isNewProjectView} />}
+          {projectsViewState === 'new-project' && <NewProject userName={userName} userId={user.userId} isNewProjectView={isNewProjectView} onProjectCreated={handleNewProjectCreated} />}
           {projectsViewState === 'show-all' && <AllProjects projects={selectedProjects} onSelectProject={selectProject} isLoading={isLoading} />}
           {projectsViewState === 'single-project' && activeProject && <SingleProject activeProject={activeProject} />}
           {/* ... other views ... */}
