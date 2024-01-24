@@ -25,7 +25,7 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
   const [searchQuery, setSearchQuery] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionSuccess, setSubmissionSuccess] = useState(false);
- 
+
 
 
 
@@ -54,18 +54,18 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
           total: budget || '0'
         },
         contact: {
-          contact: 'N/A', 
-          name: 'N/A', 
-          phone: 'N/A' 
+          contact: 'N/A',
+          name: 'N/A',
+          phone: 'N/A'
         },
         finishline: finishLine || formattedDate,
-        gallery: '/path/to/gallery', 
-        invoiceDate: formattedDate, 
+        gallery: '/path/to/gallery',
+        invoiceDate: formattedDate,
         invoices: '/path/to/invoices',
         slug: 'project-slug',
-        status: '10%', 
-        tags: [], 
-        team: [], 
+        status: '10%',
+        tags: [],
+        team: [],
         revisionHistory: [],
         thumbnails: [],
         downloads: [],
@@ -118,9 +118,17 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
   };
 
   const handleFileChange = (event) => {
-    setSelectedFiles(event.target.files);
-    setSelectedFileNames(Array.from(event.target.files).map(file => file.name).join(", "));
+    const files = event.target.files;
+    setSelectedFiles(files);
+    const fileNames = Array.from(files).map(file => file.name).join(", ");
+    setSelectedFileNames(fileNames);
   };
+
+  const clearSelectedFiles = () => {
+    setSelectedFiles([]);
+    setSelectedFileNames("");
+  };
+
 
 
 
@@ -258,7 +266,7 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
 
       const data = await createResponse.json();
       const realProjectId = data.projectId;
-      
+
 
 
       const uploadedFileUrls = await handleFileUpload(realProjectId);
@@ -280,27 +288,32 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
       }
 
       const newProject = {
-        ...initialProjectData.Item,  
-        projectId: realProjectId,    
-        uploads: uploadedFileUrls    
-  
+        ...initialProjectData.Item,
+        projectId: realProjectId,
+        uploads: uploadedFileUrls
+
       };
 
-      onProjectCreated(newProject);  
-  
-    
+
+
+
       console.log("Success!");
-  
-     
+
+
       setIsSubmitting(false);
       setSubmissionSuccess(true);
-       
+      setTimeout(() => {
+        onProjectCreated(newProject);
+
+      }, 2000);
+
+
 
     } catch (error) {
       console.error('There was an error with the submission:', error);
-      
+
     } finally {
-      setIsSubmitting(false); 
+      setIsSubmitting(false);
     }
   };
 
@@ -475,7 +488,10 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
         <div className="new-project-col2">
 
           <div className="dashboard-item new-project-uploads" onClick={openFileUploadModal}>
-            <span>Upload your files</span>
+            {selectedFileNames ?
+              (<span>{selectedFileNames}</span>) :
+              (<span>Upload your files</span>)
+            }
             <span>+</span>
           </div>
 
@@ -509,6 +525,20 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
               <div className="selected-files">
                 {selectedFileNames || "No files selected"}
               </div>
+              {selectedFiles.length > 0 && (
+                <button
+                  onClick={clearSelectedFiles}
+                  className="clear-files-button"
+                  style={{
+                    marginTop: '10px',
+                    marginBottom: '10px',
+                    borderRadius: '20px',
+                    padding: '10px 15px'
+                  }}
+                >
+                  Clear Files
+                </button>
+              )}
               <input
                 type="file"
                 ref={fileInputRef}
@@ -603,14 +633,14 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
 
       </div>
       <div className="column-final-btn">
-  <div className={`final-btn-container ${submissionSuccess ? 'final-btn-container-success' : ''}`}>
-    {!submissionSuccess ? (
-      <button
-        type="submit"
-        className="final-submit-button"
-        onClick={handleFinalSubmit}
-        disabled={isSubmitting}
-      >
+        <div className={`final-btn-container ${submissionSuccess ? 'final-btn-container-success' : ''}`}>
+          {!submissionSuccess ? (
+            <button
+              type="submit"
+              className="final-submit-button"
+              onClick={handleFinalSubmit}
+              disabled={isSubmitting}
+            >
               Submit
             </button>
           ) : (
@@ -622,14 +652,14 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
             </div>
           )}
         </div>
-        </div>
+      </div>
     </div>
 
-    
-  
 
 
-    
+
+
+
 
   );
 };
