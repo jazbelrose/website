@@ -38,6 +38,10 @@
 
 
 }
+.project-thumbnail {
+  cursor: pointer;
+}
+
 
 .project-container {
   display: flex;
