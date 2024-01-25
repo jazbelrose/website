@@ -474,14 +474,7 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
             </form>
           </Modal>
 
-
-
-
-
         </div>
-
-
-
 
         {/* Column 2 */}
 

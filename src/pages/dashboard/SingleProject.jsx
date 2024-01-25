@@ -3,6 +3,7 @@
 import React, { useState, } from 'react';
 import teamData from './team.json';
 import Map from "../../components/map";
+import Modal from 'react-modal';
 
 
 
@@ -321,17 +322,16 @@ const SingleProject = ({ activeProject }) => {
 
             </div>
             <div className="column-7">
-                <div className="dashboard-item notes
-        ">
-                    <span>Notes</span>
-
-                </div>
-
-
-            </div>
+          <div className="dashboard-item notes">
+            <span>{activeProject.description || 'Description'}</span>
+            
+          </div>
+        </div>
 
 
         </div>
     );
 };
+
+
 export default SingleProject;
