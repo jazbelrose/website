@@ -8,7 +8,7 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
 
   const [projectName, setProjectName] = useState('');
   const [budget, setBudget] = useState('');
-  const [finishLine, setFinishLine] = useState('');
+  const [finishline, setFinishLine] = useState('');
   const [description, setDescription] = useState('');
   const [showFinishLineModal, setShowFinishLineModal] = useState(false);
   const [showFileUploadModal, setShowFileUploadModal] = useState(false);
@@ -45,7 +45,7 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
         date: formattedDate,
         dateCreated: formattedDate,
         milestone: '10',
-        finishLine: finishLine,
+        finishline: finishline,
         description: description,
         location: location,
         address: address,
@@ -58,7 +58,7 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
           name: 'N/A',
           phone: 'N/A'
         },
-        finishline: finishLine || formattedDate,
+        finishline: finishline || formattedDate,
         gallery: '/path/to/gallery',
         invoiceDate: formattedDate,
         invoices: '/path/to/invoices',
@@ -197,7 +197,7 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
 
   const handleSubmitFinishLine = (e) => {
     e.preventDefault();
-    console.log("Finish Line Set:", finishLine);
+    console.log("Finish Line Set:", finishline);
     closeFinishLineModal();
 
   };
@@ -451,7 +451,7 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
 
 
           <div className="dashboard-item new-project-finish-line" onClick={handleFinishLineClick}>
-            <span>{finishLine || 'Finish Line'}</span>
+            <span>{finishline || 'Finish Line'}</span>
             <span>+</span>
           </div>
 
@@ -479,7 +479,7 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
               <label className="modal-label">Finish Line</label>
               <input
                 type="date"
-                value={finishLine}
+                value={finishline}
                 onChange={handleFinishLineChange} className="modal-input"
                 placeholder="Finish Line"
               />

@@ -88,6 +88,7 @@ const handleNewProjectCreated = (newProject) => {
 
 
 
+
   // Fetch User Data
 
   useEffect(() => {
@@ -267,6 +268,7 @@ const handleNewProjectCreated = (newProject) => {
           {projectsViewState === 'new-project' && <NewProject userName={userName} userId={user.userId} isNewProjectView={isNewProjectView} onProjectCreated={handleNewProjectCreated} />}
           {projectsViewState === 'show-all' && <AllProjects projects={selectedProjects} onSelectProject={selectProject} isLoading={isLoading} />}
           {projectsViewState === 'single-project' && activeProject && <SingleProject activeProject={activeProject} />}
+
           {/* ... other views ... */}
         </div>
       </div>

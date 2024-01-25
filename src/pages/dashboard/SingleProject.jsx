@@ -1,6 +1,5 @@
 
-
-import React, { useState, } from 'react';
+import React, { useState, useEffect } from 'react';
 import teamData from './team.json';
 import Map from "../../components/map";
 import Modal from 'react-modal';
@@ -26,16 +25,133 @@ const SingleProject = ({ activeProject }) => {
 
     const [isUploadsModalOpen, setUploadsModalOpen] = useState(false);
     const [selectedUploads, setSelectedUploads] = useState([]);
+    const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
+    const [updatedBudget, setUpdatedBudget] = useState({ date: '', total: '' });
+    const [selectedDate, setSelectedDate] = useState("");
+    const [selectedFinishLineDate, setSelectedFinishLineDate] = useState("");
+    const [localActiveProject, setLocalActiveProject] = useState(activeProject);
 
 
-    const openUploadsModal = () => {
-        setUploadsModalOpen(true);
-        setSelectedUploads(activeProject.uploads || []);
+
+    const openUploadsModal = () => { setUploadsModalOpen(true); setSelectedUploads(activeProject.uploads || []); };
+    const closeUploadsModal = () => { setUploadsModalOpen(false); };
+
+    const [isFinishLineModalOpen, setIsFinishLineModalOpen] = useState(false);
+
+    const openBudgetModal = () => {
+
+        if (localActiveProject && localActiveProject.budget) {
+            // Set initial budget and date values from localActiveProject when the modal is opened
+            setUpdatedBudget({
+                total: localActiveProject.budget.total,
+                date: localActiveProject.budget.date // If there's a budget date in the object
+            });
+            setSelectedDate(localActiveProject.budget.date);
+        }
+        setIsBudgetModalOpen(true);
     };
 
-    const closeUploadsModal = () => {
-        setUploadsModalOpen(false);
+    const openFinishLineModal = () => {
+        if (localActiveProject && localActiveProject.finishline) {
+            setSelectedFinishLineDate(localActiveProject.finishline);
+        }
+        setIsFinishLineModalOpen(true);
     };
+    
+
+
+    const handleBudgetSubmit = (e) => {
+        e.preventDefault();
+        handleUpdateBudget();
+
+        return false;
+    };
+
+
+    const handleUpdateBudget = () => {
+        const updatedProject = {
+            ...localActiveProject,
+            budget: { ...updatedBudget, date: selectedDate }
+        };
+
+
+        setLocalActiveProject(updatedProject);
+        setIsBudgetModalOpen(false);
+        updateBudgetToAPI(updatedProject.budget);
+    };
+
+
+    const handleUpdateFinishLine = () => {
+        const updatedProject = {
+            ...localActiveProject,
+            finishline: selectedFinishLineDate
+        };
+    
+        setLocalActiveProject(updatedProject);
+        setIsFinishLineModalOpen(false);
+        updateFinishLineToAPI(updatedProject.finishline);
+    };
+    
+
+    const updateBudgetToAPI = async () => {
+        const apiUrl = `https://didaoiqxl5.execute-api.us-west-1.amazonaws.com/default/editProject?projectId=${activeProject.projectId}`;
+
+        const payload = {
+            budget: {
+                ...updatedBudget,
+                date: selectedDate
+            }
+        };
+
+        try {
+            const updateResponse = await fetch(apiUrl, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
+
+            if (!updateResponse.ok) {
+                throw new Error('Failed to update budget');
+            }
+            console.log('Budget updated successfully in the API');
+        } catch (error) {
+            console.error('Error updating budget:', error);
+        }
+    };
+
+
+    const updateFinishLineToAPI = async () => {
+        const apiUrl = `https://didaoiqxl5.execute-api.us-west-1.amazonaws.com/default/editProject?projectId=${activeProject.projectId}`;
+        const payload = {
+            finishline: selectedFinishLineDate
+        };
+
+        try {
+            const response = await fetch(apiUrl, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            if (response.ok) {
+                console.log('Finish line updated successfully');
+                const updatedProject = { ...activeProject, finishline: selectedFinishLineDate };
+                
+            } else {
+                console.error('Failed to update finish line');
+            }
+        } catch (error) {
+            console.error('Error updating finish line:', error);
+        }
+
+        setIsFinishLineModalOpen(false); // Close the modal
+    };
+
+    useEffect(() => {
+        setLocalActiveProject(activeProject);
+    }, [activeProject]);
+
+
 
 
 
@@ -117,15 +233,53 @@ const SingleProject = ({ activeProject }) => {
 
                 <div className="column-1">
 
-                    <div className="dashboard-item budget">
+                    <div className="dashboard-item budget" onClick={openBudgetModal}>
                         <span>Budget</span>
-
                         <span>
-                            ${activeProject.budget && activeProject.budget.total ? activeProject.budget.total : 'Not available'}
-
+                            ${localActiveProject.budget && localActiveProject.budget.total ? localActiveProject.budget.total : 'Not available'}
                         </span>
-                        <span>{activeProject.budget && activeProject.budget.date}</span>
+                        <span>{localActiveProject.budget && localActiveProject.budget.date}</span>
                     </div>
+
+                    <Modal
+                        isOpen={isBudgetModalOpen}
+                        onRequestClose={() => setIsBudgetModalOpen(false)}
+                        contentLabel="Budget Modal"
+                        style={{
+                            overlay: { backgroundColor: 'rgba(0, 0, 0, 0.75)' },
+                            content: {
+                                display: 'flex',
+                                backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                                color: 'white',
+                                width: '300px',
+                                height: '400px',
+                                margin: 'auto',
+                                paddingTop: '50px',
+                                borderRadius: '20px'
+                            }
+                        }}
+                    >
+                        <form onSubmit={handleBudgetSubmit} className="modal-form">
+                            <input
+                                type="date"
+                                value={selectedDate}
+                                onChange={(e) => setSelectedDate(e.target.value)}
+                                className="modal-input"
+                            />
+                            <input
+                                type="text"
+                                value={updatedBudget.total}
+                                onChange={(e) => setUpdatedBudget({ ...updatedBudget, total: e.target.value })}
+                                placeholder="Budget Total"
+                                className="modal-input"
+                            />
+                            <button type="submit" className="modal-button">Update Budget</button>
+                        </form>
+                    </Modal>
+
+
+
+
 
 
                     <div className="dashboard-item uploads" onClick={openUploadsModal}>
@@ -153,17 +307,17 @@ const SingleProject = ({ activeProject }) => {
                             }
                         }}
                     ><form className="modal-form">
-                        <div className="uploads-modal-content">
-                            <div className="single-project-selected-files">
-                                <ul>
-                                    {selectedUploads.map((upload, index) => (
-                                        <li key={index}>{upload.fileName}</li>
-                                    ))}
-                                </ul>
-                            </div>
+                            <div className="uploads-modal-content">
+                                <div className="single-project-selected-files">
+                                    <ul>
+                                        {selectedUploads.map((upload, index) => (
+                                            <li key={index}>{upload.fileName}</li>
+                                        ))}
+                                    </ul>
+                                </div>
 
-                            <button className="modal-submit-button" onClick={closeUploadsModal}>Close</button>
-                        </div>
+                                <button className="modal-submit-button" onClick={closeUploadsModal}>Close</button>
+                            </div>
                         </form>
                     </Modal>
 
@@ -323,11 +477,51 @@ const SingleProject = ({ activeProject }) => {
 
                 {/* Column 4 */}
                 <div className="column-4">
-                    <div className="dashboard-item finish-line">
+                    <div className="dashboard-item finish-line" onClick={openFinishLineModal}>
                         <span>Finish line</span>
-                        <span>{activeProject?.finishline || 'Date not available'}</span>
+                        <span>{localActiveProject?.finishline || 'Date not available'}</span>
                     </div>
                 </div>
+
+                <Modal
+                    isOpen={isFinishLineModalOpen}
+                    onRequestClose={() => setIsFinishLineModalOpen(false)}
+                    contentLabel="Finish Line Modal"
+                    style={{
+                        overlay: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.75)'
+                        },
+                        content: {
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                            color: 'white',
+                            width: '300px',
+                            height: '250px',
+                            margin: 'auto',
+                            paddingTop: '50px',
+                            borderRadius: '20px'
+                        }
+                    }}
+                >
+                    <form onSubmit={handleUpdateFinishLine} className="modal-form">
+        <input
+            type="date"
+            value={selectedFinishLineDate}
+            onChange={(e) => setSelectedFinishLineDate(e.target.value)}
+            className="modal-input"
+        />
+        <button type="submit" className="modal-button">Update Finish Line</button>
+    </form>
+                </Modal>
+
+
+
+
+
+
 
 
             </div>
