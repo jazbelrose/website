@@ -267,6 +267,19 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
       const data = await createResponse.json();
       const realProjectId = data.projectId;
 
+      const updateUserProfileResponse = await fetch(`https://drgq4taueb.execute-api.us-west-1.amazonaws.com/default/postProjectToUserId?TableName=userProfiles&userId=${userId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ newProjectId: realProjectId }),
+      });
+  
+      if (!updateUserProfileResponse.ok) {
+        throw new Error('Error updating user profile with new project ID');
+      }
+  
+      
+      console.log("User profile updated with new project.");
+
 
 
       const uploadedFileUrls = await handleFileUpload(realProjectId);

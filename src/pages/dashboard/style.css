@@ -238,6 +238,21 @@ svg .project-title {
   box-sizing: border-box;
 }
 
+.single-project-selected-files{
+  height: 160px;
+  overflow-y: auto;
+  margin-top: 35px;
+
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #ccc;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 
 .address-input-container {
 
@@ -462,6 +477,29 @@ svg .project-title {
   margin: 10px 0;
   font-size: min(2rem, 3vw);
 }
+
+
+.dashboard-item.uploads {
+  height: 300px; 
+  overflow: hidden;
+}
+
+.uploads-list {
+  height: calc(100% - 20px); /* Adjust height based on the title's height */
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px; /* Space between file names */
+  padding: 10px; /* Padding inside the container */
+}
+
+.upload-file-name {
+  white-space: nowrap; /* Prevents the names from breaking */
+  border-radius: 5px; /* Optional styling */
+}
+
+
 
 .dashboard-item.view-gallery span,
 .dashboard-item.view-invoices span,
@@ -858,14 +896,14 @@ svg .project-title {
 }
 
 .dashboard-item.greetings:hover {
-  background-color: rgba(255, 255, 255, 0.025);
+  background-color: rgba(255, 255, 255, 0.05);
   cursor: auto;
 
 }
 
 .dashboard-item:hover {
 
-  background-color: rgba(255, 255, 255, 0.025);
+  background-color: rgba(255, 255, 255, 0.05);
   cursor: pointer;
 
 }

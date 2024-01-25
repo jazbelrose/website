@@ -24,6 +24,18 @@ const SingleProject = ({ activeProject }) => {
         return progress >= milestone ? type : `${type}-incomplete`;
     };
 
+    const [isUploadsModalOpen, setUploadsModalOpen] = useState(false);
+    const [selectedUploads, setSelectedUploads] = useState([]);
+
+
+    const openUploadsModal = () => {
+        setUploadsModalOpen(true);
+        setSelectedUploads(activeProject.uploads || []);
+    };
+
+    const closeUploadsModal = () => {
+        setUploadsModalOpen(false);
+    };
 
 
 
@@ -116,10 +128,47 @@ const SingleProject = ({ activeProject }) => {
                     </div>
 
 
-                    <div className="dashboard-item uploads">
+                    <div className="dashboard-item uploads" onClick={openUploadsModal}>
                         <span>Uploads</span>
                         <span>></span>
                     </div>
+
+                    <Modal
+                        isOpen={isUploadsModalOpen}
+                        onRequestClose={closeUploadsModal}
+                        contentLabel="Uploads Modal"
+                        style={{
+                            overlay: {
+                                backgroundColor: 'rgba(0, 0, 0, 0.75)'
+                            },
+                            content: {
+                                display: 'flex',
+                                backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                                color: 'white',
+                                width: '400px',
+                                height: '400px',
+                                margin: 'auto',
+                                paddingTop: '50px',
+                                borderRadius: '20px'
+                            }
+                        }}
+                    ><form className="modal-form">
+                        <div className="uploads-modal-content">
+                            <div className="single-project-selected-files">
+                                <ul>
+                                    {selectedUploads.map((upload, index) => (
+                                        <li key={index}>{upload.fileName}</li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <button className="modal-submit-button" onClick={closeUploadsModal}>Close</button>
+                        </div>
+                        </form>
+                    </Modal>
+
+
+
 
                     <div className="dashboard-item downloads">
                         <span>Downloads</span>
@@ -322,11 +371,11 @@ const SingleProject = ({ activeProject }) => {
 
             </div>
             <div className="column-7">
-          <div className="dashboard-item notes">
-            <span>{activeProject.description || 'Description'}</span>
-            
-          </div>
-        </div>
+                <div className="dashboard-item notes">
+                    <span>{activeProject.description || 'Description'}</span>
+
+                </div>
+            </div>
 
 
         </div>
