@@ -5,92 +5,24 @@ import Map from "../../components/map";
 import Modal from 'react-modal';
 import ProjectHeader from './components/ProjectHeader';
 import BudgetComponent from './components/BudgetComponent';
+import FinishLineComponent from './components/FinishLineComponent';
+import UploadsComponent from './components/UploadsComponent';
+
+
 
 
 
 const SingleProject = ({ activeProject }) => {
 
+    const [localActiveProject, setLocalActiveProject] = useState(activeProject);
     const isSmallScreen = window.innerWidth <= 768;
     const activeProjectLocation = activeProject ? activeProject.location : null;
     const projectInitial = activeProject?.title ? activeProject.title.charAt(0) : '';
-    const parseStatusToNumber = (statusString) => {
-        const number = parseFloat(statusString.replace('%', ''));
-        return number;
-    };
-
-
+    const parseStatusToNumber = (statusString) => { const number = parseFloat(statusString.replace('%', '')); return number; };
     const progress = activeProject ? parseStatusToNumber(activeProject.milestone) : 0;
-
-    const getMilestoneClass = (milestone, type) => {
-        return progress >= milestone ? type : `${type}-incomplete`;
-    };
-
-    const [isUploadsModalOpen, setUploadsModalOpen] = useState(false);
-    const [selectedUploads, setSelectedUploads] = useState([]);
-    const [selectedDate, setSelectedDate] = useState("");
-    const [selectedFinishLineDate, setSelectedFinishLineDate] = useState("");
-    const [localActiveProject, setLocalActiveProject] = useState(activeProject);
+    const getMilestoneClass = (milestone, type) => { return progress >= milestone ? type : `${type}-incomplete`; };
 
 
-
-
-
-    const openUploadsModal = () => { setUploadsModalOpen(true); setSelectedUploads(activeProject.uploads || []); };
-    const closeUploadsModal = () => { setUploadsModalOpen(false); };
-
-    const [isFinishLineModalOpen, setIsFinishLineModalOpen] = useState(false);
-
-
-
-    const openFinishLineModal = () => {
-        if (localActiveProject && localActiveProject.finishline) {
-            setSelectedFinishLineDate(localActiveProject.finishline);
-        }
-        setIsFinishLineModalOpen(true);
-    };
-
-
-
-    const handleUpdateFinishLine = () => {
-        const updatedProject = {
-            ...localActiveProject,
-            finishline: selectedFinishLineDate
-        };
-
-        setLocalActiveProject(updatedProject);
-        setIsFinishLineModalOpen(false);
-        updateFinishLineToAPI(updatedProject.finishline);
-    };
-
-
-
-
-    const updateFinishLineToAPI = async () => {
-        const apiUrl = `https://didaoiqxl5.execute-api.us-west-1.amazonaws.com/default/editProject?projectId=${activeProject.projectId}`;
-        const payload = {
-            finishline: selectedFinishLineDate
-        };
-
-        try {
-            const response = await fetch(apiUrl, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
-
-            if (response.ok) {
-                console.log('Finish line updated successfully');
-                const updatedProject = { ...activeProject, finishline: selectedFinishLineDate };
-
-            } else {
-                console.error('Failed to update finish line');
-            }
-        } catch (error) {
-            console.error('Error updating finish line:', error);
-        }
-
-        setIsFinishLineModalOpen(false); // Close the modal
-    };
 
     useEffect(() => {
         setLocalActiveProject(activeProject);
@@ -104,18 +36,11 @@ const SingleProject = ({ activeProject }) => {
 
         <div className="active-project-details">
 
-
-
             <ProjectHeader activeProject={activeProject} parseStatusToNumber={parseStatusToNumber} />
-
 
             <div className='dashboard-layout'>
 
-
-
-
-                {/* Column 1 */}
-
+                
                 <div className="column-1">
 
 
@@ -130,45 +55,17 @@ const SingleProject = ({ activeProject }) => {
                     )}
 
 
+                    {localActiveProject && localActiveProject.uploads && (
+                        <UploadsComponent
+                            budget={localActiveProject?.uploads}
+                            activeProject={localActiveProject}
+                            setLocalActiveProject={setLocalActiveProject}
+                            localActiveProject={localActiveProject}
+                        />
 
-                    <div className="dashboard-item uploads" onClick={openUploadsModal}>
-                        <span>Uploads</span>
-                        <span>></span>
-                    </div>
+                    )}
 
-                    <Modal
-                        isOpen={isUploadsModalOpen}
-                        onRequestClose={closeUploadsModal}
-                        contentLabel="Uploads Modal"
-                        style={{
-                            overlay: {
-                                backgroundColor: 'rgba(0, 0, 0, 0.75)'
-                            },
-                            content: {
-                                display: 'flex',
-                                backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                                color: 'white',
-                                width: '400px',
-                                height: '400px',
-                                margin: 'auto',
-                                paddingTop: '50px',
-                                borderRadius: '20px'
-                            }
-                        }}
-                    ><form className="modal-form">
-                            <div className="uploads-modal-content">
-                                <div className="single-project-selected-files">
-                                    <ul>
-                                        {selectedUploads.map((upload, index) => (
-                                            <li key={index}>{upload.fileName}</li>
-                                        ))}
-                                    </ul>
-                                </div>
 
-                                <button className="modal-submit-button" onClick={closeUploadsModal}>Close</button>
-                            </div>
-                        </form>
-                    </Modal>
 
 
 
@@ -326,48 +223,21 @@ const SingleProject = ({ activeProject }) => {
 
                 {/* Column 4 */}
                 <div className="column-4">
-                    <div className="dashboard-item finish-line" onClick={openFinishLineModal}>
-                        <span>Finish line</span>
-                        <span>{localActiveProject?.finishline || 'Date not available'}</span>
-                    </div>
-                </div>
 
-                <Modal
-                    isOpen={isFinishLineModalOpen}
-                    onRequestClose={() => setIsFinishLineModalOpen(false)}
-                    contentLabel="Finish Line Modal"
-                    style={{
-                        overlay: {
-                            backgroundColor: 'rgba(0, 0, 0, 0.75)'
-                        },
-                        content: {
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                            color: 'white',
-                            width: '300px',
-                            height: '250px',
-                            margin: 'auto',
-                            paddingTop: '50px',
-                            borderRadius: '20px'
-                        }
-                    }}
-                >
-                    <form onSubmit={handleUpdateFinishLine} className="modal-form">
-                        <input
-                            type="date"
-                            value={selectedFinishLineDate}
-                            onChange={(e) => setSelectedFinishLineDate(e.target.value)}
-                            className="modal-input"
+
+
+                    {localActiveProject && localActiveProject.finishline && (
+                        <FinishLineComponent
+                            finishline={localActiveProject?.finishline}
+                            activeProject={localActiveProject}
+                            setLocalActiveProject={setLocalActiveProject}
+                            localActiveProject={localActiveProject}
                         />
-                        <button type="submit" className="modal-button">Update Finish Line</button>
-                    </form>
-                </Modal>
+
+                    )}
 
 
-
+                </div>
 
 
 

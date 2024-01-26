@@ -1,7 +1,7 @@
 import React, { useState, useEffect  } from 'react';
 import Modal from 'react-modal';
 
-const BudgetComponent = ({ budget, projectId, activeProject, setLocalActiveProject, localActiveProject }) =>  {
+const BudgetComponent = ({ budget, activeProject, setLocalActiveProject, localActiveProject }) =>  {
 
   const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
   const [updatedBudget, setUpdatedBudget] = useState({ date: budget?.date || '', total: budget?.total || '' });
