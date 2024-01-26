@@ -1,8 +1,16 @@
 import React, { useState, useRef } from 'react';
 import Modal from 'react-modal';
-import Map from "../../components/map";
-import { ReactComponent as Snap } from "../../assets/svg/snap.svg";
+
+
 import { uploadData } from 'aws-amplify/storage';
+import NewProjectHeader from './components/NewProject/NewProjectHeader';
+import ProjectName from './components/NewProject/NewProjectName';
+import NewProjectBudget from './components/NewProject/NewProjectBudget';
+import NewProjectFinishline from './components/NewProject/NewProjectFinishLine';
+import NewProjectUploadFiles from './components/NewProject/NewProjectUploadFiles';
+import NewProjectAddress from './components/NewProject/NewProjectAddress';
+import NewProjectDescription from './components/NewProject/NewProjectDescription';
+
 
 const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) => {
 
@@ -10,24 +18,12 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
   const [budget, setBudget] = useState('');
   const [finishline, setFinishLine] = useState('');
   const [description, setDescription] = useState('');
-  const [showFinishLineModal, setShowFinishLineModal] = useState(false);
-  const [showFileUploadModal, setShowFileUploadModal] = useState(false);
-  const fileInputRef = useRef(null);
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [selectedFileNames, setSelectedFileNames] = useState("");
-  const openFileUploadModal = () => setShowFileUploadModal(true);
-  const closeFileUploadModal = () => setShowFileUploadModal(false);
-  const mapRef = useRef(null);
   const [location, setLocation] = useState({ lat: 34.0522, lng: -118.2437 });
   const [address, setAddress] = useState('Los Angeles, CA');
-  const [typedAddress, setTypedAddress] = useState('');
-  const [displayedAddress, setDisplayedAddress] = useState('');
-  const [searchQuery, setSearchQuery] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionSuccess, setSubmissionSuccess] = useState(false);
-
-
-
 
 
   const collectFormData = () => {
@@ -76,64 +72,8 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
   };
 
 
-
-  const [showModal, setShowModal] = useState(false);
-
-  const handleProjectNameClick = () => {
-    console.log("Project Name Clicked");
-    setShowModal(true);
-  };
-
-  const closeModal = () => setShowModal(false);
-
-  const handleProjectNameChange = (e) => setProjectName(e.target.value);
-
-
-
-  const [showBudgetModal, setShowBudgetModal] = useState(false);
-
-  const handleBudgetClick = () => {
-    setShowBudgetModal(true);
-  };
-
-  const closeBudgetModal = () => {
-    setShowBudgetModal(false);
-  };
-
-  const handleBudgetChange = (e) => {
-    setBudget(e.target.value);
-  };
-
-
-  const handleFinishLineClick = () => {
-    setShowFinishLineModal(true);
-  };
-
-  const closeFinishLineModal = () => {
-    setShowFinishLineModal(false);
-  };
-
-  const handleFinishLineChange = (e) => {
-    setFinishLine(e.target.value);
-  };
-
-  const handleFileChange = (event) => {
-    const files = event.target.files;
-    setSelectedFiles(files);
-    const fileNames = Array.from(files).map(file => file.name).join(", ");
-    setSelectedFileNames(fileNames);
-  };
-
-  const clearSelectedFiles = () => {
-    setSelectedFiles([]);
-    setSelectedFileNames("");
-  };
-
-
-
-
   const handleFileUpload = async (projectId) => {
-    const uploadedFileUrls = []; // Array to store the URLs of uploaded files
+    const uploadedFileUrls = []; 
 
     try {
       for (let file of selectedFiles) {
@@ -154,96 +94,17 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
       }
     } catch (error) {
       console.error('Error uploading files:', error);
-      // Handle any errors that occur during file upload
+      
     }
 
-    // Clear the selected files and names, close the modal
-    setSelectedFiles([]);
-    setSelectedFileNames("");
-    closeFileUploadModal();
-
-    return uploadedFileUrls; // Return the array of uploaded file URLs
+    return uploadedFileUrls; 
   };
 
 
 
-  const handleFileButtonClick = () => {
-    fileInputRef.current.click();
-  };
-
-  const [showDescriptionModal, setShowDescriptionModal] = useState(false);
-
-  const openDescriptionModal = () => setShowDescriptionModal(true);
-  const closeDescriptionModal = () => setShowDescriptionModal(false);
-
-
-  const handleDescriptionChange = (e) => setDescription(e.target.value);
 
 
 
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Submitting New Project:", projectName);
-    closeModal();
-  };
-
-  const handleSubmitBudget = (e) => {
-    e.preventDefault();
-    console.log("Budget Set:", budget);
-    closeBudgetModal();
-  };
-
-  const handleSubmitFinishLine = (e) => {
-    e.preventDefault();
-    console.log("Finish Line Set:", finishline);
-    closeFinishLineModal();
-
-  };
-
-
-
-  const searchAddress = async (address) => {
-    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`;
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      if (data.length > 0) {
-        return { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
-      }
-      return null;
-    } catch (error) {
-      console.error("Error during address search:", error);
-      return null;
-    }
-  };
-
-
-  const handleSearch = async () => {
-    const geocodedLocation = await searchAddress(searchQuery);
-    if (geocodedLocation) {
-      setLocation(geocodedLocation);
-      setAddress(searchQuery);  // Set the address to the searched query
-      console.log("Updated Location:", geocodedLocation);
-      console.log("Updated Address:", searchQuery);
-    } else {
-      console.log("No location found for the address.");
-    }
-  };
-
-
-  const handleAddressSubmit = () => {
-    setDisplayedAddress(typedAddress);
-    // Update location based on typedAddress if necessary
-  };
-
-
-  const handleSubmitDescription = (e) => {
-    e.preventDefault();
-    console.log("Description Set:", description);
-    closeDescriptionModal();
-  };
 
 
   const handleFinalSubmit = async () => {
@@ -272,12 +133,12 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ newProjectId: realProjectId }),
       });
-  
+
       if (!updateUserProfileResponse.ok) {
         throw new Error('Error updating user profile with new project ID');
       }
-  
-      
+
+
       console.log("User profile updated with new project.");
 
 
@@ -316,7 +177,7 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
       setIsSubmitting(false);
       setSubmissionSuccess(true);
       setTimeout(() => {
-        onProjectCreated(newProject);
+      onProjectCreated(newProject);
 
       }, 2000);
 
@@ -330,9 +191,7 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
     }
   };
 
-
-
-
+  
 
 
 
@@ -343,218 +202,28 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
         <h2>New Project</h2>
       </div>
 
-      {/*  Greetings  */}
-
 
       <div className="column-0">
 
 
+        <NewProjectHeader userName={userName} />
+        <ProjectName projectName={projectName} setProjectName={setProjectName} />
 
-        <div className="dashboard-item greetings">
-
-          <div className="greetings-text">
-            <span className="greeting-line">Hello <span className="username"> {userName} </span> !</span>
-            <span className="greeting-line">Let’s get a new project started!</span>
-            <span className="greeting-line">Upload floorplans, create your design notes, drop links... Upload files, inspiration images and just submit!</span>
-
-          </div>
-
-          <div className="snap-container">
-            <Snap className="new-project-snap" />
-          </div>
-        </div>
-
-
-        <div className="dashboard-item project-name" onClick={handleProjectNameClick}>
-          <span>{projectName || 'Project Name'}</span>
-          <span>+</span>
-        </div>
-
-        <Modal
-          isOpen={showModal}
-          onRequestClose={closeModal}
-          contentLabel="Project Name Modal"
-          style={{
-            overlay: {
-              backgroundColor: 'rgba(0, 0, 0, 0.75)'
-            },
-            content: {
-              display: 'flex',
-              backgroundColor: 'rgba(0, 0, 0, 0.75)',
-              color: 'white',
-              width: '300px',
-              height: '400px',
-              margin: 'auto',
-              paddingTop: '50px',
-              borderRadius: '20px'
-            }
-          }}
-        >
-          <form onSubmit={handleSubmit} className="modal-form">
-            <label className="modal-label">Project Name</label>
-            <input type="text" value={projectName} onChange={handleProjectNameChange} className="modal-input" />
-            <button type="submit" className="modal-button">Done</button>
-          </form>
-        </Modal>
 
       </div>
 
-
-
-
       <div className='dashboard-layout'>
-
-
-        {/* Column 1 */}
-
+    
         <div className="new-project-col1">
 
-
-
-          <div className="dashboard-item new-project-budget" onClick={handleBudgetClick}>
-            <span>{budget ? `$${budget}` : 'Budget'}</span>
-            <span>+</span>
-          </div>
-
-
-
-          <Modal
-            isOpen={showBudgetModal}
-            onRequestClose={closeBudgetModal}
-            contentLabel="Budget Modal"
-
-            style={{
-              overlay: {
-                backgroundColor: 'rgba(0, 0, 0, 0.75)'
-              },
-              content: {
-                display: 'flex',
-                backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                color: 'white',
-                width: '300px',
-                height: '400px',
-                margin: 'auto',
-                paddingTop: '50px',
-                borderRadius: '20px'
-              }
-            }}
-          >
-
-            <form onSubmit={handleSubmitBudget} className="modal-form">
-              <label className="modal-label">Budget</label>
-              <input type="text" value={budget} onChange={handleBudgetChange} className="modal-input" />
-              <button type="submit" className="modal-button">Done</button>
-            </form>
-          </Modal>
-
-
-
-
-          <div className="dashboard-item new-project-finish-line" onClick={handleFinishLineClick}>
-            <span>{finishline || 'Finish Line'}</span>
-            <span>+</span>
-          </div>
-
-          <Modal
-            isOpen={showFinishLineModal}
-            onRequestClose={closeFinishLineModal}
-            contentLabel="Finish Line Modal"
-            style={{
-              overlay: {
-                backgroundColor: 'rgba(0, 0, 0, 0.75)'
-              },
-              content: {
-                display: 'flex',
-                backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                color: 'white',
-                width: '300px',
-                height: '400px',
-                margin: 'auto',
-                paddingTop: '50px',
-                borderRadius: '20px'
-              }
-            }}
-          >
-            <form onSubmit={handleSubmitFinishLine} className="modal-form">
-              <label className="modal-label">Finish Line</label>
-              <input
-                type="date"
-                value={finishline}
-                onChange={handleFinishLineChange} className="modal-input"
-                placeholder="Finish Line"
-              />
-              <button type="submit" className="modal-button">Set Finish Line</button>
-            </form>
-          </Modal>
+          <NewProjectBudget budget={budget} setBudget={setBudget} />
+          <NewProjectFinishline finishline={finishline} setFinishLine={setFinishLine} /> 
 
         </div>
-
-        {/* Column 2 */}
 
         <div className="new-project-col2">
 
-          <div className="dashboard-item new-project-uploads" onClick={openFileUploadModal}>
-            {selectedFileNames ?
-              (<span>{selectedFileNames}</span>) :
-              (<span>Upload your files</span>)
-            }
-            <span>+</span>
-          </div>
-
-          <Modal
-            isOpen={showFileUploadModal}
-            onRequestClose={closeFileUploadModal}
-            contentLabel="File Upload Modal"
-            style={{
-              overlay: {
-                backgroundColor: 'rgba(0, 0, 0, 0.75)'
-              },
-              content: {
-
-                display: 'flex',
-                overflowX: 'hidden',
-                backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                color: 'white',
-                width: '300px',
-                height: '400px',
-                margin: 'auto',
-                paddingTop: '50px',
-                borderRadius: '20px'
-              }
-            }}
-          >
-
-            <form className="modal-form">
-              <div className="file-upload-btn" onClick={handleFileButtonClick}>
-                Choose Files
-              </div>
-              <div className="selected-files">
-                {selectedFileNames || "No files selected"}
-              </div>
-              {selectedFiles.length > 0 && (
-                <button
-                  onClick={clearSelectedFiles}
-                  className="clear-files-button"
-                  style={{
-                    marginTop: '10px',
-                    marginBottom: '10px',
-                    borderRadius: '20px',
-                    padding: '10px 15px'
-                  }}
-                >
-                  Clear Files
-                </button>
-              )}
-              <input
-                type="file"
-                ref={fileInputRef}
-                onChange={handleFileChange}
-                multiple
-                className="file-input"
-              />
-              <button type="button" className="modal-submit-button" onClick={closeFileUploadModal}>Done</button>
-            </form>
-          </Modal>
+         <NewProjectUploadFiles selectedFiles={selectedFiles} setSelectedFiles={setSelectedFiles} selectedFileNames={selectedFileNames} setSelectedFileNames={setSelectedFileNames} />
 
         </div>
 
@@ -564,78 +233,17 @@ const NewProject = ({ userName, userId, isNewProjectView, onProjectCreated }) =>
 
       <div className='dashboard-layout'>
 
-
-        {/* Column-3 - Location */}
-        <div className="column-new-project-address">
-          <div className="dashboard-item location">
-
-
-            <Map location={location} address={address} />
+        <NewProjectAddress location={location} setLocation={setLocation} address={address} setAddress={setAddress} />
+        <NewProjectDescription description={description} setDescription={setDescription} />
+        
 
 
-
-
-          </div>
-          <div className="address-input-container">
-            <input
-              type="text" className="address-input"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Enter address"
-            />
-            <button onClick={handleSearch} className="address-button">Search</button>
-          </div>
-
-        </div>
-
-
-        {/* Column 4 */}
-        <div className="column-new-project-description">
-          <div className="dashboard-item new-project-description" onClick={openDescriptionModal}>
-            <span className='after-input-description'>{description || 'Description'}</span>
-            {!description && <span>+</span>}
-          </div>
-
-          <Modal
-            isOpen={showDescriptionModal}
-            onRequestClose={closeDescriptionModal}
-            contentLabel="Project Description Modal"
-            style={{
-              overlay: {
-                backgroundColor: 'rgba(0, 0, 0, 0.75)'
-              },
-              content: {
-                display: 'flex',
-                backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                color: 'white',
-                width: '300px',
-                height: '400px',
-                margin: 'auto',
-                paddingTop: '50px',
-                borderRadius: '20px'
-              }
-            }}
-          >
-            <form onSubmit={handleSubmitDescription} className="modal-form">
-              <label className="modal-label">Project Description</label>
-              <textarea value={description} onChange={handleDescriptionChange} className="modal-input-description" />
-              <button type="submit" className="modal-button">Done</button>
-            </form>
-
-          </Modal>
-
-
-
-
-        </div>
 
 
       </div>
 
       <div className='dashboard-layout'>
 
-
-        {/* Column 7*/}
 
       </div>
       <div className="column-final-btn">
