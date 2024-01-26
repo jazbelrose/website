@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import teamData from './team.json';
 import Map from "../../components/map";
 import Modal from 'react-modal';
+import ProjectHeader from './components/ProjectHeader';
+import BudgetComponent from './components/BudgetComponent';
 
 
 
@@ -25,11 +27,11 @@ const SingleProject = ({ activeProject }) => {
 
     const [isUploadsModalOpen, setUploadsModalOpen] = useState(false);
     const [selectedUploads, setSelectedUploads] = useState([]);
-    const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
-    const [updatedBudget, setUpdatedBudget] = useState({ date: '', total: '' });
     const [selectedDate, setSelectedDate] = useState("");
     const [selectedFinishLineDate, setSelectedFinishLineDate] = useState("");
     const [localActiveProject, setLocalActiveProject] = useState(activeProject);
+
+
 
 
 
@@ -38,18 +40,7 @@ const SingleProject = ({ activeProject }) => {
 
     const [isFinishLineModalOpen, setIsFinishLineModalOpen] = useState(false);
 
-    const openBudgetModal = () => {
 
-        if (localActiveProject && localActiveProject.budget) {
-            // Set initial budget and date values from localActiveProject when the modal is opened
-            setUpdatedBudget({
-                total: localActiveProject.budget.total,
-                date: localActiveProject.budget.date // If there's a budget date in the object
-            });
-            setSelectedDate(localActiveProject.budget.date);
-        }
-        setIsBudgetModalOpen(true);
-    };
 
     const openFinishLineModal = () => {
         if (localActiveProject && localActiveProject.finishline) {
@@ -57,28 +48,7 @@ const SingleProject = ({ activeProject }) => {
         }
         setIsFinishLineModalOpen(true);
     };
-    
 
-
-    const handleBudgetSubmit = (e) => {
-        e.preventDefault();
-        handleUpdateBudget();
-
-        return false;
-    };
-
-
-    const handleUpdateBudget = () => {
-        const updatedProject = {
-            ...localActiveProject,
-            budget: { ...updatedBudget, date: selectedDate }
-        };
-
-
-        setLocalActiveProject(updatedProject);
-        setIsBudgetModalOpen(false);
-        updateBudgetToAPI(updatedProject.budget);
-    };
 
 
     const handleUpdateFinishLine = () => {
@@ -86,38 +56,13 @@ const SingleProject = ({ activeProject }) => {
             ...localActiveProject,
             finishline: selectedFinishLineDate
         };
-    
+
         setLocalActiveProject(updatedProject);
         setIsFinishLineModalOpen(false);
         updateFinishLineToAPI(updatedProject.finishline);
     };
-    
 
-    const updateBudgetToAPI = async () => {
-        const apiUrl = `https://didaoiqxl5.execute-api.us-west-1.amazonaws.com/default/editProject?projectId=${activeProject.projectId}`;
 
-        const payload = {
-            budget: {
-                ...updatedBudget,
-                date: selectedDate
-            }
-        };
-
-        try {
-            const updateResponse = await fetch(apiUrl, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
-            });
-
-            if (!updateResponse.ok) {
-                throw new Error('Failed to update budget');
-            }
-            console.log('Budget updated successfully in the API');
-        } catch (error) {
-            console.error('Error updating budget:', error);
-        }
-    };
 
 
     const updateFinishLineToAPI = async () => {
@@ -136,7 +81,7 @@ const SingleProject = ({ activeProject }) => {
             if (response.ok) {
                 console.log('Finish line updated successfully');
                 const updatedProject = { ...activeProject, finishline: selectedFinishLineDate };
-                
+
             } else {
                 console.error('Failed to update finish line');
             }
@@ -152,76 +97,16 @@ const SingleProject = ({ activeProject }) => {
     }, [activeProject]);
 
 
-
-
-
     return (
 
 
 
 
         <div className="active-project-details">
-            <div className='project-header'>
-                <h2>{activeProject?.title || "Summary"}</h2> {/* Default to "Summary" if title is not available */}
-            </div>
-
-            {/*  Title & Status*/}
-
-
-            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 75 1344 600">
 
 
 
-
-                {/* Initial inside Ellipse */}
-
-                <g>
-                    <g id="Ellipse" data-name="Ellipse">
-                        <ellipse className="initial-ellipse" cx="283.58" cy="337.17" rx="135" ry="135" />
-                    </g>
-
-                    <g id="project-initial">
-                        <text className="initial" x="285" y="332.5" textAnchor="middle" dominantBaseline="central">
-                            {projectInitial.toUpperCase()}
-                        </text>
-                    </g>
-
-
-                </g>
-
-
-                {/* Status*/}
-
-
-                <text className="project-status"
-                    transform={`translate(${activeProject?.status !== '100%' ? 875 : 856.58} 375.21)`}>
-                    <tspan x="0" y="0">{activeProject?.status || '0%'}</tspan>
-                </text>
-
-                {activeProject && (
-                    <ellipse
-                        cx="975"
-                        cy="337.17"
-                        rx="160"
-                        ry="160"
-                        fill="none"
-                        stroke="#fff"
-                        strokeWidth="15"
-                    >
-                        <animate
-                            attributeName="stroke-dasharray"
-                            from="0, 1004"
-                            to={`${parseStatusToNumber(activeProject.status) / 100 * 1002}, 1004`}
-                            dur="1s"
-                            begin="0s"
-                            fill="freeze"
-                        />
-                    </ellipse>
-                )}
-
-            </svg>
-
-
+            <ProjectHeader activeProject={activeProject} parseStatusToNumber={parseStatusToNumber} />
 
 
             <div className='dashboard-layout'>
@@ -233,52 +118,16 @@ const SingleProject = ({ activeProject }) => {
 
                 <div className="column-1">
 
-                    <div className="dashboard-item budget" onClick={openBudgetModal}>
-                        <span>Budget</span>
-                        <span>
-                            ${localActiveProject.budget && localActiveProject.budget.total ? localActiveProject.budget.total : 'Not available'}
-                        </span>
-                        <span>{localActiveProject.budget && localActiveProject.budget.date}</span>
-                    </div>
 
-                    <Modal
-                        isOpen={isBudgetModalOpen}
-                        onRequestClose={() => setIsBudgetModalOpen(false)}
-                        contentLabel="Budget Modal"
-                        style={{
-                            overlay: { backgroundColor: 'rgba(0, 0, 0, 0.75)' },
-                            content: {
-                                display: 'flex',
-                                backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                                color: 'white',
-                                width: '300px',
-                                height: '400px',
-                                margin: 'auto',
-                                paddingTop: '50px',
-                                borderRadius: '20px'
-                            }
-                        }}
-                    >
-                        <form onSubmit={handleBudgetSubmit} className="modal-form">
-                            <input
-                                type="date"
-                                value={selectedDate}
-                                onChange={(e) => setSelectedDate(e.target.value)}
-                                className="modal-input"
-                            />
-                            <input
-                                type="text"
-                                value={updatedBudget.total}
-                                onChange={(e) => setUpdatedBudget({ ...updatedBudget, total: e.target.value })}
-                                placeholder="Budget Total"
-                                className="modal-input"
-                            />
-                            <button type="submit" className="modal-button">Update Budget</button>
-                        </form>
-                    </Modal>
+                    {localActiveProject && localActiveProject.budget && (
+                        <BudgetComponent
+                            budget={localActiveProject?.budget}
+                            activeProject={localActiveProject}
+                            setLocalActiveProject={setLocalActiveProject}
+                            localActiveProject={localActiveProject}
+                        />
 
-
-
+                    )}
 
 
 
@@ -507,14 +356,14 @@ const SingleProject = ({ activeProject }) => {
                     }}
                 >
                     <form onSubmit={handleUpdateFinishLine} className="modal-form">
-        <input
-            type="date"
-            value={selectedFinishLineDate}
-            onChange={(e) => setSelectedFinishLineDate(e.target.value)}
-            className="modal-input"
-        />
-        <button type="submit" className="modal-button">Update Finish Line</button>
-    </form>
+                        <input
+                            type="date"
+                            value={selectedFinishLineDate}
+                            onChange={(e) => setSelectedFinishLineDate(e.target.value)}
+                            className="modal-input"
+                        />
+                        <button type="submit" className="modal-button">Update Finish Line</button>
+                    </form>
                 </Modal>
 
 

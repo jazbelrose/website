@@ -1,6 +1,6 @@
 import React from 'react';
 import Preloader from "../../components/preloader";
-import SVGThumbnail from './SVGThumbnail';
+import SVGThumbnail from './components/SVGThumbnail';
 import "./style.css";
 
 const AllProjects = ({ projects, onSelectProject, isLoading }) => {
