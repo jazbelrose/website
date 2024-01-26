@@ -19,7 +19,8 @@ const FinishLineComponent = ({ activeProject, setLocalActiveProject, localActive
 
 
 
-    const handleUpdateFinishLine = () => {
+    const handleUpdateFinishLine = (e) => {
+        e.preventDefault(); 
         const updatedProject = {
             ...localActiveProject,
             finishline: selectedFinishLineDate

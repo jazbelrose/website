@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 import teamData from './team.json';
 import Map from "../../components/map";
 import Modal from 'react-modal';
-import ProjectHeader from './components/ProjectHeader';
-import BudgetComponent from './components/BudgetComponent';
-import FinishLineComponent from './components/FinishLineComponent';
-import UploadsComponent from './components/UploadsComponent';
+import ProjectHeader from './components/SingleProject/ProjectHeader';
+import BudgetComponent from './components/SingleProject/BudgetComponent';
+import FinishLineComponent from './components/SingleProject/FinishLineComponent';
+import UploadsComponent from './components/SingleProject/UploadsComponent';
 
 
 
@@ -24,14 +24,12 @@ const SingleProject = ({ activeProject }) => {
 
 
 
-    useEffect(() => {
-        setLocalActiveProject(activeProject);
-    }, [activeProject]);
+    // useEffect(() => {
+    //     setLocalActiveProject(activeProject);
+    // }, [activeProject]);
 
 
     return (
-
-
 
 
         <div className="active-project-details">
