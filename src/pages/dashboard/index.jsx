@@ -154,10 +154,12 @@ const handleNewProjectCreated = (newProject) => {
 
 
 
-  console.log(user); // Add this inside your component to log the user object
-  useEffect(() => {
-    console.log('User updated:', user);
-  }, [user]);
+  // console.log(user); 
+
+
+  // useEffect(() => {
+  //   console.log('User updated:', user);
+  // }, [user]);
 
 
 
