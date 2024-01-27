@@ -89,6 +89,7 @@ const handleNewProjectCreated = (newProject) => {
 
 
 
+
   // Fetch User Data
 
   useEffect(() => {
@@ -108,34 +109,47 @@ const handleNewProjectCreated = (newProject) => {
     fetchUserData();
   }, [user.userId]); // Corrected dependency array
 
-  // Fetch Project Details
-  useEffect(() => {
-    const fetchProjects = async () => {
-      setIsLoading(true);
+  const fetchProjects = async () => {
+    setIsLoading(true);
+    try {
+      if (userData && userData.projects) {
+        const projectsData = await Promise.all(userData.projects.map(async (projectId) => {
+          const response = await fetch(`https://gui4kdsekj.execute-api.us-west-1.amazonaws.com/default/Projects?projectId=${projectId}`);
+          if (!response.ok) {
+            throw new Error(`Failed to fetch project data for projectId: ${projectId}`);
+          }
+          return await response.json();
+        }));
 
-      try {
-        if (userData && userData.projects) {
-          const projectsData = await Promise.all(userData.projects.map(async (projectId) => {
-            const response = await fetch(`https://gui4kdsekj.execute-api.us-west-1.amazonaws.com/default/Projects?projectId=${projectId}`);
-            if (!response.ok) {
-              throw new Error(`Failed to fetch project data for projectId: ${projectId}`);
-            }
-            return await response.json();
-          }));
-
-          setProjects(projectsData.map(data => data.Items[0]));
-        }
-      } catch (error) {
-        console.error('Error fetching project details:', error);
+        setProjects(projectsData.map(data => data.Items[0]));
       }
-      setIsLoading(false);
-    };
+    } catch (error) {
+      console.error('Error fetching project details:', error);
+    }
+    setIsLoading(false);
+  };
 
+  useEffect(() => {
     if (userData && userData.projects) {
       fetchProjects();
     }
-  }, [userData]); // Dependency on userData
+  }, [userData]); 
 
+  const onProjectDeleted = (deletedProjectId) => {
+
+  setProjects(prevProjects => {
+    const updatedProjects = prevProjects.filter(project => project.projectId !== deletedProjectId);
+    return updatedProjects;
+  });
+
+  setSelectedProjects(prevSelectedProjects => prevSelectedProjects.filter(project => project.projectId !== deletedProjectId));
+
+  setProjectsViewState('show-all');
+
+  console.log("onProjectDeleted function executed for projectId:", deletedProjectId);
+};
+
+  
 
 
   useEffect(() => {
@@ -268,8 +282,8 @@ const handleNewProjectCreated = (newProject) => {
         <div className={`sidebar-right ${projectsViewState === 'single-project' || projectsViewState === 'new-project' || projectsViewState === 'welcome' || projectsViewState === 'show-all' ? 'full-width' : ''}`}>
           {projectsViewState === 'welcome' && <WelcomeScreen userName={userName} />}
           {projectsViewState === 'new-project' && <NewProject userName={userName} userId={user.userId} isNewProjectView={isNewProjectView} onProjectCreated={handleNewProjectCreated} />}
-          {projectsViewState === 'show-all' && <AllProjects projects={selectedProjects} onSelectProject={selectProject} isLoading={isLoading} />}
-          {projectsViewState === 'single-project' && activeProject && <SingleProject activeProject={activeProject} />}
+          {projectsViewState === 'show-all' && <AllProjects projects={selectedProjects} onSelectProject={selectProject} isLoading={isLoading} setIsLoading={setIsLoading} />}
+          {projectsViewState === 'single-project' && activeProject && <SingleProject activeProject={activeProject} userId={user.userId} onToggleAllProjectsView={toggleAllProjectsView} onProjectDeleted={onProjectDeleted}/>}
 
           {/* ... other views ... */}
         </div>

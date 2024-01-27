@@ -3,10 +3,10 @@ import Preloader from "../../components/preloader";
 import SVGThumbnail from './components/AllProjects/SVGThumbnail';
 import "./style.css";
 
-const AllProjects = ({ projects, onSelectProject, isLoading }) => {
+const AllProjects = ({ localActiveProject, projects, onSelectProject, isLoading, setIsLoading }) => {
     
     if (isLoading) {
-        return <Preloader />;
+        <Preloader setIsLoading={setIsLoading} />
     }
 
     return (

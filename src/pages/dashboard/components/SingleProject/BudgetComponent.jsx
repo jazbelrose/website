@@ -1,8 +1,9 @@
 import React, { useState, useEffect  } from 'react';
 import Modal from 'react-modal';
 
-const BudgetComponent = ({ budget, activeProject, setLocalActiveProject, localActiveProject }) =>  {
+const BudgetComponent = ({ budget, activeProject }) =>  {
 
+  const [localActiveProject, setLocalActiveProject] = useState(activeProject || {});
   const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
   const [updatedBudget, setUpdatedBudget] = useState({ date: budget?.date || '', total: budget?.total || '' });
   const [selectedDate, setSelectedDate] = useState(budget?.date || '');  // Define selectedDate here
@@ -112,19 +113,21 @@ const handleBudgetSubmit = (e) => {
                     >
                         <form onSubmit={handleBudgetSubmit} className="modal-form">
                             <input
+                                style={{ borderRadius: "5px" }}
                                 type="date"
                                 value={selectedDate}
                                 onChange={(e) => setSelectedDate(e.target.value)}
                                 className="modal-input"
                             />
                             <input
+                                style={{ borderRadius: "5px" }}
                                 type="text"
                                 value={updatedBudget.total}
                                 onChange={(e) => setUpdatedBudget({ ...updatedBudget, total: e.target.value })}
                                 placeholder="Budget Total"
                                 className="modal-input"
                             />
-                            <button type="submit" className="modal-button">Update Budget</button>
+                            <button style={{ borderRadius: "10px" }} type="submit" className="modal-button">Update Budget</button>
                         </form>
                     </Modal>
     </div>

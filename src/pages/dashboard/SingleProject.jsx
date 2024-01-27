@@ -12,56 +12,61 @@ import UploadsComponent from './components/SingleProject/UploadsComponent';
 
 
 
-const SingleProject = ({ activeProject }) => {
+const SingleProject = ({ activeProject, userId, onProjectDeleted }) => {
 
-    const [localActiveProject, setLocalActiveProject] = useState(activeProject);
+    const [localActiveProject, setLocalActiveProject] = useState(activeProject || {});
     const isSmallScreen = window.innerWidth <= 768;
     const activeProjectLocation = activeProject ? activeProject.location : null;
-    const projectInitial = activeProject?.title ? activeProject.title.charAt(0) : '';
-    const parseStatusToNumber = (statusString) => { const number = parseFloat(statusString.replace('%', '')); return number; };
+
+    const parseStatusToNumber = (statusString) => {
+        return statusString ? parseFloat(statusString.replace('%', '')) : 0;
+      };
+      
     const progress = activeProject ? parseStatusToNumber(activeProject.milestone) : 0;
     const getMilestoneClass = (milestone, type) => { return progress >= milestone ? type : `${type}-incomplete`; };
 
 
 
-    // useEffect(() => {
-    //     setLocalActiveProject(activeProject);
-    // }, [activeProject]);
-
+  
 
     return (
 
 
         <div className="active-project-details">
-
-            <ProjectHeader activeProject={activeProject} parseStatusToNumber={parseStatusToNumber} />
-
+        
+            
+                <ProjectHeader
+                    
+                    activeProject={activeProject}
+                    parseStatusToNumber={parseStatusToNumber}
+                    userId={userId}
+                    onProjectDeleted={onProjectDeleted} />
+          
             <div className='dashboard-layout'>
 
-                
+
                 <div className="column-1">
 
 
-                    {localActiveProject && localActiveProject.budget && (
                         <BudgetComponent
-                            budget={localActiveProject?.budget}
-                            activeProject={localActiveProject}
-                            setLocalActiveProject={setLocalActiveProject}
+
+                            
+                            activeProject={activeProject}
                             localActiveProject={localActiveProject}
                         />
 
-                    )}
+                  
 
 
-                    {localActiveProject && localActiveProject.uploads && (
+                   
                         <UploadsComponent
                             budget={localActiveProject?.uploads}
-                            activeProject={localActiveProject}
-                            setLocalActiveProject={setLocalActiveProject}
-                            localActiveProject={localActiveProject}
+                            activeProject={activeProject}
+                            
+                            
                         />
 
-                    )}
+                   
 
 
 
@@ -224,15 +229,13 @@ const SingleProject = ({ activeProject }) => {
 
 
 
-                    {localActiveProject && localActiveProject.finishline && (
+                    
                         <FinishLineComponent
                             finishline={localActiveProject?.finishline}
-                            activeProject={localActiveProject}
-                            setLocalActiveProject={setLocalActiveProject}
-                            localActiveProject={localActiveProject}
+                            activeProject={activeProject}
                         />
 
-                    )}
+                   
 
 
                 </div>

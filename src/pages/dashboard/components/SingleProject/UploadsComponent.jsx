@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 
-const UploadsComponent = ({ activeProject, setLocalActiveProject, localActiveProject }) => {
+const UploadsComponent = ({ activeProject }) => {
 
 
 const [isUploadsModalOpen, setUploadsModalOpen] = useState(false);

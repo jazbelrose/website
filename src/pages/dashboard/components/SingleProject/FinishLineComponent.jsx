@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 
 
-const FinishLineComponent = ({ activeProject, setLocalActiveProject, localActiveProject }) => {
+const FinishLineComponent = ({ activeProject}) => {
     
+
+    const [localActiveProject, setLocalActiveProject] = useState(activeProject || {});
     const [selectedFinishLineDate, setSelectedFinishLineDate] = useState("");
     const [isFinishLineModalOpen, setIsFinishLineModalOpen] = useState(false);
 
@@ -88,19 +90,20 @@ const FinishLineComponent = ({ activeProject, setLocalActiveProject, localActive
                         width: '300px',
                         height: '250px',
                         margin: 'auto',
-                        paddingTop: '50px',
+                        
                         borderRadius: '20px'
                     }
                 }}
             >
                 <form onSubmit={handleUpdateFinishLine} className="modal-form">
-                    <input
+                    <input 
+                        style={{ borderRadius: "5px", marginBottom: "50px"}}
                         type="date"
                         value={selectedFinishLineDate}
                         onChange={(e) => setSelectedFinishLineDate(e.target.value)}
                         className="modal-input"
                     />
-                    <button type="submit" className="modal-button">Update Finish Line</button>
+                    <button style={{ borderRadius: "10px" }} type="submit" className="modal-button">Update Finish Line</button>
                 </form>
             </Modal>
 
