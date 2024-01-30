@@ -1,6 +1,8 @@
 /* Left side navigation*/
 
 
+
+
 .sidebar-container {
   display: flex;
   flex-direction: column;
@@ -143,6 +145,20 @@ svg .project-title {
 }
 
 
+body.ReactModal__Body--open {
+  overflow: hidden;
+  position: relative;
+
+  #root {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      filter: blur(4px);
+  }
+}
+
 
 .modal-form {
   display: flex;
@@ -159,9 +175,12 @@ svg .project-title {
 }
 
 .modal-input {
+  border: none;
   margin-bottom: 20px;
   width: 80%;
   padding: 10px;
+  color: white;           
+  background-color: rgb(37, 37, 37); 
 }
 
 .modal-input-description {
@@ -181,7 +200,7 @@ svg .project-title {
   color: white;
   background-color: black;
   border-radius: 20px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin-top: auto;
   font-size: 16px;
 }
@@ -201,9 +220,28 @@ svg .project-title {
   color: #FA3356;
   background-color: black;
   border-radius: 20px;
-  padding: 10px 40px;
+  padding: 10px 20px;
   margin-top: auto;
   font-size: 16px;
+}
+
+
+
+.modal-submit-button.uploads {
+  margin: 0 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-submit-button.uploads.fa {
+ border: none;
+}
+
+
+
+.modal-submit-button.uploads:hover {
+  color: #FA3356;
+  cursor: pointer;
 }
 
 
@@ -253,6 +291,8 @@ svg .project-title {
   width: 100%;
   box-sizing: border-box;
 }
+
+
 
 
 .address-input-container {
@@ -316,11 +356,17 @@ svg .project-title {
 }
 
 .project-header .left-side svg {
-  width: 75px; /* Larger width */
+  width: 90px; /* Larger width */
   height: auto;
   flex-shrink: 0;
-  margin-right: 10px;
+  margin: 0 10px;
 }
+
+#StatusSVG{
+
+  width: 100px;
+}
+
 
 
 .project-header .right-side svg {
@@ -624,6 +670,11 @@ svg .project-title {
 
 }
 
+
+
+
+
+
 .column-new-project-address{
   height: 500px;
   display: flex;
@@ -673,7 +724,7 @@ svg .project-title {
 
 .column-5,
 .column-6 {
-  height: 384px;
+  height: 500px;
 
 
 }
@@ -822,7 +873,7 @@ svg .project-title {
 .dashboard-item.notes span {
   margin: 10px 0;
   font-size: min(2rem, 3vw);
-  padding-bottom: 256px;
+  min-height: 420px;
 }
 
 
@@ -1435,13 +1486,13 @@ svg .project-title {
 
     .project-header .left-side svg
   {
-    width: 50px; /* Adjusted smaller size for SVGs */
+    width: 40px; /* Adjusted smaller size for SVGs */
     height: auto;
   }
 
   #StatusSVG{
 
-    width: 55px;
+    width: 50px;
   }
 
   .project-header .right-side svg {
@@ -1452,7 +1503,7 @@ svg .project-title {
   .project-header .single-project-title h2 {
     margin-bottom: 2px;
     font-size: 1.5rem; 
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
  
