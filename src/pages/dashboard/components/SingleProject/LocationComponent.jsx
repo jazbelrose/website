@@ -44,25 +44,25 @@ const LocationComponent = ({ activeProject }) => {
             return null;
         }
     };
-
     const handleUpdateAddress = async (e) => {
         e.preventDefault();
         const geocodedLocation = await searchAddress(searchQuery);
-        
+    
         if (geocodedLocation) {
-            setSelectedAddress(searchQuery); 
+            setSelectedAddress(searchQuery);
             setLocation(geocodedLocation);
             setAddress(searchQuery);
-            
-            console.log("Updated Location:", geocodedLocation);
-            console.log("Updated Address:", searchQuery);
-            await updateAddressToAPI(searchQuery); 
-
-            setButtonText('Saved');
-            setTimeout(() => {
-                setButtonText('Search');
-            }, 2000);
-
+    
+            const success = await updateAddressToAPI(searchQuery); // Await the API call
+            if (success) {
+                console.log("Address updated successfully", { geocodedLocation, searchQuery });
+                setButtonText('Saved');
+                setTimeout(() => {
+                    setButtonText('Search');
+                }, 2000);
+            } else {
+                console.log("Failed to update address in database.");
+            }
         } else {
             console.log("No location found for the address.");
         }
@@ -70,34 +70,23 @@ const LocationComponent = ({ activeProject }) => {
 
 
 
-
-    const updateAddressToAPI = async () => {
+    const updateAddressToAPI = async (address) => {
         const apiUrl = `https://didaoiqxl5.execute-api.us-west-1.amazonaws.com/default/editProject?projectId=${activeProject.projectId}`;
-        const payload = {
-            address: selectedAddress
-        };
-
+        const payload = { address };
+    
         try {
             const response = await fetch(apiUrl, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             });
-
-            if (response.ok) {
-                console.log('Address updated successfully');
-                const updatedProject = { ...activeProject, address: selectedAddress };
-
-            } else {
-                console.error('Failed to update Address');
-            }
+    
+            return response.ok; // Return true if the response is successful
         } catch (error) {
             console.error('Error updating address:', error);
+            return false; // Return false if there is an error
         }
-
-      
     };
-
 
 
 

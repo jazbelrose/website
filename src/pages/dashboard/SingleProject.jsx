@@ -149,7 +149,7 @@ const SingleProject = ({ activeProject, userId, onProjectDeleted }) => {
                 <div className="column-6">
 
                     <div className="dashboard-item floorplan">
-                        <span>Floorplan</span>
+                        <span>Floorplans</span>
                         <span>></span>
 
 
