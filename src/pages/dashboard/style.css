@@ -1262,6 +1262,7 @@ body.ReactModal__Body--open {
   }
 
   #wrapper {
+    max-height: 100vh;
 
     overflow: hidden;
   }

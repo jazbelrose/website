@@ -1,20 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faDownload, faTrash, faCheck } from '@fortawesome/free-solid-svg-icons';
-
-const UploadsComponent = ({ activeProject, onActiveProjectChange }) => {
-
+import { uploadData } from 'aws-amplify/storage';
 
 
+const UploadsComponent = ({ activeProject}) => {
 
 
+    
+    const fileInputRef = useRef(null);
+
+    const [isLoading, setIsLoading] = useState([]);
     const [localActiveProject, setLocalActiveProject] = useState(activeProject || {});
     const [isUploadsModalOpen, setUploadsModalOpen] = useState(false);
     const [selectedUploads, setSelectedUploads] = useState([]);
     const [isImageModalOpen, setImageModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
     const [selectedItems, setSelectedItems] = useState(new Set());
+    const [selectedFiles, setSelectedFiles] = useState([]);
     const [isSelectMode, setIsSelectMode] = useState(false);
     const apiGatewayEndpoint = 'https://o01t8q8mjk.execute-api.us-west-1.amazonaws.com/default/zipFiles'
     const apiDeleteEndpoint = 'https://k6utve4soj.execute-api.us-west-1.amazonaws.com/default/DeleteFilesFromS3'
@@ -46,6 +50,7 @@ const UploadsComponent = ({ activeProject, onActiveProjectChange }) => {
         );
     };
 
+  
 
     const handleSelectionChange = (url) => {
         const newSelectedItems = new Set(selectedItems);
@@ -97,40 +102,122 @@ const UploadsComponent = ({ activeProject, onActiveProjectChange }) => {
 
 
     const handleDelete = async () => {
-        const fileUrlsToDelete = Array.from(selectedItems);
-
+        const fileUrlsToDelete = Array.from(selectedItems); // Original URLs
+        const thumbnailUrlsToDelete = fileUrlsToDelete.map(url => getThumbnailUrl(url));
+    
         try {
-            const response = await fetch(apiDeleteEndpoint, {
+            // Delete Original Files
+            await fetch(apiDeleteEndpoint, {
                 method: 'POST',
-                body: JSON.stringify({ projectId: activeProject.projectId, field: 'uploads', fileKeys: fileUrlsToDelete }),
+                body: JSON.stringify({ 
+                    projectId: activeProject.projectId, 
+                    field: 'uploads', 
+                    fileKeys: fileUrlsToDelete // Sending original URLs for deletion
+                }),
                 headers: { 'Content-Type': 'application/json' },
             });
-
-            if (!response.ok) {
-                throw new Error('Failed to delete files.');
-            }
-
-
-            const updatedUploads = localActiveProject.uploads.filter(upload => !selectedItems.has(upload.url));
-            const updatedProject = { ...localActiveProject, uploads: updatedUploads };
-            setLocalActiveProject(updatedProject);
+    
+            
+            await fetch(apiDeleteEndpoint, {
+                method: 'POST',
+                body: JSON.stringify({ 
+                    projectId: activeProject.projectId, 
+                    field: 'uploads', 
+                    fileKeys: thumbnailUrlsToDelete // Sending thumbnail URLs for deletion
+                }),
+                headers: { 'Content-Type': 'application/json' },
+            });
+    
+           
+            const updatedUploads = localActiveProject.uploads.filter(upload => !fileUrlsToDelete.includes(upload.url));
+            setLocalActiveProject({ ...localActiveProject, uploads: updatedUploads });
             setSelectedUploads(updatedUploads);
-            setLocalActiveProject(updatedProject);
-            onActiveProjectChange(updatedProject);
-
-            const remainingUploads = selectedUploads.filter(upload => !selectedItems.has(upload.url));
-            setSelectedUploads(remainingUploads);
-            setSelectedItems(new Set()); // Clear the selection
-            setIsSelectMode(false); // Exit select mode
-
-            onActiveProjectChange(updatedProject);
+            setSelectedItems(new Set());
+            setIsSelectMode(false);
+    
         } catch (error) {
             console.error('Error during deletion:', error);
-            // Handle error appropriately in the UI
+        }
+    };
+    
+
+    const handleFileSelect = async (event) => {
+        setIsLoading(true);
+        const files = event.target.files;
+        if (!files.length) return;
+    
+        try {
+            const uploadedFileUrls = await handleFileUpload(activeProject.projectId, files);
+            const updatedUploads = [...localActiveProject.uploads, ...uploadedFileUrls];
+            const updatedProject = { ...localActiveProject, uploads: updatedUploads };
+    
+            if (uploadedFileUrls.length > 0) {
+                await updateUploadsToAPI(updatedProject.projectId, updatedUploads);
+                setLocalActiveProject(updatedProject);
+                
+            }
+        } catch (error) {
+            console.error('Upload failed:', error);
+            // Optionally, show an error message to the user
+        } finally {
+            setIsLoading(false);
+            event.target.value = ''; // Reset the file input after upload
         }
     };
 
+   const handleFileUpload = async (projectId, files) => {
+        const uploadedFileUrls = [];
+        for (let file of files) {
+            const filename = `projects/${projectId}/uploads/${file.name}`;
 
+            try {
+                // Assuming uploadData uploads the file to S3
+                await uploadData({
+                    key: filename,
+                    data: file,
+                    options: {
+                        accessLevel: 'protected',
+                    }
+                });
+
+                const fileUrl = `https://mylguserdata194416-dev.s3.us-west-1.amazonaws.com/protected/us-west-1%3A33762779-d3a2-c552-0eca-a287c4438602/${filename}`;
+                uploadedFileUrls.push({ fileName: file.name, url: fileUrl });
+            } catch (error) {
+                console.error('Error uploading files:', error);
+            }
+        }
+        return uploadedFileUrls;
+    };
+
+    const updateUploadsToAPI = async (projectId, updatedUploads) => {
+        const apiUrl = `https://didaoiqxl5.execute-api.us-west-1.amazonaws.com/default/editProject?projectId=${projectId}`;
+        const payload = { uploads: updatedUploads };
+    
+        try {
+            const response = await fetch(apiUrl, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+    
+            if (!response.ok) throw new Error('Failed to update uploads');
+            console.log('Uploads updated successfully');
+        } catch (error) {
+            console.error('Error updating uploads:', error);
+            // Optionally, provide feedback to the user on failure
+        }
+    };
+
+    const handleUploadClick = async () => {
+        
+        const uploadedFileUrls = await handleFileUpload(activeProject.projectId, selectedFiles);
+        await updateUploadsToAPI(uploadedFileUrls);
+        const updatedProject = { ...activeProject, uploads: [...activeProject.uploads, ...uploadedFileUrls] };
+         
+        setLocalActiveProject(updatedProject);
+        setSelectedUploads(updatedProject.uploads);
+        closeUploadsModal(); 
+    };
 
 
 
@@ -187,20 +274,27 @@ const UploadsComponent = ({ activeProject, onActiveProjectChange }) => {
     };
 
 
+
+
     useEffect(() => {
         setLocalActiveProject(activeProject || {});
         setSelectedUploads(localActiveProject.uploads || []);
     }, [activeProject]);
 
 
-    const updateLocalUploads = (newUploads) => {
-        const updatedProject = { ...localActiveProject, uploads: newUploads };
-        setLocalActiveProject(updatedProject);
-        setSelectedUploads(newUploads);
+  
 
-
-        onActiveProjectChange(updatedProject);
-    };
+    useEffect(() => {
+        
+        setSelectedUploads(localActiveProject.uploads.map(upload => {
+            
+            return {
+                ...upload,
+                thumbnailUrl: getThumbnailUrl(upload.url)
+            };
+        }));
+    }, [localActiveProject.uploads]);
+    
 
     useEffect(() => {
 
@@ -212,6 +306,7 @@ const UploadsComponent = ({ activeProject, onActiveProjectChange }) => {
 
         setProjects(prevProjects => prevProjects.map(proj => proj.projectId === updatedProject.projectId ? updatedProject : proj));
     };
+
 
 
 
@@ -362,6 +457,7 @@ const UploadsComponent = ({ activeProject, onActiveProjectChange }) => {
                                             bottom: 'auto',
                                             marginRight: '-50%',
                                             transform: 'translate(-50%, -50%)',
+                                            minHeight: '350px',
                                             width: 'auto',
                                             height: 'auto',
                                             maxWidth: '90%',
@@ -462,11 +558,26 @@ const UploadsComponent = ({ activeProject, onActiveProjectChange }) => {
                                 Select
                             </button>
 
-                            {/* Close Button */}
+                            {/* Upload Button */}
+                            <input
+                                type="file"
+                                multiple
+                                onChange={handleFileSelect}
+                                style={{ display: 'none' }}
+                                ref={fileInputRef}
+                            />
                             <button
                                 className="modal-submit-button uploads"
-                                onClick={closeUploadsModal}
+                                onClick={() => fileInputRef.current.click()}
+                            >
+                                Upload
+                            </button>
 
+                              {/* Close Button */}
+                              <button
+                                className="modal-submit-button uploads"
+                                onClick={closeUploadsModal}
+                                
                             >
                                 Close
                             </button>
