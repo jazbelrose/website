@@ -141,53 +141,53 @@ const UploadsComponent = ({ activeProject}) => {
     };
     
 
-    const handleFileSelect = async (event) => {
-        setIsLoading(true);
-        const files = event.target.files;
-        if (!files.length) return;
-    
+  const handleFileUpload = async (projectId, files) => {
+    const uploadedFileUrls = [];
+    for (let file of files) {
+        const filename = `projects/${projectId}/uploads/${file.name}`;
+
         try {
-            const uploadedFileUrls = await handleFileUpload(activeProject.projectId, files);
-            const updatedUploads = [...localActiveProject.uploads, ...uploadedFileUrls];
-            const updatedProject = { ...localActiveProject, uploads: updatedUploads };
-    
-            if (uploadedFileUrls.length > 0) {
-                await updateUploadsToAPI(updatedProject.projectId, updatedUploads);
-                setLocalActiveProject(updatedProject);
-                
-            }
+            await uploadData({
+                key: filename,
+                data: file,
+                options: {
+                    accessLevel: 'protected',
+                }
+            });
+
+            const fileUrl = `https://mylguserdata194416-dev.s3.us-west-1.amazonaws.com/protected/us-west-1%3A33762779-d3a2-c552-0eca-a287c4438602/${filename}`;
+            uploadedFileUrls.push({ fileName: file.name, url: fileUrl, thumbnailUrl: getThumbnailUrl(fileUrl) });
         } catch (error) {
-            console.error('Upload failed:', error);
-            // Optionally, show an error message to the user
-        } finally {
-            setIsLoading(false);
-            event.target.value = ''; // Reset the file input after upload
+            console.error('Error uploading files:', error);
         }
-    };
+    }
+    return uploadedFileUrls;
+};
 
-   const handleFileUpload = async (projectId, files) => {
-        const uploadedFileUrls = [];
-        for (let file of files) {
-            const filename = `projects/${projectId}/uploads/${file.name}`;
+const handleFileSelect = async (event) => {
+    setIsLoading(true);
+    const files = event.target.files;
+    if (!files.length) return;
 
-            try {
-                // Assuming uploadData uploads the file to S3
-                await uploadData({
-                    key: filename,
-                    data: file,
-                    options: {
-                        accessLevel: 'protected',
-                    }
-                });
+    try {
+        const uploadedFileUrls = await handleFileUpload(activeProject.projectId, files);
 
-                const fileUrl = `https://mylguserdata194416-dev.s3.us-west-1.amazonaws.com/protected/us-west-1%3A33762779-d3a2-c552-0eca-a287c4438602/${filename}`;
-                uploadedFileUrls.push({ fileName: file.name, url: fileUrl });
-            } catch (error) {
-                console.error('Error uploading files:', error);
-            }
+        if (uploadedFileUrls.length > 0) {
+            const updatedUploads = [...selectedUploads, ...uploadedFileUrls]; // Directly update the state used for rendering
+            setSelectedUploads(updatedUploads); // Update the state to trigger re-render
+            setLocalActiveProject(prevState => ({
+                ...prevState,
+                uploads: updatedUploads
+            }));
         }
-        return uploadedFileUrls;
-    };
+    } catch (error) {
+        console.error('Upload failed:', error);
+    } finally {
+        setIsLoading(false);
+        event.target.value = ''; // Reset the file input after upload
+    }
+};
+
 
     const updateUploadsToAPI = async (projectId, updatedUploads) => {
         const apiUrl = `https://didaoiqxl5.execute-api.us-west-1.amazonaws.com/default/editProject?projectId=${projectId}`;
