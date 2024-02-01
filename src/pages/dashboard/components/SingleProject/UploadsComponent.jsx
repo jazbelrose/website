@@ -3,12 +3,13 @@ import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faDownload, faTrash, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { uploadData } from 'aws-amplify/storage';
+import { CircularProgress } from '@mui/material';
 
 
-const UploadsComponent = ({ activeProject}) => {
+const UploadsComponent = ({ activeProject }) => {
 
 
-    
+
     const fileInputRef = useRef(null);
 
     const [isLoading, setIsLoading] = useState([]);
@@ -18,7 +19,6 @@ const UploadsComponent = ({ activeProject}) => {
     const [isImageModalOpen, setImageModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
     const [selectedItems, setSelectedItems] = useState(new Set());
-    const [selectedFiles, setSelectedFiles] = useState([]);
     const [isSelectMode, setIsSelectMode] = useState(false);
     const apiGatewayEndpoint = 'https://o01t8q8mjk.execute-api.us-west-1.amazonaws.com/default/zipFiles'
     const apiDeleteEndpoint = 'https://k6utve4soj.execute-api.us-west-1.amazonaws.com/default/DeleteFilesFromS3'
@@ -50,7 +50,7 @@ const UploadsComponent = ({ activeProject}) => {
         );
     };
 
-  
+
 
     const handleSelectionChange = (url) => {
         const newSelectedItems = new Set(selectedItems);
@@ -100,7 +100,6 @@ const UploadsComponent = ({ activeProject}) => {
         // Other styles such as an overlay, opacity change, etc. can be added here
     };
 
-
     const handleDelete = async () => {
         const fileUrlsToDelete = Array.from(selectedItems); // Original URLs
         const thumbnailUrlsToDelete = fileUrlsToDelete.map(url => getThumbnailUrl(url));
@@ -140,83 +139,72 @@ const UploadsComponent = ({ activeProject}) => {
         }
     };
     
-
-  const handleFileUpload = async (projectId, files) => {
-    const uploadedFileUrls = [];
-    for (let file of files) {
-        const filename = `projects/${projectId}/uploads/${file.name}`;
+    const handleFileSelect = async (event) => {
+        setIsLoading(true);
+        const files = event.target.files;
+        if (!files.length) return;
 
         try {
-            await uploadData({
-                key: filename,
-                data: file,
-                options: {
-                    accessLevel: 'protected',
-                }
-            });
+            const uploadedFileUrls = await handleFileUpload(activeProject.projectId, files);
+            const updatedUploads = [...localActiveProject.uploads, ...uploadedFileUrls];
+            const updatedProject = { ...localActiveProject, uploads: updatedUploads };
 
-            const fileUrl = `https://mylguserdata194416-dev.s3.us-west-1.amazonaws.com/protected/us-west-1%3A33762779-d3a2-c552-0eca-a287c4438602/${filename}`;
-            uploadedFileUrls.push({ fileName: file.name, url: fileUrl, thumbnailUrl: getThumbnailUrl(fileUrl) });
+            if (uploadedFileUrls.length > 0) {
+                await updateUploadsToAPI(updatedProject.projectId, updatedUploads);
+                setLocalActiveProject(updatedProject);
+
+            }
         } catch (error) {
-            console.error('Error uploading files:', error);
+            console.error('Upload failed:', error);
+            
+        } finally {
+            setIsLoading(false);
+            event.target.value = ''; 
         }
-    }
-    return uploadedFileUrls;
-};
+    };
 
-const handleFileSelect = async (event) => {
-    setIsLoading(true);
-    const files = event.target.files;
-    if (!files.length) return;
+    const handleFileUpload = async (projectId, files) => {
+        const uploadedFileUrls = [];
+        for (let file of files) {
+            const filename = `projects/${projectId}/uploads/${file.name}`;
 
-    try {
-        const uploadedFileUrls = await handleFileUpload(activeProject.projectId, files);
+            try {
+                
+                await uploadData({
+                    key: filename,
+                    data: file,
+                    options: {
+                        accessLevel: 'protected',
+                    }
+                });
 
-        if (uploadedFileUrls.length > 0) {
-            const updatedUploads = [...selectedUploads, ...uploadedFileUrls]; // Directly update the state used for rendering
-            setSelectedUploads(updatedUploads); // Update the state to trigger re-render
-            setLocalActiveProject(prevState => ({
-                ...prevState,
-                uploads: updatedUploads
-            }));
+                const fileUrl = `https://mylguserdata194416-dev.s3.us-west-1.amazonaws.com/protected/us-west-1%3A33762779-d3a2-c552-0eca-a287c4438602/${filename}`;
+                uploadedFileUrls.push({ fileName: file.name, url: fileUrl });
+            } catch (error) {
+                console.error('Error uploading files:', error);
+            }
         }
-    } catch (error) {
-        console.error('Upload failed:', error);
-    } finally {
-        setIsLoading(false);
-        event.target.value = ''; // Reset the file input after upload
-    }
-};
+        return uploadedFileUrls;
+    };
 
 
     const updateUploadsToAPI = async (projectId, updatedUploads) => {
         const apiUrl = `https://didaoiqxl5.execute-api.us-west-1.amazonaws.com/default/editProject?projectId=${projectId}`;
         const payload = { uploads: updatedUploads };
-    
+
         try {
             const response = await fetch(apiUrl, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             });
-    
+
             if (!response.ok) throw new Error('Failed to update uploads');
             console.log('Uploads updated successfully');
         } catch (error) {
             console.error('Error updating uploads:', error);
             // Optionally, provide feedback to the user on failure
         }
-    };
-
-    const handleUploadClick = async () => {
-        
-        const uploadedFileUrls = await handleFileUpload(activeProject.projectId, selectedFiles);
-        await updateUploadsToAPI(uploadedFileUrls);
-        const updatedProject = { ...activeProject, uploads: [...activeProject.uploads, ...uploadedFileUrls] };
-         
-        setLocalActiveProject(updatedProject);
-        setSelectedUploads(updatedProject.uploads);
-        closeUploadsModal(); 
     };
 
 
@@ -282,19 +270,19 @@ const handleFileSelect = async (event) => {
     }, [activeProject]);
 
 
-  
+
 
     useEffect(() => {
         
         setSelectedUploads(localActiveProject.uploads.map(upload => {
-            
+           
             return {
                 ...upload,
                 thumbnailUrl: getThumbnailUrl(upload.url)
             };
         }));
     }, [localActiveProject.uploads]);
-    
+
 
     useEffect(() => {
 
@@ -412,7 +400,7 @@ const handleFileSelect = async (event) => {
                                             maxWidth: '100%',
                                             maxHeight: '100px',
                                         }}
-                                    />
+                                    /> 
                                     {isSelectMode && (
                                         <div style={{
                                             position: 'absolute',
@@ -573,11 +561,11 @@ const handleFileSelect = async (event) => {
                                 Upload
                             </button>
 
-                              {/* Close Button */}
-                              <button
+                            {/* Close Button */}
+                            <button
                                 className="modal-submit-button uploads"
                                 onClick={closeUploadsModal}
-                                
+
                             >
                                 Close
                             </button>
