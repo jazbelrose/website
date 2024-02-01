@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 
 
 
-const DescriptionComponent = ({ activeProject }) => {
+const DescriptionComponent = ({ activeProject, updateProjectDetails }) => {
 
 
     const [localActiveProject, setLocalActiveProject] = useState(activeProject || {});
@@ -32,7 +32,8 @@ const DescriptionComponent = ({ activeProject }) => {
 
         setLocalActiveProject(updatedProject);
         setIsDescriptionModalOpen(false);
-        updateDescriptionToAPI(updatedProject.finishline);
+        updateDescriptionToAPI(updatedProject.description);
+        
     };
 
 

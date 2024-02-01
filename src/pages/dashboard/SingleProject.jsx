@@ -14,7 +14,7 @@ import LocationComponent from './components/SingleProject/LocationComponent';
 
 
 
-const SingleProject = ({ activeProject, userId, onProjectDeleted }) => {
+const SingleProject = ({ activeProject, userId, onProjectDeleted, onActiveProjectChange, }) => {
 
   
     const parseStatusToNumber = (statusString) => {
@@ -50,7 +50,7 @@ const SingleProject = ({ activeProject, userId, onProjectDeleted }) => {
 
 
                     <UploadsComponent
-                       
+                        onActiveProjectChange={onActiveProjectChange}
                         activeProject={activeProject}
                     />
 

@@ -1,24 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faDownload, faTrash, faCheck } from '@fortawesome/free-solid-svg-icons';
 
-const UploadsComponent = ({ activeProject }) => {
+const UploadsComponent = ({ activeProject, onActiveProjectChange }) => {
 
 
+
+
+
+    const [localActiveProject, setLocalActiveProject] = useState(activeProject || {});
     const [isUploadsModalOpen, setUploadsModalOpen] = useState(false);
     const [selectedUploads, setSelectedUploads] = useState([]);
     const [isImageModalOpen, setImageModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
     const [selectedItems, setSelectedItems] = useState(new Set());
     const [isSelectMode, setIsSelectMode] = useState(false);
+    const apiGatewayEndpoint = 'https://o01t8q8mjk.execute-api.us-west-1.amazonaws.com/default/zipFiles'
+    const apiDeleteEndpoint = 'https://k6utve4soj.execute-api.us-west-1.amazonaws.com/default/DeleteFilesFromS3'
 
 
 
 
     const openUploadsModal = () => {
         setUploadsModalOpen(true);
-        setSelectedUploads(activeProject.uploads || []);
+        setSelectedUploads(localActiveProject.uploads || []);
     };
 
     const closeUploadsModal = () => {
@@ -90,30 +96,123 @@ const UploadsComponent = ({ activeProject }) => {
     };
 
 
-    const handleBulkDelete = async () => {
-        // Logic to delete selected items from the database
-        // Example: 
-        // await deleteItems(Array.from(selectedItems));
-        // Update UI as necessary
+    const handleDelete = async () => {
+        const fileUrlsToDelete = Array.from(selectedItems);
+
+        try {
+            const response = await fetch(apiDeleteEndpoint, {
+                method: 'POST',
+                body: JSON.stringify({ projectId: activeProject.projectId, field: 'uploads', fileKeys: fileUrlsToDelete }),
+                headers: { 'Content-Type': 'application/json' },
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to delete files.');
+            }
+
+
+            const updatedUploads = localActiveProject.uploads.filter(upload => !selectedItems.has(upload.url));
+            const updatedProject = { ...localActiveProject, uploads: updatedUploads };
+            setLocalActiveProject(updatedProject);
+            setSelectedUploads(updatedUploads);
+            setLocalActiveProject(updatedProject);
+            onActiveProjectChange(updatedProject);
+
+            const remainingUploads = selectedUploads.filter(upload => !selectedItems.has(upload.url));
+            setSelectedUploads(remainingUploads);
+            setSelectedItems(new Set()); // Clear the selection
+            setIsSelectMode(false); // Exit select mode
+
+            onActiveProjectChange(updatedProject);
+        } catch (error) {
+            console.error('Error during deletion:', error);
+            // Handle error appropriately in the UI
+        }
     };
 
-    const handleBulkDownload = () => {
-        let delay = 0;
-    
-        selectedItems.forEach(url => {
-            setTimeout(() => {
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = true; // This might need the actual file name
-                document.body.appendChild(link); // Append to body
-                link.click();
-                link.remove(); // Clean up
-            }, delay);
-    
-            delay += 100; 
-        });
+
+
+
+
+
+    const getZippedFiles = async (fileUrls) => {
+        try {
+            const fileKeys = fileUrls.map(url => {
+                const matches = url.match(/amazonaws\.com\/(.+)$/);
+                return matches ? decodeURIComponent(matches[1]) : null;
+            }).filter(key => key !== null);
+
+            console.log("Sending file keys to Lambda:", fileKeys);
+
+            const response = await fetch(apiGatewayEndpoint, {
+                method: 'POST',
+                body: JSON.stringify({ fileKeys: fileKeys }), // Correctly formatted JSON body
+                headers: { 'Content-Type': 'application/json' }
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to get the zip file.');
+            }
+
+            const data = await response.json();
+            return data.zipFileUrl;
+        } catch (error) {
+            console.error('Error getting zipped files:', error);
+            throw error;
+        }
     };
-    
+
+
+    const handleBulkDownload = async () => {
+        const fileUrls = Array.from(selectedItems);
+
+        if (fileUrls.length > 0) {
+            try {
+                const zipFileUrl = await getZippedFiles(fileUrls);
+                initiateDownload(zipFileUrl);
+            } catch (error) {
+                console.error('Error during bulk download:', error);
+                // Handle error appropriately
+            }
+        }
+    };
+
+    const initiateDownload = (url) => {
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = true; // For the zip file, you might want to provide a filename
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+    };
+
+
+    useEffect(() => {
+        setLocalActiveProject(activeProject || {});
+        setSelectedUploads(localActiveProject.uploads || []);
+    }, [activeProject]);
+
+
+    const updateLocalUploads = (newUploads) => {
+        const updatedProject = { ...localActiveProject, uploads: newUploads };
+        setLocalActiveProject(updatedProject);
+        setSelectedUploads(newUploads);
+
+
+        onActiveProjectChange(updatedProject);
+    };
+
+    useEffect(() => {
+
+        setSelectedUploads(activeProject.uploads || []);
+    }, [activeProject, activeProject.uploads]);
+
+    const updateActiveProject = (updatedProject) => {
+        setActiveProject(updatedProject);
+
+        setProjects(prevProjects => prevProjects.map(proj => proj.projectId === updatedProject.projectId ? updatedProject : proj));
+    };
+
 
 
     return (
@@ -199,16 +298,16 @@ const UploadsComponent = ({ activeProject }) => {
 
                             >
                                 <div
-                                    onClick={() => handleImageClick(upload.url)} 
+                                    onClick={() => handleImageClick(upload.url)}
                                     style={{
                                         position: 'relative',
                                         cursor: isSelectMode ? 'pointer' : 'default',
-                                        display: 'flex', 
-                                        flexDirection: 'column', 
-                                        alignItems: 'center', 
-                                        justifyContent: 'center', 
-                                        width: '100%', 
-                                        height: '100%', 
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        width: '100%',
+                                        height: '100%',
                                     }}
                                 >
                                     <img
@@ -230,7 +329,7 @@ const UploadsComponent = ({ activeProject }) => {
                                             alignItems: 'center',
                                             justifyContent: 'center',
                                             backgroundColor: isSelected(upload.url) ? 'rgba(0, 0, 0, 0.5)' : 'transparent', // Overlay if selected
-                                            pointerEvents: 'none', 
+                                            pointerEvents: 'none',
                                         }}>
                                             {isSelected(upload.url) && (
                                                 // Show some icon or checkmark if selected
@@ -336,11 +435,11 @@ const UploadsComponent = ({ activeProject }) => {
                             {/* Delete Button */}
                             <button
                                 className="modal-submit-button uploads"
-                                onClick={handleBulkDelete}
+                                onClick={handleDelete}
                                 style={{ border: 'none', color: 'white' }}
                             >
                                 <FontAwesomeIcon className="modal-submit-button uploads fa" icon={faTrash} />
-                                
+
                             </button>
 
                             {/* Cancel Button - to exit select mode */}
@@ -358,7 +457,7 @@ const UploadsComponent = ({ activeProject }) => {
                             <button
                                 className="modal-submit-button uploads"
                                 onClick={() => setIsSelectMode(true)}
-                                
+
                             >
                                 Select
                             </button>
@@ -367,7 +466,7 @@ const UploadsComponent = ({ activeProject }) => {
                             <button
                                 className="modal-submit-button uploads"
                                 onClick={closeUploadsModal}
-                                
+
                             >
                                 Close
                             </button>

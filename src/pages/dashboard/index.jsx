@@ -30,22 +30,32 @@ export const Dashboard = () => {
 
 
 
+  
+
 
   const toggleNewProjectView = () => {
     setIsNewProjectView(!isNewProjectView);
     if (!isNewProjectView) { setProjectsViewState('new-project'); }
   };
 
-  const selectProject = (project) => {
-    setActiveProject(project);
-    setProjectsViewState('single-project');
-  };
+  const selectProject = async (project) => {
+    if (!activeProject || activeProject.projectId !== project.projectId) {
+        const fetchedProject = await fetchProjectDetails(project.projectId);
+        if (fetchedProject) {
+            setActiveProject(fetchedProject);
+            setProjectsViewState('single-project');
+        } else {
+            // Handle the case where fetching details failed.
+            // Perhaps show an error message or default back to a previous state.
+        }
+    }
+};
 
   const showWelcomeScreen = () => {
     setProjectsViewState('welcome');
     setIsNewProjectView(false);
     setActiveProject(null);
-    setSelectedProjects([]); // Reset the selected projects
+    setSelectedProjects([]); 
   };
 
 
@@ -134,6 +144,30 @@ const handleNewProjectCreated = (newProject) => {
       fetchProjects();
     }
   }, [userData]); 
+
+
+  const fetchProjectDetails = async (projectId) => {
+    setIsLoading(true);
+    try {
+        const response = await fetch(`https://gui4kdsekj.execute-api.us-west-1.amazonaws.com/default/Projects?projectId=${projectId}`);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch project data for projectId: ${projectId}`);
+        }
+        const projectData = await response.json();
+        // Assuming the response contains a project object in a `Items[0]` structure
+        setIsLoading(false);
+        return projectData.Items[0];
+    } catch (error) {
+        console.error('Error fetching project details:', error);
+        setIsLoading(false);
+        return null; // Returning null as an indicator of failure
+    }
+};
+  
+
+
+
+ 
 
   const onProjectDeleted = (deletedProjectId) => {
 
