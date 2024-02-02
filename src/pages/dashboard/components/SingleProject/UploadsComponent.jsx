@@ -20,6 +20,9 @@ const UploadsComponent = ({ activeProject }) => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [selectedItems, setSelectedItems] = useState(new Set());
     const [isSelectMode, setIsSelectMode] = useState(false);
+    const [deleting, setDeleting] = useState(false); // New state for deletion status
+    const [uploadingFiles, setUploadingFiles] = useState(new Set());
+
     const apiGatewayEndpoint = 'https://o01t8q8mjk.execute-api.us-west-1.amazonaws.com/default/zipFiles'
     const apiDeleteEndpoint = 'https://k6utve4soj.execute-api.us-west-1.amazonaws.com/default/DeleteFilesFromS3'
 
@@ -104,88 +107,150 @@ const UploadsComponent = ({ activeProject }) => {
         const fileUrlsToDelete = Array.from(selectedItems); // Original URLs
         const thumbnailUrlsToDelete = fileUrlsToDelete.map(url => getThumbnailUrl(url));
     
+        setDeleting(true); 
+
+        const allUrlsToDelete = [...fileUrlsToDelete, ...thumbnailUrlsToDelete];
+    
+        
+        if (!window.confirm('Are you sure you want to delete the selected uploads?')) {
+            return; 
+        }
+    
         try {
-            // Delete Original Files
-            await fetch(apiDeleteEndpoint, {
+            const response = await fetch(apiDeleteEndpoint, {
                 method: 'POST',
-                body: JSON.stringify({ 
-                    projectId: activeProject.projectId, 
-                    field: 'uploads', 
-                    fileKeys: fileUrlsToDelete // Sending original URLs for deletion
+                body: JSON.stringify({
+                    projectId: activeProject.projectId,
+                    field: 'uploads',
+                    fileKeys: allUrlsToDelete // Send combined URLs for deletion
                 }),
                 headers: { 'Content-Type': 'application/json' },
             });
+    
+            if (!response.ok) {
+                throw new Error('Failed to delete files.');
+            }
     
             
-            await fetch(apiDeleteEndpoint, {
-                method: 'POST',
-                body: JSON.stringify({ 
-                    projectId: activeProject.projectId, 
-                    field: 'uploads', 
-                    fileKeys: thumbnailUrlsToDelete // Sending thumbnail URLs for deletion
-                }),
-                headers: { 'Content-Type': 'application/json' },
-            });
-    
-           
-            const updatedUploads = localActiveProject.uploads.filter(upload => !fileUrlsToDelete.includes(upload.url));
+            const updatedUploads = localActiveProject.uploads.filter(upload => !allUrlsToDelete.includes(upload.url));
             setLocalActiveProject({ ...localActiveProject, uploads: updatedUploads });
             setSelectedUploads(updatedUploads);
             setSelectedItems(new Set());
             setIsSelectMode(false);
     
+           
+            alert('Selected uploads have been successfully deleted.');
         } catch (error) {
             console.error('Error during deletion:', error);
+            alert('Failed to delete selected uploads. Please try again.');
+        } finally {
+            setDeleting(false); // Indicate deletion process has ended
         }
     };
-    
+
+
     const handleFileSelect = async (event) => {
         setIsLoading(true);
-        const files = event.target.files;
-        if (!files.length) return;
+        const files = Array.from(event.target.files);
+        if (files.length === 0) {
+            setIsLoading(false);
+            return;
+        }
+
+
+        let uploadsInProgress = files.map(file => ({
+            fileName: file.name,
+            url: URL.createObjectURL(file), // Temporary URL for local preview
+            isLoading: true, // Initially mark as loading
+        }));
+
+
+        let updatedUploads = [...selectedUploads, ...uploadsInProgress];
+        setSelectedUploads(updatedUploads);
+
+
+
+        for (const file of files) {
+            try {
+                const uploadedFileInfo = await handleFileUpload(activeProject.projectId, file);
+
+                uploadsInProgress = uploadsInProgress.map(upload => {
+                    if (upload.fileName === file.name) {
+                        return {
+                            ...upload,
+                            url: uploadedFileInfo.url,
+                            isLoading: false,
+                        };
+                    }
+                    return upload;
+                });
+            } catch (error) {
+                console.error('Upload failed:', error);
+            }
+        }
+
+
+        updatedUploads = [...localActiveProject.uploads, ...uploadsInProgress];
+        setLocalActiveProject(prevState => ({
+            ...prevState,
+            uploads: updatedUploads
+        }));
+        setSelectedUploads(updatedUploads);
+
 
         try {
-            const uploadedFileUrls = await handleFileUpload(activeProject.projectId, files);
-            const updatedUploads = [...localActiveProject.uploads, ...uploadedFileUrls];
-            const updatedProject = { ...localActiveProject, uploads: updatedUploads };
+            await updateUploadsToAPI(activeProject.projectId, updatedUploads.map(upload => ({
+                fileName: upload.fileName,
+                url: upload.url,
 
-            if (uploadedFileUrls.length > 0) {
-                await updateUploadsToAPI(updatedProject.projectId, updatedUploads);
-                setLocalActiveProject(updatedProject);
-
-            }
+            })));
+            console.log('Uploads updated successfully');
         } catch (error) {
-            console.error('Upload failed:', error);
-            
-        } finally {
-            setIsLoading(false);
-            event.target.value = ''; 
+            console.error('Error updating uploads:', error);
         }
+
+        setIsLoading(false);
+        event.target.value = '';
     };
 
-    const handleFileUpload = async (projectId, files) => {
-        const uploadedFileUrls = [];
-        for (let file of files) {
-            const filename = `projects/${projectId}/uploads/${file.name}`;
 
-            try {
-                
-                await uploadData({
-                    key: filename,
-                    data: file,
-                    options: {
-                        accessLevel: 'protected',
-                    }
-                });
-
-                const fileUrl = `https://mylguserdata194416-dev.s3.us-west-1.amazonaws.com/protected/us-west-1%3A33762779-d3a2-c552-0eca-a287c4438602/${filename}`;
-                uploadedFileUrls.push({ fileName: file.name, url: fileUrl });
-            } catch (error) {
-                console.error('Error uploading files:', error);
+    const handleFileUpload = async (projectId, file) => {
+        const filename = `projects/${projectId}/uploads/${file.name}`;
+        
+        
+        setUploadingFiles(prevUploadingFiles => new Set([...prevUploadingFiles, file.name]));
+      
+        try {
+          // Perform the upload
+          await uploadData({
+            key: filename,
+            data: file,
+            options: {
+              accessLevel: 'protected',
             }
+          });
+      
+          
+          await new Promise(resolve => setTimeout(resolve, 2000));
+      
+          
+          const fileUrl = `https://mylguserdata194416-dev.s3.us-west-1.amazonaws.com/protected/us-west-1%3A33762779-d3a2-c552-0eca-a287c4438602/${filename}`;
+      
+         
+          return { fileName: file.name, url: fileUrl };
+        } catch (error) {
+          console.error('Error uploading file:', error);
+          
+        } finally {
+          
+          setUploadingFiles(prevUploadingFiles => {
+            const newUploadingFiles = new Set(prevUploadingFiles);
+            newUploadingFiles.delete(file.name);
+            return newUploadingFiles;
+          });
         }
-        return uploadedFileUrls;
-    };
+      };
+      
 
 
     const updateUploadsToAPI = async (projectId, updatedUploads) => {
@@ -273,9 +338,9 @@ const UploadsComponent = ({ activeProject }) => {
 
 
     useEffect(() => {
-        
+
         setSelectedUploads(localActiveProject.uploads.map(upload => {
-           
+
             return {
                 ...upload,
                 thumbnailUrl: getThumbnailUrl(upload.url)
@@ -393,37 +458,44 @@ const UploadsComponent = ({ activeProject }) => {
                                         height: '100%',
                                     }}
                                 >
-                                    <img
-                                        src={getThumbnailUrl(upload.url)}
-                                        alt={upload.fileName}
-                                        style={{
-                                            maxWidth: '100%',
-                                            maxHeight: '100px',
-                                        }}
-                                    /> 
-                                    {isSelectMode && (
-                                        <div style={{
-                                            position: 'absolute',
-                                            top: '0',
-                                            left: '0',
-                                            right: '0',
-                                            bottom: '0',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            backgroundColor: isSelected(upload.url) ? 'rgba(0, 0, 0, 0.5)' : 'transparent', // Overlay if selected
-                                            pointerEvents: 'none',
-                                        }}>
-                                            {isSelected(upload.url) && (
-                                                // Show some icon or checkmark if selected
-                                                <FontAwesomeIcon icon={faCheck} style={{ color: '#4CAF50' }} />
+                                    {uploadingFiles.has(upload.fileName) ? (
+                                        <CircularProgress />
+                                    ) : (
+                                        <>
+                                            <img
+                                                src={upload.url}
+                                                alt={upload.fileName}
+                                                style={{
+                                                    maxWidth: '100%',
+                                                    maxHeight: '100px',
+                                                }}
+                                            />
+                                            {isSelectMode && (
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '0',
+                                                    left: '0',
+                                                    right: '0',
+                                                    bottom: '0',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    backgroundColor: isSelected(upload.url) ? 'rgba(0, 0, 0, 0.5)' : 'transparent', // Overlay if selected
+                                                    pointerEvents: 'none',
+                                                }}>
+                                                    {isSelected(upload.url) && (
+                                                        // Show some icon or checkmark if selected
+                                                        <FontAwesomeIcon icon={faCheck} style={{ color: '#4CAF50' }} />
+                                                    )}
+                                                </div>
                                             )}
-                                        </div>
-                                    )}
-                                    {!isSelectMode && (
-                                        <div style={{ color: 'white', marginTop: '5px' }}>{upload.fileName}</div>
+                                            {!isSelectMode && (
+                                                <div style={{ color: 'white', marginTop: '5px' }}>{upload.fileName}</div>
+                                            )}
+                                        </>
                                     )}
                                 </div>
+
 
 
                                 <Modal
@@ -484,7 +556,15 @@ const UploadsComponent = ({ activeProject }) => {
                             </li>
                         ))}
                     </ul>
+
+                    {deleting && (
+                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+                            <CircularProgress />
+                        </div>
+                    )}
+               
                 </div>
+              
 
                 {/* Modal Footer */}
                 <div style={{
